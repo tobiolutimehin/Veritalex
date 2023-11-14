@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "884339258397",
+    "project_id": "veritalex-bdf40",
+    "storage_bucket": "veritalex-bdf40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884339258397:android:5a6e5e2387dd29ec31c2f4",
+        "android_client_info": {
+          "package_name": "com.veritalex"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8QeJQ9yL_X_SmJDbPHSIGBuZdD39vrOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
