@@ -1,5 +1,6 @@
 package com.veritalex.core.network.models
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 /**
@@ -24,11 +25,13 @@ data class NetworkBook(
     val title: String,
     val subjects: List<String>,
     val authors: List<NetworkPerson>,
-    val translators: List<NetworkPerson>,
+    val translators: List<NetworkPerson>? = null,
     val bookshelves: List<String>,
     val languages: List<String>,
     val copyright: Boolean? = null,
+    @SerialName("media_type")
     val mediaType: String,
     val formats: NetworkFormat,
+    @SerialName("download_count")
     val downloadCount: Int,
 )
