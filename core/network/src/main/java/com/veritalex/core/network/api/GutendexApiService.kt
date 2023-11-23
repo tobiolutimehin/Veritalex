@@ -1,5 +1,7 @@
-package com.veritalex.core.network.models
+package com.veritalex.core.network.api
 
+import com.veritalex.core.network.models.BookListResponse
+import com.veritalex.core.network.models.NetworkBook
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
