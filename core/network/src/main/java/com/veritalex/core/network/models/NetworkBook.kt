@@ -31,7 +31,7 @@ data class NetworkBook(
     val copyright: Boolean? = null,
     @SerialName("media_type")
     val mediaType: String,
-    val formats: NetworkFormat,
+    val formats: Map<String, String>,
     @SerialName("download_count")
     val downloadCount: Int,
 )

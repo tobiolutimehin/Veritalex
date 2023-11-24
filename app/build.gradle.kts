@@ -2,7 +2,9 @@
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
-    id("com.google.gms.google-services")
+    alias(libs.plugins.gms.google.services)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -62,7 +64,7 @@ dependencies {
     implementation(libs.ui.tooling.preview)
     implementation(platform(libs.compose.bom))
     implementation(libs.hilt.android)
-    implementation(project(mapOf("path" to ":core:network")))
+    ksp(libs.hilt.compiler)
 
     testImplementation(libs.junit)
 
@@ -74,7 +76,13 @@ dependencies {
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
 
+    implementation(libs.lifecycle.viewmodel.compose)
+
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
     implementation("com.google.firebase:firebase-analytics")
+
+    // Modules
+    implementation(project(mapOf("path" to ":core:network")))
+    implementation(project(mapOf("path" to ":core:data")))
 }
