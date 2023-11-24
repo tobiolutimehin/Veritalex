@@ -43,13 +43,13 @@ dependencies {
     androidTestImplementation(libs.espresso.core)
 
     implementation(libs.material3.adaptive)
-    api(libs.androidx.compose.material.iconsExtended)
+    implementation(libs.androidx.compose.material.iconsExtended)
 
-    api(libs.compose.foundation)
-    api(libs.compose.foundation.layout)
-    api(libs.androidx.compose.material.iconsExtended)
-    api(libs.material3)
-    api(libs.compose.runtime)
-    api(libs.compose.ui.tooling.preview)
-    api(libs.compose.ui.util)
+    implementation(libs.compose.foundation)
+    implementation(libs.compose.foundation.layout)
+    implementation(libs.androidx.compose.material.iconsExtended)
+    implementation(libs.material3)
+    implementation(libs.compose.runtime)
+    implementation(libs.compose.ui.tooling.preview)
+    implementation(libs.compose.ui.util)
 }
