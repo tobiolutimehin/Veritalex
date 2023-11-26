@@ -2,7 +2,8 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
-    id("com.google.devtools.ksp")
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -45,4 +46,7 @@ dependencies {
     ksp(libs.room.compiler)
     implementation(libs.room.runtime)
     implementation(libs.room.core)
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
 }
