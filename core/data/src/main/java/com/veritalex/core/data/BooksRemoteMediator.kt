@@ -51,7 +51,7 @@ class BooksRemoteMediator @Inject constructor(
             }
             loadKey = response.next?.extractPageNumberFromUrl()
 
-            MediatorResult.Success(endOfPaginationReached = (loadKey ?: 0) > 10)
+            MediatorResult.Success(endOfPaginationReached = (loadKey ?: 0) > 25)
         } catch (e: IOException) {
             MediatorResult.Error(e)
         } catch (e: HttpException) {

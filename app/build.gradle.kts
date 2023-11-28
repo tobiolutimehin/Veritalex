@@ -77,6 +77,9 @@ dependencies {
     debugImplementation(libs.ui.test.manifest)
 
     implementation(libs.lifecycle.viewmodel.compose)
+    implementation(libs.material3.adaptive.navigation.suite)
+    implementation(libs.material3.windowSizeClass)
+    implementation(libs.material3.adaptive)
 
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
@@ -85,6 +88,7 @@ dependencies {
     // Modules
     implementation(project(mapOf("path" to ":core:network")))
     implementation(project(mapOf("path" to ":core:data")))
+    implementation(project(mapOf("path" to ":core:designsystem")))
 
     implementation ("androidx.paging:paging-runtime-ktx:3.2.1")
     implementation ("androidx.paging:paging-compose:3.3.0-alpha02")
