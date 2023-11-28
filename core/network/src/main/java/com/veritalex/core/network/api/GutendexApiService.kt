@@ -18,7 +18,7 @@ interface GutendexApiService {
         @Query("search") search: String? = null,
         @Query("sort") sort: String? = null,
         @Query("topic") topic: String? = null,
-        @Query("page") page: Int = 1,
+        @Query("page") page: Int? = null,
     ): BookListResponse
 
     @GET("books/{id}")

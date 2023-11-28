@@ -5,7 +5,7 @@ import com.veritalex.core.network.models.NetworkBook
 import javax.inject.Inject
 
 interface NetworkDataSource {
-    suspend fun getBooks(): BookListResponse
+    suspend fun getBooks(page: Int? = null): BookListResponse
 
     suspend fun getBookById(id: Int): NetworkBook
 }
@@ -13,7 +13,7 @@ interface NetworkDataSource {
 class RetrofitNetworkDataSource @Inject constructor(
     private val apiService: GutendexApiService,
 ) : NetworkDataSource {
-    override suspend fun getBooks(): BookListResponse = apiService.getBooks()
+    override suspend fun getBooks(page: Int?): BookListResponse = apiService.getBooks(page = page)
 
     override suspend fun getBookById(id: Int): NetworkBook = apiService.getBookById(id)
 }
