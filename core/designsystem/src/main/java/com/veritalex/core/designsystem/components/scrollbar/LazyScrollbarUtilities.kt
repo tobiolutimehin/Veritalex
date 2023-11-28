@@ -1,4 +1,4 @@
-package com.veritalex.core.designsystem.scrollbar
+package com.veritalex.core.designsystem.components.scrollbar
 
 import androidx.compose.foundation.gestures.ScrollableState
 import kotlin.math.abs

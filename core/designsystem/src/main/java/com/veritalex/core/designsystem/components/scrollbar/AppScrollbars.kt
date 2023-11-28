@@ -1,4 +1,4 @@
-package com.veritalex.core.designsystem.scrollbar
+package com.veritalex.core.designsystem.components.scrollbar
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Spring

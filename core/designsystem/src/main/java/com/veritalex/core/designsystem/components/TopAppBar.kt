@@ -1,4 +1,4 @@
-package com.veritalex.core.designsystem
+package com.veritalex.core.designsystem.components
 
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon

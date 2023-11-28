@@ -46,10 +46,10 @@ dependencies {
     ksp(libs.room.compiler)
     api(libs.room.runtime)
     implementation(libs.room.core)
-    implementation("com.google.code.gson:gson:2.10.1")
+    implementation(libs.google.gson)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     implementation(libs.androidx.paging.common.android)
     implementation(libs.androidx.paging.common.ktx)
-    implementation ("androidx.room:room-paging:2.6.0") // Add this line
+    implementation(libs.androidx.room.paging)
 }
