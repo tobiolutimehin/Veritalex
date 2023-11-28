@@ -1,4 +1,4 @@
-package com.veritalex.ui.theme
+package com.veritalex.core.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 

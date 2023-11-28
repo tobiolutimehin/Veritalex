@@ -1,4 +1,4 @@
-package com.veritalex.ui.theme
+package com.veritalex.core.designsystem.theme
 
 import android.app.Activity
 import android.os.Build

@@ -14,6 +14,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import com.veritalex.core.designsystem.icons.VeritalexIcons
+import com.veritalex.core.designsystem.theme.VeritalexTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -51,7 +52,7 @@ fun VeritalexTopAppBar(
 @Preview
 @Composable
 private fun VeritalexTopAppBarPreview() {
-//    VeritalexTheme {
+    VeritalexTheme {
         VeritalexTopAppBar(title = "Veritalex")
-//    }
+    }
 }

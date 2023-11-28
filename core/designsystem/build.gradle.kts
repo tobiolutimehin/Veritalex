@@ -41,15 +41,24 @@ android {
 
 dependencies {
 
+    implementation(libs.activity.compose)
     implementation(libs.core.ktx)
-    implementation(libs.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
-
+    implementation(libs.material3)
+    implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.ui)
+    implementation(libs.ui.graphics)
+    implementation(libs.ui.tooling.preview)
+    implementation(platform(libs.compose.bom))
     implementation(libs.material3.adaptive)
     implementation(libs.androidx.compose.material.iconsExtended)
+
+    androidTestImplementation(libs.androidx.test.ext.junit)
+    androidTestImplementation(libs.espresso.core)
+    androidTestImplementation(libs.ui.test.junit4)
+    androidTestImplementation(platform(libs.compose.bom))
+
+    debugImplementation(libs.ui.tooling)
+    debugImplementation(libs.ui.test.manifest)
 
     implementation(libs.compose.foundation)
     implementation(libs.compose.foundation.layout)
