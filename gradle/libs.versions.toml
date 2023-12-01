@@ -24,7 +24,7 @@ okhttp = "4.12.0"
 paging-compose = "3.3.0-alpha02"
 paging-ktx-ver = "3.2.1"
 retrofit = "2.9.0"
-room = "2.6.0"
+room = "2.6.1"
 google-gson = "2.10.1"
 firebase-bom = "32.6.0"
 
