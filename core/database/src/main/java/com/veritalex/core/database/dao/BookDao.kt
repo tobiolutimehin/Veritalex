@@ -13,7 +13,7 @@ import com.veritalex.core.database.entities.PersonEntity
 @Dao
 interface BookDao {
     @Transaction
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertBookWithPeople(
         book: BookEntity,
         authors: List<PersonEntity>,
