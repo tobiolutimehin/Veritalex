@@ -1,5 +1,5 @@
 [versions]
-activity-compose = "1.8.1"
+activity-compose = "1.8.2"
 agp = "8.2.0"
 androidx-compose-material3-adaptive = "1.0.0-alpha01"
 androidx-compose-runtime-tracing = "1.0.0-beta01"
