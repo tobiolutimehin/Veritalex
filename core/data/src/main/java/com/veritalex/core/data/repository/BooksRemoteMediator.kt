@@ -1,4 +1,4 @@
-package com.veritalex.core.data
+package com.veritalex.core.data.repository
 
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
@@ -10,8 +10,8 @@ import com.veritalex.core.database.entities.BookEntity
 import com.veritalex.core.database.entities.BookWithPeople
 import com.veritalex.core.database.entities.PersonEntity
 import com.veritalex.core.network.api.RetrofitNetworkDataSource
-import com.veritalex.core.network.models.NetworkBook
-import com.veritalex.core.network.models.NetworkPerson
+import com.veritalex.core.network.models.BookDto
+import com.veritalex.core.network.models.PersonDto
 import java.io.IOException
 import javax.inject.Inject
 
@@ -60,7 +60,7 @@ class BooksRemoteMediator @Inject constructor(
     }
 }
 
-fun NetworkPerson.toPersonEntity(): PersonEntity {
+fun PersonDto.toPersonEntity(): PersonEntity {
     return PersonEntity(
         birthYear = this.birthYear,
         deathYear = this.deathYear,
@@ -68,7 +68,7 @@ fun NetworkPerson.toPersonEntity(): PersonEntity {
     )
 }
 
-fun NetworkBook.toBookEntity(): BookEntity {
+fun BookDto.toBookEntity(): BookEntity {
     return BookEntity(
         bookId = this.id,
         title = this.title,

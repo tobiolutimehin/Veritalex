@@ -5,7 +5,6 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.map
-import com.veritalex.core.data.BooksRemoteMediator
 import com.veritalex.core.data.models.Book
 import com.veritalex.core.data.models.Person
 import com.veritalex.core.database.VeritalexDatabase

@@ -1,6 +1,6 @@
 [versions]
 activity-compose = "1.8.1"
-agp = "8.1.4"
+agp = "8.2.0"
 androidx-compose-material3-adaptive = "1.0.0-alpha01"
 androidx-compose-runtime-tracing = "1.0.0-beta01"
 androidx-test-ext-junit = "1.1.5"
@@ -20,6 +20,7 @@ ksp = "1.9.10-1.0.13"
 lifecycle-runtime-ktx = "2.6.2"
 material = "1.10.0"
 moshi = "1.15.0"
+navigation-compose = "2.7.5"
 okhttp = "4.12.0"
 paging-compose = "3.3.0-alpha02"
 paging-ktx-ver = "3.2.1"
@@ -31,6 +32,7 @@ firebase-bom = "32.6.0"
 
 
 [libraries]
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation-compose" }
 androidx-paging-common-android = { group = "androidx.paging", name = "paging-common", version = "paging-ktx-ver" }
 androidx-paging-common-ktx = { group = "androidx.paging", name = "paging-common", version = "paging-ktx-ver" }
 androidx-paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "paging-compose" }

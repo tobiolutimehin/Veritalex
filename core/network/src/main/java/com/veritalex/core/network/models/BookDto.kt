@@ -20,12 +20,12 @@ import kotlinx.serialization.Serializable
  * @constructor Creates a book.
  */
 @Serializable
-data class NetworkBook(
+data class BookDto(
     val id: Int,
     val title: String,
     val subjects: List<String>,
-    val authors: List<NetworkPerson>,
-    val translators: List<NetworkPerson>? = null,
+    val authors: List<PersonDto>,
+    val translators: List<PersonDto>? = null,
     val bookshelves: List<String>,
     val languages: List<String>,
     val copyright: Boolean? = null,

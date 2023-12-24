@@ -11,7 +11,7 @@ import kotlinx.serialization.Serializable
  * @property name The name of the person.
  */
 @Serializable
-data class NetworkPerson(
+data class PersonDto(
     @SerialName("birth_year")
     val birthYear: Int? = null,
     @SerialName("death_year")

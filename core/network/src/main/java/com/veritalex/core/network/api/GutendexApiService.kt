@@ -1,7 +1,7 @@
 package com.veritalex.core.network.api
 
 import com.veritalex.core.network.models.BookListResponse
-import com.veritalex.core.network.models.NetworkBook
+import com.veritalex.core.network.models.BookDto
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -22,5 +22,5 @@ interface GutendexApiService {
     ): BookListResponse
 
     @GET("books/{id}")
-    fun getBookById(@Path("id") id: Int): NetworkBook
+    fun getBookById(@Path("id") id: Int): BookDto
 }

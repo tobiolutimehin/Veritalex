@@ -93,6 +93,7 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.squareup.okhttp3)
     implementation(libs.coil.compose)
+    implementation(libs.androidx.navigation.compose)
 
     // Modules
     implementation(project(mapOf("path" to ":core:network")))

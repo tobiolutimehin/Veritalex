@@ -19,20 +19,4 @@ data class BookEntity(
     val formats: Map<String, String>
 )
 
-@Entity(tableName = "favorites")
-data class FavoriteEntity(
-    @PrimaryKey(autoGenerate = true)
-    val favoriteId: Int,
-    val bookId: Int,
-)
-
-@Entity(primaryKeys = ["bookId", "bookId"])
-data class FavoriteBook(
-    @Embedded val favorite: FavoriteEntity,
-    @Relation(
-        entity = BookEntity::class,
-        parentColumn = "bookId",
-        entityColumn = "bookId"
-    )
-    val book: BookEntity,
-)
+// TODO: Use DataStore for favorites
