@@ -41,8 +41,7 @@ dependencies {
     implementation(libs.core.ktx)
     testImplementation(libs.junit)
     implementation(libs.material)
-    implementation(libs.moshi)
-    implementation(libs.retrofit.moshi)
+    implementation(libs.retrofit)
     implementation(libs.kotlinx.serialization.json)
 
     androidTestImplementation(libs.androidx.test.ext.junit)

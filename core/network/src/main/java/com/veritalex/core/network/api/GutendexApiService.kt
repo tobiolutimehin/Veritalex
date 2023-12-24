@@ -2,6 +2,7 @@ package com.veritalex.core.network.api
 
 import com.veritalex.core.network.models.BookListResponse
 import com.veritalex.core.network.models.BookDto
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -19,8 +20,8 @@ interface GutendexApiService {
         @Query("sort") sort: String? = null,
         @Query("topic") topic: String? = null,
         @Query("page") page: Int? = null,
-    ): BookListResponse
+    ): Response<BookListResponse>
 
     @GET("books/{id}")
-    fun getBookById(@Path("id") id: Int): BookDto
+    suspend fun getBookById(@Path("id") id: Int): Response<BookDto>
 }

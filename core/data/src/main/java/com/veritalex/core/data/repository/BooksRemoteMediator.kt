@@ -40,16 +40,22 @@ class BooksRemoteMediator @Inject constructor(
                 }
             }
             val response = network.getBooks(page = key)
-            val networkBooks = response.results
 
-            networkBooks.forEach { networkBook ->
-                val bookEntity = networkBook.toBookEntity()
-                val authors = networkBook.authors.map { it.toPersonEntity() }
-                val translators = networkBook.translators?.map { it.toPersonEntity() } ?: emptyList()
+            if (response.isSuccessful) {
+                response.body()?.let { body ->
+                    val networkBooks = body.results
 
-                bookDao.insertBookWithPeople(bookEntity, authors, translators)
+                    networkBooks.forEach { networkBook ->
+                        val bookEntity = networkBook.toBookEntity()
+                        val authors = networkBook.authors.map { it.toPersonEntity() }
+                        val translators =
+                            networkBook.translators?.map { it.toPersonEntity() } ?: emptyList()
+
+                        bookDao.insertBookWithPeople(bookEntity, authors, translators)
+                    }
+                    loadKey = body.next?.extractPageNumberFromUrl()
+                }
             }
-            loadKey = response.next?.extractPageNumberFromUrl()
 
             MediatorResult.Success(endOfPaginationReached = (loadKey ?: 0) > 25)
         } catch (e: IOException) {
