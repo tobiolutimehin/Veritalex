@@ -1,7 +1,7 @@
 [versions]
 activity-compose = "1.8.1"
 agp = "8.2.0"
-androidx-compose-material3-adaptive = "1.0.0-alpha01"
+androidx-compose-material3-adaptive = "1.0.0-alpha03"
 androidx-compose-runtime-tracing = "1.0.0-beta01"
 androidx-test-ext-junit = "1.1.5"
 appcompat = "1.6.1"
