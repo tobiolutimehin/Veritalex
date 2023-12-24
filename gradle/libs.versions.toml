@@ -27,7 +27,7 @@ paging-ktx-ver = "3.2.1"
 retrofit = "2.9.0"
 room = "2.6.1"
 google-gson = "2.10.1"
-firebase-bom = "32.6.0"
+firebase-bom = "32.7.0"
 
 
 
