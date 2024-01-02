@@ -31,7 +31,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 
-
 /**
  * The time period for showing the scrollbar thumb after interacting with it, before it fades away
  */
@@ -105,19 +104,21 @@ private fun ScrollableState.DraggableScrollbarThumb(
     orientation: Orientation,
 ) {
     Box(
-        modifier = Modifier
-            .run {
-                when (orientation) {
-                    Vertical -> width(12.dp).fillMaxHeight()
-                    Horizontal -> height(12.dp).fillMaxWidth()
+        modifier =
+            Modifier
+                .run {
+                    when (orientation) {
+                        Vertical -> width(12.dp).fillMaxHeight()
+                        Horizontal -> height(12.dp).fillMaxWidth()
+                    }
                 }
-            }
-            .background(
-                color = scrollbarThumbColor(
-                    interactionSource = interactionSource,
+                .background(
+                    color =
+                        scrollbarThumbColor(
+                            interactionSource = interactionSource,
+                        ),
+                    shape = RoundedCornerShape(16.dp),
                 ),
-                shape = RoundedCornerShape(16.dp),
-            ),
     )
 }
 
@@ -130,19 +131,21 @@ private fun ScrollableState.DecorativeScrollbarThumb(
     orientation: Orientation,
 ) {
     Box(
-        modifier = Modifier
-            .run {
-                when (orientation) {
-                    Vertical -> width(2.dp).fillMaxHeight()
-                    Horizontal -> height(2.dp).fillMaxWidth()
+        modifier =
+            Modifier
+                .run {
+                    when (orientation) {
+                        Vertical -> width(2.dp).fillMaxHeight()
+                        Horizontal -> height(2.dp).fillMaxWidth()
+                    }
                 }
-            }
-            .background(
-                color = scrollbarThumbColor(
-                    interactionSource = interactionSource,
+                .background(
+                    color =
+                        scrollbarThumbColor(
+                            interactionSource = interactionSource,
+                        ),
+                    shape = RoundedCornerShape(16.dp),
                 ),
-                shape = RoundedCornerShape(16.dp),
-            ),
     )
 }
 
@@ -151,35 +154,37 @@ private fun ScrollableState.DecorativeScrollbarThumb(
  * @param interactionSource source of interactions in the scrolling container
  */
 @Composable
-private fun ScrollableState.scrollbarThumbColor(
-    interactionSource: InteractionSource,
-): Color {
+private fun ScrollableState.scrollbarThumbColor(interactionSource: InteractionSource): Color {
     var state by remember { mutableStateOf(ThumbState.Dormant) }
     val pressed by interactionSource.collectIsPressedAsState()
     val hovered by interactionSource.collectIsHoveredAsState()
     val dragged by interactionSource.collectIsDraggedAsState()
-    val active = (canScrollForward || canScrollForward) &&
-        (pressed || hovered || dragged || isScrollInProgress)
+    val active =
+        (canScrollForward || canScrollForward) &&
+            (pressed || hovered || dragged || isScrollInProgress)
 
     val color by animateColorAsState(
-        targetValue = when (state) {
-            ThumbState.Active -> MaterialTheme.colorScheme.onSurface.copy(0.5f)
-            ThumbState.Inactive -> MaterialTheme.colorScheme.onSurface.copy(alpha = 0.2f)
-            ThumbState.Dormant -> Color.Transparent
-        },
-        animationSpec = SpringSpec(
-            stiffness = Spring.StiffnessLow,
-        ),
+        targetValue =
+            when (state) {
+                ThumbState.Active -> MaterialTheme.colorScheme.onSurface.copy(0.5f)
+                ThumbState.Inactive -> MaterialTheme.colorScheme.onSurface.copy(alpha = 0.2f)
+                ThumbState.Dormant -> Color.Transparent
+            },
+        animationSpec =
+            SpringSpec(
+                stiffness = Spring.StiffnessLow,
+            ),
         label = "Scrollbar thumb color",
     )
     LaunchedEffect(active) {
         when (active) {
             true -> state = ThumbState.Active
-            false -> if (state == ThumbState.Active) {
-                state = ThumbState.Inactive
-                delay(SCROLLBAR_INACTIVE_TO_DORMANT_TIME_IN_MS)
-                state = ThumbState.Dormant
-            }
+            false ->
+                if (state == ThumbState.Active) {
+                    state = ThumbState.Inactive
+                    delay(SCROLLBAR_INACTIVE_TO_DORMANT_TIME_IN_MS)
+                    state = ThumbState.Dormant
+                }
         }
     }
 
@@ -187,5 +192,7 @@ private fun ScrollableState.scrollbarThumbColor(
 }
 
 private enum class ThumbState {
-    Active, Inactive, Dormant
+    Active,
+    Inactive,
+    Dormant,
 }

@@ -1,8 +1,6 @@
 package com.veritalex.core.designsystem.components
 
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -18,7 +16,7 @@ import com.veritalex.core.designsystem.theme.VeritalexTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun VeritalexTopAppBar(
+fun VerTopAppBar(
     title: String,
     modifier: Modifier = Modifier,
     navigationIcon: ImageVector = VeritalexIcons.ArrowBack,
@@ -34,14 +32,18 @@ fun VeritalexTopAppBar(
             Text(text = title, style = MaterialTheme.typography.titleLarge)
         },
         navigationIcon = {
-            IconButton(onClick = onNavigationClick) {
-                Icon(imageVector = navigationIcon, contentDescription = navigationIconContentDescription)
-            }
+            VerIconButton(
+                onClick = onNavigationClick,
+                imageVector = navigationIcon,
+                contentDescription = navigationIconContentDescription,
+            )
         },
         actions = {
-            IconButton(onClick = onActionClick) {
-                Icon(imageVector = actionIcon, contentDescription = actionIconContentDescription)
-            }
+            VerIconButton(
+                onClick = onActionClick,
+                imageVector = actionIcon,
+                contentDescription = actionIconContentDescription,
+            )
         },
         modifier = modifier.testTag("veritalexTopAppBar"),
         colors = colors,
@@ -53,6 +55,6 @@ fun VeritalexTopAppBar(
 @Composable
 private fun VeritalexTopAppBarPreview() {
     VeritalexTheme {
-        VeritalexTopAppBar(title = "Veritalex")
+        VerTopAppBar(title = "Veritalex")
     }
 }
