@@ -9,6 +9,7 @@ import androidx.room.Transaction
 import com.veritalex.core.database.entities.BookEntity
 import com.veritalex.core.database.entities.BookWithPeople
 import com.veritalex.core.database.entities.PersonEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface BookDao {
@@ -17,10 +18,15 @@ interface BookDao {
     suspend fun insertBookWithPeople(
         book: BookEntity,
         authors: List<PersonEntity>,
-        translators: List<PersonEntity>
+        translators: List<PersonEntity>,
     )
 
     @Transaction
     @Query("SELECT * from books")
     fun booksPagingSource(): PagingSource<Int, BookWithPeople>
+
+    /** TODO: Make sure to get a good logic for handling the subjects (they are too vague) */
+    @Transaction
+    @Query("SELECT * FROM books WHERE (:topic IS NULL OR :topic = '' OR :topic IN (subjects)) OR COALESCE(:topic, '') = ''")
+    fun getRecommendedStream(topic: String?): Flow<List<BookWithPeople>>
 }

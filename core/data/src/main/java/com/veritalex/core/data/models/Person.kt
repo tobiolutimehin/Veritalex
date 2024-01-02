@@ -10,5 +10,5 @@ package com.veritalex.core.data.models
 data class Person(
     val birthYear: Int?,
     val deathYear: Int?,
-    val name: String
+    val name: String,
 )
