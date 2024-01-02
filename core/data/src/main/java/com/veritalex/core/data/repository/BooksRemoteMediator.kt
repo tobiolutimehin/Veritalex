@@ -4,12 +4,12 @@ import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
-import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.HttpException
 import com.veritalex.core.data.utils.Extensions.insertBooks
 import com.veritalex.core.data.utils.StringExtensions.extractPageNumberFromUrl
 import com.veritalex.core.database.dao.BookDao
 import com.veritalex.core.database.entities.BookWithPeople
 import com.veritalex.core.network.api.RetrofitNetworkDataSource
+import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
 
