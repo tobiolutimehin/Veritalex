@@ -5,13 +5,11 @@ import androidx.paging.LoadType
 import androidx.paging.PagingState
 import androidx.paging.RemoteMediator
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.HttpException
+import com.veritalex.core.data.utils.Extensions.insertBooks
+import com.veritalex.core.data.utils.StringExtensions.extractPageNumberFromUrl
 import com.veritalex.core.database.dao.BookDao
-import com.veritalex.core.database.entities.BookEntity
 import com.veritalex.core.database.entities.BookWithPeople
-import com.veritalex.core.database.entities.PersonEntity
 import com.veritalex.core.network.api.RetrofitNetworkDataSource
-import com.veritalex.core.network.models.BookDto
-import com.veritalex.core.network.models.PersonDto
 import java.io.IOException
 import javax.inject.Inject
 
@@ -60,31 +58,3 @@ class BooksRemoteMediator
             }
         }
     }
-
-fun PersonDto.toPersonEntity(): PersonEntity {
-    return PersonEntity(
-        birthYear = this.birthYear,
-        deathYear = this.deathYear,
-        name = this.name,
-    )
-}
-
-fun BookDto.toBookEntity(): BookEntity {
-    return BookEntity(
-        bookId = this.id,
-        title = this.title,
-        subjects = this.subjects,
-        bookshelves = this.bookshelves,
-        languages = this.languages,
-        copyright = this.copyright,
-        mediaType = this.mediaType,
-        formats = this.formats,
-        downloadCount = this.downloadCount,
-    )
-}
-
-fun String.extractPageNumberFromUrl(): Int? {
-    val regex = Regex("""[?&]page=(\d+)""")
-    val matchResult = regex.find(this)
-    return matchResult?.groupValues?.get(1)?.toIntOrNull()
-}
