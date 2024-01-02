@@ -19,21 +19,21 @@ import com.veritalex.ui.navigation.rememberVeritalexAppState
 @Composable
 fun VeritalexApp(
     windowSizeClass: WindowSizeClass,
-    veritalexAppState: VeritalexAppState = rememberVeritalexAppState(
-        windowSizeClass = windowSizeClass,
-    ),
-    ){
-
+    veritalexAppState: VeritalexAppState =
+        rememberVeritalexAppState(
+            windowSizeClass = windowSizeClass,
+        ),
+) {
     val snackbarHostState = remember { SnackbarHostState() }
-    
+
     Scaffold(
         topBar = {},
         modifier = Modifier.fillMaxSize(),
-        snackbarHost = { SnackbarHost(snackbarHostState) }
-    ) { paddingValues ->  
+        snackbarHost = { SnackbarHost(snackbarHostState) },
+    ) { paddingValues ->
         paddingValues
     }
-    }
+}
 
 @OptIn(
     ExperimentalMaterial3AdaptiveNavigationSuiteApi::class,
@@ -41,15 +41,12 @@ fun VeritalexApp(
 )
 @Composable
 fun VeritalexApp() {
-
     val navSuiteType =
         NavigationSuiteScaffoldDefaults.calculateFromAdaptiveInfo(currentWindowAdaptiveInfo())
-
 
     NavigationSuiteScaffold(
         navigationSuiteItems = { -> },
         modifier = Modifier,
     ) {
-
     }
 }

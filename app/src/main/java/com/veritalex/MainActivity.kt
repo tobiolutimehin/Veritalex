@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background,
                 ) {
                     VeritalexApp(
-                        windowSizeClass = calculateWindowSizeClass(this)
+                        windowSizeClass = calculateWindowSizeClass(this),
                     )
                 }
             }
