@@ -13,6 +13,7 @@ android {
     defaultConfig {
         minSdk = 30
 
+        // TODO: See if you can remove this
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -41,10 +42,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.paging.common.android)
     implementation(libs.androidx.paging.common.ktx)
-    implementation(libs.firebase.crashlytics.buildtools)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.espresso.core)
     implementation(libs.retrofit)
 
     implementation(libs.hilt.android)
