@@ -15,62 +15,57 @@ import com.veritalex.core.network.models.PersonDto
 import java.io.IOException
 import javax.inject.Inject
 
-
 @OptIn(ExperimentalPagingApi::class)
-class BooksRemoteMediator @Inject constructor(
-    private val network: RetrofitNetworkDataSource,
-    private val bookDao: BookDao
-): RemoteMediator<Int, BookWithPeople>() {
-    private var loadKey: Int? = null
-    override suspend fun load(
-        loadType: LoadType,
-        state: PagingState<Int, BookWithPeople>
-    ): MediatorResult {
-        return try {
-            val key = when (loadType) {
-                LoadType.REFRESH -> null
-                LoadType.PREPEND -> return MediatorResult.Success(endOfPaginationReached = true)
-                LoadType.APPEND -> {
-                    state.lastItemOrNull()
-                        ?: return MediatorResult.Success(
-                            endOfPaginationReached = true
-                        )
+class BooksRemoteMediator
+    @Inject
+    constructor(
+        private val network: RetrofitNetworkDataSource,
+        private val bookDao: BookDao,
+    ) : RemoteMediator<Int, BookWithPeople>() {
+        private var loadKey: Int? = null
 
-                    loadKey
-                }
-            }
-            val response = network.getBooks(page = key)
+        override suspend fun load(
+            loadType: LoadType,
+            state: PagingState<Int, BookWithPeople>,
+        ): MediatorResult {
+            return try {
+                val key =
+                    when (loadType) {
+                        LoadType.REFRESH -> null
+                        LoadType.PREPEND -> return MediatorResult.Success(endOfPaginationReached = true)
+                        LoadType.APPEND -> {
+                            state.lastItemOrNull()
+                                ?: return MediatorResult.Success(
+                                    endOfPaginationReached = true,
+                                )
 
-            if (response.isSuccessful) {
-                response.body()?.let { body ->
-                    val networkBooks = body.results
-
-                    networkBooks.forEach { networkBook ->
-                        val bookEntity = networkBook.toBookEntity()
-                        val authors = networkBook.authors.map { it.toPersonEntity() }
-                        val translators =
-                            networkBook.translators?.map { it.toPersonEntity() } ?: emptyList()
-
-                        bookDao.insertBookWithPeople(bookEntity, authors, translators)
+                            loadKey
+                        }
                     }
-                    loadKey = body.next?.extractPageNumberFromUrl()
-                }
-            }
+                val response = network.getBooks(page = key)
 
-            MediatorResult.Success(endOfPaginationReached = (loadKey ?: 0) > 25)
-        } catch (e: IOException) {
-            MediatorResult.Error(e)
-        } catch (e: HttpException) {
-            MediatorResult.Error(e)
+                if (response.isSuccessful) {
+                    response.body()?.let { body ->
+                        val networkBooks = body.results
+                        networkBooks.insertBooks(bookDao)
+                        loadKey = body.next?.extractPageNumberFromUrl()
+                    }
+                }
+
+                MediatorResult.Success(endOfPaginationReached = (loadKey ?: 0) > 25)
+            } catch (e: IOException) {
+                MediatorResult.Error(e)
+            } catch (e: HttpException) {
+                MediatorResult.Error(e)
+            }
         }
     }
-}
 
 fun PersonDto.toPersonEntity(): PersonEntity {
     return PersonEntity(
         birthYear = this.birthYear,
         deathYear = this.deathYear,
-        name = this.name
+        name = this.name,
     )
 }
 
@@ -84,7 +79,7 @@ fun BookDto.toBookEntity(): BookEntity {
         copyright = this.copyright,
         mediaType = this.mediaType,
         formats = this.formats,
-        downloadCount = this.downloadCount
+        downloadCount = this.downloadCount,
     )
 }
 

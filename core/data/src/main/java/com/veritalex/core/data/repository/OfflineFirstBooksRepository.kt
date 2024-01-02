@@ -12,40 +12,74 @@ import com.veritalex.core.database.dao.BookDao
 import com.veritalex.core.database.entities.BookWithPeople
 import com.veritalex.core.database.entities.PersonEntity
 import com.veritalex.core.network.api.RetrofitNetworkDataSource
+import com.veritalex.core.network.models.BookDto
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 interface BooksRepository {
-    suspend fun fetchBooks(): Flow<PagingData<Book>>
+    fun fetchBooks(): Flow<PagingData<Book>>
 
-    fun fetchBookById(id: Int)
+    fun fetchRecommendedBooks(topic: String? = null): Flow<List<Book>>
 }
 
 @OptIn(ExperimentalPagingApi::class)
-class OfflineFirstBooksRepository @Inject constructor(
-    private val network: RetrofitNetworkDataSource,
-    private val database: VeritalexDatabase,
-    private val bookDao: BookDao
-) : BooksRepository {
-
-    override fun fetchBookById(id: Int) {
-        TODO("Not yet implemented")
-    }
-
-    override suspend fun fetchBooks(): Flow<PagingData<Book>> {
-        return Pager(
-            config = PagingConfig(
-                pageSize = 100
-            ),
-            remoteMediator = BooksRemoteMediator(
-                network = network, bookDao = bookDao
-            )
-        ) { bookDao.booksPagingSource() }.flow.map { pagingData ->
-            pagingData.map { bookEntity ->
-                bookEntity.toBook()
+class OfflineFirstBooksRepository
+    @Inject
+    constructor(
+        private val network: RetrofitNetworkDataSource,
+        private val database: VeritalexDatabase,
+        private val bookDao: BookDao,
+    ) : BooksRepository {
+        override fun fetchRecommendedBooks(topic: String?): Flow<List<Book>> {
+            return bookDao.getRecommendedStream(topic).map { booksEntities ->
+                booksEntities.map { bookEntity ->
+                    bookEntity.toBook()
+                }
+            }.onEach { books ->
+                if (books.isEmpty()) {
+                    withContext(Dispatchers.IO) { getBooks() }
+                }
             }
         }
+
+        override fun fetchBooks(): Flow<PagingData<Book>> {
+            return Pager(
+                config =
+                    PagingConfig(
+                        pageSize = 100,
+                    ),
+                remoteMediator =
+                    BooksRemoteMediator(
+                        network = network,
+                        bookDao = bookDao,
+                    ),
+            ) { bookDao.booksPagingSource() }.flow.map { pagingData ->
+                pagingData.map { bookEntity ->
+                    bookEntity.toBook()
+                }
+            }
+        }
+
+        suspend fun getBooks() {
+            val response = network.getBooks()
+            if (response.isSuccessful) {
+                response.body()?.results?.insertBooks(bookDao)
+            }
+        }
+    }
+
+suspend fun List<BookDto>.insertBooks(bookDao: BookDao) {
+    this.forEach { networkBook ->
+        val bookEntity = networkBook.toBookEntity()
+        val authors = networkBook.authors.map { it.toPersonEntity() }
+        val translators =
+            networkBook.translators?.map { it.toPersonEntity() } ?: emptyList()
+
+        bookDao.insertBookWithPeople(bookEntity, authors, translators)
     }
 }
 
@@ -55,21 +89,22 @@ fun BookWithPeople.toBook(): Book {
         id = book.bookId,
         title = book.title,
         subjects = book.subjects,
-        authors = this.authors.toPeople() , // You may need to fetch authors separately
-        translators = this.translators.toPeople(), // You may need to fetch translators separately
+        authors = this.authors.toPeople(),
+        translators = this.translators.toPeople(),
         bookshelves = book.bookshelves,
         languages = book.languages,
         copyright = book.copyright,
         mediaType = book.mediaType,
         formats = book.formats,
-        downloadCount = book.downloadCount
+        downloadCount = book.downloadCount,
     )
 }
 
-fun PersonEntity.toPerson() = Person(
-    name = this.name,
-    deathYear = this.deathYear,
-    birthYear = this.birthYear
-)
+fun PersonEntity.toPerson() =
+    Person(
+        name = this.name,
+        deathYear = this.deathYear,
+        birthYear = this.birthYear,
+    )
 
-fun List<PersonEntity>?.toPeople() = this?.map { it.toPerson() } ?: emptyList()
+fun List<PersonEntity>?.toPeople() = this?.map { it.toPerson() }
