@@ -99,4 +99,5 @@ dependencies {
     implementation(project(mapOf("path" to ":core:network")))
     implementation(project(mapOf("path" to ":core:data")))
     implementation(project(mapOf("path" to ":core:designsystem")))
+    implementation(project(mapOf("path" to ":feature:home")))
 }
