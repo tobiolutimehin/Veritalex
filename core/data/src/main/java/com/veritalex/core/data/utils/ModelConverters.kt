@@ -55,5 +55,5 @@ object ModelConverters {
             birthYear = this.birthYear,
         )
 
-    private fun List<PersonEntity>?.toPeople() = this?.map { it.toPerson() }
+    private fun List<PersonEntity>.toPeople() = this.map { it.toPerson() }
 }
