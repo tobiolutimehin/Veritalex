@@ -1,27 +1,20 @@
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
-    alias(libs.plugins.com.android.application)
+    alias(libs.plugins.com.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
-    alias(libs.plugins.gms.google.services)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
 }
 
 android {
-    namespace = "com.veritalex"
+    namespace = "com.veritalex.feature.home"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.veritalex"
         minSdk = 30
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        vectorDrawables {
-            useSupportLibrary = true
-        }
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -46,17 +39,11 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.7"
     }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
 }
 
 dependencies {
     implementation(libs.activity.compose)
     implementation(libs.core.ktx)
-    implementation(libs.core.splashscreen)
     implementation(libs.material3)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.ui)
@@ -65,6 +52,7 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
 
     testImplementation(libs.junit)
 
@@ -81,17 +69,9 @@ dependencies {
     implementation(libs.material3.windowSizeClass)
     implementation(libs.material3.adaptive)
 
-    // Firebase
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.analytics)
-
     implementation(libs.androidx.paging.runtime.ktx)
     implementation(libs.androidx.paging.compose)
 
-    // Retrofit
-    implementation(libs.jakewharton.serialization.converter)
-    implementation(libs.retrofit)
-    implementation(libs.squareup.okhttp3)
     implementation(libs.coil.compose)
     implementation(libs.androidx.navigation.compose)
 
@@ -99,5 +79,4 @@ dependencies {
     implementation(project(mapOf("path" to ":core:network")))
     implementation(project(mapOf("path" to ":core:data")))
     implementation(project(mapOf("path" to ":core:designsystem")))
-    implementation(project(mapOf("path" to ":feature:home")))
 }
