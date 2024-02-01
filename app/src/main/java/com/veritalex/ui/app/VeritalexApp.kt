@@ -1,6 +1,7 @@
 package com.veritalex.ui.app
 
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -14,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import com.veritalex.ui.navigation.VeritalexAppState
+import com.veritalex.ui.navigation.VeritalexNavHost
 import com.veritalex.ui.navigation.rememberVeritalexAppState
 
 @Composable
@@ -31,7 +33,10 @@ fun VeritalexApp(
         modifier = Modifier.fillMaxSize(),
         snackbarHost = { SnackbarHost(snackbarHostState) },
     ) { paddingValues ->
-        paddingValues
+        VeritalexNavHost(
+            appState = veritalexAppState,
+            modifier = Modifier.padding(paddingValues),
+        )
     }
 }
 
