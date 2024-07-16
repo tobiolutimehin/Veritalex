@@ -28,4 +28,8 @@ interface BookDao {
     @Transaction
     @Query("SELECT * FROM books WHERE (:topic IS NULL OR :topic = '' OR :topic IN (subjects)) OR COALESCE(:topic, '') = ''")
     fun getRecommendedStream(topic: String?): Flow<List<BookWithPeople>>
+
+    @Transaction
+    @Query("SELECT * FROM books WHERE bookId IN (:ids)")
+    fun getBookWithIds(ids: Set<String>): Flow<List<BookWithPeople>>
 }
