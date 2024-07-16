@@ -10,36 +10,43 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.emptyFlow
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 import javax.annotation.concurrent.Immutable
 import javax.inject.Inject
 
 @HiltViewModel
 class HomeViewModel
-@Inject
-constructor(
-    booksRepository: BooksRepository,
-) : ViewModel() {
-    private val currentSelectedTopic: MutableStateFlow<String?> = MutableStateFlow(null)
-    private val currentBookInProgress: MutableStateFlow<Book?> = MutableStateFlow(null)
+    @Inject
+    constructor(
+        private val booksRepository: BooksRepository,
+    ) : ViewModel() {
+        private val currentSelectedTopic: MutableStateFlow<String?> = MutableStateFlow(null)
+        private val currentBookInProgress: MutableStateFlow<Book?> = MutableStateFlow(null)
 
-    private val fetchSavedBooks: Flow<List<Book>> =
-        emptyFlow<List<Book>>().stateIn(
+        private val fetchSavedBooks: StateFlow<List<Book>> =
+            booksRepository.fetchSavedBooks().stateIn(
+                scope = viewModelScope,
+                started = SharingStarted.WhileSubscribed(5000),
+                initialValue = emptyList(),
+        )
+
+    private val recommendedBooks: Flow<List<Book>> =
+        booksRepository.fetchRecommendedBooks().stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5000),
             initialValue = emptyList(),
         )
 
-    private val recommendedBooks: Flow<List<Book>> =
-        booksRepository
-            .fetchRecommendedBooks()
-
     fun selectRecommendedTopic(topic: String) {
         currentSelectedTopic.value = topic
     }
 
-    fun saveBook(book: Book) {}
+    fun saveBook(book: Book) {
+        viewModelScope.launch {
+            booksRepository.saveBook(book.id.toString())
+        }
+    }
 
     val uiState: StateFlow<HomeUiState> =
         combine(
