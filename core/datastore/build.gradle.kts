@@ -7,13 +7,12 @@ plugins {
 }
 
 android {
-    namespace = "com.veritalex.core.data"
-    compileSdk = 33
+    namespace = "com.veritalex.core.datastore"
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 30
 
-        // TODO: See if you can remove this
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -40,15 +39,12 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.paging.common.android)
-    implementation(libs.androidx.paging.common.ktx)
+//    implementation(libs.androidx.paging.common.android)
+//    implementation(libs.androidx.paging.common.ktx)
     testImplementation(libs.junit)
     implementation(libs.retrofit)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
-
-    implementation(project(mapOf("path" to ":core:network")))
-    implementation(project(mapOf("path" to ":core:database")))
-    implementation(project(mapOf("path" to ":core:datastore")))
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
 }

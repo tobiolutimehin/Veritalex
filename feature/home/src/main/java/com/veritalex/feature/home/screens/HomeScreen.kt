@@ -87,16 +87,16 @@ fun BookCover(
     ) {
         AsyncImage(
             model =
-            ImageRequest
-                .Builder(LocalContext.current)
-                .data(book.formats["image/jpeg"])
-                .crossfade(true)
-                .build(),
+                ImageRequest
+                    .Builder(LocalContext.current)
+                    .data(book.formats["image/jpeg"])
+                    .crossfade(true)
+                    .build(),
             alignment = Alignment.Center,
             modifier =
-            Modifier
-                .aspectRatio(0.65f) // 100.dp / 157.dp = 0.64 (approx)
-                .size(100.dp, 0.dp),
+                Modifier
+                    .aspectRatio(0.65f) // 100.dp / 157.dp = 0.64 (approx)
+                    .size(100.dp, 0.dp),
             contentDescription = "",
         )
         Spacer(modifier = Modifier.height(8.dp))
@@ -152,7 +152,7 @@ fun HomeScreen(
             Row {
                 if (uiState is HomeUiState.Success) {
                     Spacer(modifier = Modifier.height(10.dp))
-                    Text(text = "Successful with ${(uiState as HomeUiState.Success).recommendedBooks}")
+//                    Text(text = "Successful with ${(uiState as HomeUiState.Success).savedBooks}")
                 }
             }
         }
