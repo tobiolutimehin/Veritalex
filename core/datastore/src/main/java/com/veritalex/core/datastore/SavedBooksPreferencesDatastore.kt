@@ -5,6 +5,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringSetPreferencesKey
+import com.veritalex.core.datastore.utils.Constants.SAVED_BOOK_IDS_KEY
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import java.io.IOException
@@ -30,18 +31,14 @@ class SavedBooksPreferencesDatastore
          * Updates the set of saved book IDs based on the provided parameters.
          *
          * @param id The ID of the book to be updated.
-         * @param saved `true` if the book is saved, `false` if it is to be removed from saved books.
          *
          * @return [Boolean] if it was successful
          */
-        suspend fun updateBookIds(
-            id: String,
-            saved: Boolean,
-        ): Boolean {
-            return try {
+        suspend fun updateBookIds(id: String): Boolean =
+            try {
                 datastore.edit { preferences ->
                     val currentBookIds = (preferences[KEY] ?: emptySet()).toMutableSet()
-                    if (saved) {
+                    if (currentBookIds.contains(id)) {
                         currentBookIds.remove(id)
                     } else {
                         currentBookIds.add(id)
@@ -53,10 +50,9 @@ class SavedBooksPreferencesDatastore
                 Log.e(TAG, "Failed to update books", ioException)
                 false
             }
-        }
 
         companion object {
-            private val KEY = stringSetPreferencesKey("saved_book_ids")
+            private val KEY = stringSetPreferencesKey(SAVED_BOOK_IDS_KEY)
             private const val TAG = "SavedBookPreferencesDatastore"
         }
     }
