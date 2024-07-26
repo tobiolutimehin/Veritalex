@@ -21,16 +21,14 @@ import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
-interface BooksRepository {
-    fun fetchBooks(): Flow<PagingData<Book>>
-
-    fun fetchRecommendedBooks(topic: String? = null): Flow<List<Book>>
-
-    suspend fun saveBook(id: String)
-
-    fun fetchSavedBooks(): Flow<List<Book>> // Change this to non-suspend
-}
-
+/**
+ * Repository implementation that uses an offline-first approach.
+ * Fetches data from local database first, and then from network if needed.
+ *
+ * @property network The network data source for fetching books from the server.
+ * @property bookDao The DAO for accessing the local books database.
+ * @property savedBooksDatastore The datastore for managing saved book IDs.
+ */
 @OptIn(ExperimentalPagingApi::class, ExperimentalCoroutinesApi::class)
 class OfflineFirstBooksRepository
     @Inject
@@ -53,11 +51,11 @@ class OfflineFirstBooksRepository
                 }.onEach { books ->
                     if (books.isEmpty()) {
                         withContext(Dispatchers.IO) { getBooks() }
+                    }
                 }
-            }
 
-    override fun fetchBooks(): Flow<PagingData<Book>> =
-        Pager(
+        override fun fetchBooks(): Flow<PagingData<Book>> =
+            Pager(
                 config =
                     PagingConfig(
                         pageSize = 100,
@@ -73,18 +71,23 @@ class OfflineFirstBooksRepository
                 }
             }
 
-    override fun fetchSavedBooks(): Flow<List<Book>> =
-        savedBooksDatastore.savedBookIds.flatMapLatest { savedBookIds ->
-            bookDao.getBookWithIds(savedBookIds.toSet()).flatMapLatest { booksEntities ->
-                val foundBooks = booksEntities.map { it.book.bookId }.toSet()
-                val missingIds = savedBookIds.map { it.toInt() }.toSet() - foundBooks
-                if (missingIds.isNotEmpty()) {
-                    getBooks(missingIds)
-                }
-                flowOf(booksEntities.map { it.toBook() })
+        override fun fetchSavedBooks(): Flow<List<Book>> =
+            savedBooksDatastore.savedBookIds.flatMapLatest { savedBookIds ->
+                bookDao.getBookWithIds(savedBookIds.toSet()).flatMapLatest { booksEntities ->
+                    val foundBooks = booksEntities.map { it.book.bookId }.toSet()
+                    val missingIds = savedBookIds.map { it.toInt() }.toSet() - foundBooks
+                    if (missingIds.isNotEmpty()) {
+                        getBooks(missingIds)
+                    }
+                    flowOf(booksEntities.map { it.toBook() })
             }
         }
 
+    /**
+     * Fetches books from the network based on the provided IDs and inserts them into the local database.
+     *
+     * @param ids The set of book IDs to fetch from the network.
+     */
     private suspend fun getBooks(ids: Set<Int>? = null) {
         val response =
             network.getBooks(
