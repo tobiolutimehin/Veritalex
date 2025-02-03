@@ -51,6 +51,7 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.material3.adaptive)
     implementation(libs.androidx.compose.material.iconsExtended)
+    implementation(libs.androidx.ui.text.google.fonts)
 
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)

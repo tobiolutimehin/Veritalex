@@ -1,6 +1,6 @@
 [versions]
 activity-compose = "1.8.2"
-agp = "8.2.1"
+agp = "8.5.1"
 androidx-compose-material3-adaptive = "1.0.0-alpha01"
 androidx-compose-runtime-tracing = "1.0.0-beta01"
 androidx-test-ext-junit = "1.1.5"
@@ -28,6 +28,7 @@ retrofit = "2.9.0"
 room = "2.6.1"
 google-gson = "2.10.1"
 firebase-bom = "32.7.0"
+ui-text-google-fonts = "1.7.7"
 
 
 
@@ -88,6 +89,7 @@ firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "fireb
 google-gson = { module = "com.google.code.gson:gson", version.ref="google-gson"}
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom"}
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "ui-text-google-fonts" }
 
 
 [plugins]
