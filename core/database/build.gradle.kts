@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.veritalex.core.database"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 30
@@ -49,7 +49,6 @@ dependencies {
     implementation(libs.google.gson)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
-    implementation(libs.androidx.paging.common.android)
     implementation(libs.androidx.paging.common.ktx)
     implementation(libs.androidx.room.paging)
 }
