@@ -1,4 +1,4 @@
-package com.veritalex.feature.home
+package com.veritalex.feature.home.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -24,6 +24,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.veritalex.core.data.models.Book
 import com.veritalex.core.data.models.Person
+import com.veritalex.feature.home.R
 
 @Composable
 fun BookRowItem(

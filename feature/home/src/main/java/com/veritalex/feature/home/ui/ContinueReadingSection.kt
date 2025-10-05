@@ -1,4 +1,4 @@
-package com.veritalex.feature.home
+package com.veritalex.feature.home.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -27,8 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.paging.PagingData
 import com.veritalex.core.data.models.Book
 import com.veritalex.core.data.models.Person
-import com.veritalex.feature.home.screens.BooksLazyRow
-import com.veritalex.feature.home.screens.BooksLazyRowPaging
+import com.veritalex.feature.home.R
 import kotlinx.coroutines.flow.Flow
 
 @Composable
