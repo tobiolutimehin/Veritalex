@@ -2,6 +2,8 @@ package com.veritalex.feature.home.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.paging.PagingData
+import androidx.paging.cachedIn
 import com.veritalex.core.data.models.Book
 import com.veritalex.core.data.repository.BooksRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -29,14 +31,23 @@ class HomeViewModel
                 scope = viewModelScope,
                 started = SharingStarted.WhileSubscribed(5000),
                 initialValue = emptyList(),
+            )
+
+        private val recommendedBooks: Flow<List<Book>> =
+            booksRepository.fetchRecommendedBooks().stateIn(
+                scope = viewModelScope,
+                started = SharingStarted.WhileSubscribed(5000),
+                initialValue = emptyList(),
         )
 
-    private val recommendedBooks: Flow<List<Book>> =
-        booksRepository.fetchRecommendedBooks().stateIn(
-            scope = viewModelScope,
-            started = SharingStarted.WhileSubscribed(5000),
-            initialValue = emptyList(),
-        )
+    val books: Flow<PagingData<Book>> =
+        booksRepository
+            .fetchBooks()
+            .stateIn(
+                scope = viewModelScope,
+                started = SharingStarted.WhileSubscribed(5000),
+                initialValue = PagingData.empty(),
+            ).cachedIn(viewModelScope)
 
     fun selectRecommendedTopic(topic: String) {
         currentSelectedTopic.value = topic

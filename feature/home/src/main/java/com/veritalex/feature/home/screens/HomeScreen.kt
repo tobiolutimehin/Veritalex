@@ -17,16 +17,15 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -34,8 +33,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.compose.collectAsLazyPagingItems
 import androidx.paging.compose.itemContentType
@@ -43,14 +40,9 @@ import androidx.paging.compose.itemKey
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.veritalex.core.data.models.Book
-import com.veritalex.core.data.repository.BooksRepository
-import com.veritalex.feature.home.viewmodel.HomeUiState
 import com.veritalex.feature.home.viewmodel.HomeViewModel
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 @Composable
 fun BooksLazyRow(
@@ -116,31 +108,31 @@ fun BookCover(
     }
 }
 
-@OptIn(ExperimentalFoundationApi::class)
+@OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = hiltViewModel(),
 ) {
-    val uiState by viewModel.uiState.collectAsState()
-
-    val pagerState = rememberPagerState(pageCount = { tabs.size })
+    val books = viewModel.books
+    val pagerState = rememberPagerState(pageCount = { tabsList.size })
     val coroutineScope = rememberCoroutineScope()
+    val selectedTabIndex = remember { derivedStateOf { pagerState.currentPage } }
 
     Column(modifier = modifier) {
         TabRow(
-            selectedTabIndex = pagerState.currentPage,
+            selectedTabIndex = selectedTabIndex.value,
             modifier =
-            Modifier
-                .fillMaxWidth()
-                .wrapContentHeight(),
+                Modifier
+                    .fillMaxWidth()
+                    .wrapContentHeight(),
         ) {
-            tabs.forEachIndexed { index, tabItem ->
+            tabsList.forEachIndexed { index, tabItem ->
                 Tab(
-                    selected = index == pagerState.currentPage,
+                    selected = index == selectedTabIndex.value,
                     onClick = {
                         coroutineScope.launch {
-                            pagerState.scrollToPage(index)
+                            pagerState.animateScrollToPage(index)
                         }
                     },
                     text = { Text(text = tabItem.title) },
@@ -149,17 +141,20 @@ fun HomeScreen(
         }
 
         HorizontalPager(state = pagerState) {
-            Row {
-                if (uiState is HomeUiState.Success) {
-                    Spacer(modifier = Modifier.height(10.dp))
-//                    Text(text = "Successful with ${(uiState as HomeUiState.Success).savedBooks}")
+            when (it) {
+                0 -> {
+                    HomeTab(modifier = Modifier.weight(1f), allBooks = books)
+                }
+
+                1 -> {
+                    BookSection(modifier = Modifier.weight(1f))
                 }
             }
         }
     }
 }
 
-val tabs =
+val tabsList =
     listOf(
         TabItem(
             "Home",
@@ -182,13 +177,19 @@ data class TabItem(
 )
 
 @Composable
-fun HomeTab(modifier: Modifier) {
+fun HomeTab(
+    modifier: Modifier = Modifier,
+    allBooks: Flow<PagingData<Book>>? = null,
+) {
     Column(
         modifier = modifier.verticalScroll(rememberScrollState()),
     ) {
         val book: Book? = null
         book?.let {
             ContinueReadingSection(book = it)
+        }
+        allBooks?.let {
+            BooksLazyRow(books = it)
         }
     }
 }
@@ -205,9 +206,9 @@ fun ContinueReadingSection(
 ) {
     Column(
         modifier =
-        modifier
-            .fillMaxWidth()
-            .wrapContentHeight(),
+            modifier
+                .fillMaxWidth()
+                .wrapContentHeight(),
     ) {
         Text(text = "Continue Reading")
         Row {
@@ -223,28 +224,3 @@ fun ContinueReadingSection(
         }
     }
 }
-
-@HiltViewModel
-class SampleViewModel
-@Inject
-constructor(
-    private val booksRepository: BooksRepository,
-) : ViewModel() {
-    var uiState: BooksUi by mutableStateOf(BooksUi())
-
-    fun getBooks() {
-        viewModelScope.launch {
-            booksRepository.fetchBooks().collectLatest {
-                uiState = BooksUi(books = it)
-            }
-        }
-    }
-
-    init {
-        getBooks()
-    }
-}
-
-data class BooksUi(
-    val books: PagingData<Book>? = null,
-)

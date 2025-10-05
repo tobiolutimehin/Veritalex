@@ -21,26 +21,27 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideJson(): Json = Json {
-        ignoreUnknownKeys = true
-        isLenient = true
-        prettyPrint = true
-        encodeDefaults = true
-    }
+    fun provideJson(): Json =
+        Json {
+            ignoreUnknownKeys = true
+            isLenient = true
+            prettyPrint = true
+            encodeDefaults = true
+        }
 
     @Singleton
     @Provides
     fun provideRetrofit(
         json: Json,
         base: URL,
-    ): Retrofit = Retrofit.Builder()
-        .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
-        .baseUrl(base)
-        .build()
+    ): Retrofit =
+        Retrofit
+            .Builder()
+            .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
+            .baseUrl(base)
+            .build()
 
     @Singleton
     @Provides
-    fun provideRetrofitService(
-        retrofit: Retrofit,
-    ): GutendexApiService = retrofit.create(GutendexApiService::class.java)
+    fun provideRetrofitService(retrofit: Retrofit): GutendexApiService = retrofit.create(GutendexApiService::class.java)
 }

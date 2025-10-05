@@ -23,8 +23,8 @@ fun rememberVeritalexAppState(
     windowSizeClass: WindowSizeClass,
     coroutineScope: CoroutineScope = rememberCoroutineScope(),
     navController: NavHostController = rememberNavController(),
-): VeritalexAppState {
-    return remember(
+): VeritalexAppState =
+    remember(
         navController,
         coroutineScope,
         windowSizeClass,
@@ -35,7 +35,6 @@ fun rememberVeritalexAppState(
             windowSizeClass,
         )
     }
-}
 
 @Stable
 class VeritalexAppState(
@@ -46,7 +45,9 @@ class VeritalexAppState(
     val currentDestination: NavDestination?
         @Composable get() =
             navController
-                .currentBackStackEntryAsState().value?.destination
+                .currentBackStackEntryAsState()
+                .value
+                ?.destination
 
     val currentTopLevelDestination: TopLevelDestination?
         @Composable get() =
@@ -77,24 +78,23 @@ class VeritalexAppState(
      * @param topLevelDestination: The destination the app needs to navigate to.
      */
     fun navigateToTopLevelDestination(topLevelDestination: TopLevelDestination) {
-        val topLevelNavOptions =
-            navOptions {
-                // Pop up to the start destination of the graph to
-                // avoid building up a large stack of destinations
-                // on the back stack as users select items
-                popUpTo(navController.graph.findStartDestination().id) {
-                    saveState = true
-                }
-                // Avoid multiple copies of the same destination when
-                // reselecting the same item
-                launchSingleTop = true
-                // Restore state when reselecting a previously selected item
-                restoreState = true
-
-                when (topLevelDestination) {
-                    else -> {}
-                }
+        navOptions {
+            // Pop up to the start destination of the graph to
+            // avoid building up a large stack of destinations
+            // on the back stack as users select items
+            popUpTo(navController.graph.findStartDestination().id) {
+                saveState = true
             }
+            // Avoid multiple copies of the same destination when
+            // reselecting the same item
+            launchSingleTop = true
+            // Restore state when reselecting a previously selected item
+            restoreState = true
+
+            when (topLevelDestination) {
+                else -> {}
+            }
+        }
     }
 
     fun navigateToSearch() {

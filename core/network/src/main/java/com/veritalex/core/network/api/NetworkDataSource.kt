@@ -25,4 +25,4 @@ class RetrofitNetworkDataSource
         ): Response<BookListResponse> = apiService.getBooks(page = page, ids = ids.toString())
 
         override suspend fun getBookById(id: Int): Response<BookDto> = apiService.getBookById(id)
-}
+    }

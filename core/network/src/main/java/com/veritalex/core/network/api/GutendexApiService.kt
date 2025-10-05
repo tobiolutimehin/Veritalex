@@ -1,7 +1,7 @@
 package com.veritalex.core.network.api
 
-import com.veritalex.core.network.models.BookListResponse
 import com.veritalex.core.network.models.BookDto
+import com.veritalex.core.network.models.BookListResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -23,5 +23,7 @@ interface GutendexApiService {
     ): Response<BookListResponse>
 
     @GET("books/{id}")
-    suspend fun getBookById(@Path("id") id: Int): Response<BookDto>
+    suspend fun getBookById(
+        @Path("id") id: Int,
+    ): Response<BookDto>
 }

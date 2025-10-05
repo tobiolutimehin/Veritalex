@@ -58,7 +58,7 @@ class OfflineFirstBooksRepository
             Pager(
                 config =
                     PagingConfig(
-                        pageSize = 100,
+                        pageSize = 50,
                     ),
                 remoteMediator =
                     BooksRemoteMediator(
@@ -80,18 +80,18 @@ class OfflineFirstBooksRepository
                         getBooks(missingIds)
                     }
                     flowOf(booksEntities.map { it.toBook() })
+                }
             }
-        }
 
-    /**
-     * Fetches books from the network based on the provided IDs and inserts them into the local database.
-     *
-     * @param ids The set of book IDs to fetch from the network.
-     */
-    private suspend fun getBooks(ids: Set<Int>? = null) {
-        val response =
-            network.getBooks(
-                ids = ids,
+        /**
+         * Fetches books from the network based on the provided IDs and inserts them into the local database.
+         *
+         * @param ids The set of book IDs to fetch from the network.
+         */
+        private suspend fun getBooks(ids: Set<Int>? = null) {
+            val response =
+                network.getBooks(
+                    ids = ids,
             )
             if (response.isSuccessful) {
                 response.body()?.results?.insertBooks(bookDao)
