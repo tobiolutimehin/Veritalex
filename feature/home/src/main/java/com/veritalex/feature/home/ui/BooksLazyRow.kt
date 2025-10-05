@@ -1,7 +1,6 @@
 package com.veritalex.feature.home.ui
 
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
@@ -25,7 +24,6 @@ fun BooksLazyRow(
     LazyRow(
         horizontalArrangement = Arrangement.spacedBy(10.dp),
         modifier = modifier,
-        contentPadding = PaddingValues(horizontal = 16.dp),
     ) {
         items(books) { book ->
             BookRowItem(book = book)
@@ -43,7 +41,6 @@ fun BooksLazyRowPaging(
         LazyRow(
             horizontalArrangement = Arrangement.spacedBy(10.dp),
             modifier = modifier,
-            contentPadding = PaddingValues(horizontal = 16.dp),
         ) {
             items(
                 item.itemCount,
