@@ -9,11 +9,13 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -70,11 +72,14 @@ fun MyBooksSection(
 
             TextButton(
                 onClick = { },
+                contentPadding = ButtonDefaults.TextButtonWithIconContentPadding,
             ) {
-                Text("See all")
+                Text(stringResource(R.string.see_all))
+                Spacer(Modifier.size(ButtonDefaults.IconSpacing))
                 Icon(
                     imageVector = Icons.Default.Home,
                     contentDescription = null,
+                    modifier = Modifier.size(ButtonDefaults.IconSize),
                 )
             }
 

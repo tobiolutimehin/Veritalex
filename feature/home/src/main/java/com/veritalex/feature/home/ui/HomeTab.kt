@@ -1,10 +1,12 @@
 package com.veritalex.feature.home.ui
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.paging.PagingData
 import com.veritalex.core.data.models.Book
 import com.veritalex.core.data.models.Person
@@ -15,8 +17,9 @@ fun HomeTab(
     modifier: Modifier = Modifier,
     allBooks: Flow<PagingData<Book>>? = null,
 ) {
-    Column(
-        modifier = modifier.verticalScroll(rememberScrollState()),
+    LazyColumn(
+        modifier = modifier.fillMaxSize(),
+        contentPadding = PaddingValues(vertical = 16.dp),
     ) {
         val book =
             Book(
@@ -39,10 +42,18 @@ fun HomeTab(
                 formats = mapOf("image/jpeg" to "https://www.gutenberg.org/cache/epub/1342/pg1342.cover.small.jpg"),
                 downloadCount = 50000,
             )
-        ContinueReadingSection(book = book)
-        MyBooksSection(listOf(book, book, book, book, book))
-        allBooks?.let {
-            RecommendedBooksSection(allBooks)
+        item { ContinueReadingSection(book = book) }
+        item {
+            HorizontalDivider()
+        }
+        item { MyBooksSection(listOf(book, book, book, book, book)) }
+        item {
+            HorizontalDivider()
+        }
+        item {
+            allBooks?.let {
+                RecommendedBooksSection(allBooks)
+            }
         }
     }
 }
