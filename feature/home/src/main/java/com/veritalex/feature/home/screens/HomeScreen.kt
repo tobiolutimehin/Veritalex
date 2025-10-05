@@ -1,7 +1,5 @@
 package com.veritalex.feature.home.screens
 
-import androidx.annotation.DrawableRes
-import androidx.annotation.StringRes
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -19,8 +17,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.veritalex.feature.home.R
-import com.veritalex.feature.home.screens.TabItem.Companion.tabsList
+import com.veritalex.feature.home.navigation.TabItem.Companion.tabsList
 import com.veritalex.feature.home.ui.HomeTab
 import com.veritalex.feature.home.viewmodel.HomeViewModel
 import kotlinx.coroutines.launch
@@ -71,22 +68,5 @@ fun HomeScreen(
                 }
             }
         }
-    }
-}
-
-data class TabItem(
-    @StringRes val title: Int,
-    @DrawableRes val icon: Int? = null,
-) {
-    companion object {
-        val tabsList =
-            listOf(
-                TabItem(
-                    R.string.home,
-                ),
-                TabItem(
-                    R.string.my_saved_books,
-                ),
-            )
     }
 }

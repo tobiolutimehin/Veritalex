@@ -86,6 +86,27 @@ fun BookCover(
 
 @Preview
 @Composable
+fun BookCoverPreview() {
+    val book = Book(
+        id = 1,
+        title = "The Great Gatsby",
+        subjects = listOf("Fiction"),
+        authors = listOf(Person(name = "F. Scott Fitzgerald", birthYear = 1896, deathYear = 1940)),
+        translators = emptyList(),
+        bookshelves = listOf("Classic Literature"),
+        languages = listOf("en"),
+        copyright = false,
+        mediaType = "Text",
+        formats = mapOf(
+            "image/jpeg" to "https://www.gutenberg.org/cache/epub/64317/pg64317.cover.medium.jpg",
+        ),
+        downloadCount = 1000,
+    )
+    BookCover(book)
+}
+
+@Preview
+@Composable
 fun BookRowItemPreview() {
     val book = Book(
         id = 1,

@@ -2,16 +2,9 @@ package com.veritalex.feature.home.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.IntrinsicSize
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
-import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -19,15 +12,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.paging.PagingData
 import com.veritalex.core.data.models.Book
 import com.veritalex.core.data.models.Person
 import com.veritalex.feature.home.R
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flowOf
 
 @Composable
-fun ContinueReadingSection(
-    book: Book,
+fun RecommendedBooksSection(
+    books: Flow<PagingData<Book>>,
     modifier: Modifier = Modifier,
-    onClick: () -> Unit = {},
 ) {
     Column(
         modifier =
@@ -37,42 +32,15 @@ fun ContinueReadingSection(
                 .padding(vertical = 24.dp, horizontal = 16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
-        val continueReading = stringResource(R.string.continue_reading)
+        val continueReading = stringResource(R.string.recommended_books)
         Text(text = continueReading, style = MaterialTheme.typography.headlineSmall)
-
-        Row(
-            modifier = Modifier.height(IntrinsicSize.Min),
-            horizontalArrangement = Arrangement.spacedBy(16.dp),
-        ) {
-            BookCover(book = book, modifier = Modifier.width(110.dp))
-
-            Column(modifier = Modifier.fillMaxHeight()) {
-                Text(
-                    text = book.title,
-                    style = MaterialTheme.typography.titleLarge,
-                    maxLines = 3, // Allow title to wrap if long
-                )
-                Spacer(modifier = Modifier.height(4.dp))
-                book.authors.firstOrNull()?.name?.let {
-                    Text(
-                        text = it,
-                        style = MaterialTheme.typography.bodyMedium,
-                    )
-                }
-
-                Spacer(modifier = Modifier.weight(1f))
-
-                Button(onClick = onClick) {
-                    Text(text = continueReading, style = MaterialTheme.typography.labelLarge)
-                }
-            }
-        }
+        BooksLazyRowPaging(books = books)
     }
 }
 
 @Preview
 @Composable
-fun ContinueReadingSectionPreview() {
+fun RecommendedBooksSectionPreview() {
     val book =
         Book(
             id = 1,
@@ -94,5 +62,8 @@ fun ContinueReadingSectionPreview() {
             formats = mapOf("image/jpeg" to "https://www.gutenberg.org/cache/epub/1342/pg1342.cover.small.jpg"),
             downloadCount = 50000,
         )
-    ContinueReadingSection(book = book)
+    val books = flowOf(PagingData.from(listOf(book, book, book, book)))
+    RecommendedBooksSection(
+        books = books,
+    )
 }
