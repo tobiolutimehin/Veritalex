@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="book_cover_content_description">Book. %1$s by %2$s</string>
+    <string name="unknown_author">Unknown author</string>
+    <string name="continue_reading">Continue Reading</string>
+    <string name="recommended_books">Recommended Books</string>
+    <string name="saved_books">Saved books</string>
+</resources>
