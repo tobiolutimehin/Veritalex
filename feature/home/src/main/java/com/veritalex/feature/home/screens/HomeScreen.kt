@@ -69,16 +69,13 @@ fun BooksLazyRow(
     books: List<Book>,
     modifier: Modifier = Modifier,
 ) {
-    val items = books
-    items.let {
-        LazyRow(
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
-            modifier = modifier,
-            contentPadding = PaddingValues(horizontal = 16.dp),
-        ) {
-            items(books) { book ->
-                BookRowItem(book = book)
-            }
+    LazyRow(
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+        modifier = modifier,
+        contentPadding = PaddingValues(horizontal = 16.dp),
+    ) {
+        items(books) { book ->
+            BookRowItem(book = book)
         }
     }
 }
@@ -136,21 +133,14 @@ val tabsList =
     listOf(
         TabItem(
             "Home",
-            {
-//        Text(text = "Home")
-            },
         ),
         TabItem(
             "My saved books",
-            {
-//        Text(text = "My saved books")
-            },
         ),
     )
 
 data class TabItem(
     val title: String,
-    val screen: @Composable () -> Unit,
     val icon: ImageVector? = null,
 )
 
