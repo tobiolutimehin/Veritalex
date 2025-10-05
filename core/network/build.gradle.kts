@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.veritalex.core.network"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 30

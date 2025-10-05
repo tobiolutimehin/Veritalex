@@ -34,11 +34,10 @@ ui-text-google-fonts = "1.7.7"
 
 [libraries]
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation-compose" }
-androidx-paging-common-android = { group = "androidx.paging", name = "paging-common", version = "paging-ktx-ver" }
 androidx-paging-common-ktx = { group = "androidx.paging", name = "paging-common", version = "paging-ktx-ver" }
 androidx-paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "paging-compose" }
 androidx-paging-runtime-ktx = { group = "androidx.paging", name = "paging-runtime-ktx", version.ref = "paging-ktx-ver" }
-androidx-room-paging = { group = "androidx.room", name = "room-paging", version.ref = "room"}
+androidx-room-paging = { group = "androidx.room", name = "room-paging", version.ref = "room" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil-compose" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -82,12 +81,12 @@ hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testi
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 room-core = { module = "androidx.room:room-ktx", version.ref = "room" }
-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room"}
-jakewharton-serialization-converter = { module="com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "jakewharton-converter" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+jakewharton-serialization-converter = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "jakewharton-converter" }
 squareup-okhttp3 = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "firebase-crashlytics-buildtools", version = "2.9.9" }
-google-gson = { module = "com.google.code.gson:gson", version.ref="google-gson"}
-firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom"}
+google-gson = { module = "com.google.code.gson:gson", version.ref = "google-gson" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
 androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "ui-text-google-fonts" }
 
@@ -100,7 +99,7 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-gms-google-services  = { id = "com.google.gms.google-services", version.ref = "google-services" }
+gms-google-services = { id = "com.google.gms.google-services", version.ref = "google-services" }
 
 
 #[bundles]

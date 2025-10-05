@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.veritalex.core.designsystem"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 30
