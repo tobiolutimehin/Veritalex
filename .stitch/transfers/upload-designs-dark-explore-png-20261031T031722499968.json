@@ -1,0 +1,125 @@
+{
+  "results": [
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/3964645869554813434",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1XqmF8A7AzzRCt0veLoZiVWgHlkqwraNyisI1vbfLrrIX1A65VDq77Q1zGdNivqj1dZHpm4o1XS_te7jFFGUdY1AcphN_t183hKffnwVfXvEF1zszp5kUJHysW60krPA5QQMadk3JrKQnMMwt1Rrx62HDbEgQ3i3s-6itGdWd6GkepNxexPr9f1h5tnDB3rIc2QI425rI35VT-k6_T862cx-U28UBj-O2f9ZIa5eZu7aXHh8oCtz9BW1IXMNuFgNOFIECvTAFJExA"
+        },
+        "id": "3964645869554812561",
+        "width": "780",
+        "height": "1830",
+        "title": "Clarity / dark-explore",
+        "name": "projects/6233788376335662642/screens/3964645869554812561",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/3964645869554813703",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1UkUQmCYnH9_ogbwOmbj83Ii-tp0iKuxEvrh5VQdNqS2uiq4_xAEuyRdOFovmrfI4mj4sr_qwnTXchlmSROXtlXkub2U1JK_y5aj7myo7cN3-zaIIgt6Mbkjpc383m9JDZl-JeX2P0RftFE2OyWWsreQTz0klPlSGaVdRxoJOeXXqTaFB8avJ7thBfszjF6Ms1KOanQLSM6otl8Cz3tlvQ3CuOU5fVD3nzKnskQJ45y4GHMQw_LXIYfsu-JZEaleGvjEMUIeJnL"
+        },
+        "id": "3964645869554812830",
+        "width": "780",
+        "height": "1830",
+        "title": "Clarity / explore",
+        "name": "projects/6233788376335662642/screens/3964645869554812830",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/3964645869554813972",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1WX3VGaoVefsi9htFRLb_a--ZqPF-0w3tFZYgcbX-m6WuNFHPIpM1pY2LuiwMo9L9jjfxGftWcnv5O4qFXXlWYnAqKvi0viR61DoPucvlNpiMFJJJSQpE7KQb53xBs_sWX750LUIPWptjwXX6ljOgkgfyEcYV7wz1KtWrDCK-aJrpLlYxdBs-o5kfqU3foRLsv66u8QN2TxpaYH2SI4EsG6TOhRmMaZlgM2WgQGcNlmHyLdtFKo0p2LoW6bTmdKXGIItMv7hfho"
+        },
+        "id": "3964645869554813099",
+        "width": "780",
+        "height": "2032",
+        "title": "Clarity / reader-appearance",
+        "name": "projects/6233788376335662642/screens/3964645869554813099",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/3964645869554814241",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1VTiq3GT2NYOkTsTLMhvatpSixpin1EGK0Wa2HDONhSQ2Csa2nVJCPncz3VV_nXO31dFcBBkaQkpLBJ8COAXOlHcW8cVgB0sOTtali2rG30Q-fMvl9GVmqzF3WvrCrmLhog2UsRlQ5KrIVERvp5JywmHiPPwHVzGzmW9VqcR59ia4cAkoRfWL-4xdKLuWCj4ibdq7HkU3iVl593L0EjYZkIQqpo7FYT_V9n0HjbCY6M_ICb2xBFjjNJqIIdtIdhH5LjJtwygmXp"
+        },
+        "id": "3964645869554813368",
+        "width": "780",
+        "height": "1830",
+        "title": "Clarity / dark-book-details",
+        "name": "projects/6233788376335662642/screens/3964645869554813368",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    }
+  ],
+  "screenInstances": [
+    {
+      "id": "3964645869554812561",
+      "sourceScreen": "projects/6233788376335662642/screens/3964645869554812561",
+      "x": 291204,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "3964645869554812830",
+      "sourceScreen": "projects/6233788376335662642/screens/3964645869554812830",
+      "x": 291694,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "3964645869554813099",
+      "sourceScreen": "projects/6233788376335662642/screens/3964645869554813099",
+      "x": 292184,
+      "width": 390,
+      "height": 1016
+    },
+    {
+      "id": "3964645869554813368",
+      "sourceScreen": "projects/6233788376335662642/screens/3964645869554813368",
+      "x": 292674,
+      "width": 390,
+      "height": 915
+    }
+  ],
+  "transfer": {
+    "files": [
+      "designs/dark-explore.png",
+      "designs/explore.png",
+      "designs/reader-appearance.png",
+      "designs/dark-book-details.png"
+    ],
+    "prefix": "Clarity / ",
+    "sha256": {
+      "designs/dark-explore.png": "b90ec0d0ccea9459d4e0abf441e8d64ad524998a1b2359729c87db1f2fa58a03",
+      "designs/explore.png": "b286e8011a24d8ac51a1cd76bdc8493aef50c7f1ae2481db1d1d77cf2052b48d",
+      "designs/reader-appearance.png": "207a19c8d2cc1e9da8e831e9e851288c1b8bdde3a414f7d2229eb419f5714cca",
+      "designs/dark-book-details.png": "306165443d62a5dd692da0a424b195107028267e102659e2b5a94649d85baf9a"
+    }
+  }
+}

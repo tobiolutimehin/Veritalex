@@ -1,6 +1,6 @@
 # Veritalex MVP design handoff
 
-The package describes a personal Android reading app. Home, Explore and Library are the three primary destinations. Library contains Books, Shelves and Journal. Account & sync is reached through the Settings toolbar action. The approved visual rules live in [DESIGN.md](DESIGN.md).
+The package describes a personal Android reading app. Home, Explore and Library are the three primary destinations. Library contains Books, Shelves and Journal. Account & sync is reached through the Settings toolbar action. The approved visual rules live in [DESIGN.md](DESIGN.md). The clarity refinement and four before/after comparisons are in [the revision review](revisions/clarity-v1/index.html).
 
 Open [index.html](index.html) for the browsable state gallery, [prototype.html](prototype.html) for the simulated walkthrough and [WIREFLOW.md](WIREFLOW.md) for the base scenario transition map. [screens.json](screens.json) is the stable-ID source of truth. Every manifest state has a standalone grayscale wireframe and a companion light state design. Bespoke Stitch reference screens are indexed separately from those complete state designs.
 
@@ -76,8 +76,14 @@ No goals, reminders, social feed, payments, audio or user-imported books are in 
 
 ## Browser verification and exports
 
-The final package includes 14 light phone references, 7 Night references, and 4 tablet references generated in Stitch. Some references include approved final content, attribution and typography refinements; their local HTML and PNGs are the handoff versions. Complete state designs and boards are self-contained; raw bespoke Stitch HTML may load its original CDN styles or fonts, while PNGs work offline.
+The final package includes 14 light phone references, 7 Night references, and 4 tablet references generated in Stitch. Some references include approved final content, attribution and typography refinements; their local HTML and PNGs are the handoff versions. Complete state designs and boards are self-contained; the current bespoke reference HTML embeds its fonts, icons and styles, so both HTML and PNG references work offline. Original before snapshots retain the earlier export source.
 
-Browser QA uses Playwright and an installed Chromium/Chrome. Run `node .stitch/scripts/render_package.mjs audit`, `flows`, `large-text`, `boards`, or `gallery` with the localhost server above running. Set `VERITALEX_BASE_URL` for a different server URL, `VERITALEX_CHROME` for a browser executable, and `VERITALEX_PLAYWRIGHT` for a module path when needed. The renderer discovers the bundled runtime on this workstation as a fallback. Audit failures return a nonzero exit code. Generated QA JSON and screenshots are in `qa/`.
+Browser QA uses Playwright and an installed Chromium/Chrome. Run `node .stitch/scripts/render_package.mjs audit`, `flows`, `large-text`, `boards`, `references`, or `gallery` with the localhost server above running. Set `VERITALEX_BASE_URL` for a different server URL, `VERITALEX_CHROME` for a browser executable, and `VERITALEX_PLAYWRIGHT` for a module path when needed. The renderer discovers the bundled runtime on this workstation as a fallback. Audit failures return a nonzero exit code. Generated QA JSON and screenshots are in `qa/`.
 
 Rebuild reference metadata with Python 3.11+ using `python3.11 .stitch/scripts/index_exports.py`, then rebuild the gallery. Upload receipts preserve remote IDs and hashes; `publish_boards.py` resumes identical saved batches. The transfer utility reads the existing Stitch connection in memory and does not include credentials in this package.
+
+## Clarity revision
+
+The owner approved the intuitiveness audit on October 30, 2026. Home, Book Details, Library and Journal establish the revised hierarchy; related light, dark and tablet references follow the same action and copy rules. Reading access is state-specific: Download to read, Start reading or Continue reading. Saving, device downloads and reading status stay distinct. Shelf overflow opens actual Rename/Delete choices. Personal prose, notes and consequential account/recovery explanations remain. Stable screen IDs are preserved. See [the change record](revisions/clarity-v1/CHANGES.md) for validation and limits.
+
+Reference links can enter the bounded prototype with validated catalogue `book`, existing `shelf`, or `position=device|account` context. These parameters select review fixtures; they are not production deep links or storage/authentication behavior. Nonselected sample Journal records in references stay static when the prototype has no corresponding record.

@@ -1,0 +1,106 @@
+{
+  "results": [
+    {
+      "screen": {
+        "htmlCode": {
+          "name": "projects/6233788376335662642/files/8293120701598617233",
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBKNARIhYXBwX2NvbXBhbmlvbl91c2VyX3VwbG9hZGVkX2ZpbGVzGmgKM3VzZXJfdXBsb2FkZWRfaHRtbF8wMDA2NWYxYTViMmNlZDA3MDdjNGVkNTMzYTI5OWE0NBILEgcQh5SsssAKGAGSASMKCnByb2plY3RfaWQSFUITNjIzMzc4ODM3NjMzNTY2MjY0Mg&filename=&opi=96797242",
+          "mimeType": "text/markdown"
+        },
+        "id": "8293120701598617228",
+        "generatedBy": "UserUploadedDesignMd: stitch::code-to-design",
+        "width": "780",
+        "height": "1768",
+        "title": "Handoff / HANDOFF",
+        "name": "projects/6233788376335662642/screens/8293120701598617228",
+        "theme": {},
+        "screenType": "DOCUMENT",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE",
+          "displayMode": "MARKDOWN"
+        }
+      }
+    },
+    {
+      "screen": {
+        "htmlCode": {
+          "name": "projects/6233788376335662642/files/8293120701598617258",
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBKNARIhYXBwX2NvbXBhbmlvbl91c2VyX3VwbG9hZGVkX2ZpbGVzGmgKM3VzZXJfdXBsb2FkZWRfaHRtbF8wMDA2NWYxYTViMmNlZDE0MDdjNGVkNTMzYTI5OWE0NBILEgcQh5SsssAKGAGSASMKCnByb2plY3RfaWQSFUITNjIzMzc4ODM3NjMzNTY2MjY0Mg&filename=&opi=96797242",
+          "mimeType": "text/markdown"
+        },
+        "id": "8293120701598617253",
+        "generatedBy": "UserUploadedDesignMd: stitch::code-to-design",
+        "width": "780",
+        "height": "1768",
+        "title": "Handoff / WIREFLOW",
+        "name": "projects/6233788376335662642/screens/8293120701598617253",
+        "theme": {},
+        "screenType": "DOCUMENT",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE",
+          "displayMode": "MARKDOWN"
+        }
+      }
+    },
+    {
+      "screen": {
+        "htmlCode": {
+          "name": "projects/6233788376335662642/files/8293120701598617283",
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBKNARIhYXBwX2NvbXBhbmlvbl91c2VyX3VwbG9hZGVkX2ZpbGVzGmgKM3VzZXJfdXBsb2FkZWRfaHRtbF8wMDA2NWYxYTViMmNlZDE3MDdjNGVkNTMzYTI5OWE0NBILEgcQh5SsssAKGAGSASMKCnByb2plY3RfaWQSFUITNjIzMzc4ODM3NjMzNTY2MjY0Mg&filename=&opi=96797242",
+          "mimeType": "text/markdown"
+        },
+        "id": "8293120701598617278",
+        "generatedBy": "UserUploadedDesignMd: stitch::code-to-design",
+        "width": "780",
+        "height": "1768",
+        "title": "Handoff / DESIGN",
+        "name": "projects/6233788376335662642/screens/8293120701598617278",
+        "theme": {},
+        "screenType": "DOCUMENT",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE",
+          "displayMode": "MARKDOWN"
+        }
+      }
+    }
+  ],
+  "screenInstances": [
+    {
+      "id": "8293120701598617228",
+      "sourceScreen": "projects/6233788376335662642/screens/8293120701598617228",
+      "x": 307724,
+      "width": 390,
+      "height": 884
+    },
+    {
+      "id": "8293120701598617253",
+      "sourceScreen": "projects/6233788376335662642/screens/8293120701598617253",
+      "x": 308214,
+      "width": 390,
+      "height": 884
+    },
+    {
+      "id": "8293120701598617278",
+      "sourceScreen": "projects/6233788376335662642/screens/8293120701598617278",
+      "x": 308704,
+      "width": 390,
+      "height": 884
+    }
+  ],
+  "transfer": {
+    "files": [
+      "HANDOFF.md",
+      "WIREFLOW.md",
+      "DESIGN.md"
+    ],
+    "prefix": "Handoff / ",
+    "sha256": {
+      "HANDOFF.md": "0e43465f535d040d27fd8ae14c9104726c1f2ed38b85ebee1770da4117b41a9c",
+      "WIREFLOW.md": "a7beb0cec7fed72d3a2352e178cf72e34d3be70edd1f5520bc5494829dbf7b7a",
+      "DESIGN.md": "55f1b09d0bb9dd782327e4c0b1cda5fdee2d4220b038ec7279f7de8d98f43709"
+    }
+  }
+}

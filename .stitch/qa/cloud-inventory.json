@@ -1,7 +1,11 @@
 {
+  "revision": "clarity-v1",
   "references_on_canvas": 25,
+  "reference_html_on_canvas": 25,
   "board_assets_on_canvas": 48,
   "missing_references": [],
+  "missing_reference_html": [],
   "missing_boards": [],
-  "changed_board_files": []
+  "changed_local_files": [],
+  "passed": true
 }

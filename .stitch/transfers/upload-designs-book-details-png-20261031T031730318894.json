@@ -1,0 +1,125 @@
+{
+  "results": [
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/2097656440266786476",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1VwIvEZi67bNm3zh9wnnDdYntBkzW4R6Sk3_x1_ePlLFWWRXdyn_syFL8Yye5Nbn0Z-vMt00LKGqN5xp-VncaLszuYchwPDOtZ7UQ1EqP9_7KfUDPKIwQ6037iNnz8y8TCjJUjypXEUs3zPnIixsk348AcaVdUsOnpGR_W8HNCuk-zw1ZSFHn5AIXISVlkhMGWBOo_R4sXSNxuT4ZDVsiEUsGknANJCoTt7gxDS6lAn_Nit7wKzxzg1wRnjb2L50fRa9MkFVh35Rw"
+        },
+        "id": "2097656440266785997",
+        "width": "780",
+        "height": "1830",
+        "title": "Clarity / book-details",
+        "name": "projects/6233788376335662642/screens/2097656440266785997",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/2097656440266784775",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1VFEfzCllsghQgPaeJYfLGuQSr_pI2R9aHtnVgZZPncFS5QNTgslylzvRsSgGG8TlOajHeti-8383T5AvtlhDC1H__tvd6-xWduPUqt5nXeStLQyHI83JvogqrVSvdfGSzzROvvuL7gF6hikapBo5CALN2l8HtkEPn1s5SMiZJHv7oXeOQK0vKRTidN2BduUYR0wy4UJ-wtc9tWJQfMGE9go9sY0OxLeh4AekZ85qifVmT8kRtuwgnB3ReINUKRb_z05OjmgJdnJQ"
+        },
+        "id": "2097656440266788392",
+        "width": "780",
+        "height": "1830",
+        "title": "Clarity / welcome",
+        "name": "projects/6233788376335662642/screens/2097656440266788392",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/2097656440266787170",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1VjrLUhkcfoHHrz_esHCq71sFqIy1UBES8EVhq4410oTp1edxJEO3VjeJ-NE45itvHiaHqG2o1M18Lurj2VKzNnfGdj3DmW05VNRW_r8DrGq5YIMSV4hTOV0KOysW3NYFsRo-SGYNGjDwVryBG_jv8KCIB3zmjmBGErhdzgHkZXf5l18kAGR7A7UKL1o7bfAula0vrlB4-P09dElde_EpA8mq7x7dvm81eLpk0mIkR7C33ePQcqE1VqArhg6SKrsosrElcyK9hbEA"
+        },
+        "id": "2097656440266786691",
+        "width": "780",
+        "height": "1830",
+        "title": "Clarity / dark-settings",
+        "name": "projects/6233788376335662642/screens/2097656440266786691",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/2097656440266785469",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1XZXJMWJYhWroM-qn-aJRxZxDFBclAgtWQKPgVMWOG5GgZQJXR-4zrydH_CIdfQPmT_zxqidcrUolMfwBwIN-oXgMuYauM8cCZgikHwHDVOW2vOnFo0f7f2mMGAgjiRArZ01Wo4H7lAlbDgCOnVCQwx0wG4o8bnPs12R5-bH27a2WspRmUeSizP_huWWZMCmMq-0n07DUXPpPWfsQQlL810cxs-XuY5bfsX4Q5VEu1FI7W-sfcDOj_ZGBZGNMCcDWctDdATBpryow"
+        },
+        "id": "2097656440266784990",
+        "width": "2560",
+        "height": "2048",
+        "title": "Clarity / tablet-home",
+        "name": "projects/6233788376335662642/screens/2097656440266784990",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    }
+  ],
+  "screenInstances": [
+    {
+      "id": "2097656440266785997",
+      "sourceScreen": "projects/6233788376335662642/screens/2097656440266785997",
+      "x": 298864,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "2097656440266788392",
+      "sourceScreen": "projects/6233788376335662642/screens/2097656440266788392",
+      "x": 299354,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "2097656440266786691",
+      "sourceScreen": "projects/6233788376335662642/screens/2097656440266786691",
+      "x": 299844,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "2097656440266784990",
+      "sourceScreen": "projects/6233788376335662642/screens/2097656440266784990",
+      "x": 300334,
+      "width": 1280,
+      "height": 1024
+    }
+  ],
+  "transfer": {
+    "files": [
+      "designs/book-details.png",
+      "designs/welcome.png",
+      "designs/dark-settings.png",
+      "designs/tablet-home.png"
+    ],
+    "prefix": "Clarity / ",
+    "sha256": {
+      "designs/book-details.png": "1a158f1ee9b3c71d4b43024c0c0c01341b7d3ac9ab38d1bf325cb6be288e620e",
+      "designs/welcome.png": "8bec258305279db4c264afe0f9bfff246b15d3ae2e54bdd9c7ed9302bd2f99e4",
+      "designs/dark-settings.png": "535d01415e987e9f097e680cc579f8d7af4a3669b70aaee64bf49bdef7f84c72",
+      "designs/tablet-home.png": "996603cc6866b79a5f26c2310299d0aeb65dfe808cdeceb1dacba2bac96dc92b"
+    }
+  }
+}

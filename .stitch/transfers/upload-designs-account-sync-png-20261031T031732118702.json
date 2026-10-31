@@ -1,0 +1,41 @@
+{
+  "results": [
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/12526142160928120404",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1Wr7rzgnOly3dy7bQMIrzNf5zS1CEQNd-Ug_Ssol4oBqepAiopQGcCAzGOCuVViEAPbhbHYQuQqnDVbFfsmxz7jjLu0lg2xDW33-_rXSLw7pE-3rHBtBRtGRewGuvTMkxN3l_T5VjJfh1qpyWQuo1Fh1PDPZfxc4nVoskv6xNGhrK6yQT0TdGhq4u8BdYopQJagzCb0rGuHqVOk8JiJGfJ5UzcPDdwvqR83qBOVYSbWT48I5PLjut5fP4kCDFgtcZs1iE2UvIWH"
+        },
+        "id": "12526142160928117285",
+        "width": "780",
+        "height": "1830",
+        "title": "Clarity / account-sync",
+        "name": "projects/6233788376335662642/screens/12526142160928117285",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    }
+  ],
+  "screenInstances": [
+    {
+      "id": "12526142160928117285",
+      "sourceScreen": "projects/6233788376335662642/screens/12526142160928117285",
+      "x": 301714,
+      "width": 390,
+      "height": 915
+    }
+  ],
+  "transfer": {
+    "files": [
+      "designs/account-sync.png"
+    ],
+    "prefix": "Clarity / ",
+    "sha256": {
+      "designs/account-sync.png": "2c23e92228b73e7d7a69ea60bf55c96e55e4cca97e4a91bad969dd6cedf28f7c"
+    }
+  }
+}

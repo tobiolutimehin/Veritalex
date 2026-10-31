@@ -1,0 +1,16 @@
+{
+  "specification": "PASS",
+  "quality": "PASS",
+  "reviewed": "2026-10-30",
+  "states": 88,
+  "transitions": 437,
+  "references": 25,
+  "material_findings_remaining": [],
+  "corrected": [
+    "Context-aware book, subject, shelf and account links",
+    "Consistent Reader tools and progress semantics",
+    "Truthful Book fixture states",
+    "Tablet bookmark row/link follows removal and addition"
+  ],
+  "scope": "Design artifact and simulated prototype review; no user usability study or native Android review."
+}

@@ -3,7 +3,7 @@
   "title": "Veritalex \u2014 Reading, Refined",
   "visibility": "PRIVATE",
   "createTime": "2026-10-30T08:25:29.991824Z",
-  "updateTime": "2026-10-30T09:41:02.472049Z",
+  "updateTime": "2026-10-31T03:19:20.725906Z",
   "projectType": "PROJECT_DESIGN",
   "thumbnailScreenshot": {
     "name": "projects/6233788376335662642/files/0c14d787bffa4073bd185ec60ee574ce",
@@ -20,63 +20,63 @@
     "bodyFont": "ROBOTO_FLEX",
     "labelFont": "ROBOTO_FLEX",
     "namedColors": {
-      "on-surface": "#241A14",
-      "primary": "#6c390b",
-      "primary_fixed": "#ffdcc5",
-      "surface_bright": "#fff8f5",
-      "primary_fixed_dim": "#ffb782",
-      "surface_variant": "#ede0d9",
-      "surface-container": "#F5E9DF",
-      "tertiary_fixed_dim": "#86d2e4",
-      "surface_dim": "#e4d8d1",
+      "inverse_surface": "#362f2b",
+      "surface-paper": "#FFF8F3",
       "error": "#ba1a1a",
-      "tertiary_container": "#006878",
-      "surface_container": "#f9ebe4",
       "surface_container_highest": "#ede0d9",
-      "on-primary-container": "#2D1606",
-      "outline_variant": "#d7c3b6",
-      "outline": "#857469",
-      "primary_container": "#895021",
-      "secondary_fixed": "#f9ddc9",
-      "on_secondary_fixed_variant": "#554334",
-      "on_primary_fixed": "#301400",
+      "on_primary_fixed_variant": "#6d390b",
+      "inverse_on_surface": "#fbeee7",
+      "tertiary_container": "#006878",
+      "surface_dim": "#e4d8d1",
+      "surface_bright": "#fff8f5",
+      "secondary_fixed_dim": "#dcc2ae",
+      "surface_container_low": "#fef1ea",
       "on_primary_container": "#ffcead",
       "tertiary_fixed": "#a6eeff",
-      "background": "#fff8f5",
-      "on-surface-variant": "#55483D",
-      "on_tertiary_fixed": "#001f25",
-      "surface_container_lowest": "#ffffff",
-      "tertiary-container": "#E1E8B8",
-      "surface_tint": "#895021",
-      "on_primary_fixed_variant": "#6d390b",
-      "secondary_fixed_dim": "#dcc2ae",
-      "inverse_surface": "#362f2b",
-      "on_secondary_fixed": "#27190c",
-      "tertiary": "#5D633D",
-      "on_surface_variant": "#52443a",
       "highlight": "#F6E5A8",
-      "on_secondary_container": "#756050",
-      "inverse_on_surface": "#fbeee7",
-      "secondary": "#6e5b4b",
+      "background": "#fff8f5",
+      "on_secondary_fixed": "#27190c",
+      "outline": "#857469",
+      "surface-container-low": "#FCF1E8",
       "surface_container_high": "#f3e6df",
-      "secondary_container": "#f9ddc9",
-      "on_surface": "#201a16",
       "on_tertiary_fixed_variant": "#004e5b",
-      "surface-paper": "#FFF8F3",
-      "surface-container-high": "#EEE1D5",
-      "on_error": "#ffffff",
-      "surface_container_low": "#fef1ea",
-      "inverse_primary": "#ffb782",
-      "on_error_container": "#93000a",
-      "on_tertiary": "#ffffff",
-      "on_primary": "#ffffff",
-      "on_tertiary_container": "#98e4f7",
-      "on_background": "#201a16",
-      "surface": "#fff8f5",
       "error_container": "#ffdad6",
-      "on_secondary": "#ffffff",
+      "secondary": "#6e5b4b",
+      "surface_container": "#f9ebe4",
+      "on-surface": "#241A14",
+      "primary_container": "#895021",
+      "on_surface_variant": "#52443a",
+      "on_tertiary_container": "#98e4f7",
       "primary-container": "#FFDCBF",
-      "surface-container-low": "#FCF1E8"
+      "on_secondary_fixed_variant": "#554334",
+      "on_primary_fixed": "#301400",
+      "surface-container-high": "#EEE1D5",
+      "surface_tint": "#895021",
+      "on_secondary": "#ffffff",
+      "on_error_container": "#93000a",
+      "primary_fixed_dim": "#ffb782",
+      "on_error": "#ffffff",
+      "surface_variant": "#ede0d9",
+      "tertiary-container": "#E1E8B8",
+      "surface_container_lowest": "#ffffff",
+      "on_tertiary": "#ffffff",
+      "primary_fixed": "#ffdcc5",
+      "on_secondary_container": "#756050",
+      "primary": "#6c390b",
+      "surface-container": "#F5E9DF",
+      "on_primary": "#ffffff",
+      "outline_variant": "#d7c3b6",
+      "tertiary_fixed_dim": "#86d2e4",
+      "inverse_primary": "#ffb782",
+      "secondary_container": "#f9ddc9",
+      "tertiary": "#5D633D",
+      "on-surface-variant": "#55483D",
+      "on_background": "#201a16",
+      "on-primary-container": "#2D1606",
+      "on_surface": "#201a16",
+      "secondary_fixed": "#f9ddc9",
+      "on_tertiary_fixed": "#001f25",
+      "surface": "#fff8f5"
     },
     "designMd": "---\nname: Veritalex\ncolors:\n  surface: '#fff8f5'\n  surface-dim: '#e4d8d1'\n  surface-bright: '#fff8f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#FCF1E8'\n  surface-container: '#F5E9DF'\n  surface-container-high: '#EEE1D5'\n  surface-container-highest: '#ede0d9'\n  on-surface: '#241A14'\n  on-surface-variant: '#55483D'\n  inverse-surface: '#362f2b'\n  inverse-on-surface: '#fbeee7'\n  outline: '#857469'\n  outline-variant: '#d7c3b6'\n  surface-tint: '#895021'\n  primary: '#6c390b'\n  on-primary: '#ffffff'\n  primary-container: '#FFDCBF'\n  on-primary-container: '#2D1606'\n  inverse-primary: '#ffb782'\n  secondary: '#6e5b4b'\n  on-secondary: '#ffffff'\n  secondary-container: '#f9ddc9'\n  on-secondary-container: '#756050'\n  tertiary: '#5D633D'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#E1E8B8'\n  on-tertiary-container: '#98e4f7'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdcc5'\n  primary-fixed-dim: '#ffb782'\n  on-primary-fixed: '#301400'\n  on-primary-fixed-variant: '#6d390b'\n  secondary-fixed: '#f9ddc9'\n  secondary-fixed-dim: '#dcc2ae'\n  on-secondary-fixed: '#27190c'\n  on-secondary-fixed-variant: '#554334'\n  tertiary-fixed: '#a6eeff'\n  tertiary-fixed-dim: '#86d2e4'\n  on-tertiary-fixed: '#001f25'\n  on-tertiary-fixed-variant: '#004e5b'\n  background: '#fff8f5'\n  on-background: '#201a16'\n  surface-variant: '#ede0d9'\n  surface-paper: '#FFF8F3'\n  highlight: '#F6E5A8'\ntypography:\n  headline-lg:\n    fontFamily: Roboto Flex\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: 40px\n  headline-md:\n    fontFamily: Roboto Flex\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: 32px\n  headline-sm:\n    fontFamily: Roboto Flex\n    fontSize: 20px\n    fontWeight: '500'\n    lineHeight: 28px\n  title-md:\n    fontFamily: Roboto Flex\n    fontSize: 16px\n    fontWeight: '500'\n    lineHeight: 24px\n  body-lg:\n    fontFamily: Roboto Flex\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  body-sm:\n    fontFamily: Roboto Flex\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\n  label-md:\n    fontFamily: Roboto Flex\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\n  reader-prose:\n    fontFamily: Literata\n    fontSize: 19px\n    fontWeight: '400'\n    lineHeight: 32px\n  reader-chapter:\n    fontFamily: Literata\n    fontSize: 26px\n    fontWeight: '500'\n    lineHeight: 34px\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  gutter: 20px\n  margin: 20px\n  space-xs: 4px\n  space-sm: 8px\n  space-md: 12px\n  space-lg: 16px\n  space-xl: 24px\n  space-xxl: 32px\n---\n\n## Brand & Style\n\nThis design system establishes a calm, personal reading sanctuary rooted in the principles of Material 3 and Material You. The brand personality is scholarly, deliberate, warm, and focused entirely on the intimacy of text. It evokes the quiet focus of a personal study or a well-lit library alcove. \n\nThe aesthetic style is a refined, content-first **Corporate / Modern** execution tailored for literature:\n- **Atmospheric Warmth:** Built on warm paper tones and rich amber-brown seed colors rather than cold corporate neutrals.\n- **Utilitarian Clarity:** Strict adherence to native Android component behavior with generous whitespace and zero decorative fluff.\n- **Distraction-Free Focus:** Complete absence of marketing heroes, dashboard metrics, social feeds, or gradients.\n\n## Colors\n\nThe color palette is derived from an amber-brown brand seed (`#895021`), translating physical book-binding and warm paper into digital screens. The interface operates on warm paper surfaces that reduce eye strain during extended reading sessions.\n\n- **Primary:** Deep amber brown (`#895021`), used for primary actions, selected navigation states, and key interactive elements.\n- **Surfaces:** A progression of warm paper tones (`#FFF8F3` down to `#EEE1D5`) providing subtle tonal layering without relying on heavy borders or artificial elevation.\n- **Ink & Legibility:** Dark ink (`#241A14`) on-surface colors guarantee high contrast and crisp readability.\n- **System Adaptability:** Fully supports dynamic color systems and system light/dark modes, with independent Light, Sepia, and Dark themes available within the dedicated reading environment.\n\n## Typography\n\nTypography strictly bifurcates the application interface from the reading experience:\n- **Interface:** **Roboto Flex** is used exclusively for all app chrome, navigation, lists, headings, and metadata. Headings use medium weights (24/32 and 20/28), while body and supporting labels maintain high legibility at 16/24 and 14/20. Sentence-case labels are preferred.\n- **Book Prose:** **Literata** is reserved solely for actual book prose, chapter headings, and meaningful excerpts. The default reading size is set to a comfortable 19/32 regular grid with generous line height.\n\n## Layout & Spacing\n\nThe layout model follows a fluid Android phone baseline (optimized for 412dp, validating down to 360dp) utilizing edge-to-edge display with safe status and navigation insets. \n\n- **Grid & Gutters:** Content uses 20dp gutters (16dp on compact viewports). \n- **Spacing Rhythm:** Based on a strict 4dp/8dp scale (`4`, `8`, `12`, `16`, `24`, `32dp`), ensuring consistent vertical rhythm between section headers, book rows, and shelves.\n- **Form Factors:** On tablets, the layout expands gracefully using a navigation rail and intentional list/detail panes, restricting the central reading measure to an optimal 60-70 characters per line. Top bars are structured at 64dp and bottom navigation at 80dp plus system insets.\n\n## Elevation & Depth\n\nDepth is conveyed primarily through **Tonal Layers** rather than heavy drop shadows. \n- **Surface Tiers:** UI elements stack cleanly using the warm paper surface container hierarchy (`surface-container-low`, `surface-container`, `surface-container-high`).\n- **Shadows:** Applied strictly as transient overlays for floating action buttons, active bottom sheets, or dialog modals. \n- **Borders & Outlines:** Low-contrast outlines (`#857468`, `#D7C3B4`) bound interactive elements cleanly without card-in-card visual noise.\n\n## Shapes\n\nThe shape language utilizes friendly, approachable rounded geometry that mimics soft paper goods:\n- **Cards & Containers:** Softly rounded with a standard `16dp` radius for book cards and content blocks.\n- **Sheets & Dialogs:** Employs a larger `28dp` corner radius for bottom sheets and modal dialogs.\n- **Book Covers & Imagery:** Strictly maintains a `4dp` subtle rounding on book covers to preserve their authentic portrait ratio (approx. 2:3).\n- **Interactive Controls:** Buttons, chips, and input fields utilize pill shapes or fully rounded pill containers to encourage clear touch targets (minimum 48dp).\n\n## Components\n\nComponents follow native Material 3 guidelines, emphasizing functional clarity and touch ergonomics:\n\n- **Buttons:** Filled, tonal, and text variants with a pill main action shape. All interactive touch targets maintain a strict minimum of 48dp. Icon buttons have explicit 48dp bounds.\n- **Navigation:** Bottom navigation uses labeled destinations with a selected tonal pill indicator. The app features three primary destinations (Home, Explore, Library), with Settings housed as a toolbar action.\n- **Cards & Lists:** `BookCoverCard` components preserve accurate 2:3 portrait dimensions with dignified typeset fallbacks. `BookListRow` and `ShelfRow` components use flat tonal grouping with generous section spacing.\n- **Reader Interface:** Distraction-free text view with access to the `ReaderToolbar` and `ReaderAppearanceSheet` on tap. Supports continuous scroll and page modes seamlessly.\n- **State & Feedback:** Clear, factual status components (`DownloadState`, `SyncStatusRow`, `EmptyState`, `RetryState`) that keep users informed of offline capability and device sync status without exposing backend jargon.",
     "colorVariant": "FIDELITY",
@@ -84,23 +84,11 @@
     "overrideSecondaryColor": "#6f5b4b",
     "spacingScale": 2,
     "typography": {
-      "reader-chapter": {
-        "fontFamily": "Literata",
-        "fontSize": "26px",
-        "fontWeight": "500",
-        "lineHeight": "34px"
-      },
       "body-lg": {
         "fontFamily": "Roboto Flex",
         "fontSize": "16px",
         "fontWeight": "400",
         "lineHeight": "24px"
-      },
-      "reader-prose": {
-        "fontFamily": "Literata",
-        "fontSize": "19px",
-        "fontWeight": "400",
-        "lineHeight": "32px"
       },
       "headline-md": {
         "fontFamily": "Roboto Flex",
@@ -108,17 +96,23 @@
         "fontWeight": "500",
         "lineHeight": "32px"
       },
-      "headline-lg": {
-        "fontFamily": "Roboto Flex",
-        "fontSize": "32px",
-        "fontWeight": "500",
-        "lineHeight": "40px"
-      },
       "label-md": {
         "fontFamily": "Roboto Flex",
         "fontSize": "14px",
         "fontWeight": "500",
         "lineHeight": "20px"
+      },
+      "reader-prose": {
+        "fontFamily": "Literata",
+        "fontSize": "19px",
+        "fontWeight": "400",
+        "lineHeight": "32px"
+      },
+      "headline-sm": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "20px",
+        "fontWeight": "500",
+        "lineHeight": "28px"
       },
       "title-md": {
         "fontFamily": "Roboto Flex",
@@ -126,11 +120,17 @@
         "fontWeight": "500",
         "lineHeight": "24px"
       },
-      "headline-sm": {
+      "headline-lg": {
         "fontFamily": "Roboto Flex",
-        "fontSize": "20px",
+        "fontSize": "32px",
         "fontWeight": "500",
-        "lineHeight": "28px"
+        "lineHeight": "40px"
+      },
+      "reader-chapter": {
+        "fontFamily": "Literata",
+        "fontSize": "26px",
+        "fontWeight": "500",
+        "lineHeight": "34px"
       },
       "body-sm": {
         "fontFamily": "Roboto Flex",
@@ -141,13 +141,13 @@
     },
     "spacing": {
       "space-xxl": "32px",
-      "gutter": "20px",
       "space-xs": "4px",
       "space-md": "12px",
-      "space-xl": "24px",
-      "margin": "20px",
       "space-sm": "8px",
-      "space-lg": "16px"
+      "margin": "20px",
+      "space-lg": "16px",
+      "space-xl": "24px",
+      "gutter": "20px"
     },
     "headlineFontFamily": "Roboto Flex",
     "bodyFontFamily": "Roboto Flex",
@@ -163,12 +163,271 @@
       "label": "UI-08 Welcome & Account Entry - Veritalex"
     },
     {
+      "id": "11215589261446275667",
+      "sourceScreen": "projects/6233788376335662642/screens/11215589261446275667",
+      "x": 153030,
+      "width": 1280,
+      "height": 1186
+    },
+    {
+      "id": "11215589261446277392",
+      "sourceScreen": "projects/6233788376335662642/screens/11215589261446277392",
+      "x": 151650,
+      "width": 1280,
+      "height": 947
+    },
+    {
       "id": "11f336008b294986b1dfd1bc13c2193d",
       "sourceScreen": "projects/6233788376335662642/screens/11f336008b294986b1dfd1bc13c2193d",
       "y": 16406,
       "width": 390,
       "height": 884,
       "label": "UI-13 Downloads & storage - Veritalex"
+    },
+    {
+      "id": "1202936915399382480",
+      "sourceScreen": "projects/6233788376335662642/screens/1202936915399382480",
+      "x": 97988,
+      "width": 3156,
+      "height": 1422
+    },
+    {
+      "id": "1202936915399383434",
+      "sourceScreen": "projects/6233788376335662642/screens/1202936915399383434",
+      "x": 91032,
+      "width": 3156,
+      "height": 1404
+    },
+    {
+      "id": "1202936915399384051",
+      "sourceScreen": "projects/6233788376335662642/screens/1202936915399384051",
+      "x": 101244,
+      "width": 3156,
+      "height": 1464
+    },
+    {
+      "id": "1202936915399385005",
+      "sourceScreen": "projects/6233788376335662642/screens/1202936915399385005",
+      "x": 94288,
+      "width": 3600,
+      "height": 1434
+    },
+    {
+      "id": "12615647576253388675",
+      "sourceScreen": "projects/6233788376335662642/screens/12615647576253388675",
+      "x": 131880,
+      "width": 390,
+      "height": 884
+    },
+    {
+      "id": "12615647576253388916",
+      "sourceScreen": "projects/6233788376335662642/screens/12615647576253388916",
+      "x": 132370,
+      "width": 390,
+      "height": 884
+    },
+    {
+      "id": "12615647576253389157",
+      "sourceScreen": "projects/6233788376335662642/screens/12615647576253389157",
+      "x": 132860,
+      "width": 390,
+      "height": 884
+    },
+    {
+      "id": "12615647576253389398",
+      "sourceScreen": "projects/6233788376335662642/screens/12615647576253389398",
+      "x": 133350,
+      "width": 390,
+      "height": 884
+    },
+    {
+      "id": "13664084156455907756",
+      "sourceScreen": "projects/6233788376335662642/screens/13664084156455907756",
+      "x": 25484,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "13664084156455908254",
+      "sourceScreen": "projects/6233788376335662642/screens/13664084156455908254",
+      "x": 21684,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "13664084156455910053",
+      "sourceScreen": "projects/6233788376335662642/screens/13664084156455910053",
+      "x": 23584,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "13664084156455910551",
+      "sourceScreen": "projects/6233788376335662642/screens/13664084156455910551",
+      "x": 19784,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "15432184873809978430",
+      "sourceScreen": "projects/6233788376335662642/screens/15432184873809978430",
+      "x": 57140,
+      "width": 3156,
+      "height": 1422
+    },
+    {
+      "id": "15432184873809979516",
+      "sourceScreen": "projects/6233788376335662642/screens/15432184873809979516",
+      "x": 50184,
+      "width": 3156,
+      "height": 1404
+    },
+    {
+      "id": "15432184873809979935",
+      "sourceScreen": "projects/6233788376335662642/screens/15432184873809979935",
+      "x": 60396,
+      "width": 3156,
+      "height": 1464
+    },
+    {
+      "id": "15432184873809981021",
+      "sourceScreen": "projects/6233788376335662642/screens/15432184873809981021",
+      "x": 53440,
+      "width": 3600,
+      "height": 1434
+    },
+    {
+      "id": "1554670495747982116",
+      "sourceScreen": "projects/6233788376335662642/screens/1554670495747982116",
+      "x": 142790,
+      "width": 1280,
+      "height": 1024
+    },
+    {
+      "id": "1554670495747983401",
+      "sourceScreen": "projects/6233788376335662642/screens/1554670495747983401",
+      "x": 141320,
+      "width": 390,
+      "height": 1054
+    },
+    {
+      "id": "1554670495747984338",
+      "sourceScreen": "projects/6233788376335662642/screens/1554670495747984338",
+      "x": 141810,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "1554670495747985275",
+      "sourceScreen": "projects/6233788376335662642/screens/1554670495747985275",
+      "x": 142300,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "16118461375848005854",
+      "sourceScreen": "projects/6233788376335662642/screens/16118461375848005854",
+      "x": 4806,
+      "width": 1578,
+      "height": 702
+    },
+    {
+      "id": "16118461375848007421",
+      "sourceScreen": "projects/6233788376335662642/screens/16118461375848007421",
+      "x": 10284,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "16118461375848008264",
+      "sourceScreen": "projects/6233788376335662642/screens/16118461375848008264",
+      "x": 8384,
+      "width": 1800,
+      "height": 717
+    },
+    {
+      "id": "16118461375848009107",
+      "sourceScreen": "projects/6233788376335662642/screens/16118461375848009107",
+      "x": 6484,
+      "width": 1800,
+      "height": 717
+    },
+    {
+      "id": "16719224565033259585",
+      "sourceScreen": "projects/6233788376335662642/screens/16719224565033259585",
+      "x": 158550,
+      "width": 390,
+      "height": 1242
+    },
+    {
+      "id": "16719224565033259934",
+      "sourceScreen": "projects/6233788376335662642/screens/16719224565033259934",
+      "x": 157170,
+      "width": 1280,
+      "height": 1024
+    },
+    {
+      "id": "16719224565033260283",
+      "sourceScreen": "projects/6233788376335662642/screens/16719224565033260283",
+      "x": 155790,
+      "width": 1280,
+      "height": 1024
+    },
+    {
+      "id": "16719224565033260632",
+      "sourceScreen": "projects/6233788376335662642/screens/16719224565033260632",
+      "x": 154410,
+      "width": 1280,
+      "height": 1024
+    },
+    {
+      "id": "1757740575913161296",
+      "sourceScreen": "projects/6233788376335662642/screens/1757740575913161296",
+      "x": 118856,
+      "width": 3600,
+      "height": 1440
+    },
+    {
+      "id": "1757740575913162407",
+      "sourceScreen": "projects/6233788376335662642/screens/1757740575913162407",
+      "x": 129068,
+      "width": 2712,
+      "height": 1422
+    },
+    {
+      "id": "1757740575913163402",
+      "sourceScreen": "projects/6233788376335662642/screens/1757740575913163402",
+      "x": 126256,
+      "width": 2712,
+      "height": 1422
+    },
+    {
+      "id": "1757740575913164397",
+      "sourceScreen": "projects/6233788376335662642/screens/1757740575913164397",
+      "x": 122556,
+      "width": 3600,
+      "height": 1422
+    },
+    {
+      "id": "1762977036465227166",
+      "sourceScreen": "projects/6233788376335662642/screens/1762977036465227166",
+      "x": 160420,
+      "width": 390,
+      "height": 947
+    },
+    {
+      "id": "1762977036465228947",
+      "sourceScreen": "projects/6233788376335662642/screens/1762977036465228947",
+      "x": 160910,
+      "width": 390,
+      "height": 933
+    },
+    {
+      "id": "1762977036465229481",
+      "sourceScreen": "projects/6233788376335662642/screens/1762977036465229481",
+      "x": 159040,
+      "width": 1280,
+      "height": 1316
     },
     {
       "id": "1aa6946029914bd4a7c8a7c4f5fa4039",
@@ -179,6 +438,112 @@
       "label": "UI-12 Reader appearance - Veritalex"
     },
     {
+      "id": "2079028214883653215",
+      "sourceScreen": "projects/6233788376335662642/screens/2079028214883653215",
+      "x": 115600,
+      "width": 3156,
+      "height": 1464
+    },
+    {
+      "id": "2079028214883653734",
+      "sourceScreen": "projects/6233788376335662642/screens/2079028214883653734",
+      "x": 111900,
+      "width": 3600,
+      "height": 1422
+    },
+    {
+      "id": "2079028214883654253",
+      "sourceScreen": "projects/6233788376335662642/screens/2079028214883654253",
+      "x": 108200,
+      "width": 3600,
+      "height": 1404
+    },
+    {
+      "id": "2079028214883654772",
+      "sourceScreen": "projects/6233788376335662642/screens/2079028214883654772",
+      "x": 104500,
+      "width": 3600,
+      "height": 1452
+    },
+    {
+      "id": "2202519320052249562",
+      "sourceScreen": "projects/6233788376335662642/screens/2202519320052249562",
+      "x": 12184,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "2202519320052249728",
+      "sourceScreen": "projects/6233788376335662642/screens/2202519320052249728",
+      "x": 15984,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "2202519320052251693",
+      "sourceScreen": "projects/6233788376335662642/screens/2202519320052251693",
+      "x": 14084,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "2202519320052251859",
+      "sourceScreen": "projects/6233788376335662642/screens/2202519320052251859",
+      "x": 17884,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "2785915158839424557",
+      "sourceScreen": "projects/6233788376335662642/screens/2785915158839424557",
+      "x": 33084,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "2785915158839424864",
+      "sourceScreen": "projects/6233788376335662642/screens/2785915158839424864",
+      "x": 31184,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "2785915158839425171",
+      "sourceScreen": "projects/6233788376335662642/screens/2785915158839425171",
+      "x": 29284,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "2785915158839425478",
+      "sourceScreen": "projects/6233788376335662642/screens/2785915158839425478",
+      "x": 27384,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "2942784956432459683",
+      "sourceScreen": "projects/6233788376335662642/screens/2942784956432459683",
+      "x": 1550,
+      "width": 3156,
+      "height": 1434
+    },
+    {
+      "id": "3824801775273299857",
+      "sourceScreen": "projects/6233788376335662642/screens/3824801775273299857",
+      "x": 161400,
+      "width": 390,
+      "height": 884
+    },
+    {
+      "id": "434a90934c994686ac4c97eba9a2d802",
+      "sourceScreen": "projects/6233788376335662642/screens/434a90934c994686ac4c97eba9a2d802",
+      "y": 26586,
+      "width": 390,
+      "height": 964,
+      "label": "NIGHT-03 Library - Veritalex"
+    },
+    {
       "id": "44706dac603e400fa1bafb15f6872b94",
       "sourceScreen": "projects/6233788376335662642/screens/44706dac603e400fa1bafb15f6872b94",
       "y": 5783,
@@ -187,10 +552,180 @@
       "label": "UI-05 Explore - Veritalex"
     },
     {
+      "id": "4f336bc6715c4ae2b760b51aba01816a",
+      "sourceScreen": "projects/6233788376335662642/screens/4f336bc6715c4ae2b760b51aba01816a",
+      "y": 22668,
+      "width": 1280,
+      "height": 1024,
+      "label": "TAB-04 Reader with Contents - Veritalex"
+    },
+    {
+      "id": "5082065657010119592",
+      "sourceScreen": "projects/6233788376335662642/screens/5082065657010119592",
+      "x": 138560,
+      "width": 1280,
+      "height": 915
+    },
+    {
+      "id": "5082065657010120613",
+      "sourceScreen": "projects/6233788376335662642/screens/5082065657010120613",
+      "x": 137180,
+      "width": 1280,
+      "height": 963
+    },
+    {
+      "id": "5082065657010121634",
+      "sourceScreen": "projects/6233788376335662642/screens/5082065657010121634",
+      "x": 135800,
+      "width": 1280,
+      "height": 1054
+    },
+    {
+      "id": "5082065657010122667",
+      "sourceScreen": "projects/6233788376335662642/screens/5082065657010122667",
+      "x": 139940,
+      "width": 1280,
+      "height": 848
+    },
+    {
+      "id": "5151541798511063094",
+      "sourceScreen": "projects/6233788376335662642/screens/5151541798511063094",
+      "x": 48284,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "5151541798511065057",
+      "sourceScreen": "projects/6233788376335662642/screens/5151541798511065057",
+      "x": 42584,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "5151541798511065768",
+      "sourceScreen": "projects/6233788376335662642/screens/5151541798511065768",
+      "x": 44484,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "5151541798511066479",
+      "sourceScreen": "projects/6233788376335662642/screens/5151541798511066479",
+      "x": 46384,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "5164575286791655774",
+      "sourceScreen": "projects/6233788376335662642/screens/5164575286791655774",
+      "x": 38784,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "5164575286791656991",
+      "sourceScreen": "projects/6233788376335662642/screens/5164575286791656991",
+      "x": 36884,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "5164575286791658208",
+      "sourceScreen": "projects/6233788376335662642/screens/5164575286791658208",
+      "x": 34984,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "5164575286791658653",
+      "sourceScreen": "projects/6233788376335662642/screens/5164575286791658653",
+      "x": 40684,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "5394591930075914350",
+      "sourceScreen": "projects/6233788376335662642/screens/5394591930075914350",
+      "x": 74752,
+      "width": 3156,
+      "height": 1464
+    },
+    {
+      "id": "5394591930075914825",
+      "sourceScreen": "projects/6233788376335662642/screens/5394591930075914825",
+      "x": 63652,
+      "width": 3600,
+      "height": 1452
+    },
+    {
+      "id": "5394591930075916032",
+      "sourceScreen": "projects/6233788376335662642/screens/5394591930075916032",
+      "x": 67352,
+      "width": 3600,
+      "height": 1404
+    },
+    {
+      "id": "5394591930075917239",
+      "sourceScreen": "projects/6233788376335662642/screens/5394591930075917239",
+      "x": 71052,
+      "width": 3600,
+      "height": 1422
+    },
+    {
+      "id": "55b140e3f4a940919aec3e05af9e6ce0",
+      "sourceScreen": "projects/6233788376335662642/screens/55b140e3f4a940919aec3e05af9e6ce0",
+      "y": 25446,
+      "width": 390,
+      "height": 884,
+      "label": "NIGHT-02 Explore - Veritalex"
+    },
+    {
+      "id": "6209007980920153295",
+      "sourceScreen": "projects/6233788376335662642/screens/6209007980920153295",
+      "x": 161890,
+      "width": 640,
+      "height": 490
+    },
+    {
+      "id": "6209007980920153916",
+      "sourceScreen": "projects/6233788376335662642/screens/6209007980920153916",
+      "x": 162630,
+      "width": 390,
+      "height": 884
+    },
+    {
       "id": "6350690731920308195",
       "sourceScreen": "projects/6233788376335662642/screens/6350690731920308195",
       "width": 390,
       "height": 884
+    },
+    {
+      "id": "6613711110136172655",
+      "sourceScreen": "projects/6233788376335662642/screens/6613711110136172655",
+      "x": 147510,
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "id": "6613711110136172812",
+      "sourceScreen": "projects/6233788376335662642/screens/6613711110136172812",
+      "x": 146130,
+      "width": 1280,
+      "height": 932
+    },
+    {
+      "id": "6613711110136176437",
+      "sourceScreen": "projects/6233788376335662642/screens/6613711110136176437",
+      "x": 150270,
+      "width": 1280,
+      "height": 947
+    },
+    {
+      "id": "6613711110136176594",
+      "sourceScreen": "projects/6233788376335662642/screens/6613711110136176594",
+      "x": 148890,
+      "width": 1280,
+      "height": 1058
     },
     {
       "id": "6826064480911188754",
@@ -208,12 +743,57 @@
       "label": "UI-09 Bring your library with you - Veritalex"
     },
     {
+      "id": "7028754476728807443",
+      "sourceScreen": "projects/6233788376335662642/screens/7028754476728807443",
+      "x": 144660,
+      "width": 390,
+      "height": 947
+    },
+    {
+      "id": "7028754476728808850",
+      "sourceScreen": "projects/6233788376335662642/screens/7028754476728808850",
+      "x": 145150,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "7028754476728810132",
+      "sourceScreen": "projects/6233788376335662642/screens/7028754476728810132",
+      "x": 144170,
+      "width": 390,
+      "height": 1058
+    },
+    {
+      "id": "7028754476728810257",
+      "sourceScreen": "projects/6233788376335662642/screens/7028754476728810257",
+      "x": 145640,
+      "width": 390,
+      "height": 1234
+    },
+    {
+      "id": "73f2596dcfea4a8ca713f99a5d4f9716",
+      "sourceScreen": "projects/6233788376335662642/screens/73f2596dcfea4a8ca713f99a5d4f9716",
+      "x": 1344,
+      "y": 18828,
+      "width": 1280,
+      "height": 1420,
+      "label": "TAB-01 Home - Veritalex (Tablet)"
+    },
+    {
       "id": "77e4f1a5cf1c419d94bb049d7271690e",
       "sourceScreen": "projects/6233788376335662642/screens/77e4f1a5cf1c419d94bb049d7271690e",
       "y": 796,
       "width": 390,
       "height": 1074,
       "label": "UI-01 Home - Veritalex"
+    },
+    {
+      "id": "784b0f6da227430ba90d3f2ca4532148",
+      "sourceScreen": "projects/6233788376335662642/screens/784b0f6da227430ba90d3f2ca4532148",
+      "y": 21388,
+      "width": 1280,
+      "height": 1024,
+      "label": "TAB-03 Journal list and entry detail - Veritalex"
     },
     {
       "id": "8522cf91fea748f6a06927ea5ab63b78",
@@ -224,6 +804,14 @@
       "label": "UI-06 Library - Shelves - Veritalex"
     },
     {
+      "id": "8d6a767b97d34d289b3eff7e3b78cbaa",
+      "sourceScreen": "projects/6233788376335662642/screens/8d6a767b97d34d289b3eff7e3b78cbaa",
+      "y": 20108,
+      "width": 1280,
+      "height": 1024,
+      "label": "TAB-02 Library and book detail - Veritalex"
+    },
+    {
       "id": "8fd548dd2a4c4e738b6c9025689ffc26",
       "sourceScreen": "projects/6233788376335662642/screens/8fd548dd2a4c4e738b6c9025689ffc26",
       "y": 4469,
@@ -232,12 +820,76 @@
       "label": "UI-04 Library - Books - Veritalex"
     },
     {
+      "id": "9202819332753780915",
+      "sourceScreen": "projects/6233788376335662642/screens/9202819332753780915",
+      "x": 85408,
+      "width": 2712,
+      "height": 1422
+    },
+    {
+      "id": "9202819332753781880",
+      "sourceScreen": "projects/6233788376335662642/screens/9202819332753781880",
+      "x": 81708,
+      "width": 3600,
+      "height": 1422
+    },
+    {
+      "id": "9202819332753782845",
+      "sourceScreen": "projects/6233788376335662642/screens/9202819332753782845",
+      "x": 78008,
+      "width": 3600,
+      "height": 1440
+    },
+    {
+      "id": "9202819332753784046",
+      "sourceScreen": "projects/6233788376335662642/screens/9202819332753784046",
+      "x": 88220,
+      "width": 2712,
+      "height": 1422
+    },
+    {
+      "id": "9420814259143693507",
+      "sourceScreen": "projects/6233788376335662642/screens/9420814259143693507",
+      "x": 133840,
+      "width": 390,
+      "height": 1054
+    },
+    {
+      "id": "9420814259143693708",
+      "sourceScreen": "projects/6233788376335662642/screens/9420814259143693708",
+      "x": 134330,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "9420814259143693909",
+      "sourceScreen": "projects/6233788376335662642/screens/9420814259143693909",
+      "x": 134820,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "9420814259143694110",
+      "sourceScreen": "projects/6233788376335662642/screens/9420814259143694110",
+      "x": 135310,
+      "width": 390,
+      "height": 915
+    },
+    {
       "id": "9bec8ccc3c7a45129bb641e9083a7c03",
       "sourceScreen": "projects/6233788376335662642/screens/9bec8ccc3c7a45129bb641e9083a7c03",
       "y": 13246,
       "width": 390,
       "height": 937,
       "label": "UI-11 Account & sync - Veritalex"
+    },
+    {
+      "id": "a2d3f9e14c4e4b968c333c81b3c5395b",
+      "sourceScreen": "projects/6233788376335662642/screens/a2d3f9e14c4e4b968c333c81b3c5395b",
+      "y": 31672,
+      "width": 390,
+      "height": 955,
+      "label": "NIGHT-07 Account & sync - Veritalex"
     },
     {
       "id": "assets_1cf14a0733a54b90a61f9744d7e53b3c",
@@ -271,12 +923,36 @@
       "label": "UI-14 Choose where to continue - Veritalex"
     },
     {
+      "id": "d15cad542d55423bbeae500557ea985b",
+      "sourceScreen": "projects/6233788376335662642/screens/d15cad542d55423bbeae500557ea985b",
+      "y": 18828,
+      "width": 1280,
+      "height": 1420,
+      "label": "TAB-01 Home - Veritalex (Tablet)"
+    },
+    {
+      "id": "e0077ca58b29409f9d0d2b5433103dab",
+      "sourceScreen": "projects/6233788376335662642/screens/e0077ca58b29409f9d0d2b5433103dab",
+      "y": 27726,
+      "width": 1280,
+      "height": 1316,
+      "label": "NIGHT-04 Book details - Veritalex"
+    },
+    {
       "id": "e38c1a94c65c4cb2a2a5df3e3a31c3a1",
       "sourceScreen": "projects/6233788376335662642/screens/e38c1a94c65c4cb2a2a5df3e3a31c3a1",
       "y": 2126,
       "width": 390,
       "height": 947,
       "label": "UI-02 Book details - Veritalex"
+    },
+    {
+      "id": "e708c2b30742415da1505fed015d1b17",
+      "sourceScreen": "projects/6233788376335662642/screens/e708c2b30742415da1505fed015d1b17",
+      "y": 30469,
+      "width": 390,
+      "height": 947,
+      "label": "NIGHT-06 Settings - Veritalex"
     },
     {
       "id": "f0f67645e2644e1bb8eef54f0e4f21ba",
@@ -287,6 +963,22 @@
       "label": "UI-07 Library - Journal - Veritalex"
     },
     {
+      "id": "f4d1aa269eab40f7aad1fd8f79356840",
+      "sourceScreen": "projects/6233788376335662642/screens/f4d1aa269eab40f7aad1fd8f79356840",
+      "y": 23948,
+      "width": 390,
+      "height": 1242,
+      "label": "NIGHT-01 Home - Veritalex"
+    },
+    {
+      "id": "f6ce0ebff5cd464c9f0b42f6bb0db72d",
+      "sourceScreen": "projects/6233788376335662642/screens/f6ce0ebff5cd464c9f0b42f6bb0db72d",
+      "y": 29298,
+      "width": 390,
+      "height": 915,
+      "label": "NIGHT-05 Reader - Veritalex"
+    },
+    {
       "id": "f92ceaa91d604b8592392aef299e0c93",
       "sourceScreen": "projects/6233788376335662642/screens/f92ceaa91d604b8592392aef299e0c93",
       "y": 12043,
@@ -295,578 +987,711 @@
       "label": "UI-10 Settings - Veritalex"
     },
     {
-      "id": "2942784956432459683",
-      "sourceScreen": "projects/6233788376335662642/screens/2942784956432459683",
-      "x": 1550,
-      "width": 3156,
-      "height": 1434
-    },
-    {
-      "id": "16118461375848005854",
-      "sourceScreen": "projects/6233788376335662642/screens/16118461375848005854",
-      "x": 4806,
+      "id": "17031488347544779536",
+      "sourceScreen": "projects/6233788376335662642/screens/17031488347544779536",
+      "x": 163120,
       "width": 1578,
       "height": 702
     },
     {
-      "id": "16118461375848009107",
-      "sourceScreen": "projects/6233788376335662642/screens/16118461375848009107",
-      "x": 6484,
+      "id": "17031488347544777881",
+      "sourceScreen": "projects/6233788376335662642/screens/17031488347544777881",
+      "x": 164798,
       "width": 1800,
       "height": 717
     },
     {
-      "id": "16118461375848008264",
-      "sourceScreen": "projects/6233788376335662642/screens/16118461375848008264",
-      "x": 8384,
+      "id": "17031488347544780322",
+      "sourceScreen": "projects/6233788376335662642/screens/17031488347544780322",
+      "x": 166698,
       "width": 1800,
       "height": 717
     },
     {
-      "id": "16118461375848007421",
-      "sourceScreen": "projects/6233788376335662642/screens/16118461375848007421",
-      "x": 10284,
+      "id": "17031488347544778667",
+      "sourceScreen": "projects/6233788376335662642/screens/17031488347544778667",
+      "x": 168598,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "2202519320052249562",
-      "sourceScreen": "projects/6233788376335662642/screens/2202519320052249562",
-      "x": 12184,
+      "id": "12644893282114723327",
+      "sourceScreen": "projects/6233788376335662642/screens/12644893282114723327",
+      "x": 170498,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "2202519320052251693",
-      "sourceScreen": "projects/6233788376335662642/screens/2202519320052251693",
-      "x": 14084,
+      "id": "12644893282114721434",
+      "sourceScreen": "projects/6233788376335662642/screens/12644893282114721434",
+      "x": 172398,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "2202519320052249728",
-      "sourceScreen": "projects/6233788376335662642/screens/2202519320052249728",
-      "x": 15984,
+      "id": "12644893282114723637",
+      "sourceScreen": "projects/6233788376335662642/screens/12644893282114723637",
+      "x": 174298,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "2202519320052251859",
-      "sourceScreen": "projects/6233788376335662642/screens/2202519320052251859",
-      "x": 17884,
+      "id": "12644893282114721744",
+      "sourceScreen": "projects/6233788376335662642/screens/12644893282114721744",
+      "x": 176198,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "13664084156455910551",
-      "sourceScreen": "projects/6233788376335662642/screens/13664084156455910551",
-      "x": 19784,
+      "id": "1969334186451060915",
+      "sourceScreen": "projects/6233788376335662642/screens/1969334186451060915",
+      "x": 178098,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "13664084156455908254",
-      "sourceScreen": "projects/6233788376335662642/screens/13664084156455908254",
-      "x": 21684,
+      "id": "1969334186451060492",
+      "sourceScreen": "projects/6233788376335662642/screens/1969334186451060492",
+      "x": 179998,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "13664084156455910053",
-      "sourceScreen": "projects/6233788376335662642/screens/13664084156455910053",
-      "x": 23584,
+      "id": "1969334186451060069",
+      "sourceScreen": "projects/6233788376335662642/screens/1969334186451060069",
+      "x": 181898,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "13664084156455907756",
-      "sourceScreen": "projects/6233788376335662642/screens/13664084156455907756",
-      "x": 25484,
+      "id": "10139457702818359",
+      "sourceScreen": "projects/6233788376335662642/screens/10139457702818359",
+      "x": 183798,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "2785915158839425478",
-      "sourceScreen": "projects/6233788376335662642/screens/2785915158839425478",
-      "x": 27384,
+      "id": "10139457702818888",
+      "sourceScreen": "projects/6233788376335662642/screens/10139457702818888",
+      "x": 185698,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "2785915158839425171",
-      "sourceScreen": "projects/6233788376335662642/screens/2785915158839425171",
-      "x": 29284,
+      "id": "10139457702819417",
+      "sourceScreen": "projects/6233788376335662642/screens/10139457702819417",
+      "x": 187598,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "2785915158839424864",
-      "sourceScreen": "projects/6233788376335662642/screens/2785915158839424864",
-      "x": 31184,
+      "id": "10139457702819946",
+      "sourceScreen": "projects/6233788376335662642/screens/10139457702819946",
+      "x": 189498,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "2785915158839424557",
-      "sourceScreen": "projects/6233788376335662642/screens/2785915158839424557",
-      "x": 33084,
+      "id": "1605933102053942524",
+      "sourceScreen": "projects/6233788376335662642/screens/1605933102053942524",
+      "x": 191398,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "5164575286791658208",
-      "sourceScreen": "projects/6233788376335662642/screens/5164575286791658208",
-      "x": 34984,
+      "id": "1605933102053942259",
+      "sourceScreen": "projects/6233788376335662642/screens/1605933102053942259",
+      "x": 193298,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "5164575286791656991",
-      "sourceScreen": "projects/6233788376335662642/screens/5164575286791656991",
-      "x": 36884,
+      "id": "1605933102053941994",
+      "sourceScreen": "projects/6233788376335662642/screens/1605933102053941994",
+      "x": 195198,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "5164575286791655774",
-      "sourceScreen": "projects/6233788376335662642/screens/5164575286791655774",
-      "x": 38784,
+      "id": "1605933102053941729",
+      "sourceScreen": "projects/6233788376335662642/screens/1605933102053941729",
+      "x": 197098,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "5164575286791658653",
-      "sourceScreen": "projects/6233788376335662642/screens/5164575286791658653",
-      "x": 40684,
+      "id": "12041713230398647633",
+      "sourceScreen": "projects/6233788376335662642/screens/12041713230398647633",
+      "x": 198998,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "5151541798511065057",
-      "sourceScreen": "projects/6233788376335662642/screens/5151541798511065057",
-      "x": 42584,
+      "id": "12041713230398645300",
+      "sourceScreen": "projects/6233788376335662642/screens/12041713230398645300",
+      "x": 200898,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "5151541798511065768",
-      "sourceScreen": "projects/6233788376335662642/screens/5151541798511065768",
-      "x": 44484,
+      "id": "12041713230398647063",
+      "sourceScreen": "projects/6233788376335662642/screens/12041713230398647063",
+      "x": 202798,
       "width": 1800,
       "height": 732
     },
     {
-      "id": "5151541798511066479",
-      "sourceScreen": "projects/6233788376335662642/screens/5151541798511066479",
-      "x": 46384,
-      "width": 1800,
-      "height": 732
-    },
-    {
-      "id": "5151541798511063094",
-      "sourceScreen": "projects/6233788376335662642/screens/5151541798511063094",
-      "x": 48284,
-      "width": 1800,
-      "height": 732
-    },
-    {
-      "id": "15432184873809979516",
-      "sourceScreen": "projects/6233788376335662642/screens/15432184873809979516",
-      "x": 50184,
+      "id": "450502986632463607",
+      "sourceScreen": "projects/6233788376335662642/screens/450502986632463607",
+      "x": 204698,
       "width": 3156,
       "height": 1404
     },
     {
-      "id": "15432184873809981021",
-      "sourceScreen": "projects/6233788376335662642/screens/15432184873809981021",
-      "x": 53440,
+      "id": "450502986632465658",
+      "sourceScreen": "projects/6233788376335662642/screens/450502986632465658",
+      "x": 207954,
       "width": 3600,
       "height": 1434
     },
     {
-      "id": "15432184873809978430",
-      "sourceScreen": "projects/6233788376335662642/screens/15432184873809978430",
-      "x": 57140,
+      "id": "450502986632463613",
+      "sourceScreen": "projects/6233788376335662642/screens/450502986632463613",
+      "x": 211654,
       "width": 3156,
       "height": 1422
     },
     {
-      "id": "15432184873809979935",
-      "sourceScreen": "projects/6233788376335662642/screens/15432184873809979935",
-      "x": 60396,
+      "id": "450502986632465664",
+      "sourceScreen": "projects/6233788376335662642/screens/450502986632465664",
+      "x": 214910,
       "width": 3156,
       "height": 1464
     },
     {
-      "id": "5394591930075914825",
-      "sourceScreen": "projects/6233788376335662642/screens/5394591930075914825",
-      "x": 63652,
+      "id": "16330146324225643143",
+      "sourceScreen": "projects/6233788376335662642/screens/16330146324225643143",
+      "x": 218166,
       "width": 3600,
       "height": 1452
     },
     {
-      "id": "5394591930075916032",
-      "sourceScreen": "projects/6233788376335662642/screens/5394591930075916032",
-      "x": 67352,
+      "id": "16330146324225646560",
+      "sourceScreen": "projects/6233788376335662642/screens/16330146324225646560",
+      "x": 221866,
       "width": 3600,
       "height": 1404
     },
     {
-      "id": "5394591930075917239",
-      "sourceScreen": "projects/6233788376335662642/screens/5394591930075917239",
-      "x": 71052,
+      "id": "16330146324225645881",
+      "sourceScreen": "projects/6233788376335662642/screens/16330146324225645881",
+      "x": 225566,
       "width": 3600,
       "height": 1422
     },
     {
-      "id": "5394591930075914350",
-      "sourceScreen": "projects/6233788376335662642/screens/5394591930075914350",
-      "x": 74752,
+      "id": "16330146324225645202",
+      "sourceScreen": "projects/6233788376335662642/screens/16330146324225645202",
+      "x": 229266,
       "width": 3156,
       "height": 1464
     },
     {
-      "id": "9202819332753782845",
-      "sourceScreen": "projects/6233788376335662642/screens/9202819332753782845",
-      "x": 78008,
+      "id": "2789998644459250422",
+      "sourceScreen": "projects/6233788376335662642/screens/2789998644459250422",
+      "x": 232522,
       "width": 3600,
       "height": 1440
     },
     {
-      "id": "9202819332753781880",
-      "sourceScreen": "projects/6233788376335662642/screens/9202819332753781880",
-      "x": 81708,
+      "id": "2789998644459250711",
+      "sourceScreen": "projects/6233788376335662642/screens/2789998644459250711",
+      "x": 236222,
       "width": 3600,
       "height": 1422
     },
     {
-      "id": "9202819332753780915",
-      "sourceScreen": "projects/6233788376335662642/screens/9202819332753780915",
-      "x": 85408,
+      "id": "2789998644459251000",
+      "sourceScreen": "projects/6233788376335662642/screens/2789998644459251000",
+      "x": 239922,
       "width": 2712,
       "height": 1422
     },
     {
-      "id": "9202819332753784046",
-      "sourceScreen": "projects/6233788376335662642/screens/9202819332753784046",
-      "x": 88220,
+      "id": "2789998644459251289",
+      "sourceScreen": "projects/6233788376335662642/screens/2789998644459251289",
+      "x": 242734,
       "width": 2712,
       "height": 1422
     },
     {
-      "id": "1202936915399383434",
-      "sourceScreen": "projects/6233788376335662642/screens/1202936915399383434",
-      "x": 91032,
+      "id": "4451120973545036519",
+      "sourceScreen": "projects/6233788376335662642/screens/4451120973545036519",
+      "x": 245546,
       "width": 3156,
       "height": 1404
     },
     {
-      "id": "1202936915399385005",
-      "sourceScreen": "projects/6233788376335662642/screens/1202936915399385005",
-      "x": 94288,
+      "id": "4451120973545034786",
+      "sourceScreen": "projects/6233788376335662642/screens/4451120973545034786",
+      "x": 248802,
       "width": 3600,
       "height": 1434
     },
     {
-      "id": "1202936915399382480",
-      "sourceScreen": "projects/6233788376335662642/screens/1202936915399382480",
-      "x": 97988,
+      "id": "4451120973545037149",
+      "sourceScreen": "projects/6233788376335662642/screens/4451120973545037149",
+      "x": 252502,
       "width": 3156,
       "height": 1422
     },
     {
-      "id": "1202936915399384051",
-      "sourceScreen": "projects/6233788376335662642/screens/1202936915399384051",
-      "x": 101244,
+      "id": "4451120973545035416",
+      "sourceScreen": "projects/6233788376335662642/screens/4451120973545035416",
+      "x": 255758,
       "width": 3156,
       "height": 1464
     },
     {
-      "id": "2079028214883654772",
-      "sourceScreen": "projects/6233788376335662642/screens/2079028214883654772",
-      "x": 104500,
+      "id": "1631859748176387490",
+      "sourceScreen": "projects/6233788376335662642/screens/1631859748176387490",
+      "x": 259014,
       "width": 3600,
       "height": 1452
     },
     {
-      "id": "2079028214883654253",
-      "sourceScreen": "projects/6233788376335662642/screens/2079028214883654253",
-      "x": 108200,
+      "id": "1631859748176385909",
+      "sourceScreen": "projects/6233788376335662642/screens/1631859748176385909",
+      "x": 262714,
       "width": 3600,
       "height": 1404
     },
     {
-      "id": "2079028214883653734",
-      "sourceScreen": "projects/6233788376335662642/screens/2079028214883653734",
-      "x": 111900,
+      "id": "1631859748176384328",
+      "sourceScreen": "projects/6233788376335662642/screens/1631859748176384328",
+      "x": 266414,
       "width": 3600,
       "height": 1422
     },
     {
-      "id": "2079028214883653215",
-      "sourceScreen": "projects/6233788376335662642/screens/2079028214883653215",
-      "x": 115600,
+      "id": "1631859748176386843",
+      "sourceScreen": "projects/6233788376335662642/screens/1631859748176386843",
+      "x": 270114,
       "width": 3156,
       "height": 1464
     },
     {
-      "id": "1757740575913161296",
-      "sourceScreen": "projects/6233788376335662642/screens/1757740575913161296",
-      "x": 118856,
+      "id": "12922029109436544909",
+      "sourceScreen": "projects/6233788376335662642/screens/12922029109436544909",
+      "x": 273370,
       "width": 3600,
       "height": 1440
     },
     {
-      "id": "1757740575913164397",
-      "sourceScreen": "projects/6233788376335662642/screens/1757740575913164397",
-      "x": 122556,
+      "id": "12922029109436543774",
+      "sourceScreen": "projects/6233788376335662642/screens/12922029109436543774",
+      "x": 277070,
       "width": 3600,
       "height": 1422
     },
     {
-      "id": "1757740575913163402",
-      "sourceScreen": "projects/6233788376335662642/screens/1757740575913163402",
-      "x": 126256,
+      "id": "12922029109436546735",
+      "sourceScreen": "projects/6233788376335662642/screens/12922029109436546735",
+      "x": 280770,
       "width": 2712,
       "height": 1422
     },
     {
-      "id": "1757740575913162407",
-      "sourceScreen": "projects/6233788376335662642/screens/1757740575913162407",
-      "x": 129068,
+      "id": "12922029109436545600",
+      "sourceScreen": "projects/6233788376335662642/screens/12922029109436545600",
+      "x": 283582,
       "width": 2712,
       "height": 1422
     },
     {
-      "id": "12615647576253388675",
-      "sourceScreen": "projects/6233788376335662642/screens/12615647576253388675",
-      "x": 131880,
-      "width": 390,
-      "height": 884
-    },
-    {
-      "id": "12615647576253388916",
-      "sourceScreen": "projects/6233788376335662642/screens/12615647576253388916",
-      "x": 132370,
-      "width": 390,
-      "height": 884
-    },
-    {
-      "id": "12615647576253389157",
-      "sourceScreen": "projects/6233788376335662642/screens/12615647576253389157",
-      "x": 132860,
-      "width": 390,
-      "height": 884
-    },
-    {
-      "id": "12615647576253389398",
-      "sourceScreen": "projects/6233788376335662642/screens/12615647576253389398",
-      "x": 133350,
-      "width": 390,
-      "height": 884
-    },
-    {
-      "id": "9420814259143693507",
-      "sourceScreen": "projects/6233788376335662642/screens/9420814259143693507",
-      "x": 133840,
-      "width": 390,
-      "height": 1054
-    },
-    {
-      "id": "9420814259143693708",
-      "sourceScreen": "projects/6233788376335662642/screens/9420814259143693708",
-      "x": 134330,
+      "id": "7788671261819844854",
+      "sourceScreen": "projects/6233788376335662642/screens/7788671261819844854",
+      "x": 286394,
       "width": 390,
       "height": 915
     },
     {
-      "id": "9420814259143693909",
-      "sourceScreen": "projects/6233788376335662642/screens/9420814259143693909",
-      "x": 134820,
+      "id": "7788671261819844525",
+      "sourceScreen": "projects/6233788376335662642/screens/7788671261819844525",
+      "x": 286884,
       "width": 390,
       "height": 915
     },
     {
-      "id": "9420814259143694110",
-      "sourceScreen": "projects/6233788376335662642/screens/9420814259143694110",
-      "x": 135310,
+      "id": "7788671261819844196",
+      "sourceScreen": "projects/6233788376335662642/screens/7788671261819844196",
+      "x": 287374,
+      "width": 390,
+      "height": 1546
+    },
+    {
+      "id": "7788671261819843867",
+      "sourceScreen": "projects/6233788376335662642/screens/7788671261819843867",
+      "x": 287864,
       "width": 390,
       "height": 915
     },
     {
-      "id": "5082065657010121634",
-      "sourceScreen": "projects/6233788376335662642/screens/5082065657010121634",
-      "x": 135800,
-      "width": 1280,
-      "height": 1054
-    },
-    {
-      "id": "5082065657010120613",
-      "sourceScreen": "projects/6233788376335662642/screens/5082065657010120613",
-      "x": 137180,
-      "width": 1280,
-      "height": 963
-    },
-    {
-      "id": "5082065657010119592",
-      "sourceScreen": "projects/6233788376335662642/screens/5082065657010119592",
-      "x": 138560,
-      "width": 1280,
-      "height": 915
-    },
-    {
-      "id": "5082065657010122667",
-      "sourceScreen": "projects/6233788376335662642/screens/5082065657010122667",
-      "x": 139940,
-      "width": 1280,
-      "height": 848
-    },
-    {
-      "id": "1554670495747983401",
-      "sourceScreen": "projects/6233788376335662642/screens/1554670495747983401",
-      "x": 141320,
-      "width": 390,
-      "height": 1054
-    },
-    {
-      "id": "1554670495747984338",
-      "sourceScreen": "projects/6233788376335662642/screens/1554670495747984338",
-      "x": 141810,
+      "id": "370629634870761391",
+      "sourceScreen": "projects/6233788376335662642/screens/370629634870761391",
+      "x": 288354,
       "width": 390,
       "height": 915
     },
     {
-      "id": "1554670495747985275",
-      "sourceScreen": "projects/6233788376335662642/screens/1554670495747985275",
-      "x": 142300,
-      "width": 390,
-      "height": 915
-    },
-    {
-      "id": "1554670495747982116",
-      "sourceScreen": "projects/6233788376335662642/screens/1554670495747982116",
-      "x": 142790,
+      "id": "370629634870763352",
+      "sourceScreen": "projects/6233788376335662642/screens/370629634870763352",
+      "x": 288844,
       "width": 1280,
       "height": 1024
     },
     {
-      "id": "7028754476728810132",
-      "sourceScreen": "projects/6233788376335662642/screens/7028754476728810132",
-      "x": 144170,
-      "width": 390,
-      "height": 1058
-    },
-    {
-      "id": "7028754476728807443",
-      "sourceScreen": "projects/6233788376335662642/screens/7028754476728807443",
-      "x": 144660,
-      "width": 390,
-      "height": 947
-    },
-    {
-      "id": "7028754476728808850",
-      "sourceScreen": "projects/6233788376335662642/screens/7028754476728808850",
-      "x": 145150,
+      "id": "370629634870761217",
+      "sourceScreen": "projects/6233788376335662642/screens/370629634870761217",
+      "x": 290224,
       "width": 390,
       "height": 915
     },
     {
-      "id": "7028754476728810257",
-      "sourceScreen": "projects/6233788376335662642/screens/7028754476728810257",
-      "x": 145640,
+      "id": "370629634870763178",
+      "sourceScreen": "projects/6233788376335662642/screens/370629634870763178",
+      "x": 290714,
       "width": 390,
-      "height": 1234
+      "height": 1100
     },
     {
-      "id": "6613711110136172812",
-      "sourceScreen": "projects/6233788376335662642/screens/6613711110136172812",
-      "x": 146130,
+      "id": "3964645869554812561",
+      "sourceScreen": "projects/6233788376335662642/screens/3964645869554812561",
+      "x": 291204,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "3964645869554812830",
+      "sourceScreen": "projects/6233788376335662642/screens/3964645869554812830",
+      "x": 291694,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "3964645869554813099",
+      "sourceScreen": "projects/6233788376335662642/screens/3964645869554813099",
+      "x": 292184,
+      "width": 390,
+      "height": 1016
+    },
+    {
+      "id": "3964645869554813368",
+      "sourceScreen": "projects/6233788376335662642/screens/3964645869554813368",
+      "x": 292674,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "8427224241318122617",
+      "sourceScreen": "projects/6233788376335662642/screens/8427224241318122617",
+      "x": 293164,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "8427224241318124520",
+      "sourceScreen": "projects/6233788376335662642/screens/8427224241318124520",
+      "x": 293654,
       "width": 1280,
-      "height": 932
+      "height": 1024
     },
     {
-      "id": "6613711110136172655",
-      "sourceScreen": "projects/6233788376335662642/screens/6613711110136172655",
-      "x": 147510,
+      "id": "8427224241318122327",
+      "sourceScreen": "projects/6233788376335662642/screens/8427224241318122327",
+      "x": 295034,
+      "width": 1280,
+      "height": 1024
+    },
+    {
+      "id": "8427224241318124230",
+      "sourceScreen": "projects/6233788376335662642/screens/8427224241318124230",
+      "x": 296414,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "2158343539502097259",
+      "sourceScreen": "projects/6233788376335662642/screens/2158343539502097259",
+      "x": 296904,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "2158343539502098648",
+      "sourceScreen": "projects/6233788376335662642/screens/2158343539502098648",
+      "x": 297394,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "2158343539502100037",
+      "sourceScreen": "projects/6233788376335662642/screens/2158343539502100037",
+      "x": 297884,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "2158343539502097330",
+      "sourceScreen": "projects/6233788376335662642/screens/2158343539502097330",
+      "x": 298374,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "2097656440266785997",
+      "sourceScreen": "projects/6233788376335662642/screens/2097656440266785997",
+      "x": 298864,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "2097656440266788392",
+      "sourceScreen": "projects/6233788376335662642/screens/2097656440266788392",
+      "x": 299354,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "2097656440266786691",
+      "sourceScreen": "projects/6233788376335662642/screens/2097656440266786691",
+      "x": 299844,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "2097656440266784990",
+      "sourceScreen": "projects/6233788376335662642/screens/2097656440266784990",
+      "x": 300334,
+      "width": 1280,
+      "height": 1024
+    },
+    {
+      "id": "12526142160928117285",
+      "sourceScreen": "projects/6233788376335662642/screens/12526142160928117285",
+      "x": 301714,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "8430044410772261087",
+      "sourceScreen": "projects/6233788376335662642/screens/8430044410772261087",
+      "x": 302204,
+      "width": 1280,
+      "height": 878
+    },
+    {
+      "id": "8430044410772260688",
+      "sourceScreen": "projects/6233788376335662642/screens/8430044410772260688",
+      "x": 303584,
       "width": 1280,
       "height": 800
     },
     {
-      "id": "6613711110136176594",
-      "sourceScreen": "projects/6233788376335662642/screens/6613711110136176594",
-      "x": 148890,
+      "id": "8430044410772260289",
+      "sourceScreen": "projects/6233788376335662642/screens/8430044410772260289",
+      "x": 304964,
       "width": 1280,
-      "height": 1058
+      "height": 1450
     },
     {
-      "id": "6613711110136176437",
-      "sourceScreen": "projects/6233788376335662642/screens/6613711110136176437",
-      "x": 150270,
+      "id": "8430044410772259890",
+      "sourceScreen": "projects/6233788376335662642/screens/8430044410772259890",
+      "x": 306344,
       "width": 1280,
-      "height": 947
+      "height": 800
     },
     {
-      "id": "11215589261446277392",
-      "sourceScreen": "projects/6233788376335662642/screens/11215589261446277392",
-      "x": 151650,
-      "width": 1280,
-      "height": 947
-    },
-    {
-      "id": "11215589261446275667",
-      "sourceScreen": "projects/6233788376335662642/screens/11215589261446275667",
-      "x": 153030,
-      "width": 1280,
-      "height": 1186
-    },
-    {
-      "id": "16719224565033260632",
-      "sourceScreen": "projects/6233788376335662642/screens/16719224565033260632",
-      "x": 154410,
-      "width": 1280,
-      "height": 1024
-    },
-    {
-      "id": "16719224565033260283",
-      "sourceScreen": "projects/6233788376335662642/screens/16719224565033260283",
-      "x": 155790,
-      "width": 1280,
-      "height": 1024
-    },
-    {
-      "id": "16719224565033259934",
-      "sourceScreen": "projects/6233788376335662642/screens/16719224565033259934",
-      "x": 157170,
-      "width": 1280,
-      "height": 1024
-    },
-    {
-      "id": "16719224565033259585",
-      "sourceScreen": "projects/6233788376335662642/screens/16719224565033259585",
-      "x": 158550,
+      "id": "8293120701598617228",
+      "sourceScreen": "projects/6233788376335662642/screens/8293120701598617228",
+      "x": 307724,
       "width": 390,
-      "height": 1242
+      "height": 884
     },
     {
-      "id": "1762977036465229481",
-      "sourceScreen": "projects/6233788376335662642/screens/1762977036465229481",
-      "x": 159040,
+      "id": "8293120701598617253",
+      "sourceScreen": "projects/6233788376335662642/screens/8293120701598617253",
+      "x": 308214,
+      "width": 390,
+      "height": 884
+    },
+    {
+      "id": "8293120701598617278",
+      "sourceScreen": "projects/6233788376335662642/screens/8293120701598617278",
+      "x": 308704,
+      "width": 390,
+      "height": 884
+    },
+    {
+      "id": "8018856424132346532",
+      "sourceScreen": "projects/6233788376335662642/screens/8018856424132346532",
+      "x": 309194,
+      "width": 640,
+      "height": 490
+    },
+    {
+      "id": "8018856424132346939",
+      "sourceScreen": "projects/6233788376335662642/screens/8018856424132346939",
+      "x": 309934,
+      "width": 390,
+      "height": 884
+    },
+    {
+      "id": "14837101851782793676",
+      "sourceScreen": "projects/6233788376335662642/screens/14837101851782793676",
+      "x": 310424,
       "width": 1280,
-      "height": 1316
+      "height": 800
     },
     {
-      "id": "1762977036465227166",
-      "sourceScreen": "projects/6233788376335662642/screens/1762977036465227166",
-      "x": 160420,
-      "width": 390,
-      "height": 947
+      "id": "14837101851782794501",
+      "sourceScreen": "projects/6233788376335662642/screens/14837101851782794501",
+      "x": 311804,
+      "width": 1280,
+      "height": 800
     },
     {
-      "id": "1762977036465228947",
-      "sourceScreen": "projects/6233788376335662642/screens/1762977036465228947",
-      "x": 160910,
-      "width": 390,
-      "height": 933
+      "id": "14837101851782791230",
+      "sourceScreen": "projects/6233788376335662642/screens/14837101851782791230",
+      "x": 313184,
+      "width": 1280,
+      "height": 868
+    },
+    {
+      "id": "14837101851782792055",
+      "sourceScreen": "projects/6233788376335662642/screens/14837101851782792055",
+      "x": 314564,
+      "width": 1280,
+      "height": 1100
+    },
+    {
+      "id": "14632086933216920597",
+      "sourceScreen": "projects/6233788376335662642/screens/14632086933216920597",
+      "x": 315944,
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "id": "14632086933216923224",
+      "sourceScreen": "projects/6233788376335662642/screens/14632086933216923224",
+      "x": 317324,
+      "width": 1280,
+      "height": 912
+    },
+    {
+      "id": "14632086933216921755",
+      "sourceScreen": "projects/6233788376335662642/screens/14632086933216921755",
+      "x": 318704,
+      "width": 1280,
+      "height": 1016
+    },
+    {
+      "id": "14632086933216920286",
+      "sourceScreen": "projects/6233788376335662642/screens/14632086933216920286",
+      "x": 320084,
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "id": "7800365560928052667",
+      "sourceScreen": "projects/6233788376335662642/screens/7800365560928052667",
+      "x": 321464,
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "id": "7800365560928052424",
+      "sourceScreen": "projects/6233788376335662642/screens/7800365560928052424",
+      "x": 322844,
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "id": "7800365560928052181",
+      "sourceScreen": "projects/6233788376335662642/screens/7800365560928052181",
+      "x": 324224,
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "id": "7800365560928051938",
+      "sourceScreen": "projects/6233788376335662642/screens/7800365560928051938",
+      "x": 325604,
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "id": "9490278691755603785",
+      "sourceScreen": "projects/6233788376335662642/screens/9490278691755603785",
+      "x": 326984,
+      "width": 1280,
+      "height": 822
+    },
+    {
+      "id": "9490278691755603768",
+      "sourceScreen": "projects/6233788376335662642/screens/9490278691755603768",
+      "x": 328364,
+      "width": 1280,
+      "height": 886
+    },
+    {
+      "id": "9490278691755603751",
+      "sourceScreen": "projects/6233788376335662642/screens/9490278691755603751",
+      "x": 329744,
+      "width": 1280,
+      "height": 844
+    },
+    {
+      "id": "9490278691755603734",
+      "sourceScreen": "projects/6233788376335662642/screens/9490278691755603734",
+      "x": 331124,
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "id": "10422921616745575283",
+      "sourceScreen": "projects/6233788376335662642/screens/10422921616745575283",
+      "x": 332504,
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "id": "10422921616745577746",
+      "sourceScreen": "projects/6233788376335662642/screens/10422921616745577746",
+      "x": 333884,
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "id": "10422921616745576113",
+      "sourceScreen": "projects/6233788376335662642/screens/10422921616745576113",
+      "x": 335264,
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "id": "10422921616745574480",
+      "sourceScreen": "projects/6233788376335662642/screens/10422921616745574480",
+      "x": 336644,
+      "width": 1280,
+      "height": 800
+    },
+    {
+      "id": "1013459785102188053",
+      "sourceScreen": "projects/6233788376335662642/screens/1013459785102188053",
+      "x": 338024,
+      "width": 1280,
+      "height": 800
     }
   ],
   "metadata": {

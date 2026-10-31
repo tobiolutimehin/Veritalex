@@ -1,0 +1,72 @@
+{
+  "results": [
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/8018856424132349071",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1W2vP2MUZK6IUSuRGWOw7FIORvkSvg9SJF_bhjqH8gJdYwMC2ze50fawfl-N31yhXADrtkdLSKBESJTjpqO1Pm_ce73EKBrhCpBP53MXj2RedIPJMZu_HAcZTRQdlj_F2KRQXypqLFXAzeiYFTKfPsH0dOs7h8K9fXlj4EAMg7h4Ny3_DutlGu_KqBhKn0ttPNKrc2-Q0AwIaz5PjAIr2MCQqUtrPcjnwbwkTF_LcTFS8QAeAx24Jj8UijKLcQkn_2drSP8Na6Qmw"
+        },
+        "id": "8018856424132346532",
+        "width": "1280",
+        "height": "980",
+        "title": "Clarity review / overview",
+        "name": "projects/6233788376335662642/screens/8018856424132346532",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "htmlCode": {
+          "name": "projects/6233788376335662642/files/8018856424132349478",
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBKNARIhYXBwX2NvbXBhbmlvbl91c2VyX3VwbG9hZGVkX2ZpbGVzGmgKM3VzZXJfdXBsb2FkZWRfaHRtbF8wMDA2NWYxYTViNWExNjA2MDg5YWY2ZjkyZDIxNmVmNxILEgcQh5SsssAKGAGSASMKCnByb2plY3RfaWQSFUITNjIzMzc4ODM3NjMzNTY2MjY0Mg&filename=&opi=96797242",
+          "mimeType": "text/markdown"
+        },
+        "id": "8018856424132346939",
+        "generatedBy": "UserUploadedDesignMd: stitch::code-to-design",
+        "width": "780",
+        "height": "1768",
+        "title": "Clarity review / CHANGES",
+        "name": "projects/6233788376335662642/screens/8018856424132346939",
+        "theme": {},
+        "screenType": "DOCUMENT",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE",
+          "displayMode": "MARKDOWN"
+        }
+      }
+    }
+  ],
+  "screenInstances": [
+    {
+      "id": "8018856424132346532",
+      "sourceScreen": "projects/6233788376335662642/screens/8018856424132346532",
+      "x": 309194,
+      "width": 640,
+      "height": 490
+    },
+    {
+      "id": "8018856424132346939",
+      "sourceScreen": "projects/6233788376335662642/screens/8018856424132346939",
+      "x": 309934,
+      "width": 390,
+      "height": 884
+    }
+  ],
+  "transfer": {
+    "files": [
+      "overview.png",
+      "revisions/clarity-v1/CHANGES.md"
+    ],
+    "prefix": "Clarity review / ",
+    "sha256": {
+      "overview.png": "eec0d1ee56b7f5edabc91f68de81e6557d204ccfe5e0d6a489db137d3efb35a9",
+      "revisions/clarity-v1/CHANGES.md": "0c881c40ae2ac3611be9c3988ea8c03c07e08afdde1519a4314e8c0b2f1a5f47"
+    }
+  }
+}

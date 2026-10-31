@@ -29,10 +29,10 @@
       "screenIds": [
         "home-returning"
       ],
-      "refinement": "Removed invented catalogue download counts using the approved Stitch DOM operation.",
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 2108
+        "height": 1830
       }
     },
     {
@@ -51,13 +51,14 @@
       },
       "variant": "light",
       "html": "designs/book-details.html",
-      "source": "Stitch",
+      "source": "Stitch with approved final content and typography edits",
       "screenIds": [
         "book-new"
       ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 1894
+        "height": 1830
       }
     },
     {
@@ -80,10 +81,10 @@
       "screenIds": [
         "reader-scroll"
       ],
-      "refinement": "Left-aligned prose with natural spacing and a compact chapter introduction.",
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 1830
+        "height": 3092
       }
     },
     {
@@ -106,10 +107,10 @@
       "screenIds": [
         "library-books"
       ],
-      "refinement": "Corrected catalogue attribution to Project Gutenberg.",
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 2116
+        "height": 1830
       }
     },
     {
@@ -132,10 +133,10 @@
       "screenIds": [
         "explore-browse"
       ],
-      "refinement": "Corrected catalogue attribution to Project Gutenberg.",
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 2468
+        "height": 1830
       }
     },
     {
@@ -154,10 +155,11 @@
       },
       "variant": "light",
       "html": "designs/shelves.html",
-      "source": "Stitch",
+      "source": "Stitch with approved final content and typography edits",
       "screenIds": [
         "shelves-list"
       ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
         "height": 1830
@@ -179,13 +181,14 @@
       },
       "variant": "light",
       "html": "designs/journal.html",
-      "source": "Stitch",
+      "source": "Stitch with approved final content and typography edits",
       "screenIds": [
         "journal-all"
       ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 1942
+        "height": 1830
       }
     },
     {
@@ -204,13 +207,14 @@
       },
       "variant": "light",
       "html": "designs/welcome.html",
-      "source": "Stitch",
+      "source": "Stitch with approved final content and typography edits",
       "screenIds": [
         "auth-welcome"
       ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 1768
+        "height": 1830
       }
     },
     {
@@ -229,13 +233,14 @@
       },
       "variant": "light",
       "html": "designs/guest-import.html",
-      "source": "Stitch",
+      "source": "Stitch with approved final content and typography edits",
       "screenIds": [
         "auth-import-preview"
       ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 1984
+        "height": 1830
       }
     },
     {
@@ -258,10 +263,10 @@
       "screenIds": [
         "settings-main"
       ],
-      "refinement": "Corrected catalogue attribution to Project Gutenberg.",
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 1894
+        "height": 2200
       }
     },
     {
@@ -280,13 +285,14 @@
       },
       "variant": "light",
       "html": "designs/account-sync.html",
-      "source": "Stitch",
+      "source": "Stitch with approved final content and typography edits",
       "screenIds": [
         "account-details"
       ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 1874
+        "height": 1830
       }
     },
     {
@@ -305,13 +311,14 @@
       },
       "variant": "light",
       "html": "designs/reader-appearance.html",
-      "source": "Stitch",
+      "source": "Stitch with approved final content and typography edits",
       "screenIds": [
         "reader-appearance"
       ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 1830
+        "height": 2032
       }
     },
     {
@@ -330,13 +337,14 @@
       },
       "variant": "light",
       "html": "designs/downloads.html",
-      "source": "Stitch",
+      "source": "Stitch with approved final content and typography edits",
       "screenIds": [
         "settings-storage"
       ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 1768
+        "height": 1830
       }
     },
     {
@@ -359,7 +367,7 @@
       "screenIds": [
         "sync-conflict"
       ],
-      "refinement": "Removed illustrative quotes and matched the account position to Chapter 19 / 31%.",
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
         "height": 1830
@@ -381,8 +389,11 @@
       "slug": "tablet-home",
       "variant": "tablet",
       "html": "designs/tablet-home.html",
-      "source": "Stitch",
-      "screenIds": [],
+      "source": "Stitch with approved final content and typography edits",
+      "screenIds": [
+        "home-returning"
+      ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 2560,
         "height": 2048
@@ -405,8 +416,10 @@
       "variant": "tablet",
       "html": "designs/tablet-library.html",
       "source": "Stitch with approved final content and typography edits",
-      "screenIds": [],
-      "refinement": "Corrected catalogue attribution to Project Gutenberg.",
+      "screenIds": [
+        "library-books"
+      ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 2560,
         "height": 2048
@@ -428,8 +441,11 @@
       },
       "variant": "tablet",
       "html": "designs/tablet-journal.html",
-      "source": "Stitch",
-      "screenIds": [],
+      "source": "Stitch with approved final content and typography edits",
+      "screenIds": [
+        "journal-all"
+      ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 2560,
         "height": 2048
@@ -451,8 +467,11 @@
       },
       "variant": "tablet",
       "html": "designs/tablet-reader.html",
-      "source": "Stitch",
-      "screenIds": [],
+      "source": "Stitch with approved final content and typography edits",
+      "screenIds": [
+        "reader-scroll"
+      ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 2560,
         "height": 2048
@@ -474,13 +493,14 @@
       },
       "variant": "dark",
       "html": "designs/dark-home.html",
-      "source": "Stitch",
+      "source": "Stitch with approved final content and typography edits",
       "screenIds": [
         "home-returning"
       ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 2484
+        "height": 1830
       }
     },
     {
@@ -503,7 +523,7 @@
       "screenIds": [
         "explore-browse"
       ],
-      "refinement": "Corrected catalogue attribution to Project Gutenberg.",
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
         "height": 1830
@@ -529,7 +549,7 @@
       "screenIds": [
         "library-books"
       ],
-      "refinement": "Corrected catalogue attribution to Project Gutenberg.",
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
         "height": 1830
@@ -551,13 +571,14 @@
       },
       "variant": "dark",
       "html": "designs/dark-book-details.html",
-      "source": "Stitch",
+      "source": "Stitch with approved final content and typography edits",
       "screenIds": [
         "book-new"
       ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
-        "width": 2560,
-        "height": 2632
+        "width": 780,
+        "height": 1830
       }
     },
     {
@@ -580,7 +601,7 @@
       "screenIds": [
         "reader-scroll"
       ],
-      "refinement": "Left-aligned prose with natural spacing and a compact chapter introduction.",
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
         "height": 1830
@@ -602,13 +623,14 @@
       },
       "variant": "dark",
       "html": "designs/dark-settings.html",
-      "source": "Stitch",
+      "source": "Stitch with approved final content and typography edits",
       "screenIds": [
         "settings-main"
       ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 1894
+        "height": 1830
       }
     },
     {
@@ -627,13 +649,14 @@
       },
       "variant": "dark",
       "html": "designs/dark-account-sync.html",
-      "source": "Stitch",
+      "source": "Stitch with approved final content and typography edits",
       "screenIds": [
         "account-details"
       ],
+      "refinement": "Approved clarity refinement: concise copy, state-specific actions and consistent Material3 controls; see revisions/clarity-v1/CHANGES.md.",
       "exportDimensions": {
         "width": 780,
-        "height": 1866
+        "height": 1830
       }
     }
   ],
@@ -641,156 +664,156 @@
     {
       "file": "boards/01-auth-import.html",
       "prefix": "Source / WF / ",
-      "instanceId": "15432184873809979516",
-      "sourceScreen": "projects/6233788376335662642/screens/15432184873809979516",
-      "receipt": "transfers/upload-boards-01-auth-import-html-20261030T091731063994.json"
+      "instanceId": "450502986632463607",
+      "sourceScreen": "projects/6233788376335662642/screens/450502986632463607",
+      "receipt": "transfers/upload-boards-01-auth-import-html-20261031T031459495834.json"
     },
     {
       "file": "boards/02-discovery.html",
       "prefix": "Source / WF / ",
-      "instanceId": "15432184873809981021",
-      "sourceScreen": "projects/6233788376335662642/screens/15432184873809981021",
-      "receipt": "transfers/upload-boards-01-auth-import-html-20261030T091731063994.json"
+      "instanceId": "450502986632465658",
+      "sourceScreen": "projects/6233788376335662642/screens/450502986632465658",
+      "receipt": "transfers/upload-boards-01-auth-import-html-20261031T031459495834.json"
     },
     {
       "file": "boards/03-book-access.html",
       "prefix": "Source / WF / ",
-      "instanceId": "15432184873809978430",
-      "sourceScreen": "projects/6233788376335662642/screens/15432184873809978430",
-      "receipt": "transfers/upload-boards-01-auth-import-html-20261030T091731063994.json"
+      "instanceId": "450502986632463613",
+      "sourceScreen": "projects/6233788376335662642/screens/450502986632463613",
+      "receipt": "transfers/upload-boards-01-auth-import-html-20261031T031459495834.json"
     },
     {
       "file": "boards/04-library.html",
       "prefix": "Source / WF / ",
-      "instanceId": "15432184873809979935",
-      "sourceScreen": "projects/6233788376335662642/screens/15432184873809979935",
-      "receipt": "transfers/upload-boards-01-auth-import-html-20261030T091731063994.json"
+      "instanceId": "450502986632465664",
+      "sourceScreen": "projects/6233788376335662642/screens/450502986632465664",
+      "receipt": "transfers/upload-boards-01-auth-import-html-20261031T031459495834.json"
     },
     {
       "file": "boards/01-auth-import.png",
       "prefix": "WF / ",
-      "instanceId": "16118461375848005854",
-      "sourceScreen": "projects/6233788376335662642/screens/16118461375848005854",
-      "receipt": "transfers/upload-boards-01-auth-import-png-20261030T091513603324.json"
+      "instanceId": "17031488347544779536",
+      "sourceScreen": "projects/6233788376335662642/screens/17031488347544779536",
+      "receipt": "transfers/upload-boards-01-auth-import-png-20261031T031437323230.json"
     },
     {
       "file": "boards/02-discovery.png",
       "prefix": "WF / ",
-      "instanceId": "16118461375848009107",
-      "sourceScreen": "projects/6233788376335662642/screens/16118461375848009107",
-      "receipt": "transfers/upload-boards-01-auth-import-png-20261030T091513603324.json"
+      "instanceId": "17031488347544777881",
+      "sourceScreen": "projects/6233788376335662642/screens/17031488347544777881",
+      "receipt": "transfers/upload-boards-01-auth-import-png-20261031T031437323230.json"
     },
     {
       "file": "boards/03-book-access.png",
       "prefix": "WF / ",
-      "instanceId": "16118461375848008264",
-      "sourceScreen": "projects/6233788376335662642/screens/16118461375848008264",
-      "receipt": "transfers/upload-boards-01-auth-import-png-20261030T091513603324.json"
+      "instanceId": "17031488347544780322",
+      "sourceScreen": "projects/6233788376335662642/screens/17031488347544780322",
+      "receipt": "transfers/upload-boards-01-auth-import-png-20261031T031437323230.json"
     },
     {
       "file": "boards/04-library.png",
       "prefix": "WF / ",
-      "instanceId": "16118461375848007421",
-      "sourceScreen": "projects/6233788376335662642/screens/16118461375848007421",
-      "receipt": "transfers/upload-boards-01-auth-import-png-20261030T091513603324.json"
+      "instanceId": "17031488347544778667",
+      "sourceScreen": "projects/6233788376335662642/screens/17031488347544778667",
+      "receipt": "transfers/upload-boards-01-auth-import-png-20261031T031437323230.json"
     },
     {
       "file": "boards/05-organize.html",
       "prefix": "Source / WF / ",
-      "instanceId": "5394591930075914825",
-      "sourceScreen": "projects/6233788376335662642/screens/5394591930075914825",
-      "receipt": "transfers/upload-boards-05-organize-html-20261030T091755077159.json"
+      "instanceId": "16330146324225643143",
+      "sourceScreen": "projects/6233788376335662642/screens/16330146324225643143",
+      "receipt": "transfers/upload-boards-05-organize-html-20261031T031523994977.json"
     },
     {
       "file": "boards/06-shelves.html",
       "prefix": "Source / WF / ",
-      "instanceId": "5394591930075916032",
-      "sourceScreen": "projects/6233788376335662642/screens/5394591930075916032",
-      "receipt": "transfers/upload-boards-05-organize-html-20261030T091755077159.json"
+      "instanceId": "16330146324225646560",
+      "sourceScreen": "projects/6233788376335662642/screens/16330146324225646560",
+      "receipt": "transfers/upload-boards-05-organize-html-20261031T031523994977.json"
     },
     {
       "file": "boards/07-journal.html",
       "prefix": "Source / WF / ",
-      "instanceId": "5394591930075917239",
-      "sourceScreen": "projects/6233788376335662642/screens/5394591930075917239",
-      "receipt": "transfers/upload-boards-05-organize-html-20261030T091755077159.json"
+      "instanceId": "16330146324225645881",
+      "sourceScreen": "projects/6233788376335662642/screens/16330146324225645881",
+      "receipt": "transfers/upload-boards-05-organize-html-20261031T031523994977.json"
     },
     {
       "file": "boards/08-reader.html",
       "prefix": "Source / WF / ",
-      "instanceId": "5394591930075914350",
-      "sourceScreen": "projects/6233788376335662642/screens/5394591930075914350",
-      "receipt": "transfers/upload-boards-05-organize-html-20261030T091755077159.json"
+      "instanceId": "16330146324225645202",
+      "sourceScreen": "projects/6233788376335662642/screens/16330146324225645202",
+      "receipt": "transfers/upload-boards-05-organize-html-20261031T031523994977.json"
     },
     {
       "file": "boards/05-organize.png",
       "prefix": "WF / ",
-      "instanceId": "2202519320052249562",
-      "sourceScreen": "projects/6233788376335662642/screens/2202519320052249562",
-      "receipt": "transfers/upload-boards-05-organize-png-20261030T091516725960.json"
+      "instanceId": "12644893282114723327",
+      "sourceScreen": "projects/6233788376335662642/screens/12644893282114723327",
+      "receipt": "transfers/upload-boards-05-organize-png-20261031T031442271974.json"
     },
     {
       "file": "boards/06-shelves.png",
       "prefix": "WF / ",
-      "instanceId": "2202519320052251693",
-      "sourceScreen": "projects/6233788376335662642/screens/2202519320052251693",
-      "receipt": "transfers/upload-boards-05-organize-png-20261030T091516725960.json"
+      "instanceId": "12644893282114721434",
+      "sourceScreen": "projects/6233788376335662642/screens/12644893282114721434",
+      "receipt": "transfers/upload-boards-05-organize-png-20261031T031442271974.json"
     },
     {
       "file": "boards/07-journal.png",
       "prefix": "WF / ",
-      "instanceId": "2202519320052249728",
-      "sourceScreen": "projects/6233788376335662642/screens/2202519320052249728",
-      "receipt": "transfers/upload-boards-05-organize-png-20261030T091516725960.json"
+      "instanceId": "12644893282114723637",
+      "sourceScreen": "projects/6233788376335662642/screens/12644893282114723637",
+      "receipt": "transfers/upload-boards-05-organize-png-20261031T031442271974.json"
     },
     {
       "file": "boards/08-reader.png",
       "prefix": "WF / ",
-      "instanceId": "2202519320052251859",
-      "sourceScreen": "projects/6233788376335662642/screens/2202519320052251859",
-      "receipt": "transfers/upload-boards-05-organize-png-20261030T091516725960.json"
+      "instanceId": "12644893282114721744",
+      "sourceScreen": "projects/6233788376335662642/screens/12644893282114721744",
+      "receipt": "transfers/upload-boards-05-organize-png-20261031T031442271974.json"
     },
     {
       "file": "boards/09-reading-settings.html",
       "prefix": "Source / WF / ",
-      "instanceId": "9202819332753782845",
-      "sourceScreen": "projects/6233788376335662642/screens/9202819332753782845",
-      "receipt": "transfers/upload-boards-09-reading-settings-html-20261030T091817842579.json"
+      "instanceId": "2789998644459250422",
+      "sourceScreen": "projects/6233788376335662642/screens/2789998644459250422",
+      "receipt": "transfers/upload-boards-09-reading-settings-html-20261031T031548442892.json"
     },
     {
       "file": "boards/10-settings-account.html",
       "prefix": "Source / WF / ",
-      "instanceId": "9202819332753781880",
-      "sourceScreen": "projects/6233788376335662642/screens/9202819332753781880",
-      "receipt": "transfers/upload-boards-09-reading-settings-html-20261030T091817842579.json"
+      "instanceId": "2789998644459250711",
+      "sourceScreen": "projects/6233788376335662642/screens/2789998644459250711",
+      "receipt": "transfers/upload-boards-09-reading-settings-html-20261031T031548442892.json"
     },
     {
       "file": "boards/11-account-recovery.html",
       "prefix": "Source / WF / ",
-      "instanceId": "9202819332753780915",
-      "sourceScreen": "projects/6233788376335662642/screens/9202819332753780915",
-      "receipt": "transfers/upload-boards-09-reading-settings-html-20261030T091817842579.json"
+      "instanceId": "2789998644459251000",
+      "sourceScreen": "projects/6233788376335662642/screens/2789998644459251000",
+      "receipt": "transfers/upload-boards-09-reading-settings-html-20261031T031548442892.json"
     },
     {
       "file": "boards/12-sync.html",
       "prefix": "Source / WF / ",
-      "instanceId": "9202819332753784046",
-      "sourceScreen": "projects/6233788376335662642/screens/9202819332753784046",
-      "receipt": "transfers/upload-boards-09-reading-settings-html-20261030T091817842579.json"
+      "instanceId": "2789998644459251289",
+      "sourceScreen": "projects/6233788376335662642/screens/2789998644459251289",
+      "receipt": "transfers/upload-boards-09-reading-settings-html-20261031T031548442892.json"
     },
     {
       "file": "boards/09-reading-settings.png",
       "prefix": "WF / ",
-      "instanceId": "13664084156455910551",
-      "sourceScreen": "projects/6233788376335662642/screens/13664084156455910551",
-      "receipt": "transfers/upload-boards-09-reading-settings-png-20261030T091519820417.json"
+      "instanceId": "1969334186451060915",
+      "sourceScreen": "projects/6233788376335662642/screens/1969334186451060915",
+      "receipt": "transfers/upload-boards-09-reading-settings-png-20261031T031446261276.json"
     },
     {
       "file": "boards/10-settings-account.png",
       "prefix": "WF / ",
-      "instanceId": "13664084156455908254",
-      "sourceScreen": "projects/6233788376335662642/screens/13664084156455908254",
-      "receipt": "transfers/upload-boards-09-reading-settings-png-20261030T091519820417.json"
+      "instanceId": "1969334186451060492",
+      "sourceScreen": "projects/6233788376335662642/screens/1969334186451060492",
+      "receipt": "transfers/upload-boards-09-reading-settings-png-20261031T031446261276.json"
     },
     {
       "file": "boards/11-account-recovery.png",
@@ -802,163 +825,163 @@
     {
       "file": "boards/12-sync.png",
       "prefix": "WF / ",
-      "instanceId": "13664084156455907756",
-      "sourceScreen": "projects/6233788376335662642/screens/13664084156455907756",
-      "receipt": "transfers/upload-boards-09-reading-settings-png-20261030T091519820417.json"
+      "instanceId": "1969334186451060069",
+      "sourceScreen": "projects/6233788376335662642/screens/1969334186451060069",
+      "receipt": "transfers/upload-boards-09-reading-settings-png-20261031T031446261276.json"
     },
     {
       "file": "polished-boards/01-auth-import.html",
       "prefix": "Source / UI / ",
-      "instanceId": "1202936915399383434",
-      "sourceScreen": "projects/6233788376335662642/screens/1202936915399383434",
-      "receipt": "transfers/upload-polished-boards-01-auth-import-html-20261030T091842723951.json"
+      "instanceId": "4451120973545036519",
+      "sourceScreen": "projects/6233788376335662642/screens/4451120973545036519",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-html-20261031T031612564413.json"
     },
     {
       "file": "polished-boards/02-discovery.html",
       "prefix": "Source / UI / ",
-      "instanceId": "1202936915399385005",
-      "sourceScreen": "projects/6233788376335662642/screens/1202936915399385005",
-      "receipt": "transfers/upload-polished-boards-01-auth-import-html-20261030T091842723951.json"
+      "instanceId": "4451120973545034786",
+      "sourceScreen": "projects/6233788376335662642/screens/4451120973545034786",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-html-20261031T031612564413.json"
     },
     {
       "file": "polished-boards/03-book-access.html",
       "prefix": "Source / UI / ",
-      "instanceId": "1202936915399382480",
-      "sourceScreen": "projects/6233788376335662642/screens/1202936915399382480",
-      "receipt": "transfers/upload-polished-boards-01-auth-import-html-20261030T091842723951.json"
+      "instanceId": "4451120973545037149",
+      "sourceScreen": "projects/6233788376335662642/screens/4451120973545037149",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-html-20261031T031612564413.json"
     },
     {
       "file": "polished-boards/04-library.html",
       "prefix": "Source / UI / ",
-      "instanceId": "1202936915399384051",
-      "sourceScreen": "projects/6233788376335662642/screens/1202936915399384051",
-      "receipt": "transfers/upload-polished-boards-01-auth-import-html-20261030T091842723951.json"
+      "instanceId": "4451120973545035416",
+      "sourceScreen": "projects/6233788376335662642/screens/4451120973545035416",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-html-20261031T031612564413.json"
     },
     {
       "file": "polished-boards/01-auth-import.png",
       "prefix": "UI / ",
-      "instanceId": "2785915158839425478",
-      "sourceScreen": "projects/6233788376335662642/screens/2785915158839425478",
-      "receipt": "transfers/upload-polished-boards-01-auth-import-png-20261030T091523473390.json"
+      "instanceId": "10139457702818359",
+      "sourceScreen": "projects/6233788376335662642/screens/10139457702818359",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-png-20261031T031449360971.json"
     },
     {
       "file": "polished-boards/02-discovery.png",
       "prefix": "UI / ",
-      "instanceId": "2785915158839425171",
-      "sourceScreen": "projects/6233788376335662642/screens/2785915158839425171",
-      "receipt": "transfers/upload-polished-boards-01-auth-import-png-20261030T091523473390.json"
+      "instanceId": "10139457702818888",
+      "sourceScreen": "projects/6233788376335662642/screens/10139457702818888",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-png-20261031T031449360971.json"
     },
     {
       "file": "polished-boards/03-book-access.png",
       "prefix": "UI / ",
-      "instanceId": "2785915158839424864",
-      "sourceScreen": "projects/6233788376335662642/screens/2785915158839424864",
-      "receipt": "transfers/upload-polished-boards-01-auth-import-png-20261030T091523473390.json"
+      "instanceId": "10139457702819417",
+      "sourceScreen": "projects/6233788376335662642/screens/10139457702819417",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-png-20261031T031449360971.json"
     },
     {
       "file": "polished-boards/04-library.png",
       "prefix": "UI / ",
-      "instanceId": "2785915158839424557",
-      "sourceScreen": "projects/6233788376335662642/screens/2785915158839424557",
-      "receipt": "transfers/upload-polished-boards-01-auth-import-png-20261030T091523473390.json"
+      "instanceId": "10139457702819946",
+      "sourceScreen": "projects/6233788376335662642/screens/10139457702819946",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-png-20261031T031449360971.json"
     },
     {
       "file": "polished-boards/05-organize.html",
       "prefix": "Source / UI / ",
-      "instanceId": "2079028214883654772",
-      "sourceScreen": "projects/6233788376335662642/screens/2079028214883654772",
-      "receipt": "transfers/upload-polished-boards-05-organize-html-20261030T091906868880.json"
+      "instanceId": "1631859748176387490",
+      "sourceScreen": "projects/6233788376335662642/screens/1631859748176387490",
+      "receipt": "transfers/upload-polished-boards-05-organize-html-20261031T031640067274.json"
     },
     {
       "file": "polished-boards/06-shelves.html",
       "prefix": "Source / UI / ",
-      "instanceId": "2079028214883654253",
-      "sourceScreen": "projects/6233788376335662642/screens/2079028214883654253",
-      "receipt": "transfers/upload-polished-boards-05-organize-html-20261030T091906868880.json"
+      "instanceId": "1631859748176385909",
+      "sourceScreen": "projects/6233788376335662642/screens/1631859748176385909",
+      "receipt": "transfers/upload-polished-boards-05-organize-html-20261031T031640067274.json"
     },
     {
       "file": "polished-boards/07-journal.html",
       "prefix": "Source / UI / ",
-      "instanceId": "2079028214883653734",
-      "sourceScreen": "projects/6233788376335662642/screens/2079028214883653734",
-      "receipt": "transfers/upload-polished-boards-05-organize-html-20261030T091906868880.json"
+      "instanceId": "1631859748176384328",
+      "sourceScreen": "projects/6233788376335662642/screens/1631859748176384328",
+      "receipt": "transfers/upload-polished-boards-05-organize-html-20261031T031640067274.json"
     },
     {
       "file": "polished-boards/08-reader.html",
       "prefix": "Source / UI / ",
-      "instanceId": "2079028214883653215",
-      "sourceScreen": "projects/6233788376335662642/screens/2079028214883653215",
-      "receipt": "transfers/upload-polished-boards-05-organize-html-20261030T091906868880.json"
+      "instanceId": "1631859748176386843",
+      "sourceScreen": "projects/6233788376335662642/screens/1631859748176386843",
+      "receipt": "transfers/upload-polished-boards-05-organize-html-20261031T031640067274.json"
     },
     {
       "file": "polished-boards/05-organize.png",
       "prefix": "UI / ",
-      "instanceId": "5164575286791658208",
-      "sourceScreen": "projects/6233788376335662642/screens/5164575286791658208",
-      "receipt": "transfers/upload-polished-boards-05-organize-png-20261030T091527622688.json"
+      "instanceId": "1605933102053942524",
+      "sourceScreen": "projects/6233788376335662642/screens/1605933102053942524",
+      "receipt": "transfers/upload-polished-boards-05-organize-png-20261031T031452875450.json"
     },
     {
       "file": "polished-boards/06-shelves.png",
       "prefix": "UI / ",
-      "instanceId": "5164575286791656991",
-      "sourceScreen": "projects/6233788376335662642/screens/5164575286791656991",
-      "receipt": "transfers/upload-polished-boards-05-organize-png-20261030T091527622688.json"
+      "instanceId": "1605933102053942259",
+      "sourceScreen": "projects/6233788376335662642/screens/1605933102053942259",
+      "receipt": "transfers/upload-polished-boards-05-organize-png-20261031T031452875450.json"
     },
     {
       "file": "polished-boards/07-journal.png",
       "prefix": "UI / ",
-      "instanceId": "5164575286791655774",
-      "sourceScreen": "projects/6233788376335662642/screens/5164575286791655774",
-      "receipt": "transfers/upload-polished-boards-05-organize-png-20261030T091527622688.json"
+      "instanceId": "1605933102053941994",
+      "sourceScreen": "projects/6233788376335662642/screens/1605933102053941994",
+      "receipt": "transfers/upload-polished-boards-05-organize-png-20261031T031452875450.json"
     },
     {
       "file": "polished-boards/08-reader.png",
       "prefix": "UI / ",
-      "instanceId": "5164575286791658653",
-      "sourceScreen": "projects/6233788376335662642/screens/5164575286791658653",
-      "receipt": "transfers/upload-polished-boards-05-organize-png-20261030T091527622688.json"
+      "instanceId": "1605933102053941729",
+      "sourceScreen": "projects/6233788376335662642/screens/1605933102053941729",
+      "receipt": "transfers/upload-polished-boards-05-organize-png-20261031T031452875450.json"
     },
     {
       "file": "polished-boards/09-reading-settings.html",
       "prefix": "Source / UI / ",
-      "instanceId": "1757740575913161296",
-      "sourceScreen": "projects/6233788376335662642/screens/1757740575913161296",
-      "receipt": "transfers/upload-polished-boards-09-reading-settings-html-20261030T091931147544.json"
+      "instanceId": "12922029109436544909",
+      "sourceScreen": "projects/6233788376335662642/screens/12922029109436544909",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-html-20261031T031710681040.json"
     },
     {
       "file": "polished-boards/10-settings-account.html",
       "prefix": "Source / UI / ",
-      "instanceId": "1757740575913164397",
-      "sourceScreen": "projects/6233788376335662642/screens/1757740575913164397",
-      "receipt": "transfers/upload-polished-boards-09-reading-settings-html-20261030T091931147544.json"
+      "instanceId": "12922029109436543774",
+      "sourceScreen": "projects/6233788376335662642/screens/12922029109436543774",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-html-20261031T031710681040.json"
     },
     {
       "file": "polished-boards/11-account-recovery.html",
       "prefix": "Source / UI / ",
-      "instanceId": "1757740575913163402",
-      "sourceScreen": "projects/6233788376335662642/screens/1757740575913163402",
-      "receipt": "transfers/upload-polished-boards-09-reading-settings-html-20261030T091931147544.json"
+      "instanceId": "12922029109436546735",
+      "sourceScreen": "projects/6233788376335662642/screens/12922029109436546735",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-html-20261031T031710681040.json"
     },
     {
       "file": "polished-boards/12-sync.html",
       "prefix": "Source / UI / ",
-      "instanceId": "1757740575913162407",
-      "sourceScreen": "projects/6233788376335662642/screens/1757740575913162407",
-      "receipt": "transfers/upload-polished-boards-09-reading-settings-html-20261030T091931147544.json"
+      "instanceId": "12922029109436545600",
+      "sourceScreen": "projects/6233788376335662642/screens/12922029109436545600",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-html-20261031T031710681040.json"
     },
     {
       "file": "polished-boards/09-reading-settings.png",
       "prefix": "UI / ",
-      "instanceId": "5151541798511065057",
-      "sourceScreen": "projects/6233788376335662642/screens/5151541798511065057",
-      "receipt": "transfers/upload-polished-boards-09-reading-settings-png-20261030T091534803153.json"
+      "instanceId": "12041713230398647633",
+      "sourceScreen": "projects/6233788376335662642/screens/12041713230398647633",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-png-20261031T031456584501.json"
     },
     {
       "file": "polished-boards/10-settings-account.png",
       "prefix": "UI / ",
-      "instanceId": "5151541798511065768",
-      "sourceScreen": "projects/6233788376335662642/screens/5151541798511065768",
-      "receipt": "transfers/upload-polished-boards-09-reading-settings-png-20261030T091534803153.json"
+      "instanceId": "12041713230398645300",
+      "sourceScreen": "projects/6233788376335662642/screens/12041713230398645300",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-png-20261031T031456584501.json"
     },
     {
       "file": "polished-boards/11-account-recovery.png",
@@ -970,153 +993,345 @@
     {
       "file": "polished-boards/12-sync.png",
       "prefix": "UI / ",
-      "instanceId": "5151541798511063094",
-      "sourceScreen": "projects/6233788376335662642/screens/5151541798511063094",
-      "receipt": "transfers/upload-polished-boards-09-reading-settings-png-20261030T091534803153.json"
+      "instanceId": "12041713230398647063",
+      "sourceScreen": "projects/6233788376335662642/screens/12041713230398647063",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-png-20261031T031456584501.json"
     }
   ],
   "canvasReferences": [
     {
       "slug": "home",
-      "sourceScreen": "projects/6233788376335662642/screens/1554670495747983401",
-      "kind": "Final",
-      "receipt": "transfers/upload-designs-home-png-20261030T093940157489.json"
+      "sourceScreen": "projects/6233788376335662642/screens/7788671261819844854",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-home-png-20261031T031714408167.json"
     },
     {
       "slug": "book-details",
-      "sourceScreen": "projects/6233788376335662642/screens/e38c1a94c65c4cb2a2a5df3e3a31c3a1",
-      "kind": "Stitch design"
+      "sourceScreen": "projects/6233788376335662642/screens/2097656440266785997",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-book-details-png-20261031T031730318894.json"
     },
     {
       "slug": "reader",
-      "sourceScreen": "projects/6233788376335662642/screens/1554670495747984338",
-      "kind": "Final",
-      "receipt": "transfers/upload-designs-home-png-20261030T093940157489.json"
+      "sourceScreen": "projects/6233788376335662642/screens/7788671261819844196",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-home-png-20261031T031714408167.json"
     },
     {
       "slug": "library",
-      "sourceScreen": "projects/6233788376335662642/screens/7028754476728810132",
-      "kind": "Final",
-      "receipt": "transfers/upload-designs-library-png-20261030T093945420932.json"
+      "sourceScreen": "projects/6233788376335662642/screens/370629634870761217",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-dark-library-png-20261031T031718794000.json"
     },
     {
       "slug": "explore",
-      "sourceScreen": "projects/6233788376335662642/screens/7028754476728810257",
-      "kind": "Final",
-      "receipt": "transfers/upload-designs-library-png-20261030T093945420932.json"
+      "sourceScreen": "projects/6233788376335662642/screens/3964645869554812830",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-dark-explore-png-20261031T031722499968.json"
     },
     {
       "slug": "shelves",
-      "sourceScreen": "projects/6233788376335662642/screens/8522cf91fea748f6a06927ea5ab63b78",
-      "kind": "Stitch design"
+      "sourceScreen": "projects/6233788376335662642/screens/2158343539502097330",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-guest-import-png-20261031T031728024887.json"
     },
     {
       "slug": "journal",
-      "sourceScreen": "projects/6233788376335662642/screens/f0f67645e2644e1bb8eef54f0e4f21ba",
-      "kind": "Stitch design"
+      "sourceScreen": "projects/6233788376335662642/screens/2158343539502098648",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-guest-import-png-20261031T031728024887.json"
     },
     {
       "slug": "welcome",
-      "sourceScreen": "projects/6233788376335662642/screens/0f72526c22234163b91d2c2689c60e4c",
-      "kind": "Stitch design"
+      "sourceScreen": "projects/6233788376335662642/screens/2097656440266788392",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-book-details-png-20261031T031730318894.json"
     },
     {
       "slug": "guest-import",
-      "sourceScreen": "projects/6233788376335662642/screens/6e27f95c073644c9a7c28b3030c72742",
-      "kind": "Stitch design"
+      "sourceScreen": "projects/6233788376335662642/screens/2158343539502097259",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-guest-import-png-20261031T031728024887.json"
     },
     {
       "slug": "settings",
-      "sourceScreen": "projects/6233788376335662642/screens/7028754476728807443",
-      "kind": "Final",
-      "receipt": "transfers/upload-designs-library-png-20261030T093945420932.json"
+      "sourceScreen": "projects/6233788376335662642/screens/370629634870763178",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-dark-library-png-20261031T031718794000.json"
     },
     {
       "slug": "account-sync",
-      "sourceScreen": "projects/6233788376335662642/screens/9bec8ccc3c7a45129bb641e9083a7c03",
-      "kind": "Stitch design"
+      "sourceScreen": "projects/6233788376335662642/screens/12526142160928117285",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-account-sync-png-20261031T031732118702.json"
     },
     {
       "slug": "reader-appearance",
-      "sourceScreen": "projects/6233788376335662642/screens/1aa6946029914bd4a7c8a7c4f5fa4039",
-      "kind": "Stitch design"
+      "sourceScreen": "projects/6233788376335662642/screens/3964645869554813099",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-dark-explore-png-20261031T031722499968.json"
     },
     {
       "slug": "downloads",
-      "sourceScreen": "projects/6233788376335662642/screens/11f336008b294986b1dfd1bc13c2193d",
-      "kind": "Stitch design"
+      "sourceScreen": "projects/6233788376335662642/screens/2158343539502100037",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-guest-import-png-20261031T031728024887.json"
     },
     {
       "slug": "sync-conflict",
-      "sourceScreen": "projects/6233788376335662642/screens/9420814259143694110",
-      "kind": "Final",
-      "receipt": "transfers/upload-designs-home-png-20261030T093218092834.json"
+      "sourceScreen": "projects/6233788376335662642/screens/7788671261819844525",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-home-png-20261031T031714408167.json"
     },
     {
       "slug": "tablet-home",
-      "sourceScreen": "projects/6233788376335662642/screens/16719224565033260632",
-      "kind": "Reference",
-      "receipt": "transfers/upload-designs-tablet-home-png-20261030T094100123177.json"
+      "sourceScreen": "projects/6233788376335662642/screens/2097656440266784990",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-book-details-png-20261031T031730318894.json"
     },
     {
       "slug": "tablet-library",
-      "sourceScreen": "projects/6233788376335662642/screens/1554670495747982116",
-      "kind": "Final",
-      "receipt": "transfers/upload-designs-home-png-20261030T093940157489.json"
+      "sourceScreen": "projects/6233788376335662642/screens/370629634870763352",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-dark-library-png-20261031T031718794000.json"
     },
     {
       "slug": "tablet-journal",
-      "sourceScreen": "projects/6233788376335662642/screens/16719224565033260283",
-      "kind": "Reference",
-      "receipt": "transfers/upload-designs-tablet-home-png-20261030T094100123177.json"
+      "sourceScreen": "projects/6233788376335662642/screens/8427224241318122327",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-dark-account-sync-png-20261031T031724169861.json"
     },
     {
       "slug": "tablet-reader",
-      "sourceScreen": "projects/6233788376335662642/screens/16719224565033259934",
-      "kind": "Reference",
-      "receipt": "transfers/upload-designs-tablet-home-png-20261030T094100123177.json"
+      "sourceScreen": "projects/6233788376335662642/screens/8427224241318124520",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-dark-account-sync-png-20261031T031724169861.json"
     },
     {
       "slug": "dark-home",
-      "sourceScreen": "projects/6233788376335662642/screens/16719224565033259585",
-      "kind": "Reference",
-      "receipt": "transfers/upload-designs-tablet-home-png-20261030T094100123177.json"
+      "sourceScreen": "projects/6233788376335662642/screens/8427224241318124230",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-dark-account-sync-png-20261031T031724169861.json"
     },
     {
       "slug": "dark-explore",
-      "sourceScreen": "projects/6233788376335662642/screens/7028754476728808850",
-      "kind": "Final",
-      "receipt": "transfers/upload-designs-library-png-20261030T093945420932.json"
+      "sourceScreen": "projects/6233788376335662642/screens/3964645869554812561",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-dark-explore-png-20261031T031722499968.json"
     },
     {
       "slug": "dark-library",
-      "sourceScreen": "projects/6233788376335662642/screens/1554670495747985275",
-      "kind": "Final",
-      "receipt": "transfers/upload-designs-home-png-20261030T093940157489.json"
+      "sourceScreen": "projects/6233788376335662642/screens/370629634870761391",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-dark-library-png-20261031T031718794000.json"
     },
     {
       "slug": "dark-book-details",
-      "sourceScreen": "projects/6233788376335662642/screens/1762977036465229481",
-      "kind": "Reference",
-      "receipt": "transfers/upload-designs-dark-book-details-png-20261030T094102617488.json"
+      "sourceScreen": "projects/6233788376335662642/screens/3964645869554813368",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-dark-explore-png-20261031T031722499968.json"
     },
     {
       "slug": "dark-reader",
-      "sourceScreen": "projects/6233788376335662642/screens/9420814259143693909",
-      "kind": "Final",
-      "receipt": "transfers/upload-designs-home-png-20261030T093218092834.json"
+      "sourceScreen": "projects/6233788376335662642/screens/7788671261819843867",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-home-png-20261031T031714408167.json"
     },
     {
       "slug": "dark-settings",
-      "sourceScreen": "projects/6233788376335662642/screens/1762977036465227166",
-      "kind": "Reference",
-      "receipt": "transfers/upload-designs-dark-book-details-png-20261030T094102617488.json"
+      "sourceScreen": "projects/6233788376335662642/screens/2097656440266786691",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-book-details-png-20261031T031730318894.json"
     },
     {
       "slug": "dark-account-sync",
-      "sourceScreen": "projects/6233788376335662642/screens/1762977036465228947",
-      "kind": "Reference",
-      "receipt": "transfers/upload-designs-dark-book-details-png-20261030T094102617488.json"
+      "sourceScreen": "projects/6233788376335662642/screens/8427224241318122617",
+      "kind": "Clarity",
+      "receipt": "transfers/upload-designs-dark-account-sync-png-20261031T031724169861.json"
+    }
+  ],
+  "currentRevision": {
+    "id": "clarity-v1",
+    "date": "2026-10-30",
+    "review": "revisions/clarity-v1/index.html",
+    "audit": "reviews/2026-10-30-intuitiveness-audit.md",
+    "summary": "Content-first hierarchy, state-specific reading actions, concise routine copy and consistent light/dark/tablet controls."
+  },
+  "referenceSourceExports": [
+    {
+      "slug": "home",
+      "file": "designs/home.html",
+      "sourceScreen": "projects/6233788376335662642/screens/8430044410772261087",
+      "instanceId": "8430044410772261087",
+      "receipt": "transfers/upload-designs-home-html-20261031T031736217508.json"
+    },
+    {
+      "slug": "sync-conflict",
+      "file": "designs/sync-conflict.html",
+      "sourceScreen": "projects/6233788376335662642/screens/8430044410772260688",
+      "instanceId": "8430044410772260688",
+      "receipt": "transfers/upload-designs-home-html-20261031T031736217508.json"
+    },
+    {
+      "slug": "reader",
+      "file": "designs/reader.html",
+      "sourceScreen": "projects/6233788376335662642/screens/8430044410772260289",
+      "instanceId": "8430044410772260289",
+      "receipt": "transfers/upload-designs-home-html-20261031T031736217508.json"
+    },
+    {
+      "slug": "dark-reader",
+      "file": "designs/dark-reader.html",
+      "sourceScreen": "projects/6233788376335662642/screens/8430044410772259890",
+      "instanceId": "8430044410772259890",
+      "receipt": "transfers/upload-designs-home-html-20261031T031736217508.json"
+    },
+    {
+      "slug": "dark-library",
+      "file": "designs/dark-library.html",
+      "sourceScreen": "projects/6233788376335662642/screens/14837101851782793676",
+      "instanceId": "14837101851782793676",
+      "receipt": "transfers/upload-designs-dark-library-html-20261031T031758419513.json"
+    },
+    {
+      "slug": "tablet-library",
+      "file": "designs/tablet-library.html",
+      "sourceScreen": "projects/6233788376335662642/screens/14837101851782794501",
+      "instanceId": "14837101851782794501",
+      "receipt": "transfers/upload-designs-dark-library-html-20261031T031758419513.json"
+    },
+    {
+      "slug": "library",
+      "file": "designs/library.html",
+      "sourceScreen": "projects/6233788376335662642/screens/14837101851782791230",
+      "instanceId": "14837101851782791230",
+      "receipt": "transfers/upload-designs-dark-library-html-20261031T031758419513.json"
+    },
+    {
+      "slug": "settings",
+      "file": "designs/settings.html",
+      "sourceScreen": "projects/6233788376335662642/screens/14837101851782792055",
+      "instanceId": "14837101851782792055",
+      "receipt": "transfers/upload-designs-dark-library-html-20261031T031758419513.json"
+    },
+    {
+      "slug": "dark-explore",
+      "file": "designs/dark-explore.html",
+      "sourceScreen": "projects/6233788376335662642/screens/14632086933216920597",
+      "instanceId": "14632086933216920597",
+      "receipt": "transfers/upload-designs-dark-explore-html-20261031T031820975624.json"
+    },
+    {
+      "slug": "explore",
+      "file": "designs/explore.html",
+      "sourceScreen": "projects/6233788376335662642/screens/14632086933216923224",
+      "instanceId": "14632086933216923224",
+      "receipt": "transfers/upload-designs-dark-explore-html-20261031T031820975624.json"
+    },
+    {
+      "slug": "reader-appearance",
+      "file": "designs/reader-appearance.html",
+      "sourceScreen": "projects/6233788376335662642/screens/14632086933216921755",
+      "instanceId": "14632086933216921755",
+      "receipt": "transfers/upload-designs-dark-explore-html-20261031T031820975624.json"
+    },
+    {
+      "slug": "dark-book-details",
+      "file": "designs/dark-book-details.html",
+      "sourceScreen": "projects/6233788376335662642/screens/14632086933216920286",
+      "instanceId": "14632086933216920286",
+      "receipt": "transfers/upload-designs-dark-explore-html-20261031T031820975624.json"
+    },
+    {
+      "slug": "dark-account-sync",
+      "file": "designs/dark-account-sync.html",
+      "sourceScreen": "projects/6233788376335662642/screens/7800365560928052667",
+      "instanceId": "7800365560928052667",
+      "receipt": "transfers/upload-designs-dark-account-sync-html-20261031T031843396421.json"
+    },
+    {
+      "slug": "tablet-reader",
+      "file": "designs/tablet-reader.html",
+      "sourceScreen": "projects/6233788376335662642/screens/7800365560928052424",
+      "instanceId": "7800365560928052424",
+      "receipt": "transfers/upload-designs-dark-account-sync-html-20261031T031843396421.json"
+    },
+    {
+      "slug": "tablet-journal",
+      "file": "designs/tablet-journal.html",
+      "sourceScreen": "projects/6233788376335662642/screens/7800365560928052181",
+      "instanceId": "7800365560928052181",
+      "receipt": "transfers/upload-designs-dark-account-sync-html-20261031T031843396421.json"
+    },
+    {
+      "slug": "dark-home",
+      "file": "designs/dark-home.html",
+      "sourceScreen": "projects/6233788376335662642/screens/7800365560928051938",
+      "instanceId": "7800365560928051938",
+      "receipt": "transfers/upload-designs-dark-account-sync-html-20261031T031843396421.json"
+    },
+    {
+      "slug": "guest-import",
+      "file": "designs/guest-import.html",
+      "sourceScreen": "projects/6233788376335662642/screens/9490278691755603785",
+      "instanceId": "9490278691755603785",
+      "receipt": "transfers/upload-designs-guest-import-html-20261031T031859988589.json"
+    },
+    {
+      "slug": "journal",
+      "file": "designs/journal.html",
+      "sourceScreen": "projects/6233788376335662642/screens/9490278691755603768",
+      "instanceId": "9490278691755603768",
+      "receipt": "transfers/upload-designs-guest-import-html-20261031T031859988589.json"
+    },
+    {
+      "slug": "downloads",
+      "file": "designs/downloads.html",
+      "sourceScreen": "projects/6233788376335662642/screens/9490278691755603751",
+      "instanceId": "9490278691755603751",
+      "receipt": "transfers/upload-designs-guest-import-html-20261031T031859988589.json"
+    },
+    {
+      "slug": "shelves",
+      "file": "designs/shelves.html",
+      "sourceScreen": "projects/6233788376335662642/screens/9490278691755603734",
+      "instanceId": "9490278691755603734",
+      "receipt": "transfers/upload-designs-guest-import-html-20261031T031859988589.json"
+    },
+    {
+      "slug": "book-details",
+      "file": "designs/book-details.html",
+      "sourceScreen": "projects/6233788376335662642/screens/10422921616745575283",
+      "instanceId": "10422921616745575283",
+      "receipt": "transfers/upload-designs-book-details-html-20261031T031916336223.json"
+    },
+    {
+      "slug": "welcome",
+      "file": "designs/welcome.html",
+      "sourceScreen": "projects/6233788376335662642/screens/10422921616745577746",
+      "instanceId": "10422921616745577746",
+      "receipt": "transfers/upload-designs-book-details-html-20261031T031916336223.json"
+    },
+    {
+      "slug": "dark-settings",
+      "file": "designs/dark-settings.html",
+      "sourceScreen": "projects/6233788376335662642/screens/10422921616745576113",
+      "instanceId": "10422921616745576113",
+      "receipt": "transfers/upload-designs-book-details-html-20261031T031916336223.json"
+    },
+    {
+      "slug": "tablet-home",
+      "file": "designs/tablet-home.html",
+      "sourceScreen": "projects/6233788376335662642/screens/10422921616745574480",
+      "instanceId": "10422921616745574480",
+      "receipt": "transfers/upload-designs-book-details-html-20261031T031916336223.json"
+    },
+    {
+      "slug": "account-sync",
+      "file": "designs/account-sync.html",
+      "sourceScreen": "projects/6233788376335662642/screens/1013459785102188053",
+      "instanceId": "1013459785102188053",
+      "receipt": "transfers/upload-designs-account-sync-html-20261031T031920948550.json"
     }
   ]
 }

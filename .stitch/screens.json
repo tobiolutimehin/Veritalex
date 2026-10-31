@@ -433,7 +433,7 @@
     },
     {
       "id": "auth-import-preview",
-      "title": "Bring your reading with you",
+      "title": "Add guest reading?",
       "area": "Auth",
       "variant": "base",
       "nav": null,
@@ -444,41 +444,50 @@
       ],
       "blocks": [
         {
-          "type": "text",
-          "title": "Add guest data to your account?",
-          "text": "You have a separate guest library on this device. Review what will be added before continuing."
+          "type": "row",
+          "label": "Google account",
+          "detail": "reader@example.com",
+          "action": null,
+          "icon": "person"
         },
         {
           "type": "row",
-          "label": "2 guest books",
-          "detail": "1 new book · 1 already saved",
+          "label": "3 guest books",
+          "detail": "0 new · 3 already saved",
           "action": null,
-          "icon": "chevron"
+          "icon": "book"
         },
         {
           "type": "book",
           "title": "Pride and Prejudice",
           "author": "Jane Austen",
           "book_id": "1342",
-          "detail": "Already in account · Keep one book"
+          "detail": "Already in account"
         },
         {
           "type": "book",
           "title": "Frankenstein",
           "author": "Mary Shelley",
           "book_id": "84",
-          "detail": "New to account"
+          "detail": "Already in account"
+        },
+        {
+          "type": "book",
+          "title": "Alice’s Adventures in Wonderland",
+          "author": "Lewis Carroll",
+          "book_id": "11",
+          "detail": "Already in account"
         },
         {
           "type": "notice",
-          "title": "Your notes are preserved",
-          "text": "3 guest journal entries and 2 highlights will be added with their book and passage references. Existing account notes remain.",
+          "title": "Your reading stays intact",
+          "text": "1 journal entry · 1 highlight · 2 shelves · 1 private rating\nExisting account writing stays. Duplicate books and entries are matched.",
           "kind": "info"
         },
         {
           "type": "notice",
-          "title": "Choose reading position",
-          "text": "Pride and Prejudice has a newer account position. You can choose the position after importing.",
+          "title": "Reading position",
+          "text": "Choose between this device and account after adding.",
           "kind": "info"
         },
         {
@@ -495,7 +504,7 @@
       "transitions": [
         {
           "id": "import",
-          "label": "Add guest reading",
+          "label": "Add to account",
           "to": "auth-importing",
           "role": "action"
         },
@@ -529,7 +538,7 @@
         {
           "type": "row",
           "label": "Books matched",
-          "detail": "2 of 2 reviewed",
+          "detail": "3 of 3 reviewed",
           "action": null,
           "icon": "check"
         },
@@ -570,7 +579,7 @@
     },
     {
       "id": "auth-import-complete",
-      "title": "Your library is together",
+      "title": "Guest reading added",
       "area": "Auth",
       "variant": "success",
       "nav": null,
@@ -579,7 +588,7 @@
         {
           "type": "empty",
           "title": "Reading added",
-          "text": "1 new book added. 1 existing book matched. All 3 journal entries and 2 highlights were preserved.",
+          "text": "0 new books added. 3 existing books matched. 1 journal entry and 1 highlight preserved.",
           "icon": "check"
         },
         {
@@ -631,7 +640,7 @@
         {
           "type": "text",
           "title": "Start with a classic",
-          "text": "A few titles from the public catalogue."
+          "text": ""
         },
         {
           "type": "grid",
@@ -700,25 +709,13 @@
       "annotations": [],
       "blocks": [
         {
-          "type": "text",
-          "title": "Welcome back",
-          "text": "A quiet moment for your next chapter."
-        },
-        {
           "type": "continue",
           "action": "continue"
         },
         {
-          "type": "row",
-          "label": "Saved on device",
-          "detail": "Your reading is stored locally",
-          "action": "sync",
-          "icon": "device"
-        },
-        {
           "type": "text",
           "title": "Your library",
-          "text": "Ready when you are"
+          "text": ""
         },
         {
           "type": "grid",
@@ -726,6 +723,13 @@
             "84",
             "11"
           ]
+        },
+        {
+          "type": "row",
+          "label": "Saved on device",
+          "detail": "Guest",
+          "action": "sync",
+          "icon": "device"
         }
       ],
       "transitions": [
@@ -794,8 +798,8 @@
         },
         {
           "type": "text",
-          "title": "Explore by subject",
-          "text": "Choose a shelf of the public catalogue."
+          "title": "Subjects",
+          "text": ""
         },
         {
           "type": "subjects",
@@ -982,7 +986,7 @@
         {
           "type": "row",
           "label": "1 title",
-          "detail": "Title or author · All languages",
+          "detail": "All subjects",
           "action": "filters",
           "icon": "filter"
         },
@@ -992,12 +996,7 @@
           "author": "Jane Austen",
           "book_id": "1342",
           "action": "book-1342",
-          "detail": "Jane Austen · English"
-        },
-        {
-          "type": "text",
-          "title": "Catalogue results",
-          "text": "Availability is based on the public catalogue. No community ratings are shown."
+          "detail": "English"
         }
       ],
       "transitions": [
@@ -1381,6 +1380,23 @@
           "large": true
         },
         {
+          "type": "row",
+          "label": "Not downloaded",
+          "detail": "",
+          "action": null,
+          "icon": "download"
+        },
+        {
+          "type": "button",
+          "action": "download",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "save",
+          "style": "tonal"
+        },
+        {
           "type": "chips",
           "items": [
             "English",
@@ -1401,16 +1417,6 @@
           "detail": "Project Gutenberg",
           "action": null,
           "icon": "book"
-        },
-        {
-          "type": "button",
-          "action": "save",
-          "style": "primary"
-        },
-        {
-          "type": "button",
-          "action": "download",
-          "style": "tonal"
         }
       ],
       "transitions": [
@@ -1452,6 +1458,17 @@
           "large": true
         },
         {
+          "type": "notice",
+          "title": "In your library",
+          "text": "Want to read",
+          "kind": "info"
+        },
+        {
+          "type": "button",
+          "action": "download",
+          "style": "primary"
+        },
+        {
           "type": "chips",
           "items": [
             "English",
@@ -1472,17 +1489,6 @@
           "detail": "Project Gutenberg",
           "action": null,
           "icon": "book"
-        },
-        {
-          "type": "notice",
-          "title": "In your library",
-          "text": "Want to read",
-          "kind": "info"
-        },
-        {
-          "type": "button",
-          "action": "download",
-          "style": "primary"
         },
         {
           "type": "row",
@@ -1531,6 +1537,16 @@
           "large": true
         },
         {
+          "type": "progress",
+          "label": "Reading · Chapter 18",
+          "value": 28
+        },
+        {
+          "type": "button",
+          "action": "continue",
+          "style": "primary"
+        },
+        {
           "type": "chips",
           "items": [
             "English",
@@ -1551,16 +1567,6 @@
           "detail": "Project Gutenberg",
           "action": null,
           "icon": "book"
-        },
-        {
-          "type": "progress",
-          "label": "Reading · Chapter 18",
-          "value": 28
-        },
-        {
-          "type": "button",
-          "action": "continue",
-          "style": "primary"
         },
         {
           "type": "row",
@@ -1620,6 +1626,16 @@
           "large": true
         },
         {
+          "type": "progress",
+          "label": "Downloading book text…",
+          "value": 42
+        },
+        {
+          "type": "button",
+          "action": "cancel",
+          "style": "tonal"
+        },
+        {
           "type": "chips",
           "items": [
             "English",
@@ -1628,21 +1644,6 @@
           ],
           "selected": null,
           "action": null
-        },
-        {
-          "type": "progress",
-          "label": "Downloading book text…",
-          "value": 42
-        },
-        {
-          "type": "text",
-          "title": "Keep reading offline",
-          "text": "The book will be available when the download finishes."
-        },
-        {
-          "type": "button",
-          "action": "cancel",
-          "style": "tonal"
         }
       ],
       "transitions": [
@@ -1688,6 +1689,17 @@
           "large": true
         },
         {
+          "type": "notice",
+          "title": "Couldn’t download",
+          "text": "Check your connection and available storage. Your reading progress is kept.",
+          "kind": "error"
+        },
+        {
+          "type": "button",
+          "action": "retry",
+          "style": "primary"
+        },
+        {
           "type": "chips",
           "items": [
             "English",
@@ -1696,17 +1708,6 @@
           ],
           "selected": null,
           "action": null
-        },
-        {
-          "type": "notice",
-          "title": "Couldn’t download",
-          "text": "Check your connection and available storage. The book stays in your library.",
-          "kind": "error"
-        },
-        {
-          "type": "button",
-          "action": "retry",
-          "style": "primary"
         },
         {
           "type": "button",
@@ -1753,6 +1754,17 @@
           "large": true
         },
         {
+          "type": "notice",
+          "title": "Downloaded",
+          "text": "Available offline on this device.",
+          "kind": "info"
+        },
+        {
+          "type": "button",
+          "action": "read",
+          "style": "primary"
+        },
+        {
           "type": "chips",
           "items": [
             "English",
@@ -1775,20 +1787,9 @@
           "icon": "book"
         },
         {
-          "type": "notice",
-          "title": "Downloaded",
-          "text": "Available offline on this device.",
-          "kind": "info"
-        },
-        {
-          "type": "button",
-          "action": "read",
-          "style": "primary"
-        },
-        {
           "type": "row",
-          "label": "Want to read",
-          "detail": "Status changes to Reading when you begin.",
+          "label": "Organize book",
+          "detail": "Want to read · In your library",
           "action": "actions",
           "icon": "chevron"
         }
@@ -2847,7 +2848,7 @@
         },
         {
           "type": "row",
-          "label": "Create shelf",
+          "label": "New shelf",
           "detail": "",
           "action": "create",
           "icon": "plus"
@@ -2870,7 +2871,7 @@
       "transitions": [
         {
           "id": "create",
-          "label": "Create shelf",
+          "label": "New shelf",
           "to": "shelf-create",
           "role": "action"
         },
@@ -2962,7 +2963,7 @@
       "transitions": [
         {
           "id": "create",
-          "label": "Create shelf",
+          "label": "New shelf",
           "to": "shelf-create",
           "role": "action"
         },
@@ -3371,13 +3372,6 @@
       "annotations": [],
       "blocks": [
         {
-          "type": "row",
-          "label": "Shelf options",
-          "detail": "Rename or delete this shelf",
-          "action": "rename",
-          "icon": "more"
-        },
-        {
           "type": "book",
           "title": "Pride and Prejudice",
           "author": "Jane Austen",
@@ -3397,11 +3391,6 @@
           "type": "button",
           "action": "add",
           "style": "tonal"
-        },
-        {
-          "type": "button",
-          "action": "delete",
-          "style": "text"
         }
       ],
       "transitions": [
@@ -3478,27 +3467,13 @@
         {
           "type": "empty",
           "title": "This shelf has room",
-          "text": "Add books from your library. Their reading status stays the same.",
+          "text": "Add books from your library.",
           "icon": "shelf"
         },
         {
           "type": "button",
           "action": "add",
           "style": "primary"
-        },
-        {
-          "type": "row",
-          "label": "Rename shelf",
-          "detail": "",
-          "action": "rename",
-          "icon": "edit"
-        },
-        {
-          "type": "row",
-          "label": "Delete shelf",
-          "detail": "Your books stay in Library",
-          "action": "delete",
-          "icon": "delete"
         }
       ],
       "transitions": [
@@ -3570,11 +3545,9 @@
           "selected": "Journal"
         },
         {
-          "type": "row",
-          "label": "New journal entry",
-          "detail": "",
+          "type": "button",
           "action": "new",
-          "icon": "plus"
+          "style": "primary"
         },
         {
           "type": "entry",
@@ -3690,7 +3663,7 @@
         },
         {
           "id": "create",
-          "label": "Create shelf",
+          "label": "New shelf",
           "to": "shelf-create",
           "role": "action"
         },
@@ -3753,11 +3726,9 @@
           "book_id": "1342"
         },
         {
-          "type": "row",
-          "label": "New journal entry",
-          "detail": "",
+          "type": "button",
           "action": "new",
-          "icon": "plus"
+          "style": "primary"
         },
         {
           "type": "entry",
@@ -3822,7 +3793,7 @@
       "transitions": [
         {
           "id": "new",
-          "label": "Write an entry",
+          "label": "New entry",
           "to": "journal-book-picker",
           "role": "action"
         },
@@ -3899,7 +3870,7 @@
       "transitions": [
         {
           "id": "new",
-          "label": "Write an entry",
+          "label": "New entry",
           "to": "journal-create",
           "role": "action"
         },
@@ -4247,6 +4218,12 @@
           "label": "Back",
           "to": "book-reading",
           "role": "back"
+        },
+        {
+          "id": "journal",
+          "label": "Book journal",
+          "to": "journal-book",
+          "role": "action"
         }
       ]
     },
@@ -4357,6 +4334,12 @@
           "label": "Simulate reaching the end",
           "to": "reader-finished",
           "role": "event"
+        },
+        {
+          "id": "journal",
+          "label": "Book journal",
+          "to": "journal-book",
+          "role": "action"
         }
       ]
     },
@@ -4418,6 +4401,12 @@
           "label": "Back",
           "to": "book-reading",
           "role": "back"
+        },
+        {
+          "id": "journal",
+          "label": "Book journal",
+          "to": "journal-book",
+          "role": "action"
         }
       ]
     },
@@ -4550,6 +4539,12 @@
           "label": "Back",
           "to": "book-reading",
           "role": "back"
+        },
+        {
+          "id": "journal",
+          "label": "Book journal",
+          "to": "journal-book",
+          "role": "action"
         }
       ]
     },
@@ -4992,14 +4987,14 @@
         {
           "type": "row",
           "label": "Downloaded books",
-          "detail": "Manage this device’s book text",
+          "detail": "2 on this device",
           "action": "storage",
           "icon": "download"
         },
         {
           "type": "row",
           "label": "About Veritalex",
-          "detail": "Catalogue, credits and app information",
+          "detail": "",
           "action": "about",
           "icon": "info"
         }
@@ -5117,7 +5112,7 @@
       "blocks": [
         {
           "type": "text",
-          "title": "For your next reading session",
+          "title": "",
           "text": "Changes preserve your current passage."
         },
         {
@@ -5150,6 +5145,11 @@
           "setting": "margins"
         },
         {
+          "type": "text",
+          "title": "Reading mode",
+          "text": ""
+        },
+        {
           "type": "chips",
           "items": [
             "Scroll",
@@ -5167,6 +5167,11 @@
           "type": "slider",
           "label": "Line spacing · Comfortable",
           "value": 60
+        },
+        {
+          "type": "text",
+          "title": "Paper",
+          "text": "Independent of app appearance"
         },
         {
           "type": "chips",
@@ -5371,7 +5376,7 @@
         {
           "type": "row",
           "label": "Up to date",
-          "detail": "Books, notes and reading position are synced",
+          "detail": "Just now",
           "action": "sync",
           "icon": "check"
         },
@@ -5385,7 +5390,7 @@
         {
           "type": "row",
           "label": "Sign out",
-          "detail": "Review pending changes first",
+          "detail": "",
           "action": "signout",
           "icon": "logout"
         },
@@ -5506,7 +5511,7 @@
         {
           "type": "notice",
           "title": "This cannot be undone",
-          "text": "Your account library, reading positions, journal entries, highlights and shelves will be permanently deleted.",
+          "text": "Your account library, shelves, private ratings, reading positions, journal entries and highlights will be permanently deleted.",
           "kind": "error"
         },
         {
@@ -5947,7 +5952,7 @@
         {
           "type": "empty",
           "title": "Up to date",
-          "text": "Your books, notes, highlights and reading position are synced.",
+          "text": "Just now",
           "icon": "check"
         },
         {
@@ -6159,8 +6164,8 @@
         },
         {
           "type": "text",
-          "title": "Two reading positions",
-          "text": "Choose one position for this account. Your journal and highlights are kept either way."
+          "title": "",
+          "text": "Your journal and highlights are kept either way."
         },
         {
           "type": "radios",

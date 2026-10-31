@@ -117,12 +117,13 @@ def reader(b, screen):
     mode = b["mode"]
     out = ""
     if mode != "immersive" and mode not in ("selection",):
-        controls = [("contents", "book"), ("search", "search"), ("appearance", "text"), ("remove" if mode == "bookmark" else "bookmark", "bookmark")]
+        controls = [("contents", "book", "Contents"), ("appearance", "text", "Appearance"), ("search", "search", "Search"), ("journal", "journal", "Journal")]
         out += '<nav class="reader-actions" aria-label="Reading controls">'
-        for key, ico in controls:
+        for key, ico, label in controls:
             a = action(screen, key)
             if a:
-                out += link(screen, key, icon(ico), "iconbutton", attrs=f'aria-label="{esc(a["label"])}"')
+                content = icon(ico) + f'<span>{label}</span>'
+                out += link(screen, key, content, "reader-tool", attrs=f'aria-label="{esc(a["label"])}"')
         out += "</nav>"
     out += '<article class="reader-content"><h2>Chapter 18</h2>'
     if mode in ("selection", "highlight"):
@@ -187,6 +188,8 @@ def render_block(b, screen, n):
                 chips.append(link(screen, key, esc(item), cls, attrs='aria-current="true"' if item == b.get("selected") else ""))
             elif b.get("action"):
                 chips.append(link(screen, b["action"], esc(item), cls))
+            elif screen["area"] == "Book" and not b.get("setting"):
+                chips.append(f'<span class="chip">{esc(item)}</span>')
             else:
                 chips.append(f'<button type="button" class="{cls}" aria-pressed="{str(item == b.get("selected")).lower()}" data-choice="{n}">{esc(item)}</button>')
         setting = f' data-setting="{esc(b["setting"])}"' if b.get("setting") else ""
@@ -198,7 +201,7 @@ def render_block(b, screen, n):
     if kind == "subjects":
         return '<div class="subjects">' + "".join(link(screen, b["action"], esc(item), "subject") for item in b["items"]) + "</div>"
     if kind == "continue":
-        return '<section class="continue"><span class="eyebrow">Continue reading</span>' + book_block({"book_id": "1342", "title": "Pride and Prejudice", "author": "Jane Austen", "detail": "Chapter 18 · 28%"}, screen) + '<div class="progress-track"><span style="width:28%"></span></div>' + link(screen, b["action"], "Continue reading", "button") + "</section>"
+        return '<section class="continue">' + book_block({"book_id": "1342", "title": "Pride and Prejudice", "author": "Jane Austen", "detail": "Chapter 18 · 28%"}, screen) + '<div class="progress-track"><span style="width:28%"></span></div>' + link(screen, b["action"], "Continue reading", "button") + "</section>"
     if kind == "progress":
         value = b["value"]
         pct = f'<span>{value}%</span>' if value is not None else ""
@@ -255,8 +258,15 @@ def core(screen):
     if back:
         bar += link(screen, "back", icon("back"), "iconbutton", attrs='aria-label="Back"')
     bar += f'<h1 class="{"small-title" if reader_view else ""}">{esc(title)}</h1>'
+    if reader_view and screen["id"] not in ("reader-immersive", "reader-selection"):
+        key = "remove" if screen["id"] == "reader-bookmark" else "bookmark"
+        bookmark = action(screen, key)
+        if bookmark:
+            bar += f'<button type="button" class="iconbutton" data-bookmark-control="true" data-to="{esc(bookmark["to"])}" data-action="{key}" aria-label="{esc(bookmark["label"])}" aria-pressed="{str(screen["id"] == "reader-bookmark").lower()}">{icon("bookmark")}</button>'
     if action(screen, "settings"):
         bar += link(screen, "settings", icon("settings"), "iconbutton", attrs='aria-label="Settings"')
+    if screen["id"] in ("shelf-detail", "shelf-detail-empty"):
+        bar += '<details class="overflow"><summary class="iconbutton" aria-label="Shelf options">' + icon("more") + '</summary><nav class="overflow-actions" aria-label="Shelf actions">' + link(screen, "rename") + link(screen, "delete") + '</nav></details>'
     bar += '</header><main class="app-main">'
     bar += "".join(render_block(b, screen, n) for n, b in enumerate(screen["blocks"])) + "</main>"
     if screen.get("nav"):
@@ -317,7 +327,7 @@ CHILD_JS = r"""
   if(embedded)document.body.classList.add('embed-page');
   if(params.get('mode')==='styled')document.body.classList.add('styled');
   const foreground=()=>$('.dialog-body')||$('.app-main');
-  const row=(bid,target)=>{const b=catalog[bid];return '<a class="book" href="'+target+'.html" data-to="'+target+'" data-action="book-'+bid+'" data-book-id="'+bid+'"><div class="cover" role="img" aria-label="Typeset cover: '+escape(b.title)+'"><span class="cover-rule"></span><span class="cover-title">'+escape(b.title)+'</span><span class="cover-author">'+escape(b.author)+'</span></div><div class="book-copy"><h2>'+escape(b.title)+'</h2><p>'+escape(b.author)+'</p><small>'+escape(state?.workspaceData.statuses[bid]||'Want to read')+(state?.workspaceData.downloaded.includes(bid)?' · Downloaded':'')+'</small></div></a>'};
+  const row=(bid,target,detailOverride)=>{const b=catalog[bid],w=state?.workspaceData,position=w?.positions[bid],detail=detailOverride??(sid.startsWith('explore-')?b.language:(w?.statuses[bid]||'Want to read')+(position?' · '+position.percent+'%':'')+(w?.downloaded.includes(bid)?' · Downloaded':''));return '<a class="book" href="'+target+'.html" data-to="'+target+'" data-action="book-'+bid+'" data-book-id="'+bid+'"><div class="cover" role="img" aria-label="Typeset cover: '+escape(b.title)+'"><span class="cover-rule"></span><span class="cover-title">'+escape(b.title)+'</span><span class="cover-author">'+escape(b.author)+'</span></div><div class="book-copy"><h2>'+escape(b.title)+'</h2><p>'+escape(b.author)+'</p><small>'+escape(detail)+'</small></div></a>'};
   const fields=()=>Object.fromEntries(all('.field').map(el=>[el.querySelector('label').textContent,el.querySelector('input,textarea').value]));
   function snapshot(){return {fields:fields(),checks:all('.dialog-body input[type=checkbox],.app-main input[type=checkbox]').filter(el=>el.checked).map(el=>el.value),radios:all('input[type=radio]:checked').map(el=>el.value),settings:Object.fromEntries(all('[data-setting]').map(el=>[el.dataset.setting,el.querySelector('[aria-pressed=true]')?.textContent.trim()])),ranges:all('input[type=range]').map(el=>({label:el.getAttribute('aria-label'),value:Number(el.value)})),rating:Number($('.rating [aria-pressed=true]')?.dataset.rating||0)}}
   function go(to,action,label,book,entry){if(embedded)parent.postMessage({type:'veritalex:navigate',source:sid,to,action,label,book:book||currentBook,entry,form:snapshot()},'*');else location.href=to+'.html'+(book||currentBook?'?book='+encodeURIComponent(book||currentBook):'')}
@@ -328,48 +338,50 @@ CHILD_JS = r"""
     if(sid.startsWith('book-')){const chips=foreground().querySelector('.chips');if(chips)chips.innerHTML=[b.language,...b.subjects].map(x=>'<span class="chip">'+escape(x)+'</span>').join('')}
   }
   function setField(label,value){all('.field').forEach(el=>{if(el.querySelector('label').textContent===label)el.querySelector('input,textarea').value=value??''})}
-  function replaceBooks(ids,targetFor){const main=foreground();[...main.children].filter(el=>el.classList.contains('book')||el.classList.contains('empty')).forEach(el=>el.remove());const container=document.createElement('section');container.dataset.liveBooks='true';container.style.cssText='display:flex;flex-direction:column;gap:20px';main.querySelector('[data-live-books]')?.remove();container.innerHTML=ids.length?ids.map(bid=>row(bid,targetFor(bid))).join(''):'<section class="empty"><h2>No books here yet</h2><p>Saved books and their reading status will appear here.</p></section>';const button=main.querySelector('.button');main.insertBefore(container,button||null)}
+  function replaceBooks(ids,targetFor,main=foreground()){[...main.children].filter(el=>el.classList.contains('book')||el.classList.contains('empty')).forEach(el=>el.remove());const container=document.createElement('section');container.dataset.liveBooks='true';container.style.cssText='display:flex;flex-direction:column;gap:20px';main.querySelector('[data-live-books]')?.remove();container.innerHTML=ids.length?ids.map(bid=>row(bid,targetFor(bid))).join(''):'<section class="empty"><h2>No books here yet</h2><p>Saved books and their reading status will appear here.</p></section>';const button=main.querySelector('.button');main.insertBefore(container,button||null)}
   function hydrate(s){state=s;currentBook=s.book;const w=s.workspaceData,main=foreground();dynamicBook(s.book);
     if(['library-books','library-want','library-reading','library-finished','library-downloaded','library-after-removal','library-empty','journal-book-picker'].includes(sid)){
       const filter={'library-want':'Want to read','library-reading':'Reading','library-finished':'Finished'}[sid];let ids=w.books.filter(b=>!filter||w.statuses[b]===filter);if(sid==='library-downloaded')ids=ids.filter(b=>w.downloaded.includes(b));replaceBooks(ids,b=>sid==='journal-book-picker'?'journal-create':w.statuses[b]==='Reading'?'book-reading':w.downloaded.includes(b)?'book-downloaded':'book-saved');
       if(sid==='journal-book-picker'&&!ids.length){main.querySelector('.empty p').textContent='Save a book from Explore before writing a journal entry.';const a=document.createElement('a');a.className='button';a.href='explore-browse.html';a.dataset.to='explore-browse';a.dataset.action='explore';a.textContent='Explore books';main.append(a)}
     }
-    if(['shelf-detail','shelf-detail-empty'].includes(sid)){const shelf=w.shelves[s.shelf];if(shelf){$('.topbar h1').textContent=shelf.name;replaceBooks(shelf.books,b=>w.statuses[b]==='Reading'?'book-reading':'book-saved');const empty=main.querySelector('.empty');if(empty){empty.querySelector('h2').textContent='This shelf has room';empty.querySelector('p').textContent='Add books from your library. Their reading status stays the same.'}}}
+    if(['shelf-detail','shelf-detail-empty'].includes(sid)){const shelf=w.shelves[s.shelf];if(shelf){$('.topbar h1').textContent=shelf.name;replaceBooks(shelf.books,b=>w.statuses[b]==='Reading'?'book-reading':'book-saved');const empty=main.querySelector('.empty');if(empty){empty.querySelector('h2').textContent='This shelf has room';empty.querySelector('p').textContent='Add books from your library.'}}}
     if(['shelves-list','shelves-empty','shelves-after-delete'].includes(sid)){
-      [...main.children].filter(el=>el.classList.contains('row-link')||el.classList.contains('empty')).forEach(el=>el.remove());main.querySelector('[data-live-shelves]')?.remove();const section=document.createElement('section');section.dataset.liveShelves='true';section.innerHTML=Object.entries(w.shelves).map(([id,sh])=>'<a class="row-link" href="shelf-detail.html" data-to="shelf-detail" data-action="shelf-'+escape(id)+'"><span class="rowcopy"><strong>'+escape(sh.name)+'</strong><small>'+sh.books.length+' books</small></span></a>').join('')||'<section class="empty"><h2>Make a shelf of your own</h2><p>Group your saved books in a way that feels right.</p></section>';main.append(section);if(!main.querySelector('[data-action=create]')){const a=document.createElement('a');a.className='button';a.dataset.to='shelf-create';a.dataset.action='create';a.href='shelf-create.html';a.textContent='Create shelf';main.append(a)}
+      [...main.children].filter(el=>el.classList.contains('row-link')||el.classList.contains('empty')).forEach(el=>el.remove());main.querySelector('[data-live-shelves]')?.remove();const section=document.createElement('section');section.dataset.liveShelves='true';section.innerHTML=Object.entries(w.shelves).map(([id,sh])=>'<a class="row-link" href="shelf-detail.html" data-to="shelf-detail" data-action="shelf-'+escape(id)+'"><span class="rowcopy"><strong>'+escape(sh.name)+'</strong><small>'+sh.books.length+' books</small></span></a>').join('')||'<section class="empty"><h2>Make a shelf of your own</h2><p>Group your saved books in a way that feels right.</p></section>';main.append(section);if(!main.querySelector('[data-action=create]')){const a=document.createElement('a');a.className='button';a.dataset.to='shelf-create';a.dataset.action='create';a.href='shelf-create.html';a.textContent='New shelf';main.append(a)}
     }
     if(sid==='shelf-add-books'){const group=main.querySelector('fieldset');group.innerHTML='<legend class="sr-only">Choose Library books</legend>'+w.books.map(b=>'<label class="choice"><input type="checkbox" value="'+b+'" '+(w.shelves[s.shelf]?.books.includes(b)?'checked':'')+'><span>'+escape(catalog[b].title)+'</span></label>').join('');const title=main.querySelector('.text-block h2');if(title)title.textContent='Add to '+(w.shelves[s.shelf]?.name||'shelf')}
     if(sid==='shelf-membership'){main.querySelector('fieldset').innerHTML='<legend class="sr-only">Choose shelves</legend>'+Object.entries(w.shelves).map(([id,sh])=>'<label class="choice"><input type="checkbox" value="'+escape(id)+'" '+(sh.books.includes(s.book)?'checked':'')+'><span>'+escape(sh.name)+'</span></label>').join('')}
     if(['shelf-create','shelf-rename','shelf-name-error'].includes(sid)){setField('Shelf name',s.shelfDraft??(sid==='shelf-rename'?w.shelves[s.shelf]?.name:''));if(s.shelfError){let error=main.querySelector('.field-error');if(!error){error=document.createElement('span');error.className='field-error';main.querySelector('.field').append(error)}error.textContent=s.shelfError;main.querySelector('.field input').setAttribute('aria-invalid','true')}}
-    if(sid==='shelf-delete'){const text=main.querySelector('.text-block');if(text&&w.shelves[s.shelf]){text.querySelector('h2').textContent=w.shelves[s.shelf].name;text.querySelector('p').textContent=w.shelves[s.shelf].books.length+' books'}}
+    if(sid==='shelf-delete'){const background=$('.modal-background .app-main');if(background){$('.modal-background .topbar h1').textContent=w.shelves[s.shelf]?.name||'Shelf';replaceBooks(w.shelves[s.shelf]?.books||[],b=>w.statuses[b]==='Reading'?'book-reading':'book-saved',background)}const text=main.querySelector('.text-block');if(text&&w.shelves[s.shelf]){text.querySelector('h2').textContent=w.shelves[s.shelf].name;text.querySelector('p').textContent=w.shelves[s.shelf].books.length+' books'}}
     if(['journal-create','journal-edit'].includes(sid)&&s.draft){setField('Title',s.draft.title);setField('Your thought',s.draft.text);all('.row .rowcopy small,.row-link .rowcopy small').forEach(el=>{if(el.previousElementSibling?.textContent==='Book')el.textContent=catalog[s.draft.book].title});const quote=main.querySelector('.quote');if(quote&&!s.draft.quote)quote.remove();else if(quote)quote.querySelector('p').textContent=s.draft.quote}
-    if(['journal-all','journal-empty','journal-book','journal-book-empty'].includes(sid)){main.querySelectorAll('.entry,.empty').forEach(el=>el.remove());let entries=w.entries;if(sid==='journal-book'||sid==='journal-book-empty')entries=entries.filter(e=>e.book===s.book);const section=document.createElement('section');section.innerHTML=entries.map(e=>'<a class="entry" style="display:block" href="journal-view.html" data-to="journal-view" data-action="entry" data-entry-id="'+escape(e.id)+'"><h2>'+escape(e.title||'Untitled entry')+'</h2><p class="entry-meta">'+escape(catalog[e.book].title)+'</p>'+(e.quote?'<div class="quote"><p>'+escape(e.quote)+'</p></div>':'')+'<p>'+escape(e.text)+'</p></a>').join('')||'<section class="empty"><h2>A place for what stays with you</h2><p>Write a thought about a saved book.</p></section>';main.append(section)}
-    if(sid==='journal-view'){const e=w.entries.find(e=>e.id===s.entryId)||w.entries[0];if(e){const text=main.querySelectorAll('.text-block');text[0].querySelector('h2').textContent=e.title||'Untitled entry';text[0].querySelector('p').textContent=catalog[e.book].title+' · '+catalog[e.book].author;text[1].querySelector('p').textContent=e.text;const q=main.querySelector('.quote');if(!e.quote)q?.remove();else if(q){q.querySelector('p').textContent=e.quote;q.querySelector('small').textContent=e.reference||'Saved passage'}}}
+    if(['journal-all','journal-empty','journal-book','journal-book-empty'].includes(sid)){main.querySelectorAll('.entry,.empty').forEach(el=>el.remove());let entries=w.entries;if(sid==='journal-book'||sid==='journal-book-empty')entries=entries.filter(e=>e.book===s.book);const section=document.createElement('section');section.innerHTML=entries.map(e=>'<a class="entry" style="display:block" href="journal-view.html" data-to="journal-view" data-action="entry" data-entry-id="'+escape(e.id)+'"><h2>'+escape(e.title||'Untitled entry')+'</h2><p class="entry-meta">'+escape(catalog[e.book].title)+(e.reference?' · '+escape(e.reference):'')+'</p>'+(e.quote?'<div class="quote"><p>'+escape(e.quote)+'</p></div>':'')+'<p>'+escape(e.text)+'</p></a>').join('')||'<section class="empty"><h2>A place for what stays with you</h2><p>Write a thought about a saved book.</p></section>';main.append(section)}
+    if(sid==='journal-view'){const e=w.entries.find(e=>e.id===s.entryId)||w.entries[0];if(e){const text=main.querySelectorAll('.text-block');text[0].querySelector('h2').textContent=e.title||'Untitled entry';text[0].querySelector('p').textContent=catalog[e.book].title+' · '+catalog[e.book].author;text[1].querySelector('p').textContent=e.text;const q=main.querySelector('.quote');if(q){const locator=e.locator&&Number.isFinite(e.locator.chapter)&&Number.isFinite(e.locator.percent);q.querySelector('p').textContent=e.quote||'';q.querySelector('p').hidden=!e.quote;if(locator)q.querySelector('small').textContent=e.reference||'Saved passage';else{q.querySelector('a')?.remove();q.querySelector('small')?.remove()}if(!e.quote&&!locator)q.remove()}}}
     if(sid==='journal-delete'){const e=w.entries.find(e=>e.id===s.entryId);if(e)main.querySelector('.text-block h2').textContent=e.title||'Untitled entry'}
-    if(sid==='book-saved'){const status=main.querySelector('.notice p');if(status)status.textContent=w.statuses[s.book]||'Want to read'}
+    if(sid==='book-saved'){const status=main.querySelector('.notice p'),pos=w.positions[s.book];if(status)status.textContent=(w.statuses[s.book]||'Want to read')+(pos?' · Chapter '+pos.chapter+' · '+pos.percent+'%':'')}
+    if(sid==='book-downloaded'){const pos=w.positions[s.book],read=main.querySelector('[data-action=read]');if(read)read.textContent=pos?'Continue reading':'Start reading';const organize=main.querySelector('[data-action=actions] small');if(organize)organize.textContent=(w.statuses[s.book]||'Want to read')+' · In your library'}
     if(sid==='library-rating'){const score=w.ratings[s.book]||0;all('[data-rating]').forEach(b=>{b.classList.toggle('rated',Number(b.dataset.rating)<=score);b.setAttribute('aria-pressed',String(Number(b.dataset.rating)===score))})}
     if(sid==='library-actions'){const selected=w.statuses[s.book]||'Want to read';all('.chips a').forEach(a=>{a.classList.toggle('selected',a.textContent.trim()===selected)});const rating=main.querySelector('[data-action=rating] small');if(rating)rating.textContent=w.ratings[s.book]?w.ratings[s.book]+' out of 5 · Private':'Not rated · Private'}
-    if(sid==='settings-main'){const appearance=main.querySelector('[data-action=appearance] small');if(appearance)appearance.textContent=s.appAppearance.theme+' · '+s.appAppearance.colors;const account=main.querySelector('[data-action=account] small');if(account)account.textContent=s.workspace==='account'?'Google account · '+s.syncStatus:'Guest · Saved on device'}
-    if(sid==='home-first'||sid==='home-returning'){const sync=main.querySelector('[data-action=sync]');if(sync){sync.querySelector('strong').textContent=s.workspace==='account'?s.syncStatus:'Saved on device';sync.querySelector('small').textContent=s.workspace==='account'?'Your account reading':'Your reading is stored locally'}const guest=main.querySelector('.notice');if(guest&&s.workspace==='account'){guest.querySelector('strong').textContent=s.syncStatus;guest.querySelector('p').textContent='Your account library is available on this device.'}}
-    if(sid==='account-details'&&!s.deleteStatus){const sync=main.querySelector('[data-action=sync] strong');if(sync)sync.textContent=s.syncStatus}
+    if(sid==='settings-main'){const appearance=main.querySelector('[data-action=appearance] small');if(appearance)appearance.textContent=s.appAppearance.theme+' · '+s.appAppearance.colors;const account=main.querySelector('[data-action=account] small');if(account)account.textContent=s.workspace==='account'?'Google account · '+s.syncStatus:'Guest · Saved on device';const storage=main.querySelector('[data-action=storage] small');if(storage)storage.textContent=w.downloaded.length+' on this device';const reader=main.querySelector('[data-action=reader] small');if(reader)reader.textContent=s.appearance.mode+' · '+s.appearance.font+' · '+s.appearance.size+' sp'}
+    if(sid==='home-first'||sid==='home-returning'){const sync=main.querySelector('[data-action=sync]');if(sync){sync.querySelector('strong').textContent=s.workspace==='account'?s.syncStatus:'Saved on device';sync.querySelector('small').textContent=s.workspace==='account'?(s.pending?s.pending+' changes pending':'Just now'):'Guest'}const guest=main.querySelector('.notice');if(guest&&s.workspace==='account'){guest.querySelector('strong').textContent=s.syncStatus;guest.querySelector('p').textContent='Your account library is available on this device.'}}
+    if(sid==='account-details'&&!s.deleteStatus){const sync=main.querySelector('[data-action=sync]');if(sync){sync.querySelector('strong').textContent=s.syncStatus;sync.querySelector('small').textContent=s.pending?s.pending+' changes pending':'Just now'}}
     if(sid==='account-details'&&s.deleteStatus){main.querySelector('[data-deletion-notice]')?.remove();const notice=document.createElement('aside');notice.className='notice';notice.dataset.deletionNotice='true';notice.innerHTML='<strong>'+escape(s.deleteStatus==='deleting'?'Account deletion in progress':'Deletion wasn’t confirmed')+'</strong><p>Review deletion status before making further account changes.</p>';main.prepend(notice);const sync=main.querySelector('[data-action=sync]');if(sync)sync.querySelector('strong').textContent=s.deleteStatus==='deleting'?'Deletion in progress':'Deletion needs attention'}
     if(sid==='settings-appearance'){all('input[type=radio]').forEach(el=>el.checked=[s.appAppearance.theme,s.appAppearance.colors].includes(el.value))}
     if(sid==='account-signout-pending'){const title=main.querySelector('.notice strong');if(title)title.textContent=s.pending+' changes are waiting to sync'}
     if(sid==='sync-failed'&&s.pendingOperation!=='sync'){main.querySelector('.empty h2').textContent=s.pendingOperation==='import'?'Guest reading wasn’t fully added':'Library restoration interrupted';main.querySelector('.empty p').textContent='Your local reading is safe. Try again to continue this operation without duplicating records.'}
     if(sid==='book-saved'&&s.resumeAfterDownload){const notice=main.querySelector('.notice p');if(notice)notice.textContent='Download the book text to return to your saved passage. Your journal reference is kept.'}
     if(sid==='shelf-name-error'&&s.shelfEditMode==='rename')$('.topbar h1').textContent='Rename shelf';
-    if(sid==='auth-import-preview'){const newBooks=s.guestData.books.filter(b=>!s.accountData.books.includes(b)),matched=s.guestData.books.length-newBooks.length;const summaryRow=main.querySelector('.rowcopy');if(summaryRow){summaryRow.querySelector('strong').textContent=s.guestData.books.length+' guest books';summaryRow.querySelector('small').textContent=newBooks.length+' new · '+matched+' already saved'}main.querySelectorAll('.book').forEach(el=>el.remove());const list=document.createElement('section');list.style.cssText='display:flex;flex-direction:column;gap:16px';list.innerHTML=s.guestData.books.map(b=>row(b,'book-saved')).join('');main.insertBefore(list,main.querySelector('.notice'));all('.notice').forEach(el=>{if(el.querySelector('strong')?.textContent==='Your notes are preserved')el.querySelector('p').textContent=s.guestData.entries.length+' guest journal entries and their passage references will be preserved. Existing account notes remain.'})}
-    if(sid==='auth-import-complete'&&s.importSummary)main.querySelector('.empty p').textContent=s.importSummary.newBooks+' new books added. '+s.importSummary.matched+' existing books matched. '+s.importSummary.notes+' journal entries preserved.';
+    if(sid==='auth-import-preview'){const newBooks=s.guestData.books.filter(b=>!s.accountData.books.includes(b)),matched=s.guestData.books.length-newBooks.length;const summaryRow=[...main.querySelectorAll('.rowcopy')].find(el=>el.querySelector('strong')?.textContent.endsWith('guest books'));if(summaryRow){summaryRow.querySelector('strong').textContent=s.guestData.books.length+' guest books';summaryRow.querySelector('small').textContent=newBooks.length+' new · '+matched+' already saved'}main.querySelectorAll('.book').forEach(el=>el.remove());const list=document.createElement('section');list.style.cssText='display:flex;flex-direction:column;gap:16px';list.innerHTML=s.guestData.books.map(b=>row(b,'book-saved',s.accountData.books.includes(b)?'Already in account':'New to account')).join('');main.insertBefore(list,main.querySelector('.notice'));const reading=[...main.querySelectorAll('.notice')].find(el=>el.querySelector('strong')?.textContent==='Your reading stays intact');if(reading){const g=s.guestData;reading.querySelector('p').textContent=g.entries.length+' journal '+(g.entries.length===1?'entry':'entries')+' · '+g.highlights.length+' '+(g.highlights.length===1?'highlight':'highlights')+' · '+Object.keys(g.shelves).length+' shelves · '+Object.keys(g.ratings).length+' private '+(Object.keys(g.ratings).length===1?'rating':'ratings')+'\nExisting account writing stays. Duplicate books and entries are matched.'}}
+    if(sid==='auth-import-complete'&&s.importSummary)main.querySelector('.empty p').textContent=s.importSummary.newBooks+' new books added. '+s.importSummary.matched+' existing books matched. '+s.importSummary.notes+' journal '+(s.importSummary.notes===1?'entry':'entries')+' and '+s.importSummary.highlights+' '+(s.importSummary.highlights===1?'highlight':'highlights')+' preserved.';
     if(sid==='library-after-removal'&&s.removedBook)main.querySelector('.notice p').textContent=catalog[s.removedBook].title+' left Library. Your notes and highlights are kept in Journal.';
     if(sid==='shelves-after-delete'&&s.deletedShelfName)main.querySelector('.notice p').textContent=s.deletedShelfName+' was removed. All its books remain in Library.';
-    if(sid==='book-reading'){const pos=w.positions[s.book];const progress=main.querySelector('.progress-wrap');if(progress){if(pos){progress.querySelector('.progress-copy').innerHTML='<span>Reading · Chapter '+pos.chapter+'</span><span>'+pos.percent+'%</span>';progress.querySelector('.progress-track span').style.width=pos.percent+'%'}else progress.innerHTML='<p>Reading · No saved position yet</p>'}const journal=main.querySelector('[data-action=journal] small');if(journal)journal.textContent=w.entries.filter(e=>e.book===s.book).length+' entries for this book';const organize=main.querySelector('[data-action=actions] small');if(organize)organize.textContent=(w.statuses[s.book]||'Want to read')+' · '+Object.values(w.shelves).filter(sh=>sh.books.includes(s.book)).map(sh=>sh.name).join(', ')}
-    if(['home-returning','home-first'].includes(sid)&&sid==='home-returning'){if(!w.positions['1342']||!w.books.includes('1342'))main.querySelector('.continue')?.remove();const grid=main.querySelector('.book-grid');if(grid)grid.innerHTML=w.books.map(b=>row(b,w.statuses[b]==='Reading'?'book-reading':'book-saved')).join('')}
+    if(sid==='book-reading'){const pos=w.positions[s.book];const progress=main.querySelector('.progress-wrap');if(progress){if(pos){progress.querySelector('.progress-copy').innerHTML='<span>Reading · Chapter '+pos.chapter+'</span><span>'+pos.percent+'%</span>';progress.querySelector('.progress-track span').style.width=pos.percent+'%';progress.querySelector('[role=progressbar]').setAttribute('aria-valuenow',String(pos.percent))}else progress.innerHTML='<p>Reading · No saved position yet</p>'}const journal=main.querySelector('[data-action=journal] small');if(journal)journal.textContent=w.entries.filter(e=>e.book===s.book).length+' entries for this book';const organize=main.querySelector('[data-action=actions] small');if(organize)organize.textContent=(w.statuses[s.book]||'Want to read')+' · '+Object.values(w.shelves).filter(sh=>sh.books.includes(s.book)).map(sh=>sh.name).join(', ')}
+    if(['home-returning','home-first'].includes(sid)&&sid==='home-returning'){if(!w.positions['1342']||!w.books.includes('1342'))main.querySelector('.continue')?.remove();const card=main.querySelector('.continue'),pos=w.positions['1342'];if(card&&pos){card.querySelector('small').textContent='Chapter '+pos.chapter+' · '+pos.percent+'%';card.querySelector('.progress-track span').style.width=pos.percent+'%';card.querySelector('[data-action=continue]').textContent=w.downloaded.includes('1342')?'Continue reading':'Download to read'}const grid=main.querySelector('.book-grid');if(grid)grid.innerHTML=w.books.filter(b=>b!=='1342'||!main.querySelector('.continue')).map(b=>row(b,w.statuses[b]==='Reading'?'book-reading':'book-saved')).join('')}
     if(sid==='settings-storage'){replaceBooks(w.downloaded,b=>'book-downloaded');const text=main.querySelector('.notice p');if(text)text.textContent=w.downloaded.length+' books available offline on this device.'}
     if(sid==='explore-results'){const q=s.search.toLowerCase(),subject=s.subject;let ids=Object.keys(catalog).filter(b=>(!q||(catalog[b].title+' '+catalog[b].author).toLowerCase().includes(q))&&(!subject||catalog[b].subjects.includes(subject)));replaceBooks(ids,()=> 'book-new');const search=main.querySelector('.search span');if(search)search.textContent=s.search||s.subject||'All books';const count=main.querySelector('.rowcopy strong');if(count)count.textContent=ids.length+' titles'}
     if(sid==='explore-search')setField('Title or author',s.search);
     if(sid==='reader-search')setField('Word or phrase',s.readerQuery);
     if(sid==='reader-search-empty'||sid==='reader-search-results'){const input=main.querySelector('.search span');if(input)input.textContent=s.readerQuery;if(sid==='reader-search-results'){main.querySelectorAll('[data-action=result]').forEach(el=>el.remove());const results=document.createElement('section');results.innerHTML=s.readerResults.map(r=>'<a class="row-link" href="reader-scroll.html" data-to="reader-scroll" data-action="result" data-entry-id="'+r.passage+'"><span class="rowcopy"><strong>'+escape(r.text)+'</strong><small>Chapter 18</small></span></a>').join('');main.insertBefore(results,main.querySelector('.notice'))}}
     if(s.appAppearance.theme==='Dark'){Object.entries({'--paper':'#19120d','--panel':'#231a14','--ink':'#f0dfd6','--muted':'#d6c3b7','--tonal':'#6d3a0d','--accent':'#ffb77f','--onaccent':'#4e2600','--line':'#9f8d83'}).forEach(([k,v])=>$('.phone').style.setProperty(k,v))}
+    const bookmarkControl=$('.topbar [data-bookmark-control]');if(bookmarkControl){const pos=w.positions['1342'],saved=w.bookmarks.some(b=>b.book==='1342'&&b.chapter===pos?.chapter&&(b.passage||0)===(pos?.passage||0));bookmarkControl.setAttribute('aria-pressed',String(saved));bookmarkControl.setAttribute('aria-label',saved?'Remove bookmark':'Add bookmark');bookmarkControl.classList.toggle('bookmarked',saved)}
     if(sid==='reader-contents'){const bookmark=main.querySelector('[data-action=bookmark]');if(bookmark){if(!w.bookmarks.length)bookmark.remove();else{const saved=w.bookmarks[0];bookmark.querySelector('strong').textContent='Chapter '+saved.chapter+' · '+saved.percent+'%'}}const label=[...main.querySelectorAll('.text-block h2')].find(el=>el.textContent==='Saved bookmark');if(label&&!w.bookmarks.length)label.textContent='No bookmarks yet'}
     if(sid==='reader-highlight'&&!w.highlights.some(h=>h.book==='1342')){main.querySelectorAll('mark').forEach(el=>el.replaceWith(document.createTextNode(el.textContent)));main.querySelector('.notice')?.remove()}
     if(sid.startsWith('reader-')){const pos=w.positions['1342']||{chapter:18,percent:28},appearance=s.appearance;all('[data-setting]').forEach(el=>{el.querySelectorAll('button').forEach(b=>{const selected=b.textContent.trim()===appearance[el.dataset.setting];b.classList.toggle('selected',selected);b.setAttribute('aria-pressed',String(selected))})});const prose=main.querySelector('.reader-content');if(prose){prose.style.fontFamily=appearance.font==='Roboto Flex'?"'Roboto Flex',Arial,sans-serif":"Literata,Georgia,serif";prose.style.fontSize=appearance.size+'px';prose.style.lineHeight=appearance.line+'px';prose.querySelector('h2').textContent='Chapter '+pos.chapter;prose.querySelectorAll('p').forEach(p=>{p.style.fontSize='inherit';p.style.lineHeight='inherit'});if(pos.chapter===19)prose.innerHTML='<h2>Chapter 19</h2><p>'+(sid==='reader-selection'||sid==='reader-highlight'?'<mark>The next day opened a new scene at Longbourn.</mark>':'The next day opened a new scene at Longbourn.')+' Mr. Collins made his declaration in form.</p>';else if(pos.passage===1)prose.innerHTML='<h2>Chapter 18</h2><p>The moment of her release from him was ecstasy.</p>';const margin={Narrow:16,Comfortable:24,Wide:32}[appearance.margins];main.style.paddingLeft=margin+'px';main.style.paddingRight=margin+'px'}all('.reader-position').forEach(el=>el.innerHTML='<span>Chapter '+pos.chapter+'</span><span>'+pos.percent+'%</span>');const palettes={Light:{'--paper':'#fff8f3','--panel':'#fcf1e8','--ink':'#241a14','--muted':'#55483d','--tonal':'#ffdcbd','--line':'#d7c3b4','--accent':'#895021','--onaccent':'#fff'},Sepia:{'--paper':'#f4e9d4','--panel':'#eee0c7','--ink':'#332519','--muted':'#654d36','--tonal':'#e7d7b8','--line':'#c9b38a','--accent':'#895021','--onaccent':'#fff'},Dark:{'--paper':'#19120d','--panel':'#231a14','--ink':'#f0dfd6','--muted':'#d6c3b7','--tonal':'#6d3a0d','--line':'#9f8d83','--accent':'#ffb77f','--onaccent':'#4e2600'}};Object.entries(palettes[appearance.paper]||palettes.Light).forEach(([k,v])=>$('.phone').style.setProperty(k,v))}
@@ -377,11 +389,13 @@ CHILD_JS = r"""
     const required=$('[data-require-selection]');if(required)required.setAttribute('aria-disabled',String(!all('input[type=checkbox]:checked').length));
   }
   document.addEventListener('click',event=>{
-    const a=event.target.closest('a[data-to]');if(a){event.preventDefault();if(a.getAttribute('aria-disabled')==='true')return;go(a.dataset.to,a.dataset.action,a.textContent.trim(),a.dataset.bookId,a.dataset.entryId);return}
+    const a=event.target.closest('a[data-to],button[data-to]');if(a){event.preventDefault();if(a.getAttribute('aria-disabled')==='true')return;go(a.dataset.to,a.dataset.action,a.textContent.trim(),a.dataset.bookId,a.dataset.entryId);return}
     const chip=event.target.closest('button[data-choice]');if(chip){chip.parentElement.querySelectorAll('button').forEach(b=>{b.classList.remove('selected');b.setAttribute('aria-pressed','false')});chip.classList.add('selected');chip.setAttribute('aria-pressed','true')}
     const rating=event.target.closest('[data-rating]');if(rating){const score=Number(rating.dataset.rating);rating.parentElement.querySelectorAll('button').forEach(b=>{b.classList.toggle('rated',Number(b.dataset.rating)<=score);b.setAttribute('aria-pressed',String(Number(b.dataset.rating)===score))})}
   });
-  document.addEventListener('keydown',event=>{if(event.key!=='Enter'||event.isComposing||event.target.tagName!=='INPUT')return;const key=sid==='explore-search'?'submit':sid==='reader-search'?'search':null;if(key){const submit=$('[data-action='+key+']');if(submit){event.preventDefault();go(submit.dataset.to,key,submit.textContent)}}});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'){const menu=$('.overflow[open]');if(menu){event.preventDefault();menu.open=false;menu.querySelector('summary').focus();return}}if(event.key!=='Enter'||event.isComposing||event.target.tagName!=='INPUT')return;const key=sid==='explore-search'?'submit':sid==='reader-search'?'search':null;if(key){const submit=$('[data-action='+key+']');if(submit){event.preventDefault();go(submit.dataset.to,key,submit.textContent)}}});
+  document.addEventListener('click',event=>{all('.overflow[open]').forEach(menu=>{if(!menu.contains(event.target))menu.open=false})});
+  all('.overflow').forEach(menu=>menu.addEventListener('focusout',event=>{if(event.relatedTarget&&!menu.contains(event.relatedTarget))menu.open=false}));
   document.addEventListener('change',()=>{const required=$('[data-require-selection]');if(required)required.setAttribute('aria-disabled',String(!all('input[type=checkbox]:checked').length))});
   window.addEventListener('message',event=>{if(event.source===parent&&event.data?.type==='veritalex:hydrate')hydrate(event.data.state)});
   const dialog=$('dialog');if(dialog&&params.get('embed')==='1'){dialog.removeAttribute('open');dialog.showModal();dialog.addEventListener('cancel',event=>{event.preventDefault();const back=dialog.querySelector('[data-action=back]');if(back)go(back.dataset.to,'back','Back')});const safe=dialog.querySelector('[data-action=cancel],[data-action=keep]');if(safe)safe.focus()}
@@ -409,6 +423,7 @@ POLISHED_CSS = """
 .styled .phone{font-family:'Roboto Flex',Arial,sans-serif;--paper:#fff8f3;--panel:#fcf1e8;--tonal:#ffdcbd;--ink:#241a14;--muted:#55483d;--line:#d7c3b4;--accent:#895021;--onaccent:#fff}.styled .phone input,.styled .phone textarea,.styled .phone button{font-family:inherit}.styled .reader-content,.styled .reader-content h2,.styled .reader-content p,.styled .quote p,.styled .mini-prose{font-family:Literata,Georgia,serif}.styled .reader-position,.styled .quote small,.styled .quote a{font-family:'Roboto Flex',Arial,sans-serif}.styled .notice{border:0;background:#f5e9df;border-radius:16px}.styled .notice.error{background:#ffdad6;color:#410002}.styled .notice.error p{color:#410002}.styled .cover{background:#e6d8c6;border-color:#a88f70;color:#503c27;box-shadow:inset 4px 0 #503c2715}.styled .book-grid .grid-book:nth-child(2n) .cover{background:#dce0cf;color:#3e4530;border-color:#8d957a}.styled .book-grid .grid-book:nth-child(3n) .cover{background:#edd7c9;color:#684838;border-color:#b79984}.styled .cover-rule{opacity:.5}.styled .bottomnav{background:#f5e9df;border:0}.styled .chip{border-color:#857468}.styled .chip.selected{background:#f9ddc5;border-color:#f9ddc5}.styled .subject{background:#fcf1e8;border:0;border-radius:16px}.styled .search{background:#f5e9df}.styled .progress-track{background:#f9ddc5}.styled .reader-content mark{background:#f6e5a8}.styled .button{font-weight:600}.styled .app-dialog{border:0}.styled .button.text{color:#895021}.styled .book.large{padding-top:14px}.styled .row,.styled .row-link,.styled .entry{border-color:#e1d3c7}.styled .topbar h1{font-weight:500}.styled .tabs{border-color:#d7c3b4}.styled .empty>.icon{color:#895021}.styled .brand-mark{background:#ffdcbd;border:0;color:#895021}.styled .reader-sepia{--paper:#f4e9d4;--panel:#eee0c7}.styled .quote{border-color:#895021}.styled .field input,.styled .field textarea{border-color:#857468}.styled .choice input,.styled .slider input{accent-color:#895021}
 """
 APP_CSS += ".phone .chip{min-height:48px;min-width:48px;justify-content:center}.phone .slider input{min-height:48px}.phone .quote a{min-height:48px;display:flex;align-items:center}.phone .selection-bar a{min-height:48px}.phone .app-main p{font-size:16px;line-height:24px}.phone .notice p,.phone .book-copy p{font-size:14px;line-height:20px}.phone .reader-content p{font-size:19px;line-height:32px}.phone .quote p{font-size:19px;line-height:29px}.phone .grid-book p{font-size:13px;line-height:18px}.phone a[aria-disabled=true]{opacity:.45;cursor:default}"
+APP_CSS += ".phone .book.large{flex-direction:row;text-align:left;align-items:center;padding:8px 0;gap:16px}.phone .book.large .cover{width:80px;padding:14px 6px}.phone .book.large .cover-title{font-size:11px;line-height:15px}.phone .book.large .cover-author{font-size:9px;line-height:12px}.phone .book.large .book-copy{flex:1}.phone .book.large .book-copy h2{font-size:22px;line-height:29px}.phone .subjects{gap:8px}.phone .subject{min-height:48px;padding:13px 12px}.phone .entry{display:block}.reader-tool{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:64px;min-width:0;flex:1;padding:8px 2px;font-size:12px;line-height:16px;background:transparent;color:inherit;border:0;border-radius:12px}.reader-tool span{min-width:0;max-width:100%;overflow-wrap:anywhere}.iconbutton[data-bookmark-control][aria-pressed=true]{background:var(--tonal)}.iconbutton[data-bookmark-control][aria-pressed=true] .icon{fill:currentColor}.overflow{position:relative;flex:none}.overflow summary{list-style:none;cursor:pointer}.overflow summary::-webkit-details-marker{display:none}.overflow summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}.overflow-actions{position:absolute;right:0;top:52px;min-width:184px;padding:8px;background:var(--paper);border:1px solid var(--line);border-radius:12px;box-shadow:0 6px 18px #0002;z-index:5}.overflow-actions a{display:flex;align-items:center;min-height:48px;padding:12px;border-radius:8px;font-size:15px;line-height:24px}.overflow-actions a:hover{background:var(--panel)}"
 
 
 def screen_page(screen, polished=False):
@@ -444,10 +459,40 @@ window.startVeritalexPrototype=function(data){
   const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const sample={id:'entry-1',book:'1342',title:'First impressions',text:'How quickly a first impression becomes a certainty. I want to notice when Elizabeth changes her mind.',quote:'“The moment of her release from him was ecstasy.”',reference:'Chapter 18 · 28%',locator:{chapter:18,percent:28,passage:0}};
   function library(empty=false){return {books:empty?[]:['1342','84','11'],statuses:empty?{}:{'1342':'Reading','84':'Want to read','11':'Finished'},downloaded:empty?[]:['1342','11'],ratings:empty?{}:{'1342':4},positions:empty?{}:{'1342':{chapter:18,percent:28,passage:0}},shelves:empty?{}:{classics:{name:'Classics',books:['1342','84']},'reading-next':{name:'Reading next',books:['84']}},entries:empty?[]:[clone(sample)],bookmarks:[],highlights:[]}}
-  function fixture(id){const first=['auth-welcome','home-first','library-empty','shelves-empty','journal-empty'].includes(id);const guest=library(first),account=library();guest.entries.forEach(e=>e.id='guest-'+e.id);guest.highlights=first?[]:[{id:'guest-highlight-1',book:'1342',reference:'Chapter 18',locator:{chapter:18,percent:28,passage:0},text:sample.quote}];account.entries[0].id='account-entry-1';account.positions['1342']={chapter:19,percent:31,passage:0};if(id==='account-deleted'){account.books=[];account.statuses={};account.downloaded=[];account.ratings={};account.positions={};account.shelves={};account.entries=[];account.highlights=[];account.bookmarks=[]}if(id==='library-after-removal'){guest.books=guest.books.filter(b=>b!=='1342');guest.downloaded=guest.downloaded.filter(b=>b!=='1342');Object.values(guest.shelves).forEach(sh=>sh.books=sh.books.filter(b=>b!=='1342'))}if(id==='shelves-after-delete')delete guest.shelves.classics;if(id==='journal-book-empty')guest.entries=[];if(id==='shelf-detail-empty')guest.shelves.classics.books=[];if(id==='settings-storage-empty')guest.downloaded=[];const signed=id.startsWith('account-')||id.startsWith('auth-import')||id.startsWith('sync-')&&id!=='sync-local';const s={workspace:signed&&id!=='account-deleted'?'account':'guest',guest,account,book:'1342',shelf:'classics',shelfDraft:null,shelfError:'',shelfEditMode:id==='shelf-rename'?'rename':'create',entryId:signed?'account-entry-1':'guest-entry-1',draft:null,draftOrigin:'journal-create',appAppearance:{theme:'Follow system',colors:'Veritalex brand'},appearance:{font:'Literata',margins:'Comfortable',paper:'Light',mode:'Scroll',size:19,line:32},readerQuery:'Elizabeth',readerResults:[{text:'Till Elizabeth entered the drawing-room at Netherfield',passage:0}],search:first?'':'Austen',subject:'',syncStatus:'Up to date',nextShelf:1,pending:0,pendingOperation:'sync',signoutAfterSync:false,deleteStatus:null,readerMode:'reader-scroll',settingsReturn:'home-returning',bookReturn:'library-books',journalReturn:'journal-all',importSummary:null};if(id==='reader-search-empty'){s.readerQuery='no matching phrase';s.readerResults=[]}if(id==='account-signout-pending'||['sync-waiting','sync-failed','sync-syncing','sync-expired'].includes(id))s.pending=2;if(id==='sync-restoring')s.pendingOperation='restore';if(id==='auth-importing')s.pendingOperation='import';if(id==='account-deleting')s.deleteStatus='deleting';if(id==='account-delete-error')s.deleteStatus='failed';if(id==='reader-paged')s.readerMode='reader-paged';if(['journal-create','journal-edit','journal-discard'].includes(id)){s.draft=id==='journal-edit'?clone(s[s.workspace].entries[0]):{...clone(sample),id:null};s.entryId=s.draft.id||s.entryId;s.draftOrigin=id==='journal-edit'?'journal-edit':'journal-create'}s.pendingByWorkspace={guest:0,account:signed?s.pending:0};if(s.pending&&signed)s.syncStatus='Waiting to sync';if(id==='reader-bookmark'||id==='reader-contents')s[s.workspace].bookmarks=[{id:'bookmark-1342-18-0',book:'1342',chapter:18,percent:28,passage:0}];return s}
-  let current=byId.has(location.hash.slice(1))?location.hash.slice(1):'auth-welcome',state=fixture(current),history=[],mode='wireframe';
+  function fixture(id,selectedBook='1342',bookDemo=true){const first=['auth-welcome','home-first','library-empty','shelves-empty','journal-empty'].includes(id);const guest=library(first),account=library();if(bookDemo&&selectedBook==='1342'&&['book-new','book-saved','book-downloaded','book-downloading','book-download-failed'].includes(id)){delete guest.positions['1342'];guest.downloaded=guest.downloaded.filter(b=>b!=='1342');guest.statuses['1342']='Want to read';if(id==='book-downloaded')guest.downloaded.push('1342');if(id==='book-new'){guest.books=guest.books.filter(b=>b!=='1342');delete guest.statuses['1342'];Object.values(guest.shelves).forEach(sh=>sh.books=sh.books.filter(b=>b!=='1342'))}}guest.entries.forEach(e=>e.id='guest-'+e.id);guest.highlights=first?[]:[{id:'guest-highlight-1',book:'1342',reference:'Chapter 18',locator:{chapter:18,percent:28,passage:0},text:sample.quote}];account.entries[0].id='account-entry-1';account.positions['1342']={chapter:19,percent:31,passage:0};if(id==='account-deleted'){account.books=[];account.statuses={};account.downloaded=[];account.ratings={};account.positions={};account.shelves={};account.entries=[];account.highlights=[];account.bookmarks=[]}if(id==='library-after-removal'){guest.books=guest.books.filter(b=>b!=='1342');guest.downloaded=guest.downloaded.filter(b=>b!=='1342');Object.values(guest.shelves).forEach(sh=>sh.books=sh.books.filter(b=>b!=='1342'))}if(id==='shelves-after-delete')delete guest.shelves.classics;if(id==='journal-book-empty')guest.entries=[];if(id==='shelf-detail-empty')guest.shelves.classics.books=[];if(id==='settings-storage-empty')guest.downloaded=[];const signed=id.startsWith('account-')||id.startsWith('auth-import')||id.startsWith('sync-')&&id!=='sync-local';const s={workspace:signed&&id!=='account-deleted'?'account':'guest',guest,account,book:'1342',shelf:'classics',shelfDraft:null,shelfError:'',shelfEditMode:id==='shelf-rename'?'rename':'create',entryId:signed?'account-entry-1':'guest-entry-1',draft:null,draftOrigin:'journal-create',appAppearance:{theme:'Follow system',colors:'Veritalex brand'},appearance:{font:'Literata',margins:'Comfortable',paper:'Light',mode:'Scroll',size:19,line:32},readerQuery:'Elizabeth',readerResults:[{text:'Till Elizabeth entered the drawing-room at Netherfield',passage:0}],search:first?'':'Austen',subject:'',syncStatus:'Up to date',nextShelf:1,pending:0,pendingOperation:'sync',signoutAfterSync:false,deleteStatus:null,readerMode:'reader-scroll',settingsReturn:'home-returning',bookReturn:'library-books',journalReturn:'journal-all',importSummary:null};if(id==='reader-search-empty'){s.readerQuery='no matching phrase';s.readerResults=[]}if(id==='account-signout-pending'||['sync-waiting','sync-failed','sync-syncing','sync-expired'].includes(id))s.pending=2;if(id==='sync-restoring')s.pendingOperation='restore';if(id==='auth-importing')s.pendingOperation='import';if(id==='account-deleting')s.deleteStatus='deleting';if(id==='account-delete-error')s.deleteStatus='failed';if(id==='reader-paged')s.readerMode='reader-paged';if(['journal-create','journal-edit','journal-discard'].includes(id)){s.draft=id==='journal-edit'?clone(s[s.workspace].entries[0]):{...clone(sample),id:null};s.entryId=s.draft.id||s.entryId;s.draftOrigin=id==='journal-edit'?'journal-edit':'journal-create'}s.pendingByWorkspace={guest:0,account:signed?s.pending:0};if(s.pending&&signed)s.syncStatus='Waiting to sync';if(id==='reader-bookmark'||id==='reader-contents')s[s.workspace].bookmarks=[{id:'bookmark-1342-18-0',book:'1342',chapter:18,percent:28,passage:0}];return s}
+  const entryParams=new URLSearchParams(location.search),requestedBook=entryParams.get('book'),requestedWorkspace=entryParams.get('workspace');
+  let current=byId.has(location.hash.slice(1))?location.hash.slice(1):'auth-welcome';
+  const contentWorkspace=['Home','Explore','Book','Library','Shelves','Journal','Reader','Settings'].includes(byId.get(current).area)&&['account','guest'].includes(requestedWorkspace)?requestedWorkspace:null;
+  let state=fixture(current,Object.prototype.hasOwnProperty.call(data.catalogue,requestedBook)?requestedBook:'1342',contentWorkspace!=='account'),history=[],mode='wireframe';
+  if(contentWorkspace){state.workspace=contentWorkspace;state.pending=state.pendingByWorkspace[contentWorkspace]}
   const workspace=()=>state[state.workspace];
-  const bookDestination=(w,book)=>!w.books.includes(book)?'book-new':w.statuses[book]==='Reading'?'book-reading':w.downloaded.includes(book)?'book-downloaded':'book-saved';
+  const bookDestination=(w,book)=>!w.books.includes(book)?'book-new':!w.downloaded.includes(book)?'book-saved':w.statuses[book]==='Reading'?'book-reading':'book-downloaded';
+  if(contentWorkspace){
+    if(['book-new','book-saved','book-reading','book-downloaded'].includes(current))current=bookDestination(workspace(),state.book);
+    if(['home-first','home-returning'].includes(current))current=workspace().books.length?'home-returning':'home-first';
+    if(['library-books','library-empty'].includes(current))current=workspace().books.length?'library-books':'library-empty';
+    if(['shelves-list','shelves-empty'].includes(current))current=Object.keys(workspace().shelves).length?'shelves-list':'shelves-empty';
+    if(['journal-all','journal-empty'].includes(current))current=workspace().entries.length?'journal-all':'journal-empty';
+  }
+  if(requestedBook&&Object.prototype.hasOwnProperty.call(data.catalogue,requestedBook)){
+    state.book=requestedBook;
+    if(['book-new','book-saved','book-reading','book-downloaded'].includes(current))current=bookDestination(workspace(),requestedBook);
+    if(['journal-book','journal-book-empty'].includes(current))current=workspace().entries.some(e=>e.book===requestedBook)?'journal-book':'journal-book-empty';
+  }
+  const requestedShelf=entryParams.get('shelf');
+  if(['shelf-detail','shelf-detail-empty','shelf-rename','shelf-delete'].includes(current)&&requestedShelf&&Object.prototype.hasOwnProperty.call(workspace().shelves,requestedShelf)){
+    state.shelf=requestedShelf;
+    if(['shelf-detail','shelf-detail-empty'].includes(current))current=workspace().shelves[requestedShelf].books.length?'shelf-detail':'shelf-detail-empty';
+  }
+  const requestedPosition=entryParams.get('position');
+  if(current==='reader-scroll'&&state.book==='1342'&&['account','device'].includes(requestedPosition)){
+    workspace().positions['1342']=clone((requestedPosition==='account'?state.account:state.guest).positions['1342']);
+  }
+  const requestedSubject=entryParams.get('subject');
+  if(['explore-results','explore-empty'].includes(current)&&['Fiction','Romance','Gothic fiction','Adventure'].includes(requestedSubject)){
+    state.search='';state.subject=requestedSubject;
+    current=Object.values(data.catalogue).some(book=>book.subjects.includes(requestedSubject))?'explore-results':'explore-empty';
+  }
   function transport(){return {book:state.book,shelf:state.shelf,shelfDraft:state.shelfDraft,shelfError:state.shelfError,shelfEditMode:state.shelfEditMode,entryId:state.entryId,draft:state.draft,removedBook:state.removedBook,deletedShelfName:state.deletedShelfName,appearance:state.appearance,appAppearance:state.appAppearance,pending:state.pending,resumeAfterDownload:state.resumeAfterDownload,workspace:state.workspace,workspaceData:workspace(),guestData:state.guest,accountData:state.account,readerQuery:state.readerQuery,readerResults:state.readerResults,search:state.search,subject:state.subject,syncStatus:state.syncStatus,deleteStatus:state.deleteStatus,pendingOperation:state.pendingOperation,importSummary:state.importSummary}}
   function hydrate(){frame.contentWindow?.postMessage({type:'veritalex:hydrate',state:transport()},'*')}
   function render(id,push=true){if(!byId.has(id))return;if(push&&current!==id)history.push(current);if(id==='sync-syncing')state.syncStatus='Syncing';current=id;select.value=id;const screen=byId.get(id);frame.title=screen.title+' · '+screen.variant+' · design prototype';frame.src=(mode==='styled'?'polished/':'wireframes/')+id+'.html?embed=1&mode='+mode+'&book='+encodeURIComponent(state.book);$('#state-label').textContent=String(data.screens.indexOf(screen)+1).padStart(2,'0')+' / '+data.screens.length+' · '+id;$('#state-title').textContent=screen.title;$('#state-notes').textContent=screen.annotations.join(' ')||'Representative '+screen.variant+' state. Changes are kept only in this prototype session.';$('#state-transitions').innerHTML=screen.transitions.map(a=>'<li><a href="#'+escape(a.to)+'" data-target="'+escape(a.to)+'" data-prototype-action="'+escape(a.id)+'">'+escape(a.label)+'<small>'+escape(a.role==='event'?'Simulated event':a.role)+' → '+escape(a.to)+'</small></a></li>').join('');$('#open-wireframe').href='wireframes/'+id+'.html';$('#back-button').disabled=history.length===0;window.history.replaceState(null,'','#'+id);$('#prototype-status').textContent='Simulated '+state.workspace+' workspace · In-memory changes reset on reload. Reader passages use the Pride and Prejudice demo.'}
@@ -467,6 +512,7 @@ window.startVeritalexPrototype=function(data){
       if(source==='journal-create'||source==='journal-edit')return 'journal-discard';
       if(source==='journal-discard')return state.draftOrigin;
       if(source==='journal-view')return state.journalReturn;
+      if(['journal-book','journal-book-empty'].includes(source))return state.bookJournalReturn||bookDestination(w,state.book);
       if(['reader-selection','reader-highlight','reader-bookmark','reader-appearance','reader-contents','reader-search','reader-search-results','reader-search-empty'].includes(source))return state.readerMode;
       if(source.startsWith('book-'))return state.bookReturn;
       if(source==='shelf-name-error')return state.shelfEditMode==='rename'?'shelf-rename':'shelf-create';
@@ -489,7 +535,7 @@ window.startVeritalexPrototype=function(data){
     if(source==='book-new'&&key==='save'){if(w.books.includes(state.book))return bookDestination(w,state.book);w.books.push(state.book);w.statuses[state.book]='Want to read';markPending();return 'book-saved'}
     if(source==='book-downloading'&&key==='cancel')return w.books.includes(state.book)?'book-saved':'book-new';
     if(source==='book-downloading'&&key==='success'){if(!w.books.includes(state.book))w.books.push(state.book);if(!w.downloaded.includes(state.book))w.downloaded.push(state.book);w.statuses[state.book]??='Want to read';if(state.resumeAfterDownload){w.positions['1342']=state.resumeAfterDownload.position;state.resumeAfterDownload=null;state.book='1342';return state.readerMode}return 'book-downloaded'}
-    if(['book-downloaded','book-reading','home-returning'].includes(source)&&['read','continue'].includes(key)){if(source==='home-returning')state.book='1342';if(state.book!=='1342')state.book='1342';if(!w.books.includes(state.book))w.books.push(state.book);w.statuses[state.book]='Reading';w.positions['1342']??={chapter:18,percent:28,passage:0};state.readerMode=state.appearance.mode==='Paged'?'reader-paged':'reader-scroll';return state.readerMode}
+    if(['book-downloaded','book-reading','home-returning'].includes(source)&&['read','continue'].includes(key)){if(source==='home-returning')state.book='1342';if(state.book!=='1342')state.book='1342';if(!w.downloaded.includes(state.book))return 'book-saved';if(!w.books.includes(state.book))w.books.push(state.book);w.statuses[state.book]='Reading';w.positions['1342']??={chapter:18,percent:28,passage:0};state.readerMode=state.appearance.mode==='Paged'?'reader-paged':'reader-scroll';return state.readerMode}
     if(source==='library-actions'&&['want','reading','finished'].includes(key)){w.statuses[state.book]={want:'Want to read',reading:'Reading',finished:'Finished'}[key];if(!w.books.includes(state.book))w.books.push(state.book);markPending();return to}
     if(source==='reader-finished'&&key==='finish'){w.statuses['1342']='Finished';if(!w.books.includes('1342'))w.books.push('1342');return 'library-finished'}
     if(source==='library-rating'&&['save','clear'].includes(key)){if(key==='clear')delete w.ratings[state.book];else w.ratings[state.book]=form.rating||null;markPending();return 'library-actions'}
@@ -508,6 +554,8 @@ window.startVeritalexPrototype=function(data){
     if(source==='shelf-delete'&&key==='delete'){state.deletedShelfName=w.shelves[state.shelf]?.name;delete w.shelves[state.shelf];markPending();return 'shelves-after-delete'}
     if(key==='new'&&source.startsWith('journal-')){newDraft(state.book);if(source==='journal-book'||source==='journal-book-empty'){state.journalReturn=source;return 'journal-create'}state.journalReturn='journal-all';return 'journal-book-picker'}
     if(source==='journal-book-picker'&&key?.startsWith('book-')){if(!state.draft)newDraft(state.book);state.draft.book=state.book;state.draft.quote='';state.draft.reference='';return 'journal-create'}
+    if(source.startsWith('reader-')&&key==='journal'){state.book='1342';state.bookJournalReturn=state.readerMode;return w.entries.some(e=>e.book==='1342')?'journal-book':'journal-book-empty'}
+    if(source==='book-reading'&&key==='journal'){state.bookJournalReturn='book-reading';return w.entries.some(e=>e.book===state.book)?'journal-book':'journal-book-empty'}
     if(source.startsWith('reader-')&&key==='note'){state.book='1342';newDraft('1342',true);state.journalReturn=state.readerMode;return 'journal-create'}
     if(key==='entry'&&source.startsWith('journal-')){state.entryId=entry||w.entries.find(e=>source==='journal-book'?e.book===state.book:true)?.id;state.journalReturn=source;return 'journal-view'}
     if(source==='journal-view'&&key==='edit'){state.draft=clone(w.entries.find(e=>e.id===state.entryId)||sample);state.book=state.draft.book;state.draftOrigin='journal-edit';return 'journal-edit'}
@@ -515,9 +563,9 @@ window.startVeritalexPrototype=function(data){
     if(source==='journal-discard'&&key==='keep')return state.draftOrigin;
     if(source==='journal-discard'&&key==='discard'){state.draft=null;return state.journalReturn}
     if(source==='journal-delete'&&key==='delete'){w.entries=w.entries.filter(e=>e.id!==state.entryId);markPending();return w.entries.length?'journal-all':'journal-empty'}
-    if(source==='journal-view'&&key==='passage'){const e=w.entries.find(e=>e.id===state.entryId);state.book=e?.book||'1342';const position=e?.locator?clone(e.locator):{chapter:18,percent:28,passage:0};if(!w.downloaded.includes(state.book)){state.resumeAfterDownload={book:state.book,position};return 'book-saved'}w.positions['1342']=position;const highlight=w.highlights.find(h=>h.book===state.book&&h.locator?.chapter===position.chapter&&(h.locator?.passage||0)===(position.passage||0));state.activeHighlightId=highlight?.id;return highlight?'reader-highlight':state.readerMode}
+    if(source==='journal-view'&&key==='passage'){const e=w.entries.find(e=>e.id===state.entryId);if(!e?.locator||!Number.isFinite(e.locator.chapter)||!Number.isFinite(e.locator.percent))return 'journal-view';state.book=e.book;const position=clone(e.locator);if(!w.downloaded.includes(state.book)){state.resumeAfterDownload={book:state.book,position};return 'book-saved'}w.positions['1342']=position;const highlight=w.highlights.find(h=>h.book===state.book&&h.locator?.chapter===position.chapter&&(h.locator?.passage||0)===(position.passage||0));state.activeHighlightId=highlight?.id;return highlight?'reader-highlight':state.readerMode}
     if(source==='reader-contents'&&key==='bookmark'){const saved=w.bookmarks[0];if(saved){w.positions['1342']={chapter:saved.chapter,percent:saved.percent,passage:saved.passage||0};state.activeBookmarkId=saved.id}return 'reader-bookmark'}
-    if(source.startsWith('reader-')&&key==='bookmark'){const p=w.positions['1342'],id='bookmark-1342-'+p.chapter+'-'+(p.passage||0);if(!w.bookmarks.some(b=>b.id===id))w.bookmarks.push({id,book:'1342',chapter:p.chapter,percent:p.percent,passage:p.passage||0});state.activeBookmarkId=id;markPending();return 'reader-bookmark'}
+    if(source.startsWith('reader-')&&key==='bookmark'){const p=w.positions['1342'],id='bookmark-1342-'+p.chapter+'-'+(p.passage||0);if(w.bookmarks.some(b=>b.id===id)){w.bookmarks=w.bookmarks.filter(b=>b.id!==id);markPending();return state.readerMode}w.bookmarks.push({id,book:'1342',chapter:p.chapter,percent:p.percent,passage:p.passage||0});state.activeBookmarkId=id;markPending();return 'reader-bookmark'}
     if(source==='reader-bookmark'&&key==='remove'){const position=w.positions['1342'];w.bookmarks=w.bookmarks.filter(b=>b.id!==(state.activeBookmarkId||'bookmark-1342-'+position.chapter+'-'+(position.passage||0)));markPending();return state.readerMode}
     if(source==='reader-selection'&&key==='highlight'){const position=w.positions['1342'],id='highlight-1342-'+position.chapter+'-'+(position.passage||0);if(!w.highlights.some(h=>h.id===id))w.highlights.push({id,book:'1342',reference:'Chapter '+position.chapter,locator:clone(position),text:position.chapter===19?'The next day opened a new scene at Longbourn.':sample.quote});state.activeHighlightId=id;markPending();return 'reader-highlight'}
     if(source==='reader-highlight'&&key==='remove'){const position=w.positions['1342'];const current=w.highlights.find(h=>h.locator?.chapter===position.chapter&&(h.locator?.passage||0)===(position.passage||0));w.highlights=w.highlights.filter(h=>h.id!==(state.activeHighlightId||current?.id));markPending();return state.readerMode}
@@ -538,7 +586,7 @@ window.startVeritalexPrototype=function(data){
     if(source==='auth-loading'&&key==='success'){state.pendingByWorkspace[state.workspace]=state.pending;state.workspace='account';state.pending=state.pendingByWorkspace.account;if(state.reauth){state.reauth=false;return state.pendingOperation==='restore'?'sync-restoring':'sync-syncing'}return state.guest.books.length?'auth-import-preview':state.pending?'sync-syncing':'sync-restoring'}
     if(source==='auth-import-preview'&&key==='skip'){state.workspace='account';return state.pending?'sync-syncing':'home-returning'}
     if(source==='auth-import-preview'&&key==='import'){state.pendingOperation='import';return 'auth-importing'}
-    if(source==='auth-importing'&&key==='success'){const g=state.guest,a=state.account,newBooks=g.books.filter(b=>!a.books.includes(b));state.importSummary={newBooks:newBooks.length,matched:g.books.length-newBooks.length,notes:g.entries.length};a.books=[...new Set([...a.books,...g.books])];for(const bid of newBooks)a.statuses[bid]=g.statuses[bid];a.entries=[...a.entries,...g.entries.filter(e=>!a.entries.some(x=>x.id===e.id))];a.highlights=[...a.highlights,...g.highlights.filter(e=>!a.highlights.some(x=>x.id===e.id))];for(const [id,rating] of Object.entries(g.ratings))if(a.ratings[id]==null)a.ratings[id]=rating;for(const [id,sh] of Object.entries(g.shelves)){const key='guest-'+id;if(!a.shelves[key])a.shelves[key]=clone(sh)}state.pendingOperation='sync';state.syncStatus='Up to date';return 'auth-import-complete'}
+    if(source==='auth-importing'&&key==='success'){const g=state.guest,a=state.account,newBooks=g.books.filter(b=>!a.books.includes(b));state.importSummary={newBooks:newBooks.length,matched:g.books.length-newBooks.length,notes:g.entries.length,highlights:g.highlights.length};a.books=[...new Set([...a.books,...g.books])];for(const bid of newBooks)a.statuses[bid]=g.statuses[bid];a.entries=[...a.entries,...g.entries.filter(e=>!a.entries.some(x=>x.id===e.id))];a.highlights=[...a.highlights,...g.highlights.filter(e=>!a.highlights.some(x=>x.id===e.id))];for(const [id,rating] of Object.entries(g.ratings))if(a.ratings[id]==null)a.ratings[id]=rating;for(const [id,sh] of Object.entries(g.shelves)){const key='guest-'+id;if(!a.shelves[key])a.shelves[key]=clone(sh)}state.pendingOperation='sync';state.syncStatus='Up to date';return 'auth-import-complete'}
     if(['auth-importing','sync-restoring','sync-syncing'].includes(source)&&key==='failure'){state.pendingOperation=source==='auth-importing'?'import':source==='sync-restoring'?'restore':'sync';state.syncStatus='Couldn’t sync';return 'sync-failed'}
     if(source==='sync-failed'&&key==='retry')return {import:'auth-importing',restore:'sync-restoring',sync:'sync-syncing'}[state.pendingOperation];
     if(['sync-syncing','sync-restoring'].includes(source)&&key==='success'){state.pending=0;state.pendingByWorkspace[state.workspace]=0;state.syncStatus='Up to date';if(state.signoutAfterSync)return signedOut();return 'sync-current'}
@@ -588,7 +636,7 @@ def gallery():
     options = lambda xs: "".join(f'<option value="{esc(x)}">{esc(x)}</option>' for x in xs)
     exp = exports()
     total = sum(len(s["transitions"]) for s in SCREENS.values())
-    out = shell_head("Veritalex · Design handoff") + '<body data-page="gallery"><main class="shell"><div class="eyebrow">Veritalex · Approved MVP design package</div><h1>A personal place to read.</h1><p class="intro">A complete state map, grayscale phone wireframes and a simulated walkthrough. Polished Stitch exports appear alongside the states they represent. This package contains design artifacts; it does not run real account, catalogue or sync services.</p><nav class="shellnav" aria-label="Package navigation"><a class="primary" href="prototype.html">Open design prototype</a><a href="#polished">Stitch exports</a><a href="#boards">Wireframe boards</a><a href="HANDOFF.md">Handoff notes</a><a href="WIREFLOW.md">Transition map</a><a href="screens.json">State manifest</a></nav>'
+    out = shell_head("Veritalex · Design handoff") + '<body data-page="gallery"><main class="shell"><div class="eyebrow">Veritalex · Approved MVP design package</div><h1>A personal place to read.</h1><p class="intro">A complete state map, grayscale phone wireframes and a simulated walkthrough. Polished Stitch exports appear alongside the states they represent. This package contains design artifacts; it does not run real account, catalogue or sync services.</p><nav class="shellnav" aria-label="Package navigation"><a class="primary" href="prototype.html">Open design prototype</a><a href="#polished">Stitch exports</a><a href="#boards">Wireframe boards</a><a href="revisions/clarity-v1/index.html">Review clarity refinements</a><a href="HANDOFF.md">Handoff notes</a><a href="WIREFLOW.md">Transition map</a><a href="screens.json">State manifest</a></nav>'
     out += f'<div class="summary"><span>{len(SCREENS)} distinct screen states</span><span>{total} declared transitions</span><span>{len(MANIFEST["boards"])} related boards</span><span id="reference-count">{len(exp)} available Stitch references</span><span>412 dp · compact 360 dp</span></div>'
     out += '<section aria-labelledby="screen-heading"><h2 id="screen-heading">Browse every state</h2><div class="filterbar"><label>Search screens<input id="screen-search" type="search" placeholder="Try offline, journal, download…"></label><label>Area<select id="area-filter"><option value="">All areas</option>' + options(areas) + '</select></label><label>State<select id="state-filter"><option value="">All states</option>' + options(variants) + '</select></label></div><p id="result-count" class="result-count" aria-live="polite"></p><div class="screen-grid">'
     for screen in SCREENS.values():
@@ -782,11 +830,22 @@ def audit():
 
 
 def test_prototype():
-    """Focused VM regressions for selected-book and duplicate-shelf identity."""
+    """Focused regressions for identity, preserved writing and reader actions."""
+    for sid in ("book-new", "book-saved", "book-reading", "book-downloaded"):
+        content = core(SCREENS[sid])
+        key = {"book-new": "download", "book-saved": "download", "book-reading": "continue", "book-downloaded": "read"}[sid]
+        assert content.index(f'data-action="{key}"') < content.index('data-book-about'), sid
+    for sid in ("shelf-detail", "shelf-detail-empty"):
+        content = core(SCREENS[sid])
+        assert '<details class="overflow">' in content and '<summary class="iconbutton" aria-label="Shelf options">' in content
+        assert content.count('data-action="rename"') == content.count('data-action="delete"') == 1
+    for sid in ("journal-all", "journal-book", "journal-empty", "journal-book-empty"):
+        content = core(SCREENS[sid])
+        assert content.count('data-action="new"') == 1 and 'data-action="passage"' not in content
     harness = r"""
 const assert = require('node:assert/strict');
 const vm = require('node:vm');
-function scenario(initial) {
+function scenario(initial, search = '') {
   const elements = new Map();
   const element = selector => {
     if (!elements.has(selector)) elements.set(selector, {
@@ -795,13 +854,13 @@ function scenario(initial) {
     });
     return elements.get(selector);
   };
-  const location = { hash: '#' + initial };
+  const location = { hash: '#' + initial, search };
   const window = {
     addEventListener() {},
     history: { replaceState(_state, _unused, hash) { location.hash = hash; } }
   };
   const context = vm.createContext({
-    window, location,
+    window, location, URLSearchParams,
     document: { querySelector: element, querySelectorAll: () => [], addEventListener() {} }
   });
   vm.runInContext(PROTOTYPE_SOURCE, context);
@@ -814,6 +873,48 @@ function scenario(initial) {
   };
 }
 const owned = scenario('library-books');
+const newState = scenario('book-new').state().guest;
+assert.equal(newState.books.includes('1342'), false);
+assert.equal(newState.downloaded.includes('1342'), false);
+const savedState = scenario('book-saved').state().guest;
+assert.equal(savedState.statuses['1342'], 'Want to read');
+assert.equal(savedState.downloaded.includes('1342'), false);
+const downloadedState = scenario('book-downloaded').state().guest;
+assert.equal(downloadedState.statuses['1342'], 'Want to read');
+assert.equal(downloadedState.downloaded.includes('1342'), true);
+assert.equal(downloadedState.positions['1342'], undefined);
+assert.equal(scenario('book-saved', '?book=1342').screen(), 'book-saved');
+const linkedBook = scenario('book-new', '?book=84');
+assert.equal(linkedBook.state().book, '84');
+assert.equal(linkedBook.screen(), 'book-saved');
+assert.equal(JSON.stringify(linkedBook.state().guest), JSON.stringify(owned.state().guest));
+assert.equal(scenario('book-saved', '?book=11').screen(), 'book-downloaded');
+assert.equal(scenario('book-saved', '?book=1260').screen(), 'book-new');
+assert.equal(scenario('book-saved', '?book=invalid').state().book, '1342');
+assert.equal(scenario('book-saved', '?book=toString').state().book, '1342');
+assert.equal(scenario('journal-book', '?book=84').screen(), 'journal-book-empty');
+const linkedShelf = scenario('shelf-delete', '?shelf=reading-next');
+assert.equal(linkedShelf.state().shelf, 'reading-next');
+assert.equal(JSON.stringify(linkedShelf.state().guest), JSON.stringify(owned.state().guest));
+assert.equal(scenario('shelf-rename', '?shelf=unknown').state().shelf, 'classics');
+assert.equal(scenario('reader-scroll', '?book=1342&position=account').state().guest.positions['1342'].percent, 31);
+assert.equal(scenario('reader-scroll', '?position=device').state().guest.positions['1342'].percent, 28);
+assert.equal(scenario('reader-scroll', '?book=84&position=account').state().guest.positions['1342'].percent, 28);
+assert.equal(scenario('reader-scroll', '?position=invalid').state().guest.positions['1342'].percent, 28);
+const linkedSubject = scenario('explore-empty', '?subject=Gothic%20fiction');
+assert.equal(linkedSubject.screen(), 'explore-results');
+assert.equal(linkedSubject.state().subject, 'Gothic fiction');
+assert.equal(linkedSubject.state().search, '');
+assert.equal(JSON.stringify(linkedSubject.state().guest), JSON.stringify(owned.state().guest));
+assert.equal(scenario('explore-results', '?subject=invalid').state().search, 'Austen');
+const accountContent = scenario('home-returning', '?workspace=account');
+assert.equal(accountContent.state().workspace, 'account');
+assert.equal(JSON.stringify(accountContent.state().guest), JSON.stringify(owned.state().guest));
+assert.equal(JSON.stringify(accountContent.state().account), JSON.stringify(scenario('account-details').state().account));
+assert.equal(scenario('home-first', '?workspace=account').screen(), 'home-returning');
+assert.equal(scenario('book-new', '?workspace=account').screen(), 'book-reading');
+assert.equal(scenario('home-returning', '?workspace=invalid').state().workspace, 'guest');
+assert.equal(scenario('auth-import-preview', '?workspace=guest').state().workspace, 'account');
 const before = JSON.stringify(owned.state().guest);
 owned.go('nav-explore', 'explore-browse');
 owned.go('book-1342', 'book-new', '1342');
@@ -830,7 +931,8 @@ owned.go('back', 'explore-results');
 owned.go('book-11', 'book-new', '11');
 assert.equal(owned.screen(), 'book-downloaded');
 assert.equal(owned.state().guest.statuses['11'], 'Finished');
-const staleNew = scenario('book-new');
+const staleNew = scenario('library-books');
+staleNew.go('scenario', 'book-new');
 staleNew.go('save', 'book-saved');
 assert.equal(staleNew.screen(), 'book-reading');
 assert.equal(staleNew.state().guest.statuses['1342'], 'Reading');
@@ -851,6 +953,14 @@ fresh.go('save', 'book-saved');
 assert.equal(fresh.state().guest.books.join(','), '1260');
 assert.equal(fresh.state().guest.statuses['1260'], 'Want to read');
 assert.equal(fresh.state().pending, 1);
+const removedText = scenario('settings-storage-confirm');
+removedText.go('remove', 'settings-storage-empty');
+removedText.go('nav-explore', 'explore-browse');
+removedText.go('book-1342', 'book-new', '1342');
+assert.equal(removedText.screen(), 'book-saved');
+assert.equal(removedText.state().guest.statuses['1342'], 'Reading');
+assert.equal(removedText.state().guest.positions['1342'].percent, 28);
+assert.equal(removedText.state().guest.entries.length, 1);
 const duplicate = scenario('shelves-list');
 const shelfCount = Object.keys(duplicate.state().guest.shelves).length;
 duplicate.go('create', 'shelf-create');
@@ -860,7 +970,36 @@ duplicate.go('existing', 'shelf-detail');
 assert.equal(duplicate.state().shelf, 'reading-next');
 assert.equal(duplicate.screen(), 'shelf-detail');
 assert.equal(Object.keys(duplicate.state().guest.shelves).length, shelfCount);
+const bookmark = scenario('reader-scroll');
+bookmark.go('bookmark', 'reader-bookmark');
+assert.equal(bookmark.state().guest.bookmarks.length, 1);
+bookmark.go('back', 'reader-scroll');
+bookmark.go('bookmark', 'reader-bookmark');
+assert.equal(bookmark.screen(), 'reader-scroll');
+assert.equal(bookmark.state().guest.bookmarks.length, 0);
+bookmark.go('journal', 'journal-book');
+assert.equal(bookmark.screen(), 'journal-book');
+bookmark.go('back', 'book-reading');
+assert.equal(bookmark.screen(), 'reader-scroll');
+const journal = scenario('journal-all');
+journal.go('new', 'journal-book-picker');
+journal.go('book-84', 'journal-create', '84');
+journal.go('save', 'journal-view', null, { fields: { Title: 'No passage', 'Your thought': 'A note written from Journal.' } });
+assert.equal(journal.screen(), 'journal-view');
+const writing = JSON.stringify(journal.state().guest.entries);
+journal.go('passage', 'reader-highlight');
+assert.equal(journal.screen(), 'journal-view');
+assert.equal(JSON.stringify(journal.state().guest.entries), writing);
+const imported = scenario('auth-import-preview');
+imported.go('import', 'auth-importing');
+imported.go('success', 'auth-import-complete');
+const added = JSON.stringify(imported.state().account);
+imported.go('back', 'auth-import-preview');
+imported.go('import', 'auth-importing');
+imported.go('success', 'auth-import-complete');
+assert.equal(JSON.stringify(imported.state().account), added);
 console.log('PASS: owned-book routing preserves Reading/Want/Finished status, downloads and workspace; stale Save is idempotent; new additions still save once; duplicate shelf opens matching identity.');
+console.log('PASS: book actions precede About; shelf overflow owns Rename/Delete; Journal has one New entry and no fabricated passage; bookmark toggles and retried import preserve records.');
 """
     source = "const PROTOTYPE_SOURCE=" + json.dumps(PROTOTYPE_JS) + ";\nconst MANIFEST_DATA=" + json.dumps(MANIFEST) + ";\n" + harness
     subprocess.run(["node", "-"], input=source, text=True, check=True, cwd=ROOT)

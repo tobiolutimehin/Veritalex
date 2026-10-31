@@ -15,7 +15,7 @@ metadata["stitchScreens"] = []
 for slug in slugs:
     source = json.loads((root / "raw" / (slug + "-screen.json")).read_text())
     source.update(slug=slug, variant="dark" if slug.startswith("dark-") else "tablet" if slug.startswith("tablet-") else "light", html="designs/"+slug+".html", screenshot="designs/"+slug+".png", source="Stitch")
-    state = states.get(slug.removeprefix("dark-"))
+    state = states.get(slug.removeprefix("dark-").removeprefix("tablet-"))
     source["screenIds"] = [state] if state else []
     if slug in refinements:
         source["refinement"] = refinements[slug]
@@ -38,7 +38,7 @@ canvas = {item["slug"]: {"slug": item["slug"], "sourceScreen": item["name"], "ki
 for path in sorted((root / "transfers").glob("*.json"), key=lambda p: p.stat().st_mtime):
     data = json.loads(path.read_text())
     transfer = data.get("transfer", {})
-    if transfer.get("prefix") not in ["Final / ", "Reference / "]:
+    if transfer.get("prefix") not in ["Final / ", "Reference / ", "Clarity / "]:
         continue
     for file, instance in zip(transfer.get("files", []), data.get("screenInstances", [])):
         local = root / file
@@ -48,6 +48,20 @@ for path in sorted((root / "transfers").glob("*.json"), key=lambda p: p.stat().s
             continue
         canvas[local.stem] = {"slug": local.stem, "sourceScreen": instance["sourceScreen"], "kind": transfer["prefix"].strip(" /"), "receipt": str(path.relative_to(root))}
 metadata["canvasReferences"] = list(canvas.values())
+reference_sources = {}
+for path in sorted((root / "transfers").glob("*.json"), key=lambda p: p.stat().st_mtime):
+    data = json.loads(path.read_text())
+    transfer = data.get("transfer", {})
+    if transfer.get("prefix") not in ["Source / Final / ", "Source / Clarity / "]:
+        continue
+    for file, instance in zip(transfer.get("files", []), data.get("screenInstances", [])):
+        local = root / file
+        if local.suffix != ".html" or local.stem not in canvas or not local.exists():
+            continue
+        if transfer.get("sha256", {}).get(file) != hashlib.sha256(local.read_bytes()).hexdigest():
+            continue
+        reference_sources[local.stem] = {"slug": local.stem, "file": file, "sourceScreen": instance["sourceScreen"], "instanceId": instance.get("id"), "receipt": str(path.relative_to(root))}
+metadata["referenceSourceExports"] = list(reference_sources.values())
 metadata["designSystems"]["dark"] = "assets/1cf14a0733a54b90a61f9744d7e53b3c"
 (root / "metadata.json").write_text(json.dumps(metadata, indent=2))
 print(json.dumps({"references": len(metadata["stitchScreens"]), "uploaded_board_assets": len(boards)}))

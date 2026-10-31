@@ -8,6 +8,7 @@ from stitch_io import ROOT, upload
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("kind", choices=["images", "html", "docs", "references-images", "references-html", "missing-references"])
+parser.add_argument("--revision", choices=["final", "clarity"], default="final", help="Name the reviewed reference revision on the Stitch canvas.")
 args = parser.parse_args()
 saved = set()
 for receipt in (ROOT / "transfers").glob("*.json"):
@@ -21,7 +22,8 @@ if args.kind == "docs":
 elif args.kind == "missing-references":
     groups = [("designs", "Reference / ")]
 elif args.kind.startswith("references-"):
-    groups = [("designs", "Final / " if args.kind.endswith("images") else "Source / Final / ")]
+    label = "Clarity" if args.revision == "clarity" else "Final"
+    groups = [("designs", label + " / " if args.kind.endswith("images") else "Source / " + label + " / ")]
 for folder, prefix in groups:
     if args.kind == "docs":
         paths = [ROOT / name for name in ["HANDOFF.md", "WIREFLOW.md", "DESIGN.md", "DESIGN-DARK.md"]]

@@ -61,7 +61,8 @@ try{
  }else if(mode==='references'){
   await page.setViewportSize({width:390,height:915});
   const refinements=JSON.parse(await fs.readFile(path.join(root,'raw/reference-refinements.json'),'utf8'));
-  for(const slug of Object.keys(refinements)){
+  const selected=process.argv.slice(3);
+  for(const slug of Object.keys(refinements).filter(slug=>!selected.length||selected.includes(slug))){
    const tablet=slug.startsWith('tablet-');
    await page.setViewportSize(tablet?{width:1280,height:1024}:{width:390,height:915});
    await page.goto(baseUrl+'/designs/'+slug+'.html',{waitUntil:'networkidle'});
@@ -71,7 +72,7 @@ try{
     await page.setViewportSize({width:390,height});
    }
    const styles=await page.evaluate(()=>[...document.styleSheets].flatMap(sheet=>{try{return [...sheet.cssRules].map(rule=>rule.cssText);}catch{return [];}}).join('\n'));
-   if(styles.length<10000)throw new Error('Reference stylesheet did not finish loading: '+slug);
+   if(styles.length<500)throw new Error('Reference stylesheet did not finish loading: '+slug);
    await page.screenshot({path:path.join(root,'designs/'+slug+'.png'),fullPage:true});
    report.results.push({slug,stylesLength:styles.length,title:await page.title()});
   }

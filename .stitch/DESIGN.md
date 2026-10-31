@@ -36,3 +36,10 @@ Ratings are private user data. No invented community ratings, publication dates,
 Android phone baseline 412x915, validate down to 360dp. Edge-to-edge with safe status/navigation insets; content gutters 20dp (16dp compact), spacing 4/8/12/16/24/32dp. Top bars about 64dp, bottom navigation about 80dp plus system inset. Reader hides destination navigation; distraction-free text, controls on tap. Continuous scroll default with page mode option. Preserve passage when appearance changes.
 Tablet: navigation rail and intentional list/detail panes. Reader centered measure 60-70 characters, optional contents pane. No giant stretched phone.
 Guest data stays on device; Google sign-in is optional. Cloud status is factual: Saved on device, Waiting to sync, Syncing, Up to date, Sign in to sync, Couldn't sync. Reading remains usable offline. Separate account and guest workspaces. Never show backend implementation terms in app copy.
+
+## 6. Clarity and interaction rules
+Content and state lead the routine screens. On book details, place the current reading/download state and one prominent next action before summary/source metadata: Download to read, Start reading, or Continue reading. Keep saving for later separate from downloading. Library membership and passage bookmarks use distinct symbols.
+
+Home leads with the current book; Library and Journal prioritize content rows and useful filters. Use one clear creation entry point. Shelf overflow opens Rename and Delete choices. Journal passage navigation belongs with an entry that has a real locator. Keep main navigation, tabs, and consequential action labels visible; familiar toolbar icons have accessible names and state. Every interactive control keeps a minimum 48dp target.
+
+Supporting text supplies current values, consequences or recovery. Remove paraphrases, repeated headings, duplicate populated-state discovery actions and explanations of absent features. Preserve explicit import, pending-write sign-out, deletion and reading-position choice information. Reader prose and personal writing are content, not explanatory copy to shorten. The clarity revision is reviewed at revisions/clarity-v1/index.html.

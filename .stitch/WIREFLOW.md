@@ -53,11 +53,11 @@ Auth · error. [Wireframe](wireframes/auth-error.html) · [Light state design](p
 - Continue as guest (action) → 08 · `home-first`
 - Back (back) → 01 · `auth-welcome`
 
-### 05 · Bring your reading with you · `auth-import-preview`
+### 05 · Add guest reading? · `auth-import-preview`
 
 Auth · base. [Wireframe](wireframes/auth-import-preview.html) · [Light state design](polished/auth-import-preview.html) · [Prototype](prototype.html#auth-import-preview)
 
-- Add guest reading (action) → 06 · `auth-importing`
+- Add to account (action) → 06 · `auth-importing`
 - Keep libraries separate (action) → 09 · `home-returning`
 - Back (back) → 71 · `account-details`
 
@@ -75,7 +75,7 @@ Auth · progress. [Wireframe](wireframes/auth-importing.html) · [Light state de
 - Simulate import interrupted (event) → 83 · `sync-failed`
 - Back (back) → 71 · `account-details`
 
-### 07 · Your library is together · `auth-import-complete`
+### 07 · Guest reading added · `auth-import-complete`
 
 Auth · success. [Wireframe](wireframes/auth-import-complete.html) · [Light state design](polished/auth-import-complete.html) · [Prototype](prototype.html#auth-import-complete)
 
@@ -412,7 +412,7 @@ Library · sheet. [Wireframe](wireframes/library-rating.html) · [Light state de
 
 Shelves · base. [Wireframe](wireframes/shelves-list.html) · [Light state design](polished/shelves-list.html) · [Prototype](prototype.html#shelves-list)
 
-- Create shelf (action) → 35 · `shelf-create`
+- New shelf (action) → 35 · `shelf-create`
 - Home (navigation) → 09 · `home-returning`
 - Explore (navigation) → 10 · `explore-browse`
 - Library (navigation) → 24 · `library-books`
@@ -427,7 +427,7 @@ Shelves · base. [Wireframe](wireframes/shelves-list.html) · [Light state desig
 
 Shelves · empty. [Wireframe](wireframes/shelves-empty.html) · [Light state design](polished/shelves-empty.html) · [Prototype](prototype.html#shelves-empty)
 
-- Create shelf (action) → 35 · `shelf-create`
+- New shelf (action) → 35 · `shelf-create`
 - Home (navigation) → 09 · `home-returning`
 - Explore (navigation) → 10 · `explore-browse`
 - Library (navigation) → 24 · `library-books`
@@ -540,7 +540,7 @@ Journal · base. [Wireframe](wireframes/journal-all.html) · [Light state design
 Shelves · after-removal. [Wireframe](wireframes/shelves-after-delete.html) · [Light state design](polished/shelves-after-delete.html) · [Prototype](prototype.html#shelves-after-delete)
 
 - View saved books (action) → 24 · `library-books`
-- Create shelf (action) → 35 · `shelf-create`
+- New shelf (action) → 35 · `shelf-create`
 - Home (navigation) → 09 · `home-returning`
 - Explore (navigation) → 10 · `explore-browse`
 - Library (navigation) → 24 · `library-books`
@@ -563,7 +563,7 @@ Journal · base. [Wireframe](wireframes/journal-book.html) · [Light state desig
 
 Journal · empty. [Wireframe](wireframes/journal-empty.html) · [Light state design](polished/journal-empty.html) · [Prototype](prototype.html#journal-empty)
 
-- Write an entry (action) → 88 · `journal-book-picker`
+- New entry (action) → 88 · `journal-book-picker`
 - Home (navigation) → 09 · `home-returning`
 - Explore (navigation) → 10 · `explore-browse`
 - Library (navigation) → 24 · `library-books`
@@ -576,7 +576,7 @@ Journal · empty. [Wireframe](wireframes/journal-empty.html) · [Light state des
 
 Journal · empty. [Wireframe](wireframes/journal-book-empty.html) · [Light state design](polished/journal-book-empty.html) · [Prototype](prototype.html#journal-book-empty)
 
-- Write an entry (action) → 49 · `journal-create`
+- New entry (action) → 49 · `journal-create`
 - Back (back) → 19 · `book-reading`
 
 ### 48 · Journal entry · `journal-view`
@@ -634,6 +634,7 @@ Reader · scroll. [Wireframe](wireframes/reader-scroll.html) · [Light state des
 - Add bookmark (action) → 56 · `reader-bookmark`
 - Select passage (action) → 57 · `reader-selection`
 - Back (back) → 19 · `book-reading`
+- Book journal (action) → 45 · `journal-book`
 
 Annotation: Reader demo anchor: 28%, Chapter 18. Continuous scroll is the default.
 
@@ -664,6 +665,7 @@ Reader · paged. [Wireframe](wireframes/reader-paged.html) · [Light state desig
 - Select passage (action) → 57 · `reader-selection`
 - Back (back) → 19 · `book-reading`
 - Simulate reaching the end (event) → 64 · `reader-finished`
+- Book journal (action) → 45 · `journal-book`
 
 Annotation: Reader demo anchor: 28%, Chapter 18. Continuous scroll is the default.
 
@@ -679,6 +681,7 @@ Reader · bookmark. [Wireframe](wireframes/reader-bookmark.html) · [Light state
 - Search in book (action) → 61 · `reader-search`
 - Select passage (action) → 57 · `reader-selection`
 - Back (back) → 19 · `book-reading`
+- Book journal (action) → 45 · `journal-book`
 
 Annotation: Reader demo anchor: 28%, Chapter 18. Continuous scroll is the default.
 
@@ -708,6 +711,7 @@ Reader · highlight. [Wireframe](wireframes/reader-highlight.html) · [Light sta
 - Search in book (action) → 61 · `reader-search`
 - Add bookmark (action) → 56 · `reader-bookmark`
 - Back (back) → 19 · `book-reading`
+- Book journal (action) → 45 · `journal-book`
 
 Annotation: Reader demo anchor: 28%, Chapter 18. Continuous scroll is the default.
 

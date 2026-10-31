@@ -1,0 +1,48 @@
+{
+  "results": [
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/1013459785102186118",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1UJDWLKJAH6Erz3MlshB8X6gGtCPnGQjmOdG7FBpsEjIHDzJzzr0s3ov-W6ek__L51pEP7GU0ff3o1Trh1ZDuLkt_ofguIVcVfvhBCux2FYkef2ZSHX6gUTVDs-yYkcC_YucCLyu8A4nEJR6WF-IrXTIVxZmohHoeZaiLAniGXzU6FG87NiMB56c_kVRghIpwTcQxN8aH9mgV6TERnvVkLGvGimarPAdbGXA1-w5FnQQl0jkJlbA6ZiTcM2fbjh1fPT2fPBgv_o"
+        },
+        "htmlCode": {
+          "name": "projects/6233788376335662642/files/1013459785102188279",
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBKNARIhYXBwX2NvbXBhbmlvbl91c2VyX3VwbG9hZGVkX2ZpbGVzGmgKM3VzZXJfdXBsb2FkZWRfaHRtbF8wMDA2NWYxYTYwZWU5Y2M1MDg5YWY2ZjkyZDIxNmVmNxILEgcQh5SsssAKGAGSASMKCnByb2plY3RfaWQSFUITNjIzMzc4ODM3NjMzNTY2MjY0Mg&filename=&opi=96797242",
+          "mimeType": "text/html"
+        },
+        "id": "1013459785102188053",
+        "generatedBy": "UserUploadedHtml: stitch::code-to-design",
+        "width": "2560",
+        "height": "1600",
+        "title": "Source / Clarity / account-sync",
+        "name": "projects/6233788376335662642/screens/1013459785102188053",
+        "theme": {},
+        "screenType": "DESIGN",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE",
+          "displayMode": "HTML"
+        }
+      }
+    }
+  ],
+  "screenInstances": [
+    {
+      "id": "1013459785102188053",
+      "sourceScreen": "projects/6233788376335662642/screens/1013459785102188053",
+      "x": 338024,
+      "width": 1280,
+      "height": 800
+    }
+  ],
+  "transfer": {
+    "files": [
+      "designs/account-sync.html"
+    ],
+    "prefix": "Source / Clarity / ",
+    "sha256": {
+      "designs/account-sync.html": "85395fa0898beda80335426e0c696949dc54d1f4e270f58d8ce85f836a58588b"
+    }
+  }
+}

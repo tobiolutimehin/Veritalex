@@ -6,53 +6,128 @@
   "results": [
     {
       "slug": "home",
-      "stylesLength": 25313,
+      "stylesLength": 535675,
       "title": "Veritalex - Home"
     },
     {
       "slug": "sync-conflict",
-      "stylesLength": 19161,
+      "stylesLength": 529205,
       "title": "Veritalex - Sync Conflict"
     },
     {
       "slug": "reader",
-      "stylesLength": 19792,
+      "stylesLength": 529836,
       "title": "Veritalex - Reader"
     },
     {
       "slug": "dark-reader",
-      "stylesLength": 18416,
-      "title": "Veritalex - Dark Reader"
+      "stylesLength": 504005,
+      "title": "Veritalex · Dark Reader"
     },
     {
       "slug": "dark-library",
-      "stylesLength": 25360,
-      "title": "Veritalex - Library"
+      "stylesLength": 504005,
+      "title": "Veritalex · Dark Library"
     },
     {
       "slug": "tablet-library",
-      "stylesLength": 19108,
-      "title": "TAB-02 Library & Book Detail - Veritalex"
+      "stylesLength": 504005,
+      "title": "Veritalex · Tablet Library"
     },
     {
       "slug": "library",
-      "stylesLength": 22359,
+      "stylesLength": 532403,
       "title": "Veritalex — Library"
     },
     {
       "slug": "settings",
-      "stylesLength": 18377,
+      "stylesLength": 528421,
       "title": "Veritalex - Settings"
     },
     {
       "slug": "dark-explore",
-      "stylesLength": 23995,
-      "title": "Veritalex - Explore"
+      "stylesLength": 504005,
+      "title": "Veritalex · Dark Explore"
     },
     {
       "slug": "explore",
-      "stylesLength": 23015,
+      "stylesLength": 533059,
       "title": "Veritalex - Explore"
+    },
+    {
+      "slug": "reader-appearance",
+      "stylesLength": 532352,
+      "title": "Veritalex - Reader Appearance"
+    },
+    {
+      "slug": "dark-book-details",
+      "stylesLength": 504005,
+      "title": "Veritalex · Dark Book Details"
+    },
+    {
+      "slug": "dark-account-sync",
+      "stylesLength": 504005,
+      "title": "Veritalex · Dark Account Sync"
+    },
+    {
+      "slug": "tablet-reader",
+      "stylesLength": 504005,
+      "title": "Veritalex · Tablet Reader"
+    },
+    {
+      "slug": "tablet-journal",
+      "stylesLength": 504005,
+      "title": "Veritalex · Tablet Journal"
+    },
+    {
+      "slug": "dark-home",
+      "stylesLength": 504005,
+      "title": "Veritalex · Dark Home"
+    },
+    {
+      "slug": "guest-import",
+      "stylesLength": 530438,
+      "title": "Veritalex - Bring your library with you"
+    },
+    {
+      "slug": "journal",
+      "stylesLength": 532606,
+      "title": "Veritalex - Library Journal"
+    },
+    {
+      "slug": "downloads",
+      "stylesLength": 531171,
+      "title": "Veritalex - Downloads and storage"
+    },
+    {
+      "slug": "shelves",
+      "stylesLength": 530101,
+      "title": "Veritalex - Library Shelves"
+    },
+    {
+      "slug": "book-details",
+      "stylesLength": 531010,
+      "title": "Veritalex - Book details"
+    },
+    {
+      "slug": "welcome",
+      "stylesLength": 533095,
+      "title": "Veritalex — Welcome"
+    },
+    {
+      "slug": "dark-settings",
+      "stylesLength": 504005,
+      "title": "Veritalex · Dark Settings"
+    },
+    {
+      "slug": "tablet-home",
+      "stylesLength": 504005,
+      "title": "Veritalex · Tablet Home"
+    },
+    {
+      "slug": "account-sync",
+      "stylesLength": 528915,
+      "title": "Veritalex - Account & sync"
     }
   ],
   "passed": true
