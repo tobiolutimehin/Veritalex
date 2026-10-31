@@ -39,6 +39,6 @@ There is one activity launch test. Unit-test tasks currently have no business te
 
 The approved product and visual reference remains [.stitch/HANDOFF.md](.stitch/HANDOFF.md). Open [.stitch/index.html](.stitch/index.html) to browse it. Its reader, shelves, journal and account flows describe future work.
 
-The complete source before this learning reset, including Room schemas, migrations and tests, is preserved on the local branch `codex/pre-reset-2026-10-30` at `9445e42`. Work continues on `codex/foundation-reset`. Earlier maintenance plans are historical records.
+The complete source before this learning reset, including Room schemas, migrations and tests, is preserved on the local branch `codex/pre-reset-2026-10-30` at `9445e42`. The learning baseline is on `main`; the reset checkpoint is `7b0ce5b`. Earlier maintenance plans are historical records.
 
 The sample app opens no existing database or preferences and performs no data migration or deletion. The Git checkpoint preserves source code and schemas, not device data; keep separate backups of any records you need.
