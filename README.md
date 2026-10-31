@@ -19,6 +19,8 @@ The native [design-system guide](docs/DESIGN_SYSTEM.md) explains colors, type, s
 
 The first real product milestone is **browse → save → Library → relaunch offline**. The learner will implement it incrementally; this checkpoint establishes a small, readable starting point.
 
+The [backend guide](docs/BACKEND.md) describes the Firebase Auth/Firestore foundation and the separate TypeScript/Express saved-book API. The API is local-only and owner-restricted, with request limits and a private Firebase HTTPS Functions entry point retained for future review. Deployment is paused and billing remains disabled. Android retains Firebase Authentication and will access reading data through HTTP. The sample screen still renders local data; account UI and synchronization are separate feature work.
+
 ## Build and check
 
 Use Temurin JDK 25 and Android SDK 37. The retained toolchain is AGP 9.5.0, Gradle 9.8.2 and Kotlin 2.4.21, with AGP's built-in Kotlin support. The app supports API 30+, targets SDK 37 and emits JVM 17 bytecode. The JDK running Gradle and the Android bytecode target serve different purposes.

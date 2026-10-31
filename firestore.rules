@@ -1,0 +1,11 @@
+rules_version = '2';
+// Android accesses reading data through the API. The Admin SDK uses IAM;
+// account authorization and validation are enforced by the API server.
+// Cloud client access is closed while development stays local and billing is off.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

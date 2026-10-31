@@ -1,0 +1,30 @@
+{
+  "auth": {
+    "providers": {
+      "googleSignIn": {
+        "oAuthBrandDisplayName": "Veritalex",
+        "supportEmail": "olutimehintobi@gmail.com"
+      }
+    }
+  },
+  "emulators": {
+    "functions": { "host": "127.0.0.1", "port": 5001 },
+    "auth": { "host": "127.0.0.1", "port": 9099 },
+    "firestore": { "host": "127.0.0.1", "port": 8080 },
+    "ui": { "enabled": false },
+    "singleProjectMode": true
+  },
+  "functions": [{
+    "source": "backend",
+    "codebase": "veritalex-api",
+    "runtime": "nodejs22",
+    "ignore": ["node_modules", ".git", "test", "*.test.mjs", "*-debug.log"],
+    "predeploy": ["rtk proxy npm --prefix \"$RESOURCE_DIR\" run build"]
+  }],
+  "firestore": {
+    "database": "(default)",
+    "location": "us-east1",
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}

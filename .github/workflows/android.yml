@@ -29,6 +29,9 @@ jobs:
           "$veritalex_sdk_root/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37.0" "build-tools;36.0.0"
         fi
 
+    - name: Use demo Firebase configuration for build checks
+      run: cp config/google-services.example.json app/google-services.json
+
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle

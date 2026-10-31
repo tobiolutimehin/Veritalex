@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.google.services)
 }
 
 android {
@@ -35,6 +36,8 @@ android {
 
 dependencies {
     implementation(platform(libs.compose.bom))
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
     implementation(libs.activity.compose)
     implementation(libs.lifecycle.runtime)
     implementation(libs.compose.foundation)

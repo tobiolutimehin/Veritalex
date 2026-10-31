@@ -42,6 +42,11 @@ google-services.json
 # Kotlin compiler state
 .kotlin/
 
+# Firebase emulator and rules-test dependencies
+.firebase/
+backend/node_modules/
+backend/lib/
+
 # Local design bundles and Python caches (sources and review exports stay tracked)
 /.stitch/*.zip
 __pycache__/
