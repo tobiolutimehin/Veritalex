@@ -2,10 +2,14 @@
 <resources>
     <string name="book_cover_content_description">Book. %1$s by %2$s</string>
     <string name="unknown_author">Unknown author</string>
-    <string name="continue_reading">Continue Reading</string>
-    <string name="recommended_books">Recommended Books</string>
+    <string name="continue_reading">Continue reading</string>
+    <string name="recommended_books">From the catalogue</string>
     <string name="saved_books">Saved books</string>
     <string name="home">Home</string>
     <string name="my_saved_books">My saved books</string>
     <string name="see_all">See all</string>
+    <string name="no_saved_books">Your saved books will appear here.</string>
+    <string name="books_load_error">Couldn’t load your books.</string>
+    <string name="retry">Retry</string>
+    <string name="catalogue_empty">No books to show yet.</string>
 </resources>

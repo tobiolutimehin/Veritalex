@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Veritalex — Welcome</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..600;1,7..72,400&amp;family=Roboto+Flex:opsz,wght@8..144,300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-highest": "#ede0d9",
+            "surface-container-high": "#EEE1D5",
+            "primary-container": "#FFDCBF",
+            "on-error-container": "#93000a",
+            "secondary-container": "#f9ddc9",
+            "inverse-primary": "#ffb782",
+            "surface-dim": "#e4d8d1",
+            "primary-fixed": "#ffdcc5",
+            "on-error": "#ffffff",
+            "secondary": "#6e5b4b",
+            "surface-variant": "#ede0d9",
+            "on-primary-container": "#ffcead",
+            "on-tertiary-fixed-variant": "#004e5b",
+            "outline-variant": "#d7c3b6",
+            "surface-container": "#f9ebe4",
+            "on-tertiary-fixed": "#001f25",
+            "primary": "#6c390b",
+            "surface": "#fff8f5",
+            "surface-container-low": "#FCF1E8",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-container": "#756050",
+            "outline": "#857469",
+            "tertiary-container": "#006878",
+            "tertiary-fixed": "#a6eeff",
+            "tertiary-fixed-dim": "#86d2e4",
+            "surface-tint": "#895021",
+            "on-surface-variant": "#52443a",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fff8f5",
+            "on-primary-fixed-variant": "#6d390b",
+            "surface-paper": "#FFF8F3",
+            "inverse-surface": "#362f2b",
+            "inverse-on-surface": "#fbeee7",
+            "secondary-fixed": "#f9ddc9",
+            "on-secondary-fixed": "#27190c",
+            "on-surface": "#241A14",
+            "on-secondary": "#ffffff",
+            "background": "#fff8f5",
+            "on-primary": "#ffffff",
+            "highlight": "#F6E5A8",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#301400",
+            "primary-fixed-dim": "#ffb782",
+            "tertiary": "#5D633D",
+            "on-tertiary-container": "#98e4f7",
+            "on-tertiary": "#ffffff",
+            "on-background": "#201a16",
+            "secondary-fixed-dim": "#dcc2ae",
+            "on-secondary-fixed-variant": "#554334"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xxl": "32px",
+            "space-md": "12px",
+            "space-xl": "24px",
+            "space-lg": "16px",
+            "margin": "20px",
+            "gutter": "20px",
+            "space-xs": "4px",
+            "space-sm": "8px"
+          },
+          "fontFamily": {
+            "reader-chapter": ["Literata", "serif"],
+            "body-sm": ["Roboto Flex", "sans-serif"],
+            "title-md": ["Roboto Flex", "sans-serif"],
+            "reader-prose": ["Literata", "serif"],
+            "body-lg": ["Roboto Flex", "sans-serif"],
+            "headline-md": ["Roboto Flex", "sans-serif"],
+            "headline-sm": ["Roboto Flex", "sans-serif"],
+            "label-md": ["Roboto Flex", "sans-serif"],
+            "headline-lg": ["Roboto Flex", "sans-serif"]
+          },
+          "fontSize": {
+            "reader-chapter": ["26px", { "lineHeight": "34px", "fontWeight": "500" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "reader-prose": ["19px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Subtle paper texture feel via SVG noise overlay */
+    .paper-tint {
+      background-image: radial-gradient(circle at 50% 0%, #fffbf8 0%, #fff8f5 100%);
+    }
+    /* Natural classical book spine elevation */
+    .book-shadow-left {
+      box-shadow: -4px 8px 18px rgba(36, 26, 20, 0.08), 0 2px 6px rgba(36, 26, 20, 0.04);
+    }
+    .book-shadow-center {
+      box-shadow: 0 14px 28px rgba(36, 26, 20, 0.12), 0 4px 10px rgba(36, 26, 20, 0.06);
+    }
+    .book-shadow-right {
+      box-shadow: 4px 8px 18px rgba(36, 26, 20, 0.08), 0 2px 6px rgba(36, 26, 20, 0.04);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased flex justify-center items-center min-h-screen p-0 sm:py-6 selection:bg-primary-container selection:text-primary">
+<!-- Mobile Android Frame (412x915 baseline) -->
+<main class="w-full max-w-[412px] h-[915px] max-h-[884px] bg-surface paper-tint sm:rounded-[36px] sm:shadow-2xl sm:border sm:border-outline-variant/30 flex flex-col justify-between overflow-hidden relative select-none">
+<!-- Top System Bar (Edge-to-Edge Android 14) -->
+<header class="w-full pt-3 px-6 pb-2 flex justify-between items-center text-on-surface z-30">
+<div class="text-[14px] font-medium font-body-sm tracking-tight text-on-surface pl-1">9:41</div>
+<div class="flex items-center space-x-2 text-on-surface">
+<span class="material-symbols-outlined text-[17px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[17px]">wifi</span>
+<span class="material-symbols-outlined text-[19px]">battery_full</span>
+</div>
+</header>
+<!-- Main Content Container with Material 20dp Gutters -->
+<div class="flex-1 flex flex-col justify-between px-margin pb-2 pt-2 z-20">
+<!-- Brand Header -->
+<section class="flex flex-col items-center pt-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[20px]" data-icon="auto_stories">auto_stories</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-primary">Veritalex</span>
+</div>
+<!-- Headline & Supporting Message -->
+<div class="text-center px-2">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight font-medium mb-2.5">
+            A good book. Your own pace.
+          </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-[320px] mx-auto">
+            Discover classics, keep your thoughts, and pick up where you left off.
+          </p>
+</div>
+</section>
+<!-- Classical Typeset Book Cover Arrangement (2:3 Portrait Aspect Ratio) -->
+<section aria-label="Featured classical library preview" class="relative w-full flex items-center justify-center my-auto py-5">
+<div class="relative w-[320px] h-[220px] flex items-center justify-center">
+<!-- Book 1: Pride and Prejudice (Wine / Claret typeset) - Left tilt -->
+<article class="absolute left-3 w-[122px] h-[184px] rounded-[4px] bg-[#4a1525] text-[#fbeee7] p-3 flex flex-col justify-between book-shadow-left -rotate-[6deg] transform transition-transform duration-300 hover:-rotate-3 z-10 border-l border-[#6b2539]">
+<div class="border border-[#cbb09c]/25 h-full w-full p-2 flex flex-col justify-between rounded-[2px] bg-[#401220]/40">
+<div class="text-center">
+<span class="block text-[8px] uppercase tracking-widest text-[#dfc5b3] font-body-sm opacity-80 mb-1">Veritalex Classics</span>
+<span class="block font-reader-chapter text-[13px] leading-tight font-medium text-[#fdf4ee] tracking-tight">Pride and Prejudice</span>
+</div>
+<div class="w-5 h-[1px] bg-[#cbb09c]/40 mx-auto my-auto"></div>
+<div class="text-center">
+<span class="block font-reader-prose text-[9px] italic text-[#dfc5b3]">Jane Austen</span>
+</div>
+</div>
+</article>
+<!-- Book 3: Alice in Wonderland (Deep Slate Purple typeset) - Right tilt -->
+<article class="absolute right-3 w-[122px] h-[184px] rounded-[4px] bg-[#2d2238] text-[#f4ebf8] p-3 flex flex-col justify-between book-shadow-right rotate-[6deg] transform transition-transform duration-300 hover:rotate-3 z-10 border-l border-[#433454]">
+<div class="border border-[#c6b4d4]/25 h-full w-full p-2 flex flex-col justify-between rounded-[2px] bg-[#231b2c]/40">
+<div class="text-center">
+<span class="block text-[8px] uppercase tracking-widest text-[#d5c5e0] font-body-sm opacity-80 mb-1">Veritalex Classics</span>
+<span class="block font-reader-chapter text-[13px] leading-tight font-medium text-[#fbf6fd] tracking-tight">Alice in Wonderland</span>
+</div>
+<div class="w-5 h-[1px] bg-[#c6b4d4]/40 mx-auto my-auto"></div>
+<div class="text-center">
+<span class="block font-reader-prose text-[9px] italic text-[#d5c5e0]">Lewis Carroll</span>
+</div>
+</div>
+</article>
+<!-- Book 2: Frankenstein (Deep Forest Sage/Cypress typeset) - Center Prominent -->
+<article class="relative w-[134px] h-[202px] rounded-[4px] bg-[#1d3025] text-[#e8f2eb] p-3 flex flex-col justify-between book-shadow-center z-20 transform transition-transform duration-300 hover:scale-[1.02] border-l-2 border-[#2c4737]">
+<div class="border border-[#b6cdbe]/30 h-full w-full p-2.5 flex flex-col justify-between rounded-[2px] bg-[#17271e]/40">
+<div class="text-center pt-1">
+<span class="block text-[8px] uppercase tracking-[0.16em] text-[#b6cdbe] font-body-sm mb-1.5 opacity-90">Veritalex Edition</span>
+<span class="block font-reader-chapter text-[15px] leading-tight font-medium text-[#ffffff] tracking-tight">Frankenstein</span>
+</div>
+<div class="flex flex-col items-center justify-center my-auto">
+<div class="w-6 h-[1px] bg-[#b6cdbe]/40 my-1"></div>
+<span class="material-symbols-outlined text-[13px] text-[#b6cdbe]/60" data-icon="book_2">book_2</span>
+<div class="w-6 h-[1px] bg-[#b6cdbe]/40 my-1"></div>
+</div>
+<div class="text-center pb-1">
+<span class="block font-reader-prose text-[10px] italic text-[#c8dcd0]">Mary Shelley</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Thumb-Friendly Lower Action Area -->
+<section class="w-full flex flex-col items-stretch space-y-3 pt-2">
+<!-- Primary Action: Continue with Google -->
+<button class="w-full h-13 py-3.5 px-6 rounded-full bg-surface-container-lowest border border-outline-variant hover:bg-surface-container-low active:scale-[0.98] transition-all duration-150 flex items-center justify-center shadow-xs group" type="button">
+<svg aria-hidden="true" class="w-5 h-5 mr-3 shrink-0" viewbox="0 0 24 24">
+<path d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.65v3.03h3.88c2.27-2.09 3.66-5.17 3.66-9.12z" fill="#4285F4"></path>
+<path d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.03c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.26v3.13C3.26 21.35 7.36 24 12 24z" fill="#34A853"></path>
+<path d="M5.28 14.29c-.25-.72-.38-1.49-.38-2.29s.13-1.57.38-2.29V6.58H1.26C.46 8.18 0 9.99 0 12s.46 3.82 1.26 5.42l4.02-3.13z" fill="#FBBC05"></path>
+<path d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.36 0 3.26 2.65 1.26 6.58l4.02 3.13c.95-2.83 3.6-4.96 6.72-4.96z" fill="#EA4335"></path>
+</svg>
+<span class="font-title-md text-title-md text-on-surface font-medium tracking-tight">Continue with Google</span>
+</button>
+<!-- Secondary Action: Continue without an account (First-class dignified guest entry) -->
+<button class="w-full h-13 py-3.5 px-6 rounded-full bg-surface-container hover:bg-surface-container-high active:scale-[0.98] transition-all duration-150 flex items-center justify-center text-on-surface border border-transparent" type="button">
+<span class="font-title-md text-title-md text-on-surface font-medium tracking-tight">Continue without an account</span>
+</button>
+<!-- Dignified Sync Notice -->
+<p class="font-body-sm text-[13px] text-on-surface-variant text-center px-4 pt-1 leading-normal">
+          An account keeps your library and journal in sync across devices. You can sign in at any time.
+        </p>
+</section>
+<!-- Legal / Secondary Footer Links -->
+<footer class="pt-4 pb-1 text-center">
+<div class="inline-flex items-center justify-center space-x-2 text-[12px] font-body-sm text-outline">
+<a class="hover:text-primary transition-colors underline-offset-2 hover:underline" href="#">Privacy Policy</a>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<a class="hover:text-primary transition-colors underline-offset-2 hover:underline" href="#">Terms of Service</a>
+</div>
+</footer>
+</div>
+<!-- Edge-to-Edge Android 14 Home Gesture Navigation Bar -->
+<div class="w-full pb-2.5 pt-1 flex justify-center items-center z-30 pointer-events-none">
+<div class="w-32 h-1 bg-on-surface/30 rounded-full"></div>
+</div>
+</main>
+</body></html>

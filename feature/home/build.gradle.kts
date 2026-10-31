@@ -1,13 +1,14 @@
 plugins {
     alias(libs.plugins.com.android.library)
-    alias(libs.plugins.org.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
 }
 
 android {
     namespace = "com.veritalex.feature.home"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         minSdk = 30
@@ -26,17 +27,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     buildFeatures {
         compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.7"
     }
 }
 
@@ -51,9 +46,9 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
-    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
 
     testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
 
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -64,18 +59,17 @@ dependencies {
     debugImplementation(libs.ui.test.manifest)
 
     implementation(libs.lifecycle.viewmodel.compose)
-    implementation(libs.material3.adaptive.navigation.suite)
-    implementation(libs.material3.windowSizeClass)
-    implementation(libs.material3.adaptive)
+    implementation(libs.lifecycle.runtime.compose)
+    implementation(libs.androidx.hilt.compose)
 
-    implementation(libs.androidx.paging.runtime.ktx)
     implementation(libs.androidx.paging.compose)
 
     implementation(libs.coil.compose)
-    implementation(libs.androidx.navigation.compose)
+    implementation(libs.coil.network.okhttp)
+    implementation(libs.androidx.navigation3.runtime)
 
     // Modules
-    implementation(project(mapOf("path" to ":core:network")))
+    implementation(project(mapOf("path" to ":core:navigation")))
     implementation(project(mapOf("path" to ":core:data")))
     implementation(project(mapOf("path" to ":core:designsystem")))
 }

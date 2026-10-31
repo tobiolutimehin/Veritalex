@@ -1,0 +1,18 @@
+{
+  "slug": "dark-reader",
+  "id": "f6ce0ebff5cd464c9f0b42f6bb0db72d",
+  "name": "projects/6233788376335662642/screens/f6ce0ebff5cd464c9f0b42f6bb0db72d",
+  "title": "NIGHT-05 Reader - Veritalex",
+  "width": "780",
+  "height": "1830",
+  "deviceType": "MOBILE",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/1b6ad57bf7df4a8f9a89c6e870d84fe6:download",
+    "name": "projects/6233788376335662642/files/1b6ad57bf7df4a8f9a89c6e870d84fe6"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/df689d50dda6473fb3d4e7780a77ab69:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/df689d50dda6473fb3d4e7780a77ab69"
+  }
+}

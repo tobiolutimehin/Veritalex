@@ -1,0 +1,18 @@
+{
+  "slug": "library",
+  "id": "8fd548dd2a4c4e738b6c9025689ffc26",
+  "name": "projects/6233788376335662642/screens/8fd548dd2a4c4e738b6c9025689ffc26",
+  "title": "UI-04 Library - Books - Veritalex",
+  "width": "780",
+  "height": "2116",
+  "deviceType": "MOBILE",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/1f6644dfd3ce4ecc872db53fa86b4491:download",
+    "name": "projects/6233788376335662642/files/1f6644dfd3ce4ecc872db53fa86b4491"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/3848f71cd6064c518b05adfbd253d9cf:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/3848f71cd6064c518b05adfbd253d9cf"
+  }
+}

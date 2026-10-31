@@ -1,0 +1,1122 @@
+{
+  "projectId": "6233788376335662642",
+  "projectUrl": "https://stitch.withgoogle.com/projects/6233788376335662642",
+  "title": "Veritalex \u2014 Reading, Refined",
+  "created": "2026-10-30",
+  "designSystems": {
+    "light": "assets/8968a942b6fd463cb1575ef49ec130ed",
+    "dark": "assets/1cf14a0733a54b90a61f9744d7e53b3c",
+    "wireframe": "assets/17156614220181015221"
+  },
+  "stitchScreens": [
+    {
+      "id": "77e4f1a5cf1c419d94bb049d7271690e",
+      "name": "projects/6233788376335662642/screens/77e4f1a5cf1c419d94bb049d7271690e",
+      "title": "UI-01 Home - Veritalex",
+      "width": "780",
+      "height": "2148",
+      "deviceType": "MOBILE",
+      "htmlCode": {
+        "name": "projects/6233788376335662642/files/a34d3fee99494c49acee102653b50149",
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/a34d3fee99494c49acee102653b50149:download",
+        "mimeType": "text/html"
+      },
+      "screenshot": "designs/home.png",
+      "slug": "home",
+      "variant": "light",
+      "html": "designs/home.html",
+      "source": "Stitch with approved final content and typography edits",
+      "screenIds": [
+        "home-returning"
+      ],
+      "refinement": "Removed invented catalogue download counts using the approved Stitch DOM operation.",
+      "exportDimensions": {
+        "width": 780,
+        "height": 2108
+      }
+    },
+    {
+      "slug": "book-details",
+      "id": "e38c1a94c65c4cb2a2a5df3e3a31c3a1",
+      "name": "projects/6233788376335662642/screens/e38c1a94c65c4cb2a2a5df3e3a31c3a1",
+      "title": "UI-02 Book details - Veritalex",
+      "width": "780",
+      "height": "1894",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/book-details.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/391244559d4b4b06bd45fb61e347e47a:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/391244559d4b4b06bd45fb61e347e47a"
+      },
+      "variant": "light",
+      "html": "designs/book-details.html",
+      "source": "Stitch",
+      "screenIds": [
+        "book-new"
+      ],
+      "exportDimensions": {
+        "width": 780,
+        "height": 1894
+      }
+    },
+    {
+      "slug": "reader",
+      "id": "b91aef34d57d44038fdb9eedf13539b4",
+      "name": "projects/6233788376335662642/screens/b91aef34d57d44038fdb9eedf13539b4",
+      "title": "UI-03 Reader - Veritalex",
+      "width": "780",
+      "height": "1768",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/reader.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/eba50492cb044cf39c6ef15bbacecf37:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/eba50492cb044cf39c6ef15bbacecf37"
+      },
+      "variant": "light",
+      "html": "designs/reader.html",
+      "source": "Stitch with approved final content and typography edits",
+      "screenIds": [
+        "reader-scroll"
+      ],
+      "refinement": "Left-aligned prose with natural spacing and a compact chapter introduction.",
+      "exportDimensions": {
+        "width": 780,
+        "height": 1830
+      }
+    },
+    {
+      "slug": "library",
+      "id": "8fd548dd2a4c4e738b6c9025689ffc26",
+      "name": "projects/6233788376335662642/screens/8fd548dd2a4c4e738b6c9025689ffc26",
+      "title": "UI-04 Library - Books - Veritalex",
+      "width": "780",
+      "height": "2116",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/library.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/3848f71cd6064c518b05adfbd253d9cf:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/3848f71cd6064c518b05adfbd253d9cf"
+      },
+      "variant": "light",
+      "html": "designs/library.html",
+      "source": "Stitch with approved final content and typography edits",
+      "screenIds": [
+        "library-books"
+      ],
+      "refinement": "Corrected catalogue attribution to Project Gutenberg.",
+      "exportDimensions": {
+        "width": 780,
+        "height": 2116
+      }
+    },
+    {
+      "slug": "explore",
+      "id": "44706dac603e400fa1bafb15f6872b94",
+      "name": "projects/6233788376335662642/screens/44706dac603e400fa1bafb15f6872b94",
+      "title": "UI-05 Explore - Veritalex",
+      "width": "780",
+      "height": "2436",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/explore.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/bba04e5ff6944cb382b24e09c7b60a85:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/bba04e5ff6944cb382b24e09c7b60a85"
+      },
+      "variant": "light",
+      "html": "designs/explore.html",
+      "source": "Stitch with approved final content and typography edits",
+      "screenIds": [
+        "explore-browse"
+      ],
+      "refinement": "Corrected catalogue attribution to Project Gutenberg.",
+      "exportDimensions": {
+        "width": 780,
+        "height": 2468
+      }
+    },
+    {
+      "slug": "shelves",
+      "id": "8522cf91fea748f6a06927ea5ab63b78",
+      "name": "projects/6233788376335662642/screens/8522cf91fea748f6a06927ea5ab63b78",
+      "title": "UI-06 Library - Shelves - Veritalex",
+      "width": "780",
+      "height": "1830",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/shelves.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/b10f6be7c38742098265d104fdfa11e8:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/b10f6be7c38742098265d104fdfa11e8"
+      },
+      "variant": "light",
+      "html": "designs/shelves.html",
+      "source": "Stitch",
+      "screenIds": [
+        "shelves-list"
+      ],
+      "exportDimensions": {
+        "width": 780,
+        "height": 1830
+      }
+    },
+    {
+      "slug": "journal",
+      "id": "f0f67645e2644e1bb8eef54f0e4f21ba",
+      "name": "projects/6233788376335662642/screens/f0f67645e2644e1bb8eef54f0e4f21ba",
+      "title": "UI-07 Library - Journal - Veritalex",
+      "width": "780",
+      "height": "1942",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/journal.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/ae19d712ebc547fc9e227a4bf1781527:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/ae19d712ebc547fc9e227a4bf1781527"
+      },
+      "variant": "light",
+      "html": "designs/journal.html",
+      "source": "Stitch",
+      "screenIds": [
+        "journal-all"
+      ],
+      "exportDimensions": {
+        "width": 780,
+        "height": 1942
+      }
+    },
+    {
+      "slug": "welcome",
+      "id": "0f72526c22234163b91d2c2689c60e4c",
+      "name": "projects/6233788376335662642/screens/0f72526c22234163b91d2c2689c60e4c",
+      "title": "UI-08 Welcome & Account Entry - Veritalex",
+      "width": "780",
+      "height": "1768",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/welcome.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/e35dc81d1e22439fbe8051ad34d92918:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/e35dc81d1e22439fbe8051ad34d92918"
+      },
+      "variant": "light",
+      "html": "designs/welcome.html",
+      "source": "Stitch",
+      "screenIds": [
+        "auth-welcome"
+      ],
+      "exportDimensions": {
+        "width": 780,
+        "height": 1768
+      }
+    },
+    {
+      "slug": "guest-import",
+      "id": "6e27f95c073644c9a7c28b3030c72742",
+      "name": "projects/6233788376335662642/screens/6e27f95c073644c9a7c28b3030c72742",
+      "title": "UI-09 Bring your library with you - Veritalex",
+      "width": "780",
+      "height": "1984",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/guest-import.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/fae9af581c584891981197f8749b42c8:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/fae9af581c584891981197f8749b42c8"
+      },
+      "variant": "light",
+      "html": "designs/guest-import.html",
+      "source": "Stitch",
+      "screenIds": [
+        "auth-import-preview"
+      ],
+      "exportDimensions": {
+        "width": 780,
+        "height": 1984
+      }
+    },
+    {
+      "slug": "settings",
+      "id": "f92ceaa91d604b8592392aef299e0c93",
+      "name": "projects/6233788376335662642/screens/f92ceaa91d604b8592392aef299e0c93",
+      "title": "UI-10 Settings - Veritalex",
+      "width": "780",
+      "height": "1894",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/settings.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/0c11a752727f40a9a319028599c9ae13:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/0c11a752727f40a9a319028599c9ae13"
+      },
+      "variant": "light",
+      "html": "designs/settings.html",
+      "source": "Stitch with approved final content and typography edits",
+      "screenIds": [
+        "settings-main"
+      ],
+      "refinement": "Corrected catalogue attribution to Project Gutenberg.",
+      "exportDimensions": {
+        "width": 780,
+        "height": 1894
+      }
+    },
+    {
+      "slug": "account-sync",
+      "id": "9bec8ccc3c7a45129bb641e9083a7c03",
+      "name": "projects/6233788376335662642/screens/9bec8ccc3c7a45129bb641e9083a7c03",
+      "title": "UI-11 Account & sync - Veritalex",
+      "width": "780",
+      "height": "1874",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/account-sync.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/7e05e3832b8a41c986fbfb33aeccc2fe:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/7e05e3832b8a41c986fbfb33aeccc2fe"
+      },
+      "variant": "light",
+      "html": "designs/account-sync.html",
+      "source": "Stitch",
+      "screenIds": [
+        "account-details"
+      ],
+      "exportDimensions": {
+        "width": 780,
+        "height": 1874
+      }
+    },
+    {
+      "slug": "reader-appearance",
+      "id": "1aa6946029914bd4a7c8a7c4f5fa4039",
+      "name": "projects/6233788376335662642/screens/1aa6946029914bd4a7c8a7c4f5fa4039",
+      "title": "UI-12 Reader appearance - Veritalex",
+      "width": "780",
+      "height": "1830",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/reader-appearance.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/9398065a42aa4badbb33ca06c2e22314:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/9398065a42aa4badbb33ca06c2e22314"
+      },
+      "variant": "light",
+      "html": "designs/reader-appearance.html",
+      "source": "Stitch",
+      "screenIds": [
+        "reader-appearance"
+      ],
+      "exportDimensions": {
+        "width": 780,
+        "height": 1830
+      }
+    },
+    {
+      "slug": "downloads",
+      "id": "11f336008b294986b1dfd1bc13c2193d",
+      "name": "projects/6233788376335662642/screens/11f336008b294986b1dfd1bc13c2193d",
+      "title": "UI-13 Downloads & storage - Veritalex",
+      "width": "780",
+      "height": "1768",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/downloads.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/28d4cfb3f7f04040bb3ca6c6cac4dce0:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/28d4cfb3f7f04040bb3ca6c6cac4dce0"
+      },
+      "variant": "light",
+      "html": "designs/downloads.html",
+      "source": "Stitch",
+      "screenIds": [
+        "settings-storage"
+      ],
+      "exportDimensions": {
+        "width": 780,
+        "height": 1768
+      }
+    },
+    {
+      "id": "cfe0f6ff044e4d858bcf99d4960168a9",
+      "name": "projects/6233788376335662642/screens/cfe0f6ff044e4d858bcf99d4960168a9",
+      "title": "UI-14 Choose where to continue - Veritalex",
+      "width": "780",
+      "height": "2052",
+      "deviceType": "MOBILE",
+      "htmlCode": {
+        "name": "projects/6233788376335662642/files/c1ccc3037ee040d782ba4e0bbb9ab01d",
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/c1ccc3037ee040d782ba4e0bbb9ab01d:download",
+        "mimeType": "text/html"
+      },
+      "screenshot": "designs/sync-conflict.png",
+      "slug": "sync-conflict",
+      "variant": "light",
+      "html": "designs/sync-conflict.html",
+      "source": "Stitch with approved final content and typography edits",
+      "screenIds": [
+        "sync-conflict"
+      ],
+      "refinement": "Removed illustrative quotes and matched the account position to Chapter 19 / 31%.",
+      "exportDimensions": {
+        "width": 780,
+        "height": 1830
+      }
+    },
+    {
+      "id": "73f2596dcfea4a8ca713f99a5d4f9716",
+      "name": "projects/6233788376335662642/screens/73f2596dcfea4a8ca713f99a5d4f9716",
+      "title": "TAB-01 Home - Veritalex (Tablet)",
+      "width": "2560",
+      "height": "2048",
+      "deviceType": "DESKTOP",
+      "htmlCode": {
+        "name": "projects/6233788376335662642/files/39e0aa90d64d40c299c411020f60699c",
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/39e0aa90d64d40c299c411020f60699c:download",
+        "mimeType": "text/html"
+      },
+      "screenshot": "designs/tablet-home.png",
+      "slug": "tablet-home",
+      "variant": "tablet",
+      "html": "designs/tablet-home.html",
+      "source": "Stitch",
+      "screenIds": [],
+      "exportDimensions": {
+        "width": 2560,
+        "height": 2048
+      }
+    },
+    {
+      "slug": "tablet-library",
+      "id": "8d6a767b97d34d289b3eff7e3b78cbaa",
+      "name": "projects/6233788376335662642/screens/8d6a767b97d34d289b3eff7e3b78cbaa",
+      "title": "TAB-02 Library and book detail - Veritalex",
+      "width": "2560",
+      "height": "2048",
+      "deviceType": "DESKTOP",
+      "screenshot": "designs/tablet-library.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/e241036d313e4d35af0d9871b634fc77:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/e241036d313e4d35af0d9871b634fc77"
+      },
+      "variant": "tablet",
+      "html": "designs/tablet-library.html",
+      "source": "Stitch with approved final content and typography edits",
+      "screenIds": [],
+      "refinement": "Corrected catalogue attribution to Project Gutenberg.",
+      "exportDimensions": {
+        "width": 2560,
+        "height": 2048
+      }
+    },
+    {
+      "slug": "tablet-journal",
+      "id": "784b0f6da227430ba90d3f2ca4532148",
+      "name": "projects/6233788376335662642/screens/784b0f6da227430ba90d3f2ca4532148",
+      "title": "TAB-03 Journal list and entry detail - Veritalex",
+      "width": "2560",
+      "height": "2048",
+      "deviceType": "DESKTOP",
+      "screenshot": "designs/tablet-journal.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/6404b6cd5a8c4dd7a9efca0df0ef4922:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/6404b6cd5a8c4dd7a9efca0df0ef4922"
+      },
+      "variant": "tablet",
+      "html": "designs/tablet-journal.html",
+      "source": "Stitch",
+      "screenIds": [],
+      "exportDimensions": {
+        "width": 2560,
+        "height": 2048
+      }
+    },
+    {
+      "slug": "tablet-reader",
+      "id": "4f336bc6715c4ae2b760b51aba01816a",
+      "name": "projects/6233788376335662642/screens/4f336bc6715c4ae2b760b51aba01816a",
+      "title": "TAB-04 Reader with Contents - Veritalex",
+      "width": "2560",
+      "height": "2048",
+      "deviceType": "TABLET",
+      "screenshot": "designs/tablet-reader.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/f3daa52a53334a39975a42e6cb97d3ca:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/f3daa52a53334a39975a42e6cb97d3ca"
+      },
+      "variant": "tablet",
+      "html": "designs/tablet-reader.html",
+      "source": "Stitch",
+      "screenIds": [],
+      "exportDimensions": {
+        "width": 2560,
+        "height": 2048
+      }
+    },
+    {
+      "slug": "dark-home",
+      "id": "f4d1aa269eab40f7aad1fd8f79356840",
+      "name": "projects/6233788376335662642/screens/f4d1aa269eab40f7aad1fd8f79356840",
+      "title": "NIGHT-01 Home - Veritalex",
+      "width": "780",
+      "height": "2484",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/dark-home.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/106cfe8826bc4e7f82eae9b2cc1e4276:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/106cfe8826bc4e7f82eae9b2cc1e4276"
+      },
+      "variant": "dark",
+      "html": "designs/dark-home.html",
+      "source": "Stitch",
+      "screenIds": [
+        "home-returning"
+      ],
+      "exportDimensions": {
+        "width": 780,
+        "height": 2484
+      }
+    },
+    {
+      "slug": "dark-explore",
+      "id": "55b140e3f4a940919aec3e05af9e6ce0",
+      "name": "projects/6233788376335662642/screens/55b140e3f4a940919aec3e05af9e6ce0",
+      "title": "NIGHT-02 Explore - Veritalex",
+      "width": "780",
+      "height": "1768",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/dark-explore.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/866635552aef44dc925fe7b5063d7ead:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/866635552aef44dc925fe7b5063d7ead"
+      },
+      "variant": "dark",
+      "html": "designs/dark-explore.html",
+      "source": "Stitch with approved final content and typography edits",
+      "screenIds": [
+        "explore-browse"
+      ],
+      "refinement": "Corrected catalogue attribution to Project Gutenberg.",
+      "exportDimensions": {
+        "width": 780,
+        "height": 1830
+      }
+    },
+    {
+      "slug": "dark-library",
+      "id": "434a90934c994686ac4c97eba9a2d802",
+      "name": "projects/6233788376335662642/screens/434a90934c994686ac4c97eba9a2d802",
+      "title": "NIGHT-03 Library - Veritalex",
+      "width": "780",
+      "height": "1768",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/dark-library.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/29565a4dd9164c639af38588c984ed96:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/29565a4dd9164c639af38588c984ed96"
+      },
+      "variant": "dark",
+      "html": "designs/dark-library.html",
+      "source": "Stitch with approved final content and typography edits",
+      "screenIds": [
+        "library-books"
+      ],
+      "refinement": "Corrected catalogue attribution to Project Gutenberg.",
+      "exportDimensions": {
+        "width": 780,
+        "height": 1830
+      }
+    },
+    {
+      "slug": "dark-book-details",
+      "id": "e0077ca58b29409f9d0d2b5433103dab",
+      "name": "projects/6233788376335662642/screens/e0077ca58b29409f9d0d2b5433103dab",
+      "title": "NIGHT-04 Book details - Veritalex",
+      "width": "2560",
+      "height": "2632",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/dark-book-details.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/a7d46d1c132b45729b998f8e6f0ff3aa:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/a7d46d1c132b45729b998f8e6f0ff3aa"
+      },
+      "variant": "dark",
+      "html": "designs/dark-book-details.html",
+      "source": "Stitch",
+      "screenIds": [
+        "book-new"
+      ],
+      "exportDimensions": {
+        "width": 2560,
+        "height": 2632
+      }
+    },
+    {
+      "slug": "dark-reader",
+      "id": "f6ce0ebff5cd464c9f0b42f6bb0db72d",
+      "name": "projects/6233788376335662642/screens/f6ce0ebff5cd464c9f0b42f6bb0db72d",
+      "title": "NIGHT-05 Reader - Veritalex",
+      "width": "780",
+      "height": "1830",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/dark-reader.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/df689d50dda6473fb3d4e7780a77ab69:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/df689d50dda6473fb3d4e7780a77ab69"
+      },
+      "variant": "dark",
+      "html": "designs/dark-reader.html",
+      "source": "Stitch with approved final content and typography edits",
+      "screenIds": [
+        "reader-scroll"
+      ],
+      "refinement": "Left-aligned prose with natural spacing and a compact chapter introduction.",
+      "exportDimensions": {
+        "width": 780,
+        "height": 1830
+      }
+    },
+    {
+      "slug": "dark-settings",
+      "id": "e708c2b30742415da1505fed015d1b17",
+      "name": "projects/6233788376335662642/screens/e708c2b30742415da1505fed015d1b17",
+      "title": "NIGHT-06 Settings - Veritalex",
+      "width": "780",
+      "height": "1894",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/dark-settings.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/7377230e84b94582b53bd34abd86a0b4:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/7377230e84b94582b53bd34abd86a0b4"
+      },
+      "variant": "dark",
+      "html": "designs/dark-settings.html",
+      "source": "Stitch",
+      "screenIds": [
+        "settings-main"
+      ],
+      "exportDimensions": {
+        "width": 780,
+        "height": 1894
+      }
+    },
+    {
+      "slug": "dark-account-sync",
+      "id": "a2d3f9e14c4e4b968c333c81b3c5395b",
+      "name": "projects/6233788376335662642/screens/a2d3f9e14c4e4b968c333c81b3c5395b",
+      "title": "NIGHT-07 Account & sync - Veritalex",
+      "width": "780",
+      "height": "1866",
+      "deviceType": "MOBILE",
+      "screenshot": "designs/dark-account-sync.png",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/1cdae0244a2a483eb40bb21241a1e799:download",
+        "mimeType": "text/html",
+        "name": "projects/6233788376335662642/files/1cdae0244a2a483eb40bb21241a1e799"
+      },
+      "variant": "dark",
+      "html": "designs/dark-account-sync.html",
+      "source": "Stitch",
+      "screenIds": [
+        "account-details"
+      ],
+      "exportDimensions": {
+        "width": 780,
+        "height": 1866
+      }
+    }
+  ],
+  "boardExports": [
+    {
+      "file": "boards/01-auth-import.html",
+      "prefix": "Source / WF / ",
+      "instanceId": "15432184873809979516",
+      "sourceScreen": "projects/6233788376335662642/screens/15432184873809979516",
+      "receipt": "transfers/upload-boards-01-auth-import-html-20261030T091731063994.json"
+    },
+    {
+      "file": "boards/02-discovery.html",
+      "prefix": "Source / WF / ",
+      "instanceId": "15432184873809981021",
+      "sourceScreen": "projects/6233788376335662642/screens/15432184873809981021",
+      "receipt": "transfers/upload-boards-01-auth-import-html-20261030T091731063994.json"
+    },
+    {
+      "file": "boards/03-book-access.html",
+      "prefix": "Source / WF / ",
+      "instanceId": "15432184873809978430",
+      "sourceScreen": "projects/6233788376335662642/screens/15432184873809978430",
+      "receipt": "transfers/upload-boards-01-auth-import-html-20261030T091731063994.json"
+    },
+    {
+      "file": "boards/04-library.html",
+      "prefix": "Source / WF / ",
+      "instanceId": "15432184873809979935",
+      "sourceScreen": "projects/6233788376335662642/screens/15432184873809979935",
+      "receipt": "transfers/upload-boards-01-auth-import-html-20261030T091731063994.json"
+    },
+    {
+      "file": "boards/01-auth-import.png",
+      "prefix": "WF / ",
+      "instanceId": "16118461375848005854",
+      "sourceScreen": "projects/6233788376335662642/screens/16118461375848005854",
+      "receipt": "transfers/upload-boards-01-auth-import-png-20261030T091513603324.json"
+    },
+    {
+      "file": "boards/02-discovery.png",
+      "prefix": "WF / ",
+      "instanceId": "16118461375848009107",
+      "sourceScreen": "projects/6233788376335662642/screens/16118461375848009107",
+      "receipt": "transfers/upload-boards-01-auth-import-png-20261030T091513603324.json"
+    },
+    {
+      "file": "boards/03-book-access.png",
+      "prefix": "WF / ",
+      "instanceId": "16118461375848008264",
+      "sourceScreen": "projects/6233788376335662642/screens/16118461375848008264",
+      "receipt": "transfers/upload-boards-01-auth-import-png-20261030T091513603324.json"
+    },
+    {
+      "file": "boards/04-library.png",
+      "prefix": "WF / ",
+      "instanceId": "16118461375848007421",
+      "sourceScreen": "projects/6233788376335662642/screens/16118461375848007421",
+      "receipt": "transfers/upload-boards-01-auth-import-png-20261030T091513603324.json"
+    },
+    {
+      "file": "boards/05-organize.html",
+      "prefix": "Source / WF / ",
+      "instanceId": "5394591930075914825",
+      "sourceScreen": "projects/6233788376335662642/screens/5394591930075914825",
+      "receipt": "transfers/upload-boards-05-organize-html-20261030T091755077159.json"
+    },
+    {
+      "file": "boards/06-shelves.html",
+      "prefix": "Source / WF / ",
+      "instanceId": "5394591930075916032",
+      "sourceScreen": "projects/6233788376335662642/screens/5394591930075916032",
+      "receipt": "transfers/upload-boards-05-organize-html-20261030T091755077159.json"
+    },
+    {
+      "file": "boards/07-journal.html",
+      "prefix": "Source / WF / ",
+      "instanceId": "5394591930075917239",
+      "sourceScreen": "projects/6233788376335662642/screens/5394591930075917239",
+      "receipt": "transfers/upload-boards-05-organize-html-20261030T091755077159.json"
+    },
+    {
+      "file": "boards/08-reader.html",
+      "prefix": "Source / WF / ",
+      "instanceId": "5394591930075914350",
+      "sourceScreen": "projects/6233788376335662642/screens/5394591930075914350",
+      "receipt": "transfers/upload-boards-05-organize-html-20261030T091755077159.json"
+    },
+    {
+      "file": "boards/05-organize.png",
+      "prefix": "WF / ",
+      "instanceId": "2202519320052249562",
+      "sourceScreen": "projects/6233788376335662642/screens/2202519320052249562",
+      "receipt": "transfers/upload-boards-05-organize-png-20261030T091516725960.json"
+    },
+    {
+      "file": "boards/06-shelves.png",
+      "prefix": "WF / ",
+      "instanceId": "2202519320052251693",
+      "sourceScreen": "projects/6233788376335662642/screens/2202519320052251693",
+      "receipt": "transfers/upload-boards-05-organize-png-20261030T091516725960.json"
+    },
+    {
+      "file": "boards/07-journal.png",
+      "prefix": "WF / ",
+      "instanceId": "2202519320052249728",
+      "sourceScreen": "projects/6233788376335662642/screens/2202519320052249728",
+      "receipt": "transfers/upload-boards-05-organize-png-20261030T091516725960.json"
+    },
+    {
+      "file": "boards/08-reader.png",
+      "prefix": "WF / ",
+      "instanceId": "2202519320052251859",
+      "sourceScreen": "projects/6233788376335662642/screens/2202519320052251859",
+      "receipt": "transfers/upload-boards-05-organize-png-20261030T091516725960.json"
+    },
+    {
+      "file": "boards/09-reading-settings.html",
+      "prefix": "Source / WF / ",
+      "instanceId": "9202819332753782845",
+      "sourceScreen": "projects/6233788376335662642/screens/9202819332753782845",
+      "receipt": "transfers/upload-boards-09-reading-settings-html-20261030T091817842579.json"
+    },
+    {
+      "file": "boards/10-settings-account.html",
+      "prefix": "Source / WF / ",
+      "instanceId": "9202819332753781880",
+      "sourceScreen": "projects/6233788376335662642/screens/9202819332753781880",
+      "receipt": "transfers/upload-boards-09-reading-settings-html-20261030T091817842579.json"
+    },
+    {
+      "file": "boards/11-account-recovery.html",
+      "prefix": "Source / WF / ",
+      "instanceId": "9202819332753780915",
+      "sourceScreen": "projects/6233788376335662642/screens/9202819332753780915",
+      "receipt": "transfers/upload-boards-09-reading-settings-html-20261030T091817842579.json"
+    },
+    {
+      "file": "boards/12-sync.html",
+      "prefix": "Source / WF / ",
+      "instanceId": "9202819332753784046",
+      "sourceScreen": "projects/6233788376335662642/screens/9202819332753784046",
+      "receipt": "transfers/upload-boards-09-reading-settings-html-20261030T091817842579.json"
+    },
+    {
+      "file": "boards/09-reading-settings.png",
+      "prefix": "WF / ",
+      "instanceId": "13664084156455910551",
+      "sourceScreen": "projects/6233788376335662642/screens/13664084156455910551",
+      "receipt": "transfers/upload-boards-09-reading-settings-png-20261030T091519820417.json"
+    },
+    {
+      "file": "boards/10-settings-account.png",
+      "prefix": "WF / ",
+      "instanceId": "13664084156455908254",
+      "sourceScreen": "projects/6233788376335662642/screens/13664084156455908254",
+      "receipt": "transfers/upload-boards-09-reading-settings-png-20261030T091519820417.json"
+    },
+    {
+      "file": "boards/11-account-recovery.png",
+      "prefix": "WF / ",
+      "instanceId": "13664084156455910053",
+      "sourceScreen": "projects/6233788376335662642/screens/13664084156455910053",
+      "receipt": "transfers/upload-boards-09-reading-settings-png-20261030T091519820417.json"
+    },
+    {
+      "file": "boards/12-sync.png",
+      "prefix": "WF / ",
+      "instanceId": "13664084156455907756",
+      "sourceScreen": "projects/6233788376335662642/screens/13664084156455907756",
+      "receipt": "transfers/upload-boards-09-reading-settings-png-20261030T091519820417.json"
+    },
+    {
+      "file": "polished-boards/01-auth-import.html",
+      "prefix": "Source / UI / ",
+      "instanceId": "1202936915399383434",
+      "sourceScreen": "projects/6233788376335662642/screens/1202936915399383434",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-html-20261030T091842723951.json"
+    },
+    {
+      "file": "polished-boards/02-discovery.html",
+      "prefix": "Source / UI / ",
+      "instanceId": "1202936915399385005",
+      "sourceScreen": "projects/6233788376335662642/screens/1202936915399385005",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-html-20261030T091842723951.json"
+    },
+    {
+      "file": "polished-boards/03-book-access.html",
+      "prefix": "Source / UI / ",
+      "instanceId": "1202936915399382480",
+      "sourceScreen": "projects/6233788376335662642/screens/1202936915399382480",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-html-20261030T091842723951.json"
+    },
+    {
+      "file": "polished-boards/04-library.html",
+      "prefix": "Source / UI / ",
+      "instanceId": "1202936915399384051",
+      "sourceScreen": "projects/6233788376335662642/screens/1202936915399384051",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-html-20261030T091842723951.json"
+    },
+    {
+      "file": "polished-boards/01-auth-import.png",
+      "prefix": "UI / ",
+      "instanceId": "2785915158839425478",
+      "sourceScreen": "projects/6233788376335662642/screens/2785915158839425478",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-png-20261030T091523473390.json"
+    },
+    {
+      "file": "polished-boards/02-discovery.png",
+      "prefix": "UI / ",
+      "instanceId": "2785915158839425171",
+      "sourceScreen": "projects/6233788376335662642/screens/2785915158839425171",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-png-20261030T091523473390.json"
+    },
+    {
+      "file": "polished-boards/03-book-access.png",
+      "prefix": "UI / ",
+      "instanceId": "2785915158839424864",
+      "sourceScreen": "projects/6233788376335662642/screens/2785915158839424864",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-png-20261030T091523473390.json"
+    },
+    {
+      "file": "polished-boards/04-library.png",
+      "prefix": "UI / ",
+      "instanceId": "2785915158839424557",
+      "sourceScreen": "projects/6233788376335662642/screens/2785915158839424557",
+      "receipt": "transfers/upload-polished-boards-01-auth-import-png-20261030T091523473390.json"
+    },
+    {
+      "file": "polished-boards/05-organize.html",
+      "prefix": "Source / UI / ",
+      "instanceId": "2079028214883654772",
+      "sourceScreen": "projects/6233788376335662642/screens/2079028214883654772",
+      "receipt": "transfers/upload-polished-boards-05-organize-html-20261030T091906868880.json"
+    },
+    {
+      "file": "polished-boards/06-shelves.html",
+      "prefix": "Source / UI / ",
+      "instanceId": "2079028214883654253",
+      "sourceScreen": "projects/6233788376335662642/screens/2079028214883654253",
+      "receipt": "transfers/upload-polished-boards-05-organize-html-20261030T091906868880.json"
+    },
+    {
+      "file": "polished-boards/07-journal.html",
+      "prefix": "Source / UI / ",
+      "instanceId": "2079028214883653734",
+      "sourceScreen": "projects/6233788376335662642/screens/2079028214883653734",
+      "receipt": "transfers/upload-polished-boards-05-organize-html-20261030T091906868880.json"
+    },
+    {
+      "file": "polished-boards/08-reader.html",
+      "prefix": "Source / UI / ",
+      "instanceId": "2079028214883653215",
+      "sourceScreen": "projects/6233788376335662642/screens/2079028214883653215",
+      "receipt": "transfers/upload-polished-boards-05-organize-html-20261030T091906868880.json"
+    },
+    {
+      "file": "polished-boards/05-organize.png",
+      "prefix": "UI / ",
+      "instanceId": "5164575286791658208",
+      "sourceScreen": "projects/6233788376335662642/screens/5164575286791658208",
+      "receipt": "transfers/upload-polished-boards-05-organize-png-20261030T091527622688.json"
+    },
+    {
+      "file": "polished-boards/06-shelves.png",
+      "prefix": "UI / ",
+      "instanceId": "5164575286791656991",
+      "sourceScreen": "projects/6233788376335662642/screens/5164575286791656991",
+      "receipt": "transfers/upload-polished-boards-05-organize-png-20261030T091527622688.json"
+    },
+    {
+      "file": "polished-boards/07-journal.png",
+      "prefix": "UI / ",
+      "instanceId": "5164575286791655774",
+      "sourceScreen": "projects/6233788376335662642/screens/5164575286791655774",
+      "receipt": "transfers/upload-polished-boards-05-organize-png-20261030T091527622688.json"
+    },
+    {
+      "file": "polished-boards/08-reader.png",
+      "prefix": "UI / ",
+      "instanceId": "5164575286791658653",
+      "sourceScreen": "projects/6233788376335662642/screens/5164575286791658653",
+      "receipt": "transfers/upload-polished-boards-05-organize-png-20261030T091527622688.json"
+    },
+    {
+      "file": "polished-boards/09-reading-settings.html",
+      "prefix": "Source / UI / ",
+      "instanceId": "1757740575913161296",
+      "sourceScreen": "projects/6233788376335662642/screens/1757740575913161296",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-html-20261030T091931147544.json"
+    },
+    {
+      "file": "polished-boards/10-settings-account.html",
+      "prefix": "Source / UI / ",
+      "instanceId": "1757740575913164397",
+      "sourceScreen": "projects/6233788376335662642/screens/1757740575913164397",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-html-20261030T091931147544.json"
+    },
+    {
+      "file": "polished-boards/11-account-recovery.html",
+      "prefix": "Source / UI / ",
+      "instanceId": "1757740575913163402",
+      "sourceScreen": "projects/6233788376335662642/screens/1757740575913163402",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-html-20261030T091931147544.json"
+    },
+    {
+      "file": "polished-boards/12-sync.html",
+      "prefix": "Source / UI / ",
+      "instanceId": "1757740575913162407",
+      "sourceScreen": "projects/6233788376335662642/screens/1757740575913162407",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-html-20261030T091931147544.json"
+    },
+    {
+      "file": "polished-boards/09-reading-settings.png",
+      "prefix": "UI / ",
+      "instanceId": "5151541798511065057",
+      "sourceScreen": "projects/6233788376335662642/screens/5151541798511065057",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-png-20261030T091534803153.json"
+    },
+    {
+      "file": "polished-boards/10-settings-account.png",
+      "prefix": "UI / ",
+      "instanceId": "5151541798511065768",
+      "sourceScreen": "projects/6233788376335662642/screens/5151541798511065768",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-png-20261030T091534803153.json"
+    },
+    {
+      "file": "polished-boards/11-account-recovery.png",
+      "prefix": "UI / ",
+      "instanceId": "5151541798511066479",
+      "sourceScreen": "projects/6233788376335662642/screens/5151541798511066479",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-png-20261030T091534803153.json"
+    },
+    {
+      "file": "polished-boards/12-sync.png",
+      "prefix": "UI / ",
+      "instanceId": "5151541798511063094",
+      "sourceScreen": "projects/6233788376335662642/screens/5151541798511063094",
+      "receipt": "transfers/upload-polished-boards-09-reading-settings-png-20261030T091534803153.json"
+    }
+  ],
+  "canvasReferences": [
+    {
+      "slug": "home",
+      "sourceScreen": "projects/6233788376335662642/screens/1554670495747983401",
+      "kind": "Final",
+      "receipt": "transfers/upload-designs-home-png-20261030T093940157489.json"
+    },
+    {
+      "slug": "book-details",
+      "sourceScreen": "projects/6233788376335662642/screens/e38c1a94c65c4cb2a2a5df3e3a31c3a1",
+      "kind": "Stitch design"
+    },
+    {
+      "slug": "reader",
+      "sourceScreen": "projects/6233788376335662642/screens/1554670495747984338",
+      "kind": "Final",
+      "receipt": "transfers/upload-designs-home-png-20261030T093940157489.json"
+    },
+    {
+      "slug": "library",
+      "sourceScreen": "projects/6233788376335662642/screens/7028754476728810132",
+      "kind": "Final",
+      "receipt": "transfers/upload-designs-library-png-20261030T093945420932.json"
+    },
+    {
+      "slug": "explore",
+      "sourceScreen": "projects/6233788376335662642/screens/7028754476728810257",
+      "kind": "Final",
+      "receipt": "transfers/upload-designs-library-png-20261030T093945420932.json"
+    },
+    {
+      "slug": "shelves",
+      "sourceScreen": "projects/6233788376335662642/screens/8522cf91fea748f6a06927ea5ab63b78",
+      "kind": "Stitch design"
+    },
+    {
+      "slug": "journal",
+      "sourceScreen": "projects/6233788376335662642/screens/f0f67645e2644e1bb8eef54f0e4f21ba",
+      "kind": "Stitch design"
+    },
+    {
+      "slug": "welcome",
+      "sourceScreen": "projects/6233788376335662642/screens/0f72526c22234163b91d2c2689c60e4c",
+      "kind": "Stitch design"
+    },
+    {
+      "slug": "guest-import",
+      "sourceScreen": "projects/6233788376335662642/screens/6e27f95c073644c9a7c28b3030c72742",
+      "kind": "Stitch design"
+    },
+    {
+      "slug": "settings",
+      "sourceScreen": "projects/6233788376335662642/screens/7028754476728807443",
+      "kind": "Final",
+      "receipt": "transfers/upload-designs-library-png-20261030T093945420932.json"
+    },
+    {
+      "slug": "account-sync",
+      "sourceScreen": "projects/6233788376335662642/screens/9bec8ccc3c7a45129bb641e9083a7c03",
+      "kind": "Stitch design"
+    },
+    {
+      "slug": "reader-appearance",
+      "sourceScreen": "projects/6233788376335662642/screens/1aa6946029914bd4a7c8a7c4f5fa4039",
+      "kind": "Stitch design"
+    },
+    {
+      "slug": "downloads",
+      "sourceScreen": "projects/6233788376335662642/screens/11f336008b294986b1dfd1bc13c2193d",
+      "kind": "Stitch design"
+    },
+    {
+      "slug": "sync-conflict",
+      "sourceScreen": "projects/6233788376335662642/screens/9420814259143694110",
+      "kind": "Final",
+      "receipt": "transfers/upload-designs-home-png-20261030T093218092834.json"
+    },
+    {
+      "slug": "tablet-home",
+      "sourceScreen": "projects/6233788376335662642/screens/16719224565033260632",
+      "kind": "Reference",
+      "receipt": "transfers/upload-designs-tablet-home-png-20261030T094100123177.json"
+    },
+    {
+      "slug": "tablet-library",
+      "sourceScreen": "projects/6233788376335662642/screens/1554670495747982116",
+      "kind": "Final",
+      "receipt": "transfers/upload-designs-home-png-20261030T093940157489.json"
+    },
+    {
+      "slug": "tablet-journal",
+      "sourceScreen": "projects/6233788376335662642/screens/16719224565033260283",
+      "kind": "Reference",
+      "receipt": "transfers/upload-designs-tablet-home-png-20261030T094100123177.json"
+    },
+    {
+      "slug": "tablet-reader",
+      "sourceScreen": "projects/6233788376335662642/screens/16719224565033259934",
+      "kind": "Reference",
+      "receipt": "transfers/upload-designs-tablet-home-png-20261030T094100123177.json"
+    },
+    {
+      "slug": "dark-home",
+      "sourceScreen": "projects/6233788376335662642/screens/16719224565033259585",
+      "kind": "Reference",
+      "receipt": "transfers/upload-designs-tablet-home-png-20261030T094100123177.json"
+    },
+    {
+      "slug": "dark-explore",
+      "sourceScreen": "projects/6233788376335662642/screens/7028754476728808850",
+      "kind": "Final",
+      "receipt": "transfers/upload-designs-library-png-20261030T093945420932.json"
+    },
+    {
+      "slug": "dark-library",
+      "sourceScreen": "projects/6233788376335662642/screens/1554670495747985275",
+      "kind": "Final",
+      "receipt": "transfers/upload-designs-home-png-20261030T093940157489.json"
+    },
+    {
+      "slug": "dark-book-details",
+      "sourceScreen": "projects/6233788376335662642/screens/1762977036465229481",
+      "kind": "Reference",
+      "receipt": "transfers/upload-designs-dark-book-details-png-20261030T094102617488.json"
+    },
+    {
+      "slug": "dark-reader",
+      "sourceScreen": "projects/6233788376335662642/screens/9420814259143693909",
+      "kind": "Final",
+      "receipt": "transfers/upload-designs-home-png-20261030T093218092834.json"
+    },
+    {
+      "slug": "dark-settings",
+      "sourceScreen": "projects/6233788376335662642/screens/1762977036465227166",
+      "kind": "Reference",
+      "receipt": "transfers/upload-designs-dark-book-details-png-20261030T094102617488.json"
+    },
+    {
+      "slug": "dark-account-sync",
+      "sourceScreen": "projects/6233788376335662642/screens/1762977036465228947",
+      "kind": "Reference",
+      "receipt": "transfers/upload-designs-dark-book-details-png-20261030T094102617488.json"
+    }
+  ]
+}

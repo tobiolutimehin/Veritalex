@@ -17,6 +17,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.dimensionResource
+import com.veritalex.core.designsystem.R as DesignR
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.veritalex.core.data.models.Book
@@ -34,11 +36,11 @@ fun ContinueReadingSection(
             modifier
                 .fillMaxWidth()
                 .wrapContentHeight()
-                .padding(vertical = 24.dp, horizontal = 16.dp),
+                .padding(vertical = 24.dp, horizontal = dimensionResource(DesignR.dimen.content_gutter)),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         val continueReading = stringResource(R.string.continue_reading)
-        Text(text = continueReading, style = MaterialTheme.typography.headlineSmall)
+        Text(text = continueReading, style = MaterialTheme.typography.titleMedium)
 
         Row(
             modifier = Modifier.height(IntrinsicSize.Min),

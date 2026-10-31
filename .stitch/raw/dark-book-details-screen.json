@@ -1,0 +1,18 @@
+{
+  "slug": "dark-book-details",
+  "id": "e0077ca58b29409f9d0d2b5433103dab",
+  "name": "projects/6233788376335662642/screens/e0077ca58b29409f9d0d2b5433103dab",
+  "title": "NIGHT-04 Book details - Veritalex",
+  "width": "2560",
+  "height": "2632",
+  "deviceType": "MOBILE",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/1bcf70074fcd4b7b9ebb2c11246d70e6:download",
+    "name": "projects/6233788376335662642/files/1bcf70074fcd4b7b9ebb2c11246d70e6"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/a7d46d1c132b45729b998f8e6f0ff3aa:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/a7d46d1c132b45729b998f8e6f0ff3aa"
+  }
+}

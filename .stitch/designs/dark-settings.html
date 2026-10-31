@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Veritalex - Settings</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..600;1,7..72,400..600&amp;family=Roboto+Flex:opsz,wght@8..144,300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-container": "#98e4f7",
+            "inverse-on-surface": "#fbeee7",
+            "on-surface": "#201a16",
+            "tertiary": "#5D633D",
+            "surface": "#fff8f5",
+            "secondary-fixed-dim": "#dcc2ae",
+            "surface-tint": "#895021",
+            "primary-container": "#895021",
+            "tertiary-container": "#006878",
+            "on-surface-variant": "#52443a",
+            "surface-container-high": "#f3e6df",
+            "background": "#fff8f5",
+            "surface-container": "#F5E9DF",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#2D1606",
+            "on-error-container": "#93000a",
+            "surface-container-low": "#FCF1E8",
+            "outline": "#857469",
+            "on-primary-fixed": "#301400",
+            "primary": "#6c390b",
+            "outline-variant": "#d7c3b6",
+            "on-tertiary-fixed-variant": "#004e5b",
+            "inverse-surface": "#362f2b",
+            "primary-fixed": "#ffdcc5",
+            "surface-paper": "#FFF8F3",
+            "tertiary-fixed": "#a6eeff",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#f9ddc9",
+            "error": "#ba1a1a",
+            "on-tertiary": "#ffffff",
+            "secondary": "#6e5b4b",
+            "on-primary-fixed-variant": "#6d390b",
+            "surface-variant": "#ede0d9",
+            "error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#86d2e4",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#ede0d9",
+            "on-secondary-container": "#756050",
+            "on-secondary-fixed": "#27190c",
+            "on-secondary-fixed-variant": "#554334",
+            "on-error": "#ffffff",
+            "highlight": "#F6E5A8",
+            "secondary-fixed": "#f9ddc9",
+            "primary-fixed-dim": "#ffb782",
+            "on-tertiary-fixed": "#001f25",
+            "surface-dim": "#e4d8d1",
+            "on-background": "#201a16",
+            "surface-bright": "#fff8f5",
+            "inverse-primary": "#ffb782"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "4px",
+            "space-lg": "16px",
+            "space-xxl": "32px",
+            "space-sm": "8px",
+            "space-xl": "24px",
+            "space-md": "12px",
+            "margin": "20px",
+            "gutter": "20px"
+          },
+          "fontFamily": {
+            "headline-md": ["Roboto Flex"],
+            "body-sm": ["Roboto Flex"],
+            "headline-sm": ["Roboto Flex"],
+            "body-lg": ["Roboto Flex"],
+            "headline-lg": ["Roboto Flex"],
+            "title-md": ["Roboto Flex"],
+            "reader-prose": ["Literata"],
+            "reader-chapter": ["Literata"],
+            "label-md": ["Roboto Flex"]
+          },
+          "fontSize": {
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "reader-prose": ["19px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "reader-chapter": ["26px", { "lineHeight": "34px", "fontWeight": "500" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      background-color: #201a16;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 16px 0;
+    }
+    /* Touch Ripple emulation & active states */
+    .touch-ripple {
+      transition: background-color 150ms ease, transform 100ms ease;
+    }
+    .touch-ripple:active {
+      background-color: #F5E9DF;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-inverse-surface antialiased font-body-lg selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Mobile Device Shell: 412x915 baseline -->
+<main class="w-[412px] h-[915px] bg-[#19120D] flex flex-col relative overflow-hidden shadow-2xl rounded-[32px] border border-[#382D25] text-[#F0DFD6]"><!-- 1. Android Status Bar -->
+<header class="w-full h-11 px-6 flex justify-between items-center bg-[#19120D] select-none z-20 shrink-0 text-[#F0DFD6]">
+<span class="text-[14px] font-medium tracking-tight">9:41</span>
+<div class="flex items-center gap-1.5 text-[#F0DFD6]">
+<span class="material-symbols-outlined text-[17px]" data-icon="signal_cellular_alt">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[17px]" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-[19px]" data-icon="battery_full">battery_full</span>
+</div>
+</header>
+<!-- 2. Top App Bar -->
+<nav aria-label="Top app bar" class="w-full h-16 px-3 flex items-center bg-[#19120D] shrink-0 z-10">
+<button aria-label="Navigate up" class="w-12 h-12 flex items-center justify-center rounded-full text-[#F0DFD6] hover:bg-[#231A14] active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px]" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-[20px] font-medium text-[#F0DFD6] ml-2 tracking-tight">Settings</h1>
+</nav>
+<!-- 3. Scrollable Settings Canvas -->
+<div class="flex-1 overflow-y-auto px-0 pb-8 overscroll-contain">
+<!-- Account Section -->
+<section aria-labelledby="section-account" class="pt-2">
+<h2 class="px-5 py-2 text-[12px] font-medium text-[#FFB77F] tracking-wider uppercase" id="section-account">Account</h2>
+<!-- Profile Summary Row -->
+<div class="touch-ripple w-full flex items-center px-5 py-3.5 gap-4 cursor-pointer hover:bg-[#231A14]/60 transition-colors" role="button" tabindex="0">
+<div class="w-10 h-10 rounded-full bg-[#6D3A0D] text-[#FFDCBF] flex items-center justify-center font-medium text-[18px] shrink-0">
+        A
+      </div>
+<div class="flex-1 min-w-0">
+<p class="text-[16px] font-medium text-[#F0DFD6] truncate">Alex Morgan</p>
+<p class="text-[14px] text-[#D6C3B7] truncate">alex@example.com</p>
+</div>
+</div>
+<!-- Account & Sync Row -->
+<div class="touch-ripple w-full flex items-center justify-between px-5 py-3.5 cursor-pointer hover:bg-[#231A14]/60 transition-colors" role="button" tabindex="0">
+<div class="flex items-center gap-4 flex-1 pr-2">
+<span class="material-symbols-outlined text-[#D6C3B7] shrink-0 text-[24px]" data-icon="cloud_done">cloud_done</span>
+<div>
+<p class="text-[16px] font-medium text-[#F0DFD6]">Account &amp; sync</p>
+<p class="text-[14px] text-[#D6C3B7]">Up to date</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#9F8D83] text-[20px] shrink-0" data-icon="chevron_right">chevron_right</span>
+</div>
+</section>
+<!-- Divider -->
+<hr class="border-t border-[#382D25] mx-5 my-1"/>
+<!-- Appearance Section -->
+<section aria-labelledby="section-appearance">
+<h2 class="px-5 pt-3 pb-2 text-[12px] font-medium text-[#FFB77F] tracking-wider uppercase" id="section-appearance">Appearance</h2>
+<!-- App theme Row -->
+<div class="touch-ripple w-full flex items-center justify-between px-5 py-3.5 cursor-pointer hover:bg-[#231A14]/60 transition-colors" role="button" tabindex="0">
+<div class="flex items-center gap-4 flex-1 pr-2">
+<span class="material-symbols-outlined text-[#D6C3B7] shrink-0 text-[24px]" data-icon="palette">palette</span>
+<div>
+<p class="text-[16px] font-medium text-[#F0DFD6]">App theme</p>
+<p class="text-[14px] text-[#D6C3B7]">Night (Warm Dark)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#9F8D83] text-[20px] shrink-0" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Use wallpaper colors (Switch ON) -->
+<div class="touch-ripple w-full flex items-center justify-between px-5 py-3.5 select-none hover:bg-[#231A14]/60 transition-colors">
+<div class="flex items-center gap-4 flex-1 pr-3">
+<span class="material-symbols-outlined text-[#D6C3B7] shrink-0 text-[24px]" data-icon="palette">palette</span>
+<div>
+<p class="text-[16px] font-medium text-[#F0DFD6]">Use wallpaper colors</p>
+<p class="text-[14px] text-[#D6C3B7]">Personalize with your device colors</p>
+</div>
+</div>
+<!-- Material 3 Switch: ON state in Veritalex Night -->
+<button aria-checked="true" aria-label="Use wallpaper colors" class="relative inline-flex h-8 w-[52px] shrink-0 cursor-pointer rounded-full p-1 bg-[#FFB77F] transition-colors focus:outline-none" role="switch" type="button">
+<span class="pointer-events-none translate-x-5 inline-block h-6 w-6 transform rounded-full bg-[#4E2600] shadow-sm transition-transform duration-200 ease-in-out flex items-center justify-center">
+<span class="material-symbols-outlined text-[#FFDCBF] text-[14px]" data-icon="check" style="font-variation-settings: 'FILL' 1;">check</span>
+</span>
+</button>
+</div>
+</section>
+<!-- Divider -->
+<hr class="border-t border-[#382D25] mx-5 my-1"/>
+<!-- Reading Section -->
+<section aria-labelledby="section-reading">
+<h2 class="px-5 pt-3 pb-2 text-[12px] font-medium text-[#FFB77F] tracking-wider uppercase" id="section-reading">Reading</h2>
+<!-- Reader defaults Row -->
+<div class="touch-ripple w-full flex items-center justify-between px-5 py-3.5 cursor-pointer hover:bg-[#231A14]/60 transition-colors" role="button" tabindex="0">
+<div class="flex items-center gap-4 flex-1 pr-2">
+<span class="material-symbols-outlined text-[#D6C3B7] shrink-0 text-[24px]" data-icon="menu_book">menu_book</span>
+<div>
+<p class="text-[16px] font-medium text-[#F0DFD6]">Reader defaults</p>
+<p class="text-[14px] text-[#D6C3B7]">Scroll, Literata</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#9F8D83] text-[20px] shrink-0" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Keep screen awake while reading (Switch OFF) -->
+<div class="touch-ripple w-full flex items-center justify-between px-5 py-3.5 select-none hover:bg-[#231A14]/60 transition-colors">
+<div class="flex items-center gap-4 flex-1 pr-3">
+<span class="material-symbols-outlined text-[#D6C3B7] shrink-0 text-[24px]" data-icon="stay_current_portrait">stay_current_portrait</span>
+<div>
+<p class="text-[16px] font-medium text-[#F0DFD6]">Keep screen awake while reading</p>
+<p class="text-[14px] text-[#D6C3B7]">Prevent display sleep during continuous reading</p>
+</div>
+</div>
+<!-- Material 3 Switch: OFF state in Veritalex Night -->
+<button aria-checked="false" aria-label="Keep screen awake while reading" class="relative inline-flex h-8 w-[52px] shrink-0 cursor-pointer rounded-full p-1 bg-[#231A14] border border-[#52443B] transition-colors focus:outline-none" role="switch" type="button">
+<span class="pointer-events-none translate-x-0 inline-block h-6 w-6 transform rounded-full bg-[#9F8D83] shadow-sm transition-transform duration-200 ease-in-out"></span>
+</button>
+</div>
+</section>
+<!-- Divider -->
+<hr class="border-t border-[#382D25] mx-5 my-1"/>
+<!-- Storage Section -->
+<section aria-labelledby="section-storage">
+<h2 class="px-5 pt-3 pb-2 text-[12px] font-medium text-[#FFB77F] tracking-wider uppercase" id="section-storage">Storage</h2>
+<!-- Downloads Row -->
+<div class="touch-ripple w-full flex items-center justify-between px-5 py-3.5 cursor-pointer hover:bg-[#231A14]/60 transition-colors" role="button" tabindex="0">
+<div class="flex items-center gap-4 flex-1 pr-2">
+<span class="material-symbols-outlined text-[#D6C3B7] shrink-0 text-[24px]" data-icon="download">download</span>
+<div>
+<p class="text-[16px] font-medium text-[#F0DFD6]">Downloads</p>
+<p class="text-[14px] text-[#D6C3B7]">2 books on this device</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#9F8D83] text-[20px] shrink-0" data-icon="chevron_right">chevron_right</span>
+</div>
+</section>
+<!-- Divider -->
+<hr class="border-t border-[#382D25] mx-5 my-1"/>
+<!-- About Section -->
+<section aria-labelledby="section-about">
+<h2 class="px-5 pt-3 pb-2 text-[12px] font-medium text-[#FFB77F] tracking-wider uppercase" id="section-about">About</h2>
+<!-- About Veritalex -->
+<div class="touch-ripple w-full flex items-center justify-between px-5 py-3.5 cursor-pointer hover:bg-[#231A14]/60 transition-colors" role="button" tabindex="0">
+<div class="flex items-center gap-4 flex-1 pr-2">
+<span class="material-symbols-outlined text-[#D6C3B7] shrink-0 text-[24px]" data-icon="info">info</span>
+<div>
+<p class="text-[16px] font-medium text-[#F0DFD6]">Veritalex</p>
+<p class="text-[14px] text-[#D6C3B7]">Version 1.0.4 (Build 42)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#9F8D83] text-[20px] shrink-0" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Content sources -->
+<div class="touch-ripple w-full flex items-center justify-between px-5 py-3.5 cursor-pointer hover:bg-[#231A14]/60 transition-colors" role="button" tabindex="0">
+<div class="flex items-center gap-4 flex-1 pr-2">
+<span class="material-symbols-outlined text-[#D6C3B7] shrink-0 text-[24px]" data-icon="local_library">local_library</span>
+<div>
+<p class="text-[16px] font-medium text-[#F0DFD6]">Content sources</p>
+<p class="text-[14px] text-[#D6C3B7]">Public domain books via Project Gutenberg</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#9F8D83] text-[20px] shrink-0" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Privacy -->
+<div class="touch-ripple w-full flex items-center justify-between px-5 py-3.5 cursor-pointer hover:bg-[#231A14]/60 transition-colors" role="button" tabindex="0">
+<div class="flex items-center gap-4 flex-1 pr-2">
+<span class="material-symbols-outlined text-[#D6C3B7] shrink-0 text-[24px]" data-icon="privacy_tip">privacy_tip</span>
+<div>
+<p class="text-[16px] font-medium text-[#F0DFD6]">Privacy</p>
+<p class="text-[14px] text-[#D6C3B7]">Reading stays local unless synced</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#9F8D83] text-[20px] shrink-0" data-icon="chevron_right">chevron_right</span>
+</div>
+</section>
+</div>
+<!-- 4. Native Android System Navigation Bar (Gesture Pill) -->
+<footer class="w-full h-8 bg-[#19120D] flex items-center justify-center pb-2 select-none shrink-0 z-20">
+<div class="w-28 h-1 bg-[#52443B] rounded-full"></div>
+</footer></main>
+<script>
+    // Lightweight micro-interaction for switch toggles
+    document.querySelectorAll('[role="switch"]').forEach(switchBtn => {
+      switchBtn.addEventListener('click', () => {
+        const isChecked = switchBtn.getAttribute('aria-checked') === 'true';
+        const nextState = !isChecked;
+        switchBtn.setAttribute('aria-checked', String(nextState));
+
+        const thumb = switchBtn.querySelector('span');
+        if (nextState) {
+          switchBtn.className = "relative inline-flex h-8 w-[52px] shrink-0 cursor-pointer rounded-full p-1 bg-primary transition-colors focus:outline-none";
+          thumb.className = "pointer-events-none translate-x-5 inline-block h-6 w-6 transform rounded-full bg-on-primary shadow-sm transition-transform duration-200 ease-in-out flex items-center justify-center";
+          thumb.innerHTML = `<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;" data-icon="check">check</span>`;
+        } else {
+          switchBtn.className = "relative inline-flex h-8 w-[52px] shrink-0 cursor-pointer rounded-full p-1 bg-surface-container-highest border border-outline transition-colors focus:outline-none";
+          thumb.className = "pointer-events-none translate-x-0 inline-block h-6 w-6 transform rounded-full bg-outline shadow-sm transition-transform duration-200 ease-in-out";
+          thumb.innerHTML = "";
+        }
+      });
+    });
+  </script>
+</body></html>

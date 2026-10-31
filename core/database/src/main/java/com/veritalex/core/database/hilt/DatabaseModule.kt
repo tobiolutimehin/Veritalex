@@ -3,6 +3,7 @@ package com.veritalex.core.database.hilt
 import android.content.Context
 import androidx.room.Room
 import com.veritalex.core.database.VeritalexDatabase
+import com.veritalex.core.database.MIGRATION_1_2
 import com.veritalex.core.database.dao.BookDao
 import com.veritalex.core.database.dao.PersonDao
 import dagger.Module
@@ -23,7 +24,7 @@ object DatabaseModule {
         context,
         VeritalexDatabase::class.java,
         "veritalex-db",
-    ).build()
+    ).addMigrations(MIGRATION_1_2).build()
 
     @Provides
     fun providesBookDao(

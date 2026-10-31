@@ -1,0 +1,18 @@
+{
+  "slug": "tablet-library",
+  "id": "8d6a767b97d34d289b3eff7e3b78cbaa",
+  "name": "projects/6233788376335662642/screens/8d6a767b97d34d289b3eff7e3b78cbaa",
+  "title": "TAB-02 Library and book detail - Veritalex",
+  "width": "2560",
+  "height": "2048",
+  "deviceType": "DESKTOP",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/36ef1a47b1cf44119371d20f07c85af5:download",
+    "name": "projects/6233788376335662642/files/36ef1a47b1cf44119371d20f07c85af5"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/e241036d313e4d35af0d9871b634fc77:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/e241036d313e4d35af0d9871b634fc77"
+  }
+}

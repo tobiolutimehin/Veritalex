@@ -1,0 +1,18 @@
+{
+  "slug": "settings",
+  "id": "f92ceaa91d604b8592392aef299e0c93",
+  "name": "projects/6233788376335662642/screens/f92ceaa91d604b8592392aef299e0c93",
+  "title": "UI-10 Settings - Veritalex",
+  "width": "780",
+  "height": "1894",
+  "deviceType": "MOBILE",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/621117d212714a389643c98e952f7a68:download",
+    "name": "projects/6233788376335662642/files/621117d212714a389643c98e952f7a68"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/0c11a752727f40a9a319028599c9ae13:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/0c11a752727f40a9a319028599c9ae13"
+  }
+}

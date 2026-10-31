@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Veritalex - Home</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&amp;family=Roboto+Flex:opsz,wght@8..144,300..600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed-variant": "#6b3a0c",
+            "on-tertiary": "#00363f",
+            "on-error-container": "#ffdad6",
+            "on-secondary-fixed": "#291809",
+            "on-background": "#ece0d9",
+            "surface-container-lowest": "#120d0a",
+            "surface-bright": "#3f3833",
+            "secondary": "#e1c0a8",
+            "on-primary-container": "#FFDCBF",
+            "inverse-primary": "#875123",
+            "background": "#18120f",
+            "tertiary": "#C6CE9F",
+            "surface-container-low": "#201a16",
+            "on-tertiary-fixed-variant": "#004e5b",
+            "error-container": "#93000a",
+            "on-primary": "#4e2600",
+            "tertiary-fixed": "#a8edff",
+            "surface-container": "#2D231C",
+            "on-secondary": "#402c1b",
+            "on-tertiary-container": "#005b69",
+            "inverse-on-surface": "#362f2b",
+            "primary-container": "#ffb77f",
+            "error": "#FFB4AB",
+            "on-primary-fixed": "#2f1500",
+            "surface": "#19120D",
+            "secondary-fixed-dim": "#e1c0a8",
+            "on-error": "#690005",
+            "inverse-surface": "#ece0d9",
+            "outline": "#9F8D83",
+            "on-surface-variant": "#D6C3B7",
+            "on-secondary-container": "#d2b39b",
+            "surface-container-high": "#382D25",
+            "outline-variant": "#52443a",
+            "on-surface": "#ece0d9",
+            "surface-tint": "#ffb77f",
+            "secondary-container": "#5b4532",
+            "primary-fixed-dim": "#ffb77f",
+            "surface-variant": "#3a332f",
+            "tertiary-container": "#88d1e3",
+            "tertiary-fixed-dim": "#88d1e3",
+            "on-secondary-fixed-variant": "#584230",
+            "primary-fixed": "#ffdcc4",
+            "surface-container-highest": "#3a332f",
+            "on-tertiary-fixed": "#001f26",
+            "primary": "#ffdcc4",
+            "surface-dim": "#18120f",
+            "secondary-fixed": "#fedcc3"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "margin": "1rem",
+            "gutter": "1rem",
+            "space-xl": "2rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Roboto Flex"],
+            "headline-lg": ["Roboto Flex"],
+            "headline-md": ["Roboto Flex"],
+            "body-md": ["Roboto Flex"],
+            "reader-prose": ["Literata"]
+          },
+          "fontSize": {
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "reader-prose": ["19px", { "lineHeight": "32px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 24px;
+      line-height: 1;
+      display: inline-block;
+    }
+    /* Hide scrollbar for clean horizontal shelf */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex justify-center selection:bg-primary-container selection:text-on-primary">
+<!-- Mobile Device Simulation Frame / Centered Container (412px baseline) -->
+<div class="w-full max-w-[440px] min-h-screen bg-surface flex flex-col relative pb-28">
+<!-- Status Bar (Android Native 24-32dp safe context) -->
+<div class="w-full h-8 px-5 pt-2 flex items-center justify-between text-on-surface-variant font-body-sm select-none z-30">
+<span class="text-[13px] tracking-tight font-medium text-on-surface">9:41</span>
+<div class="flex items-center gap-1.5 opacity-90">
+<span class="material-symbols-outlined text-[15px]" data-icon="signal_cellular_alt">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[15px]" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-[15px]" data-icon="battery_full">battery_full</span>
+</div>
+</div>
+<!-- Top App Bar (Shared Components JSON execution) -->
+<header class="flex justify-between items-center w-full px-space-md py-space-sm h-16 bg-surface dark:bg-surface border-b border-outline-variant/30 sticky top-0 z-20">
+<div class="flex items-center gap-2">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<h1 class="font-headline-md text-headline-md tracking-tight font-medium text-primary dark:text-primary">Veritalex</h1>
+<span class="material-symbols-outlined text-[16px] text-tertiary" data-icon="cloud_done">cloud_done</span>
+</div>
+<span class="text-[11px] font-body-sm text-on-surface-variant tracking-wide -mt-0.5">Up to date</span>
+</div>
+</div>
+<button aria-label="Settings" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high/50 transition-colors active:opacity-80">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-4 pt-4 space-y-6">
+<!-- Section 1: Continue Reading -->
+<section aria-labelledby="section-continue">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-3 px-1" id="section-continue">
+          Continue reading
+        </h2>
+<!-- Featured Card -->
+<article class="bg-surface-container-low rounded-2xl p-4 border border-outline-variant/20 shadow-none transition-colors">
+<div class="flex gap-4">
+<!-- Book Cover: Pride and Prejudice (Strict 2:3 ratio) -->
+<div class="w-[104px] h-[156px] flex-shrink-0 rounded-md bg-[#3b171f] border border-[#6b2b3a]/40 p-2.5 flex flex-col justify-between relative overflow-hidden shadow-sm">
+<div class="border border-[#e1c0a8]/25 h-full w-full rounded-sm p-2 flex flex-col justify-between text-center">
+<span class="text-[8px] font-body-sm tracking-widest text-[#e1c0a8]/60 uppercase">Vol. I</span>
+<div class="space-y-1 my-auto">
+<p class="font-reader-prose text-[13px] leading-tight font-medium text-[#ffdcc4] italic">
+                    Pride &amp; Prejudice
+                  </p>
+<div class="w-4 h-[1px] bg-[#ffdcc4]/30 mx-auto"></div>
+</div>
+<p class="font-body-sm text-[9px] text-[#e1c0a8]/80 font-normal">Jane Austen</p>
+</div>
+</div>
+<!-- Metadata & Progress Details -->
+<div class="flex-1 flex flex-col justify-between py-0.5 min-w-0">
+<div>
+<p class="font-reader-prose text-[18px] leading-snug font-medium text-on-surface truncate">
+                  Pride and Prejudice
+                </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                  Jane Austen
+                </p>
+<div class="mt-3 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[12px] font-body-sm">
+<span class="material-symbols-outlined text-[13px] text-primary" data-icon="bookmark">bookmark</span>
+<span>Chapter 18</span>
+</div>
+</div>
+<!-- Progress Bar & Percentage -->
+<div class="space-y-1.5 mt-3">
+<div class="flex justify-between items-center text-[12px] font-body-sm">
+<span class="text-on-surface-variant">Progress</span>
+<span class="text-primary font-medium">28% read</span>
+</div>
+<!-- Custom Progress Track -->
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 28%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Button (Pill Primary Button) -->
+<div class="mt-4 pt-3 border-t border-outline-variant/15 flex">
+<button class="w-full h-12 rounded-full bg-primary-container text-on-primary font-body-md text-body-md font-medium flex items-center justify-center gap-2 hover:brightness-105 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="menu_book" data-weight="fill" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span>Continue reading</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Section 2: Your Books -->
+<section aria-labelledby="section-your-books">
+<div class="flex items-center justify-between mb-3 px-1">
+<h2 class="font-headline-md text-headline-md text-on-surface" id="section-your-books">
+            Your books
+          </h2>
+<button class="text-primary font-body-sm text-body-sm hover:underline flex items-center gap-0.5">
+<span>See all</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<!-- Shelf Horizontal Scroll / Row -->
+<div class="grid grid-cols-3 gap-3 overflow-x-auto pb-1 no-scrollbar">
+<!-- Book Item 1: Frankenstein -->
+<div class="flex flex-col group cursor-pointer">
+<div class="w-full aspect-[2/3] rounded-md bg-[#1F382B] border border-[#2e5240]/50 p-2 flex flex-col justify-between shadow-none group-hover:border-primary/40 transition-colors">
+<div class="border border-[#C6CE9F]/20 h-full w-full rounded-sm p-1.5 flex flex-col justify-between text-center">
+<span class="text-[7px] font-body-sm text-[#C6CE9F]/60 uppercase tracking-widest">Gutenberg</span>
+<p class="font-reader-prose text-[12px] leading-tight text-[#ece0d9] my-auto italic">
+                  Frankenstein
+                </p>
+<span class="text-[8px] font-body-sm text-[#C6CE9F]/80 truncate">M. Shelley</span>
+</div>
+</div>
+<div class="mt-2 space-y-0.5">
+<h3 class="font-body-sm text-[13px] font-medium text-on-surface leading-snug line-clamp-1">Frankenstein</h3>
+<p class="font-body-sm text-[11px] text-on-surface-variant truncate">Mary Shelley</p>
+<div class="pt-1">
+<span class="inline-flex items-center gap-1 text-[10px] text-tertiary bg-surface-container px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-[10px]" data-icon="download_done">download_done</span>
+<span>Downloaded</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Book Item 2: Alice's Adventures in Wonderland -->
+<div class="flex flex-col group cursor-pointer">
+<div class="w-full aspect-[2/3] rounded-md bg-[#20243F] border border-[#303863]/50 p-2 flex flex-col justify-between shadow-none group-hover:border-primary/40 transition-colors">
+<div class="border border-[#a8edff]/20 h-full w-full rounded-sm p-1.5 flex flex-col justify-between text-center">
+<span class="text-[7px] font-body-sm text-[#a8edff]/60 uppercase tracking-widest">Classic</span>
+<p class="font-reader-prose text-[11px] leading-tight text-[#ece0d9] my-auto italic">
+                  Alice in Wonderland
+                </p>
+<span class="text-[8px] font-body-sm text-[#a8edff]/80 truncate">L. Carroll</span>
+</div>
+</div>
+<div class="mt-2 space-y-0.5">
+<h3 class="font-body-sm text-[13px] font-medium text-on-surface leading-snug line-clamp-1">Alice's Adventures</h3>
+<p class="font-body-sm text-[11px] text-on-surface-variant truncate">Lewis Carroll</p>
+<div class="pt-1">
+<span class="inline-flex items-center gap-1 text-[10px] text-tertiary bg-surface-container px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-[10px]" data-icon="download_done">download_done</span>
+<span>Downloaded</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Book Item 3: Jane Eyre -->
+<div class="flex flex-col group cursor-pointer">
+<div class="w-full aspect-[2/3] rounded-md bg-[#33261C] border border-[#4e3a2b]/50 p-2 flex flex-col justify-between shadow-none group-hover:border-primary/40 transition-colors">
+<div class="border border-[#e1c0a8]/20 h-full w-full rounded-sm p-1.5 flex flex-col justify-between text-center">
+<span class="text-[7px] font-body-sm text-[#e1c0a8]/60 uppercase tracking-widest">Novel</span>
+<p class="font-reader-prose text-[12px] leading-tight text-[#ece0d9] my-auto italic">
+                  Jane Eyre
+                </p>
+<span class="text-[8px] font-body-sm text-[#e1c0a8]/80 truncate">C. Brontë</span>
+</div>
+</div>
+<div class="mt-2 space-y-0.5">
+<h3 class="font-body-sm text-[13px] font-medium text-on-surface leading-snug line-clamp-1">Jane Eyre</h3>
+<p class="font-body-sm text-[11px] text-on-surface-variant truncate">Charlotte Brontë</p>
+<div class="pt-1">
+<span class="inline-flex items-center gap-1 text-[10px] text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded">
+<span class="material-symbols-outlined text-[10px]" data-icon="library_books">library_books</span>
+<span>In library</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Popular Classics -->
+<section aria-labelledby="section-popular" class="pt-1">
+<div class="flex items-end justify-between mb-3 px-1">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface" id="section-popular">
+              Popular classics
+            </h2>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">
+              From Project Gutenberg catalogue
+            </p>
+</div>
+<button class="text-primary font-body-sm text-body-sm hover:underline flex items-center gap-0.5 pb-0.5">
+<span>Explore</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<!-- 3 Dignified Cards with Subtle Layout -->
+<div class="space-y-2.5">
+<!-- Classic 1: Great Expectations -->
+<article class="bg-surface-container rounded-DEFAULT p-3 flex items-center gap-3.5 border border-outline-variant/10 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="w-12 h-[72px] flex-shrink-0 rounded bg-[#2c1d38] border border-[#482f5c]/50 p-1 flex flex-col justify-center items-center text-center">
+<span class="font-reader-prose text-[9px] text-[#ffdcc4] italic leading-tight">Great Exp.</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-reader-prose text-[15px] font-medium text-on-surface leading-tight truncate">Great Expectations</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[13px] mt-0.5">Charles Dickens</p>
+<div class="flex items-center gap-3 mt-1.5 text-[11px] text-outline font-body-sm">
+<span>Victorian fiction</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Unabridged</span>
+</div>
+</div>
+<button aria-label="Add to library" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</article>
+<!-- Classic 2: The Picture of Dorian Gray -->
+<article class="bg-surface-container rounded-DEFAULT p-3 flex items-center gap-3.5 border border-outline-variant/10 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="w-12 h-[72px] flex-shrink-0 rounded bg-[#182b2d] border border-[#28494c]/50 p-1 flex flex-col justify-center items-center text-center">
+<span class="font-reader-prose text-[9px] text-[#C6CE9F] italic leading-tight">Dorian Gray</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-reader-prose text-[15px] font-medium text-on-surface leading-tight truncate">The Picture of Dorian Gray</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[13px] mt-0.5">Oscar Wilde</p>
+<div class="flex items-center gap-3 mt-1.5 text-[11px] text-outline font-body-sm">
+<span>Philosophical gothic</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Complete text</span>
+</div>
+</div>
+<button aria-label="Add to library" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</article>
+<!-- Classic 3: Moby-Dick -->
+<article class="bg-surface-container rounded-DEFAULT p-3 flex items-center gap-3.5 border border-outline-variant/10 hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="w-12 h-[72px] flex-shrink-0 rounded bg-[#1d273a] border border-[#304161]/50 p-1 flex flex-col justify-center items-center text-center">
+<span class="font-reader-prose text-[9px] text-[#ffdcc4] italic leading-tight">Moby-Dick</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-reader-prose text-[15px] font-medium text-on-surface leading-tight truncate">Moby-Dick</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[13px] mt-0.5">Herman Melville</p>
+<div class="flex items-center gap-3 mt-1.5 text-[11px] text-outline font-body-sm">
+<span>Maritime epic</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Standard edition</span>
+</div>
+</div>
+<button aria-label="Add to library" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+</button>
+</article>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Docked Bottom, Exactly Mirroring Shared Components JSON) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-space-md py-space-sm h-20 bg-surface-container-low dark:bg-surface-container-low border-t border-outline-variant/30 max-w-[440px] left-1/2 -translate-x-1/2">
+<!-- Destination 1: Home (Active) -->
+<a aria-current="page" class="flex flex-col items-center justify-center gap-1 px-5 py-1.5 rounded-full bg-secondary-container dark:bg-secondary-container text-on-secondary-container dark:text-on-secondary-container font-body-sm text-body-sm active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-primary text-[22px]" data-icon="auto_stories" data-weight="fill" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+<span class="text-primary font-medium tracking-tight">Home</span>
+</a>
+<!-- Destination 2: Explore (Inactive) -->
+<a class="flex flex-col items-center justify-center gap-1 px-5 py-1.5 text-on-surface-variant dark:text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface dark:hover:text-on-surface transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="explore">explore</span>
+<span class="tracking-tight">Explore</span>
+</a>
+<!-- Destination 3: Library (Inactive) -->
+<a class="flex flex-col items-center justify-center gap-1 px-5 py-1.5 text-on-surface-variant dark:text-on-surface-variant font-body-sm text-body-sm hover:text-on-surface dark:hover:text-on-surface transition-colors active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-[22px]" data-icon="local_library">local_library</span>
+<span class="tracking-tight">Library</span>
+</a>
+</nav>
+<!-- Android Gesture Pill / Safe Area Inset Indicator -->
+<div class="fixed bottom-1 left-1/2 -translate-x-1/2 w-28 h-1 bg-outline-variant/50 rounded-full z-50 pointer-events-none"></div>
+</div>
+</body></html>

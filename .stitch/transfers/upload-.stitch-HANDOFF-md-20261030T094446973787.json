@@ -1,0 +1,44 @@
+{
+  "results": [
+    {
+      "screen": {
+        "htmlCode": {
+          "name": "projects/6233788376335662642/files/3824801775273297696",
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBKNARIhYXBwX2NvbXBhbmlvbl91c2VyX3VwbG9hZGVkX2ZpbGVzGmgKM3VzZXJfdXBsb2FkZWRfaHRtbF8wMDA2NWYwYmE1NzkzYThkMDJhOTk1ZmJkYTA3NGNhZRILEgcQh5SsssAKGAGSASMKCnByb2plY3RfaWQSFUITNjIzMzc4ODM3NjMzNTY2MjY0Mg&filename=&opi=96797242",
+          "mimeType": "text/markdown"
+        },
+        "id": "3824801775273299857",
+        "generatedBy": "UserUploadedDesignMd: stitch::code-to-design",
+        "width": "780",
+        "height": "1768",
+        "title": "Handoff / HANDOFF",
+        "name": "projects/6233788376335662642/screens/3824801775273299857",
+        "theme": {},
+        "screenType": "DOCUMENT",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE",
+          "displayMode": "MARKDOWN"
+        }
+      }
+    }
+  ],
+  "screenInstances": [
+    {
+      "id": "3824801775273299857",
+      "sourceScreen": "projects/6233788376335662642/screens/3824801775273299857",
+      "x": 161400,
+      "width": 390,
+      "height": 884
+    }
+  ],
+  "transfer": {
+    "files": [
+      "HANDOFF.md"
+    ],
+    "prefix": "Handoff / ",
+    "sha256": {
+      "HANDOFF.md": "d418c0ad829639c8b29c7715f0a662223ac03ba5ca8b6399d5378094750cf46f"
+    }
+  }
+}

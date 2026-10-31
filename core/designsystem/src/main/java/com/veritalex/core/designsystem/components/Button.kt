@@ -17,7 +17,7 @@ fun VerIconButton(
     contentDescription: String?,
     modifier: Modifier = Modifier,
 ) {
-    IconButton(onClick = onClick) {
+    IconButton(onClick = onClick, modifier = modifier) {
         Icon(imageVector = imageVector, contentDescription = contentDescription)
     }
 }

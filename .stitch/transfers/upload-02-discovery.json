@@ -1,0 +1,39 @@
+{
+  "results": [
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/2942784956432460510",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1ULwSQvkJ9IJWwPwKVPWyv26eaRmtQvC3gmMeW_uDSHzvseoV6kujVCz5vWXYbvAoII6Z40cY5GH2DXa1s2DtNkoOSU1xkt6NVdtoFBuhwoBBST0psxi6fUwLwIK4Blx8audPUih9KIBf8dE4O0qfc26zjjSfHZgyn23n3pz88DGitUoSOOBEnlxRdOf8jW4nX81NQ5rbH3gR0hyln9x0NWWYDU8fB7L1a2Kc0NgUcsMBghbZZZvPWeLJnCtXxITl6kbDtsxa4ClQ"
+        },
+        "htmlCode": {
+          "name": "projects/6233788376335662642/files/2942784956432461337",
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBKNARIhYXBwX2NvbXBhbmlvbl91c2VyX3VwbG9hZGVkX2ZpbGVzGmgKM3VzZXJfdXBsb2FkZWRfaHRtbF8wMDA2NWYwYWY5OTQ2NjhhMDkyNWM3YzFlOTFhZTY5NRILEgcQh5SsssAKGAGSASMKCnByb2plY3RfaWQSFUITNjIzMzc4ODM3NjMzNTY2MjY0Mg&filename=&opi=96797242",
+          "mimeType": "text/html"
+        },
+        "id": "2942784956432459683",
+        "generatedBy": "UserUploadedHtml: stitch::code-to-design",
+        "width": "6312",
+        "height": "2868",
+        "title": "Source / Light / 02-discovery",
+        "name": "projects/6233788376335662642/screens/2942784956432459683",
+        "theme": {},
+        "screenType": "DESIGN",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE",
+          "displayMode": "HTML"
+        }
+      }
+    }
+  ],
+  "screenInstances": [
+    {
+      "id": "2942784956432459683",
+      "sourceScreen": "projects/6233788376335662642/screens/2942784956432459683",
+      "x": 1550,
+      "width": 3156,
+      "height": 1434
+    }
+  ]
+}

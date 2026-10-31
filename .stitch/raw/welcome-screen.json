@@ -1,0 +1,18 @@
+{
+  "slug": "welcome",
+  "id": "0f72526c22234163b91d2c2689c60e4c",
+  "name": "projects/6233788376335662642/screens/0f72526c22234163b91d2c2689c60e4c",
+  "title": "UI-08 Welcome & Account Entry - Veritalex",
+  "width": "780",
+  "height": "1768",
+  "deviceType": "MOBILE",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/20867543eb524f0b95fd02de85aa7cfa:download",
+    "name": "projects/6233788376335662642/files/20867543eb524f0b95fd02de85aa7cfa"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/e35dc81d1e22439fbe8051ad34d92918:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/e35dc81d1e22439fbe8051ad34d92918"
+  }
+}

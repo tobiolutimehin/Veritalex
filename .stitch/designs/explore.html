@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=412, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Veritalex - Explore</title>
+<!-- Material Symbols Outlined font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts: Roboto Flex & Literata -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&amp;family=Roboto+Flex:wght,opsz@400,8..144;500,8..144;600,8..144;700,8..144&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-container": "#98e4f7",
+            "on-secondary-fixed": "#27190c",
+            "on-secondary": "#ffffff",
+            "tertiary-fixed": "#a6eeff",
+            "background": "#fff8f5",
+            "tertiary-fixed-dim": "#86d2e4",
+            "primary-container": "#FFDCBF",
+            "on-background": "#201a16",
+            "secondary-fixed": "#f9ddc9",
+            "surface-container": "#f9ebe4",
+            "surface-container-lowest": "#ffffff",
+            "tertiary": "#5D633D",
+            "inverse-primary": "#ffb782",
+            "surface-dim": "#e4d8d1",
+            "primary-fixed": "#ffdcc5",
+            "outline-variant": "#d7c3b6",
+            "on-tertiary": "#ffffff",
+            "on-surface": "#201a16",
+            "inverse-surface": "#362f2b",
+            "on-secondary-fixed-variant": "#554334",
+            "on-primary-container": "#2D1606",
+            "surface-paper": "#FFF8F3",
+            "surface-bright": "#fff8f5",
+            "on-primary-fixed": "#301400",
+            "primary-fixed-dim": "#ffb782",
+            "on-tertiary-fixed": "#001f25",
+            "surface-container-low": "#FCF1E8",
+            "surface": "#fff8f5",
+            "secondary-fixed-dim": "#dcc2ae",
+            "surface-container-high": "#f3e6df",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#E1E8B8",
+            "surface-variant": "#ede0d9",
+            "on-primary": "#ffffff",
+            "surface-tint": "#895021",
+            "surface-container-highest": "#ede0d9",
+            "error": "#ba1a1a",
+            "on-secondary-container": "#756050",
+            "on-surface-variant": "#55483D",
+            "on-error-container": "#93000a",
+            "highlight": "#F6E5A8",
+            "on-tertiary-fixed-variant": "#004e5b",
+            "secondary": "#6e5b4b",
+            "inverse-on-surface": "#fbeee7",
+            "on-error": "#ffffff",
+            "on-primary-fixed-variant": "#6d390b",
+            "secondary-container": "#f9ddc9",
+            "outline": "#857469",
+            "primary": "#6c390b"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "24px",
+            "space-xxl": "32px",
+            "space-md": "12px",
+            "space-sm": "8px",
+            "space-xs": "4px",
+            "space-lg": "16px",
+            "margin": "20px",
+            "gutter": "20px"
+          },
+          "fontFamily": {
+            "headline-sm": ["Roboto Flex"],
+            "body-sm": ["Roboto Flex"],
+            "reader-chapter": ["Literata"],
+            "headline-lg": ["Roboto Flex"],
+            "headline-md": ["Roboto Flex"],
+            "body-lg": ["Roboto Flex"],
+            "label-md": ["Roboto Flex"],
+            "reader-prose": ["Literata"],
+            "title-md": ["Roboto Flex"]
+          },
+          "fontSize": {
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "reader-chapter": ["26px", { "lineHeight": "34px", "fontWeight": "500" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "reader-prose": ["19px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: 'liga';
+    }
+    
+    /* Touch highlight removal for native Android feel */
+    * {
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    input {
+      user-select: auto;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased flex justify-center min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- Mobile Android Container (412dp baseline) -->
+<div class="w-full max-w-[412px] min-h-screen bg-surface flex flex-col relative pb-28 shadow-sm">
+<!-- 1. Native Android Status Bar (Edge-to-edge standard 9:41) -->
+<header class="w-full h-8 pt-2 px-6 flex justify-between items-center text-on-surface select-none z-30">
+<span class="font-label-md text-label-md tracking-tight font-medium text-xs">9:41</span>
+<div class="flex items-center space-x-2 text-on-surface">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">wifi</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">battery_full</span>
+</div>
+</header>
+<!-- 2. Top App Bar (Material 3 small, strictly borderless tonal transition) -->
+<!-- JSON Specs: headline: "Veritalex", style_shell_layout: "flex justify-between items-center w-full px-5 h-16" -->
+<div class="flex justify-between items-center w-full px-5 h-16 bg-surface select-none">
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="cloud_done">cloud_done</span>
+<h1 class="text-headline-sm font-headline-sm text-primary tracking-tight font-bold">Veritalex</h1>
+</div>
+<button aria-label="Settings" class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-2xl" data-icon="settings">settings</span>
+</button>
+</div>
+<!-- Main Content Canvas -->
+<main class="flex-1 flex flex-col px-5 space-y-6 pt-1">
+<!-- Header Title & Subheading -->
+<div class="space-y-1">
+<h2 class="text-headline-md font-headline-md text-on-surface tracking-normal">Explore</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Timeless literature preserved for unhurried study</p>
+</div>
+<!-- 3. Material 3 Search Bar -->
+<div class="w-full">
+<div class="relative flex items-center w-full h-14 bg-surface-container-low rounded-full px-4 border border-outline-variant/40 shadow-none focus-within:bg-surface-container focus-within:border-primary transition-all duration-200">
+<span class="material-symbols-outlined text-on-surface-variant mr-3 text-2xl" data-icon="search">search</span>
+<input aria-label="Search books or authors" class="w-full bg-transparent border-none p-0 text-body-lg font-body-lg text-on-surface placeholder:text-on-surface-variant focus:ring-0 focus:outline-none" placeholder="Search books or authors" type="text"/>
+<button aria-label="Filter" class="w-10 h-10 -mr-2 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95 transition-transform duration-150" type="button">
+<span class="material-symbols-outlined text-xl" data-icon="tune">tune</span>
+</button>
+</div>
+</div>
+<!-- 4. Browse by subject -->
+<section class="space-y-3 pt-1">
+<div class="flex items-center justify-between">
+<h3 class="text-title-md font-title-md text-on-surface font-medium">Browse by subject</h3>
+<span class="text-label-md font-label-md text-on-surface-variant text-xs">6 subjects</span>
+</div>
+<!-- Compact 2-column grid of tonal tiles -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Subject: Fiction -->
+<button class="group flex items-center p-3.5 bg-surface-container-low hover:bg-surface-container rounded-2xl transition-all duration-200 text-left active:scale-[0.98]" type="button">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors duration-200 mr-3">
+<span class="material-symbols-outlined text-xl" data-icon="menu_book">menu_book</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md text-on-surface text-sm font-medium">Fiction</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant text-xs">Classic prose</span>
+</div>
+</button>
+<!-- Subject: Mystery -->
+<button class="group flex items-center p-3.5 bg-surface-container-low hover:bg-surface-container rounded-2xl transition-all duration-200 text-left active:scale-[0.98]" type="button">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors duration-200 mr-3">
+<span class="material-symbols-outlined text-xl" data-icon="visibility">visibility</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md text-on-surface text-sm font-medium">Mystery</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant text-xs">Deduction &amp; dark</span>
+</div>
+</button>
+<!-- Subject: Romance -->
+<button class="group flex items-center p-3.5 bg-surface-container-low hover:bg-surface-container rounded-2xl transition-all duration-200 text-left active:scale-[0.98]" type="button">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors duration-200 mr-3">
+<span class="material-symbols-outlined text-xl" data-icon="favorite_border">favorite_border</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md text-on-surface text-sm font-medium">Romance</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant text-xs">Courts &amp; passion</span>
+</div>
+</button>
+<!-- Subject: Adventure -->
+<button class="group flex items-center p-3.5 bg-surface-container-low hover:bg-surface-container rounded-2xl transition-all duration-200 text-left active:scale-[0.98]" type="button">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors duration-200 mr-3">
+<span class="material-symbols-outlined text-xl" data-icon="explore">explore</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md text-on-surface text-sm font-medium">Adventure</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant text-xs">Journeys &amp; trials</span>
+</div>
+</button>
+<!-- Subject: Philosophy -->
+<button class="group flex items-center p-3.5 bg-surface-container-low hover:bg-surface-container rounded-2xl transition-all duration-200 text-left active:scale-[0.98]" type="button">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors duration-200 mr-3">
+<span class="material-symbols-outlined text-xl" data-icon="psychology">psychology</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md text-on-surface text-sm font-medium">Philosophy</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant text-xs">Ethics &amp; mind</span>
+</div>
+</button>
+<!-- Subject: Poetry -->
+<button class="group flex items-center p-3.5 bg-surface-container-low hover:bg-surface-container rounded-2xl transition-all duration-200 text-left active:scale-[0.98]" type="button">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors duration-200 mr-3">
+<span class="material-symbols-outlined text-xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md text-on-surface text-sm font-medium">Poetry</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant text-xs">Verse &amp; ballad</span>
+</div>
+</button>
+</div>
+</section>
+<!-- 5. Popular classics -->
+<section class="space-y-3 pt-2">
+<div class="flex flex-col">
+<h3 class="text-title-md font-title-md text-on-surface font-medium">Popular classics</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant text-xs">From Project Gutenberg catalogue</p>
+</div>
+<!-- Book Rows List -->
+<div class="space-y-3">
+<!-- Book 1: Pride and Prejudice -->
+<div class="group flex items-center p-3 bg-surface-container-low hover:bg-surface-container rounded-2xl transition-all duration-200">
+<!-- 2:3 Typeset Gutenberg Cover: Classic warm dark brown/burgundy -->
+<div class="w-14 h-21 aspect-[2/3] rounded bg-[#3D1D16] text-[#F9DDC9] p-1.5 flex flex-col justify-between shrink-0 shadow-sm border border-[#552A20]">
+<div class="flex justify-between items-center text-[7px] tracking-widest font-mono text-[#D7C3B6]/80 border-b border-[#552A20] pb-0.5">
+<span>GUTENBERG</span>
+<span>1342</span>
+</div>
+<div class="my-auto py-1 text-center">
+<span class="font-reader-chapter text-[9px] font-medium leading-tight block line-clamp-2">Pride and Prejudice</span>
+<span class="font-label-md text-[7px] block text-[#D7C3B6] tracking-wide mt-0.5">Austen</span>
+</div>
+<div class="text-[6px] tracking-wider text-center text-[#D7C3B6]/60 border-t border-[#552A20] pt-0.5">
+                CLASSIC
+              </div>
+</div>
+<!-- Book Meta -->
+<div class="flex-1 min-w-0 ml-3.5 pr-2">
+<h4 class="text-title-md font-title-md text-on-surface truncate font-medium">Pride and Prejudice</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Jane Austen</p>
+<div class="flex items-center space-x-2 mt-1">
+<span class="text-body-sm font-body-sm text-xs text-secondary bg-secondary-container/60 px-2 py-0.5 rounded-full">Complete text</span>
+<span class="text-body-sm font-body-sm text-xs text-on-surface-variant">61 chapters</span>
+</div>
+</div>
+<!-- Trailing Save Button -->
+<button aria-label="Save Pride and Prejudice to library" class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container active:scale-90 transition-all duration-150 shrink-0" type="button">
+<span class="material-symbols-outlined text-2xl" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+<!-- Book 2: Frankenstein -->
+<div class="group flex items-center p-3 bg-surface-container-low hover:bg-surface-container rounded-2xl transition-all duration-200">
+<!-- 2:3 Typeset Gutenberg Cover: Dark slate/forest green -->
+<div class="w-14 h-21 aspect-[2/3] rounded bg-[#1F2E2B] text-[#DCE7E1] p-1.5 flex flex-col justify-between shrink-0 shadow-sm border border-[#2D423E]">
+<div class="flex justify-between items-center text-[7px] tracking-widest font-mono text-[#A8BEB6]/80 border-b border-[#2D423E] pb-0.5">
+<span>GUTENBERG</span>
+<span>84</span>
+</div>
+<div class="my-auto py-1 text-center">
+<span class="font-reader-chapter text-[9px] font-medium leading-tight block line-clamp-2">Frankenstein</span>
+<span class="font-label-md text-[7px] block text-[#A8BEB6] tracking-wide mt-0.5">Shelley</span>
+</div>
+<div class="text-[6px] tracking-wider text-center text-[#A8BEB6]/60 border-t border-[#2D423E] pt-0.5">
+                GOTHIC
+              </div>
+</div>
+<!-- Book Meta -->
+<div class="flex-1 min-w-0 ml-3.5 pr-2">
+<h4 class="text-title-md font-title-md text-on-surface truncate font-medium">Frankenstein</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Mary Shelley</p>
+<div class="flex items-center space-x-2 mt-1">
+<span class="text-body-sm font-body-sm text-xs text-secondary bg-secondary-container/60 px-2 py-0.5 rounded-full">Complete text</span>
+<span class="text-body-sm font-body-sm text-xs text-on-surface-variant">24 chapters</span>
+</div>
+</div>
+<!-- Trailing Save Button -->
+<button aria-label="Save Frankenstein to library" class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container active:scale-90 transition-all duration-150 shrink-0" type="button">
+<span class="material-symbols-outlined text-2xl" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+<!-- Book 3: Jane Eyre -->
+<div class="group flex items-center p-3 bg-surface-container-low hover:bg-surface-container rounded-2xl transition-all duration-200">
+<!-- 2:3 Typeset Gutenberg Cover: Dark espresso/sepia -->
+<div class="w-14 h-21 aspect-[2/3] rounded bg-[#2E231F] text-[#F3E6DF] p-1.5 flex flex-col justify-between shrink-0 shadow-sm border border-[#44352F]">
+<div class="flex justify-between items-center text-[7px] tracking-widest font-mono text-[#D7C3B6]/80 border-b border-[#44352F] pb-0.5">
+<span>GUTENBERG</span>
+<span>1260</span>
+</div>
+<div class="my-auto py-1 text-center">
+<span class="font-reader-chapter text-[9px] font-medium leading-tight block line-clamp-2">Jane Eyre</span>
+<span class="font-label-md text-[7px] block text-[#D7C3B6] tracking-wide mt-0.5">C. Brontë</span>
+</div>
+<div class="text-[6px] tracking-wider text-center text-[#D7C3B6]/60 border-t border-[#44352F] pt-0.5">
+                VICTORIAN
+              </div>
+</div>
+<!-- Book Meta -->
+<div class="flex-1 min-w-0 ml-3.5 pr-2">
+<h4 class="text-title-md font-title-md text-on-surface truncate font-medium">Jane Eyre</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Charlotte Brontë</p>
+<div class="flex items-center space-x-2 mt-1">
+<span class="text-body-sm font-body-sm text-xs text-secondary bg-secondary-container/60 px-2 py-0.5 rounded-full">Complete text</span>
+<span class="text-body-sm font-body-sm text-xs text-on-surface-variant">38 chapters</span>
+</div>
+</div>
+<!-- Trailing Save Button -->
+<button aria-label="Save Jane Eyre to library" class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container active:scale-90 transition-all duration-150 shrink-0" type="button">
+<span class="material-symbols-outlined text-2xl" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 6. Quiet catalogue attribution -->
+<footer class="pt-4 pb-6 text-center select-none">
+<p class="text-body-sm font-body-sm text-on-surface-variant/70 text-xs">
+          Public domain editions via Project Gutenberg &amp; Project Gutenberg
+        </p>
+<p class="text-body-sm font-body-sm text-on-surface-variant/50 text-[11px] mt-1">
+          Designed for quiet offline reading
+        </p>
+</footer>
+</main>
+<!-- 7. Fixed Bottom Navigation Bar (BottomNavBar) -->
+<!-- 
+      JSON Attributes:
+      - destination_count: "3"
+      - label_texts: ["Home", "Explore", "Library"]
+      - icons: ["auto_stories", "explore", "local_library"]
+      - Active item: "Explore" (exact semantic match)
+      - style_active_navigation: "flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-5 py-1"
+      - style_inactive_navigation: "flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-5 py-1"
+      - style_shell_layout: "fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 pb-safe"
+      - style_bg_color: "bg-surface-container dark:bg-surface-container-high"
+      - Prohibit top borders (shadows or tonal shifts only)
+    -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-[412px] mx-auto z-50 flex justify-around items-center px-4 h-20 bg-surface-container select-none">
+<!-- Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-colors duration-200 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="auto_stories">auto_stories</span>
+<span class="text-label-md font-label-md text-xs mt-1">Home</span>
+</a>
+<!-- Explore (Active: selected tonal pill indicator) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-5 py-1 active:scale-95 transition-transform duration-150 shadow-none" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="text-label-md font-label-md text-xs mt-1 font-semibold">Explore</span>
+</a>
+<!-- Library (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-colors duration-200 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="local_library">local_library</span>
+<span class="text-label-md font-label-md text-xs mt-1">Library</span>
+</a>
+<!-- Android Gesture Navigation Bar Pill Inset (Physical Ergonomics) -->
+<div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-28 h-1 bg-on-surface/20 rounded-full pointer-events-none"></div>
+</nav>
+</div>
+<!-- Interactive feedback micro-interactions -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Toggle bookmark interaction feedback
+      const bookmarkBtns = document.querySelectorAll('button[aria-label*="Save"]');
+      bookmarkBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const icon = btn.querySelector('.material-symbols-outlined');
+          if (icon.textContent === 'bookmark_border') {
+            icon.textContent = 'bookmark';
+            icon.style.fontVariationSettings = "'FILL' 1";
+            btn.classList.add('text-primary');
+          } else {
+            icon.textContent = 'bookmark_border';
+            icon.style.fontVariationSettings = "'FILL' 0";
+            btn.classList.remove('text-primary');
+          }
+        });
+      });
+    });
+  </script>
+</body></html>

@@ -1,0 +1,18 @@
+{
+  "slug": "account-sync",
+  "id": "9bec8ccc3c7a45129bb641e9083a7c03",
+  "name": "projects/6233788376335662642/screens/9bec8ccc3c7a45129bb641e9083a7c03",
+  "title": "UI-11 Account & sync - Veritalex",
+  "width": "780",
+  "height": "1874",
+  "deviceType": "MOBILE",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/99df6f2f73b0492e9ae68c5bd0150f06:download",
+    "name": "projects/6233788376335662642/files/99df6f2f73b0492e9ae68c5bd0150f06"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/7e05e3832b8a41c986fbfb33aeccc2fe:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/7e05e3832b8a41c986fbfb33aeccc2fe"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "73f2596dcfea4a8ca713f99a5d4f9716",
+  "name": "projects/6233788376335662642/screens/73f2596dcfea4a8ca713f99a5d4f9716",
+  "title": "TAB-01 Home - Veritalex (Tablet)",
+  "width": "2560",
+  "height": "2048",
+  "deviceType": "DESKTOP",
+  "htmlCode": {
+    "name": "projects/6233788376335662642/files/39e0aa90d64d40c299c411020f60699c",
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/39e0aa90d64d40c299c411020f60699c:download",
+    "mimeType": "text/html"
+  },
+  "screenshot": {
+    "name": "projects/6233788376335662642/files/bb8fc941a090429bbe2a278870a8bae9",
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/bb8fc941a090429bbe2a278870a8bae9:download",
+    "mimeType": "png"
+  },
+  "slug": "tablet-home"
+}

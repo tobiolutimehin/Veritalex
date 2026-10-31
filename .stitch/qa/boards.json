@@ -1,0 +1,129 @@
+{
+  "mode": "boards",
+  "baseUrl": "http://127.0.0.1:4175",
+  "executable": "/Users/tobiolutimehin/Library/Caches/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-mac-arm64/chrome-headless-shell",
+  "errors": [],
+  "results": [
+    {
+      "file": "boards/01-auth-import.html",
+      "width": 3156,
+      "height": 1404
+    },
+    {
+      "file": "boards/02-discovery.html",
+      "width": 3600,
+      "height": 1434
+    },
+    {
+      "file": "boards/03-book-access.html",
+      "width": 3600,
+      "height": 1434
+    },
+    {
+      "file": "boards/04-library.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "boards/05-organize.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "boards/06-shelves.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "boards/07-journal.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "boards/08-reader.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "boards/09-reading-settings.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "boards/10-settings-account.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "boards/11-account-recovery.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "boards/12-sync.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "polished-boards/01-auth-import.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "polished-boards/02-discovery.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "polished-boards/03-book-access.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "polished-boards/04-library.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "polished-boards/05-organize.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "polished-boards/06-shelves.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "polished-boards/07-journal.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "polished-boards/08-reader.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "polished-boards/09-reading-settings.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "polished-boards/10-settings-account.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "polished-boards/11-account-recovery.html",
+      "width": 3600,
+      "height": 1464
+    },
+    {
+      "file": "polished-boards/12-sync.html",
+      "width": 3600,
+      "height": 1464
+    }
+  ],
+  "passed": true
+}

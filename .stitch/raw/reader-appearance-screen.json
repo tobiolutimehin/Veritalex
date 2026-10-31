@@ -1,0 +1,18 @@
+{
+  "slug": "reader-appearance",
+  "id": "1aa6946029914bd4a7c8a7c4f5fa4039",
+  "name": "projects/6233788376335662642/screens/1aa6946029914bd4a7c8a7c4f5fa4039",
+  "title": "UI-12 Reader appearance - Veritalex",
+  "width": "780",
+  "height": "1830",
+  "deviceType": "MOBILE",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/88e8dc5398c045b3b3f25646c519b63a:download",
+    "name": "projects/6233788376335662642/files/88e8dc5398c045b3b3f25646c519b63a"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/9398065a42aa4badbb33ca06c2e22314:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/9398065a42aa4badbb33ca06c2e22314"
+  }
+}

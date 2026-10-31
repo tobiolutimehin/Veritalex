@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Veritalex - Reader</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#f9ebe4",
+            "primary-fixed": "#ffdcc5",
+            "secondary-fixed": "#f9ddc9",
+            "tertiary": "#5D633D",
+            "tertiary-container": "#006878",
+            "surface-container-lowest": "#ffffff",
+            "on-surface-variant": "#52443a",
+            "surface-paper": "#FFF8F3",
+            "inverse-primary": "#ffb782",
+            "surface-container-high": "#f3e6df",
+            "inverse-on-surface": "#fbeee7",
+            "background": "#fff8f5",
+            "primary-container": "#FFDCBF",
+            "surface-container-low": "#FCF1E8",
+            "on-secondary-fixed-variant": "#554334",
+            "on-tertiary-container": "#98e4f7",
+            "primary-fixed-dim": "#ffb782",
+            "on-tertiary-fixed": "#001f25",
+            "on-error-container": "#93000a",
+            "on-secondary": "#ffffff",
+            "error-container": "#ffdad6",
+            "surface-variant": "#ede0d9",
+            "outline-variant": "#d7c3b6",
+            "on-background": "#201a16",
+            "primary": "#6c390b",
+            "inverse-surface": "#362f2b",
+            "outline": "#857469",
+            "on-primary-container": "#ffcead",
+            "on-surface": "#201a16",
+            "secondary-fixed-dim": "#dcc2ae",
+            "on-tertiary-fixed-variant": "#004e5b",
+            "secondary": "#6e5b4b",
+            "on-primary": "#ffffff",
+            "tertiary-fixed": "#a6eeff",
+            "surface-dim": "#e4d8d1",
+            "surface-bright": "#fff8f5",
+            "on-primary-fixed-variant": "#6d390b",
+            "surface-container-highest": "#ede0d9",
+            "on-tertiary": "#ffffff",
+            "surface-tint": "#895021",
+            "on-error": "#ffffff",
+            "highlight": "#F6E5A8",
+            "tertiary-fixed-dim": "#86d2e4",
+            "surface": "#fff8f5",
+            "on-primary-fixed": "#301400",
+            "on-secondary-container": "#756050",
+            "on-secondary-fixed": "#27190c",
+            "error": "#ba1a1a",
+            "secondary-container": "#f9ddc9"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "4px",
+            "space-sm": "8px",
+            "space-md": "12px",
+            "space-lg": "16px",
+            "space-xl": "24px",
+            "space-xxl": "32px",
+            "margin": "20px",
+            "gutter": "20px"
+          },
+          "fontFamily": {
+            "title-md": ["Roboto Flex"],
+            "body-sm": ["Roboto Flex"],
+            "label-md": ["Roboto Flex"],
+            "body-lg": ["Roboto Flex"],
+            "reader-prose": ["Literata"],
+            "reader-chapter": ["Literata"],
+            "headline-md": ["Roboto Flex"],
+            "headline-lg": ["Roboto Flex"],
+            "headline-sm": ["Roboto Flex"]
+          },
+          "fontSize": {
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "reader-prose": ["19px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "reader-chapter": ["26px", { "lineHeight": "34px", "fontWeight": "500" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Hide scrollbars for clean reader aesthetic */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    * {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-dim flex justify-center items-center min-h-screen p-0 sm:p-6 antialiased selection:bg-primary-container selection:text-on-primary-fixed">
+<!-- Mobile Device Shell (412x915 baseline) -->
+<main class="w-full max-w-[412px] h-[915px] max-h-screen sm:max-h-[915px] bg-surface-paper text-on-surface relative flex flex-col justify-between overflow-hidden shadow-2xl sm:rounded-[36px] border border-outline-variant/30 select-none">
+<!-- 1. Native Android Status Bar (24dp height) -->
+<header class="w-full h-8 px-6 pt-2 flex items-center justify-between z-30 select-none bg-surface-paper">
+<span class="font-label-md text-label-md font-semibold text-on-surface tracking-tight text-xs">9:41</span>
+<div class="flex items-center space-x-1.5 text-on-surface text-sm">
+<span class="material-symbols-outlined !text-[15px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined !text-[15px]">wifi</span>
+<span class="material-symbols-outlined !text-[17px] -rotate-90">battery_full</span>
+</div>
+</header>
+<!-- 2. Top Reader Toolbar (Docked compact 64dp bar) -->
+<nav aria-label="Reader Top Bar" class="w-full h-16 px-3 flex items-center justify-between z-20 bg-surface-paper transition-opacity duration-200">
+<!-- Leading: Back Arrow Touch Target (min 48dp) -->
+<button aria-label="Navigate Back" class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface active:bg-surface-container transition-colors duration-150 active:scale-95">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<!-- Center Title and Sub-caption -->
+<div class="flex-1 flex flex-col items-center justify-center px-2 text-center pointer-events-none">
+<h1 class="font-title-md text-title-md text-on-surface truncate max-w-[210px] tracking-tight">Pride and Prejudice</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate text-xs">Chapter 18</p>
+</div>
+<!-- Trailing Action Icons -->
+<div class="flex items-center">
+<!-- Bookmark Action -->
+<button aria-label="Bookmark this page" class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface active:bg-surface-container transition-colors duration-150 active:scale-95" id="bookmark-btn">
+<span class="material-symbols-outlined" id="bookmark-icon">bookmark_border</span>
+</button>
+<!-- Overflow Menu Action -->
+<button aria-label="More options" class="w-12 h-12 rounded-full flex items-center justify-center text-on-surface active:bg-surface-container transition-colors duration-150 active:scale-95">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</nav>
+<!-- 3. Reading Canvas / Main Body (Literata / book serif reader-prose) -->
+<article class="flex-1 overflow-y-auto px-6 pt-4 pb-6 select-text cursor-text focus:outline-none">
+<!-- Chapter Heading Indicator -->
+<header class="" style="padding:8px 0 20px;text-align:left">
+<h2 class="font-reader-chapter text-reader-chapter text-primary tracking-tight font-medium" style="font-family:Literata,Georgia,serif;font-size:26px;line-height:34px;font-weight:500">Chapter 18</h2>
+</header>
+<!-- Literary Prose -->
+<div class="space-y-6 text-on-surface font-reader-prose text-reader-prose leading-[32px] text-left tracking-normal" style="text-align:left;word-spacing:normal">
+<p class="indent-6">
+          When the dancing recommenced, however, and Darcy approached to claim her hand, Charlotte could not help cautioning her in a whisper, not to be a simpleton, and allow her fancy for Wickham to make her appear unpleasant in the eyes of a man of ten times his consequence. Elizabeth made no answer, and took her place in the set, amazed at the dignity to which she was arrived in being allowed to stand opposite to Mr. Darcy, and reading in her neighbours' looks their equal amazement in beholding it.
+        </p>
+<p class="indent-6">
+          They stood for some time without speaking a word; and she began to imagine that their silence was to last through the two dances, and at first was resolved not to break it; till suddenly fancying that it would be the greater punishment to her partner to oblige him to talk, she made some slight observation on the dance.
+        </p>
+<p class="indent-6">
+          He replied, and was again silent. After a pause of some minutes, she addressed him a second time: “It is your turn to say something now, Mr. Darcy. I talked about the dance, and you ought to make some sort of remark on the size of the room, or the number of couples.”
+        </p>
+</div>
+<!-- End of Section Decorative Flourish -->
+<div class="py-8 flex justify-center items-center text-outline-variant select-none">
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant mx-1"></span>
+<span class="w-2 h-2 rounded-full bg-primary/40 mx-1"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant mx-1"></span>
+</div>
+</article>
+<!-- 4. Bottom Reader Controls (Tonal layer, controls visible state) -->
+<footer class="w-full bg-surface-container-low rounded-t-[28px] border-t border-outline-variant/20 shadow-sm z-20 flex flex-col pt-3 pb-2 px-5">
+<!-- Scrubber Scrub Area -->
+<div class="w-full px-2 pt-1 pb-2">
+<div class="flex items-center justify-between text-xs text-on-surface-variant font-label-md mb-2">
+<span>Chapter 18</span>
+<span class="font-medium text-primary">28%</span>
+</div>
+<!-- Interactive Material 3 Scrubber / Progress Bar -->
+<div class="relative w-full h-8 flex items-center group cursor-pointer" id="scrubber-track">
+<!-- Background Track -->
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<!-- Active Fill -->
+<div class="h-full bg-primary rounded-full" style="width: 28%"></div>
+</div>
+<!-- Scrubber Thumb (48dp touchable zone) -->
+<div class="absolute left-[28%] -translate-x-1/2 w-4 h-4 bg-primary rounded-full shadow-md border-2 border-surface-paper flex items-center justify-center transition-transform group-hover:scale-125"></div>
+</div>
+</div>
+<!-- Restrained 4-Action Navigation Row -->
+<div class="grid grid-cols-4 gap-2 pt-1 pb-2">
+<!-- Action 1: Contents -->
+<button aria-label="Table of Contents" class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors duration-150 active:scale-95" type="button">
+<div class="w-10 h-7 flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined !text-[22px]">format_list_bulleted</span>
+</div>
+<span class="font-label-md text-[11px] tracking-tight text-on-surface-variant mt-0.5">Contents</span>
+</button>
+<!-- Action 2: Appearance -->
+<button aria-label="Reading Appearance Settings" class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors duration-150 active:scale-95" type="button">
+<div class="w-10 h-7 flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined !text-[22px]">text_fields</span>
+</div>
+<span class="font-label-md text-[11px] tracking-tight text-on-surface-variant mt-0.5">Appearance</span>
+</button>
+<!-- Action 3: Search -->
+<button aria-label="Search within book" class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors duration-150 active:scale-95" type="button">
+<div class="w-10 h-7 flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined !text-[22px]">search</span>
+</div>
+<span class="font-label-md text-[11px] tracking-tight text-on-surface-variant mt-0.5">Search</span>
+</button>
+<!-- Action 4: Notes -->
+<button aria-label="Bookmarks and Notes" class="flex flex-col items-center justify-center py-1.5 px-1 rounded-xl text-on-surface-variant hover:text-on-surface active:bg-surface-container transition-colors duration-150 active:scale-95" type="button">
+<div class="w-10 h-7 flex items-center justify-center rounded-full">
+<span class="material-symbols-outlined !text-[22px]">edit_note</span>
+</div>
+<span class="font-label-md text-[11px] tracking-tight text-on-surface-variant mt-0.5">Notes</span>
+</button>
+</div>
+<!-- 5. Native Android Gesture Pill Inset -->
+<div class="w-full flex justify-center items-center pt-1 pb-1">
+<div class="w-32 h-1 bg-on-surface-variant/40 rounded-full"></div>
+</div>
+</footer>
+</main>
+<script>
+    // Lightweight micro-interaction for bookmark toggle
+    const bookmarkBtn = document.getElementById('bookmark-btn');
+    const bookmarkIcon = document.getElementById('bookmark-icon');
+    let isBookmarked = false;
+
+    bookmarkBtn.addEventListener('click', () => {
+      isBookmarked = !isBookmarked;
+      if (isBookmarked) {
+        bookmarkIcon.textContent = 'bookmark';
+        bookmarkIcon.classList.add('fill-icon', 'text-primary');
+      } else {
+        bookmarkIcon.textContent = 'bookmark_border';
+        bookmarkIcon.classList.remove('fill-icon', 'text-primary');
+      }
+    });
+  </script>
+</body></html>

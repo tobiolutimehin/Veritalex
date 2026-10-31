@@ -1,13 +1,12 @@
 plugins {
     alias(libs.plugins.com.android.library)
-    alias(libs.plugins.org.jetbrains.kotlin.android)
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
 }
 
 android {
     namespace = "com.veritalex.core.datastore"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         minSdk = 30
@@ -26,24 +25,16 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
 dependencies {
     implementation(libs.core.ktx)
-    implementation(libs.appcompat)
-    implementation(libs.material)
-//    implementation(libs.androidx.paging.common.android)
-//    implementation(libs.androidx.paging.common.ktx)
     testImplementation(libs.junit)
-    implementation(libs.retrofit)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
-    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation(libs.androidx.datastore.preferences)
 }

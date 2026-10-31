@@ -1,0 +1,18 @@
+{
+  "slug": "shelves",
+  "id": "8522cf91fea748f6a06927ea5ab63b78",
+  "name": "projects/6233788376335662642/screens/8522cf91fea748f6a06927ea5ab63b78",
+  "title": "UI-06 Library - Shelves - Veritalex",
+  "width": "780",
+  "height": "1830",
+  "deviceType": "MOBILE",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/0a2f953911b0458996d04f0a8f065aba:download",
+    "name": "projects/6233788376335662642/files/0a2f953911b0458996d04f0a8f065aba"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/b10f6be7c38742098265d104fdfa11e8:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/b10f6be7c38742098265d104fdfa11e8"
+  }
+}

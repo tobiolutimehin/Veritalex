@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Veritalex - Library Shelves</title>
+<!-- Google Fonts: Roboto Flex & Literata -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..600;1,7..72,400&amp;family=Roboto+Flex:opsz,wght@8..144,400..600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration matching Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface": "#201a16",
+            "primary-fixed": "#ffdcc5",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#006878",
+            "surface-container-highest": "#ede0d9",
+            "on-secondary-fixed": "#27190c",
+            "surface": "#fff8f5",
+            "inverse-on-surface": "#fbeee7",
+            "background": "#fff8f5",
+            "outline": "#857469",
+            "surface-container-low": "#FCF1E8",
+            "secondary": "#6e5b4b",
+            "on-error-container": "#93000a",
+            "primary": "#6c390b",
+            "inverse-surface": "#362f2b",
+            "on-error": "#ffffff",
+            "primary-container": "#FFDCBF",
+            "on-primary-container": "#ffcead",
+            "surface-paper": "#FFF8F3",
+            "secondary-container": "#f9ddc9",
+            "surface-container-high": "#EEE1D5",
+            "tertiary-fixed": "#a6eeff",
+            "on-tertiary": "#ffffff",
+            "error": "#ba1a1a",
+            "on-surface-variant": "#52443a",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#004e5b",
+            "on-primary-fixed": "#301400",
+            "inverse-primary": "#ffb782",
+            "tertiary-fixed-dim": "#86d2e4",
+            "tertiary": "#5D633D",
+            "on-tertiary-container": "#98e4f7",
+            "secondary-fixed": "#f9ddc9",
+            "on-secondary": "#ffffff",
+            "surface-dim": "#e4d8d1",
+            "surface-container": "#F5E9DF",
+            "on-secondary-fixed-variant": "#554334",
+            "on-primary": "#ffffff",
+            "highlight": "#F6E5A8",
+            "on-background": "#201a16",
+            "on-secondary-container": "#756050",
+            "surface-variant": "#ede0d9",
+            "surface-tint": "#895021",
+            "primary-fixed-dim": "#ffb782",
+            "outline-variant": "#d7c3b6",
+            "on-primary-fixed-variant": "#6d390b",
+            "on-tertiary-fixed": "#001f25",
+            "secondary-fixed-dim": "#dcc2ae",
+            "surface-bright": "#fff8f5"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "24px",
+            "space-sm": "8px",
+            "margin": "20px",
+            "gutter": "20px",
+            "space-md": "12px",
+            "space-xs": "4px",
+            "space-lg": "16px",
+            "space-xxl": "32px"
+          },
+          "fontFamily": {
+            "label-md": ["Roboto Flex"],
+            "body-sm": ["Roboto Flex"],
+            "body-lg": ["Roboto Flex"],
+            "headline-sm": ["Roboto Flex"],
+            "headline-md": ["Roboto Flex"],
+            "headline-lg": ["Roboto Flex"],
+            "title-md": ["Roboto Flex"],
+            "reader-prose": ["Literata"],
+            "reader-chapter": ["Literata"]
+          },
+          "fontSize": {
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "reader-prose": ["19px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "reader-chapter": ["26px", { "lineHeight": "34px", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex items-center justify-center p-0 md:p-6 select-none font-body-sm text-body-sm">
+<!-- Mobile Frame Container (412x915 native Android baseline) -->
+<div class="relative w-full max-w-[412px] h-[915px] bg-surface flex flex-col overflow-hidden shadow-2xl md:rounded-[32px] border border-outline-variant/30">
+<!-- 1. System Status Bar (24dp) -->
+<header class="w-full h-8 pt-1.5 px-6 flex items-center justify-between z-40 bg-surface">
+<span class="font-label-md text-label-md text-on-surface font-semibold tracking-tight">9:41</span>
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[16px]">wifi</span>
+<span class="material-symbols-outlined text-[18px]">battery_full</span>
+</div>
+</header>
+<!-- 2. Top App Bar & Sync State -->
+<div class="w-full px-5 pt-1 pb-2 flex flex-col justify-center bg-surface">
+<div class="flex items-center justify-between h-14">
+<div class="flex flex-col">
+<h1 class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface">Library</h1>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[14px]">cloud_done</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-xs">Up to date</span>
+</div>
+</div>
+<button aria-label="Settings" class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+</button>
+</div>
+</div>
+<!-- 3. Primary Library Tabs (Segmented/Underline) -->
+<nav aria-label="Library Sections" class="w-full px-5 flex items-center bg-surface border-b border-outline-variant/40">
+<button class="py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" onclick="selectTab(this, 'Books')">
+        Books
+      </button>
+<div class="relative py-3 px-4 flex flex-col items-center">
+<button class="font-label-md text-label-md text-primary font-semibold" onclick="selectTab(this, 'Shelves')">
+          Shelves
+        </button>
+<!-- Active Underline Indicator -->
+<span class="absolute bottom-0 left-4 right-4 h-0.5 bg-primary rounded-full"></span>
+</div>
+<button class="py-3 px-4 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" onclick="selectTab(this, 'Journal')">
+        Journal
+      </button>
+</nav>
+<!-- Scrollable Main Content Canvas -->
+<main class="flex-1 overflow-y-auto px-5 pt-5 pb-24 space-y-5 scroll-smooth">
+<!-- 4. Section Header & 'New shelf' Action -->
+<section class="flex items-start justify-between">
+<div>
+<h2 class="font-title-md text-title-md font-semibold text-on-surface tracking-tight">Your shelves</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[13px] mt-0.5">Your own way to organize a good read.</p>
+</div>
+<button class="h-10 px-3.5 flex items-center gap-1.5 rounded-full bg-surface-container hover:bg-surface-container-high active:scale-95 text-on-surface font-label-md text-label-md font-medium transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">add</span>
+<span>New shelf</span>
+</button>
+</section>
+<!-- 5. Personal Shelf Rows -->
+<div class="space-y-3.5">
+<!-- Shelf A: Weekend reads (3 books) -->
+<div class="group p-4 bg-surface-container-low rounded-xl flex items-center justify-between border border-outline-variant/30 hover:border-outline-variant transition-colors">
+<div class="flex items-center gap-4">
+<!-- Overlapping Covers Stack (approx 2:3 ratio) -->
+<div class="relative w-20 h-16 flex-shrink-0 flex items-center">
+<!-- Book 3: Frankenstein (Back) -->
+<div class="absolute left-6 top-1 w-10 h-14 rounded-[3px] bg-[#2E3B32] shadow-sm border-l border-white/20 flex flex-col justify-between p-1 text-[5px] text-[#D8E2DC] overflow-hidden rotate-3">
+<span class="font-reader-chapter tracking-tighter truncate leading-tight">Frankenstein</span>
+<span class="text-[4px] opacity-70">Shelley</span>
+</div>
+<!-- Book 2: Alice's Adventures in Wonderland (Middle) -->
+<div class="absolute left-3 top-0.5 w-10 h-14 rounded-[3px] bg-[#3B2844] shadow-md border-l border-white/20 flex flex-col justify-between p-1 text-[5px] text-[#EADCF0] overflow-hidden -rotate-2">
+<span class="font-reader-chapter tracking-tighter truncate leading-tight">Alice's Adv.</span>
+<span class="text-[4px] opacity-70">Carroll</span>
+</div>
+<!-- Book 1: Pride and Prejudice (Front) -->
+<div class="absolute left-0 top-0 w-10 h-14 rounded-[3px] bg-[#4A1F1F] shadow-lg border-l border-white/30 flex flex-col justify-between p-1 text-[5px] text-[#F9DDD2] overflow-hidden">
+<span class="font-reader-chapter tracking-tighter truncate leading-tight font-semibold">Pride &amp; Prej.</span>
+<span class="text-[4px] opacity-80">Austen</span>
+</div>
+</div>
+<!-- Shelf Metadata -->
+<div>
+<h3 class="font-title-md text-title-md font-medium text-on-surface">Weekend reads</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[13px] mt-0.5">3 books</p>
+</div>
+</div>
+<!-- Options Trailing Button -->
+<button aria-label="Shelf options for Weekend reads" class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Shelf B: Classics to revisit (2 books) -->
+<div class="group p-4 bg-surface-container-low rounded-xl flex items-center justify-between border border-outline-variant/30 hover:border-outline-variant transition-colors">
+<div class="flex items-center gap-4">
+<!-- Overlapping Covers Stack -->
+<div class="relative w-20 h-16 flex-shrink-0 flex items-center">
+<!-- Book 2: Frankenstein (Back) -->
+<div class="absolute left-4 top-1 w-10 h-14 rounded-[3px] bg-[#2E3B32] shadow-sm border-l border-white/20 flex flex-col justify-between p-1 text-[5px] text-[#D8E2DC] overflow-hidden rotate-3">
+<span class="font-reader-chapter tracking-tighter truncate leading-tight">Frankenstein</span>
+<span class="text-[4px] opacity-70">Shelley</span>
+</div>
+<!-- Book 1: Jane Eyre (Front) -->
+<div class="absolute left-0 top-0 w-10 h-14 rounded-[3px] bg-[#222E3C] shadow-lg border-l border-white/30 flex flex-col justify-between p-1 text-[5px] text-[#D8E8F5] overflow-hidden">
+<span class="font-reader-chapter tracking-tighter truncate leading-tight font-semibold">Jane Eyre</span>
+<span class="text-[4px] opacity-80">Brontë</span>
+</div>
+</div>
+<!-- Shelf Metadata -->
+<div>
+<h3 class="font-title-md text-title-md font-medium text-on-surface">Classics to revisit</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[13px] mt-0.5">2 books</p>
+</div>
+</div>
+<!-- Options Trailing Button -->
+<button aria-label="Shelf options for Classics to revisit" class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Shelf C: Curious minds (1 book) -->
+<div class="group p-4 bg-surface-container-low rounded-xl flex items-center justify-between border border-outline-variant/30 hover:border-outline-variant transition-colors">
+<div class="flex items-center gap-4">
+<!-- Single Miniature Book Cover -->
+<div class="relative w-20 h-16 flex-shrink-0 flex items-center">
+<div class="w-10 h-14 rounded-[3px] bg-[#3B2844] shadow-md border-l border-white/20 flex flex-col justify-between p-1 text-[5px] text-[#EADCF0] overflow-hidden">
+<span class="font-reader-chapter tracking-tighter truncate leading-tight font-semibold">Alice's Adv.</span>
+<span class="text-[4px] opacity-70">Carroll</span>
+</div>
+</div>
+<!-- Shelf Metadata -->
+<div>
+<h3 class="font-title-md text-title-md font-medium text-on-surface">Curious minds</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[13px] mt-0.5">1 book</p>
+</div>
+</div>
+<!-- Options Trailing Button -->
+<button aria-label="Shelf options for Curious minds" class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</div>
+</main>
+<!-- 6. Bottom Navigation Bar (Material 3 Native) -->
+<!-- Executing Shared Components JSON: BottomNavBar with exact destinations & styles -->
+<nav class="fixed md:absolute bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 pb-safe bg-surface-container shadow-none">
+<!-- Destination 1: Home -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[24px]">auto_stories</span>
+<span class="font-label-md text-label-md text-xs mt-1">Home</span>
+</a>
+<!-- Destination 2: Explore -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:bg-surface-container-highest transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[24px]">explore</span>
+<span class="font-label-md text-label-md text-xs mt-1">Explore</span>
+</a>
+<!-- Destination 3: Library (Active Destination) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-5 py-1 hover:bg-surface-container-highest transition-colors duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">local_library</span>
+<span class="font-label-md text-label-md text-xs font-semibold mt-1">Library</span>
+</a>
+</nav>
+<!-- Android Home Navigation Bar Pill Indicator Inset -->
+<div class="absolute bottom-1 left-1/2 -translate-x-1/2 w-32 h-1 bg-on-surface/40 rounded-full pointer-events-none z-50"></div>
+</div>
+<script>
+    function selectTab(element, tabName) {
+      // Visual feedback stub
+      console.log('Tab selected: ' + tabName);
+    }
+  </script>
+</body></html>

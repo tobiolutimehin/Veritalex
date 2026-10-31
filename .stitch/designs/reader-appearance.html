@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Veritalex - Reader Appearance</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;family=Roboto+Flex:wght,opsz@400,8..144;500,8..144;600,8..144&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-high": "#EEE1D5",
+            "surface-container": "#F5E9DF",
+            "on-surface-variant": "#55483D",
+            "surface-variant": "#ede0d9",
+            "tertiary": "#5D633D",
+            "secondary-container": "#f9ddc9",
+            "surface-container-lowest": "#ffffff",
+            "inverse-on-surface": "#fbeee7",
+            "inverse-surface": "#362f2b",
+            "tertiary-container": "#006878",
+            "on-surface": "#201a16",
+            "surface-dim": "#e4d8d1",
+            "primary": "#6c390b",
+            "on-secondary-fixed-variant": "#554334",
+            "on-secondary": "#ffffff",
+            "outline": "#857469",
+            "on-error": "#ffffff",
+            "surface-paper": "#FFF8F3",
+            "primary-fixed": "#ffdcc5",
+            "surface-container-highest": "#ede0d9",
+            "on-tertiary-fixed-variant": "#004e5b",
+            "secondary-fixed": "#f9ddc9",
+            "surface-container-low": "#FCF1E8",
+            "on-secondary-fixed": "#27190c",
+            "surface-bright": "#fff8f5",
+            "primary-container": "#FFDCBF",
+            "on-tertiary-fixed": "#001f25",
+            "highlight": "#F6E5A8",
+            "error": "#ba1a1a",
+            "primary-fixed-dim": "#ffb782",
+            "tertiary-fixed": "#a6eeff",
+            "error-container": "#ffdad6",
+            "surface": "#fff8f5",
+            "on-error-container": "#93000a",
+            "background": "#fff8f5",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed-variant": "#6d390b",
+            "on-tertiary-container": "#98e4f7",
+            "tertiary-fixed-dim": "#86d2e4",
+            "on-background": "#201a16",
+            "surface-tint": "#895021",
+            "on-primary-container": "#2D1606",
+            "on-primary-fixed": "#301400",
+            "secondary-fixed-dim": "#dcc2ae",
+            "on-secondary-container": "#756050",
+            "inverse-primary": "#ffb782",
+            "secondary": "#6e5b4b",
+            "outline-variant": "#d7c3b6",
+            "on-primary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "4px",
+            "gutter": "20px",
+            "space-xxl": "32px",
+            "space-xl": "24px",
+            "space-md": "12px",
+            "space-lg": "16px",
+            "margin": "20px",
+            "space-sm": "8px"
+          },
+          "fontFamily": {
+            "body-lg": ["Roboto Flex"],
+            "reader-prose": ["Literata"],
+            "headline-md": ["Roboto Flex"],
+            "body-sm": ["Roboto Flex"],
+            "reader-chapter": ["Literata"],
+            "headline-sm": ["Roboto Flex"],
+            "title-md": ["Roboto Flex"],
+            "headline-lg": ["Roboto Flex"],
+            "label-md": ["Roboto Flex"]
+          },
+          "fontSize": {
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "reader-prose": ["19px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "reader-chapter": ["26px", { "lineHeight": "34px", "fontWeight": "500" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 24px;
+      line-height: 1;
+      display: inline-block;
+    }
+    /* Hide scrollbars cleanly for mobile presentation */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-dim flex items-center justify-center min-h-screen antialiased text-on-surface p-0 sm:p-4 select-none">
+<!-- Mobile Device Shell (412 x 915 dp standard modern Android device) -->
+<div class="relative w-full max-w-[412px] h-[915px] bg-surface overflow-hidden shadow-2xl sm:rounded-[36px] flex flex-col justify-between border border-outline-variant/30">
+<!-- ========================================== -->
+<!-- BACKGROUND: DIMMED READER VIEWPORT         -->
+<!-- ========================================== -->
+<div class="absolute inset-0 flex flex-col bg-surface-paper z-0 pointer-events-none">
+<!-- Native Android Status Bar (Reader Underlay) -->
+<div class="h-10 px-6 pt-2 flex items-center justify-between text-on-surface text-label-md font-label-md">
+<span>9:41</span>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[18px]">wifi</span>
+<span class="material-symbols-outlined text-[18px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[18px]">battery_full</span>
+</div>
+</div>
+<!-- Reader Top App Bar -->
+<div class="h-16 px-4 flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md text-on-surface leading-tight">Pride and Prejudice</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Chapter 18 · 28% read</span>
+</div>
+</div>
+<div class="flex items-center space-x-1">
+<div class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</div>
+<div class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface">
+<span class="material-symbols-outlined">more_vert</span>
+</div>
+</div>
+</div>
+<!-- Background Reading Passage Canvas -->
+<div class="px-6 pt-8 pb-12 flex-1 overflow-hidden">
+<div class="text-on-surface-variant text-label-md font-label-md uppercase tracking-wider mb-2">Book I</div>
+<h1 class="text-reader-chapter font-reader-chapter text-on-surface mb-8">Chapter 18</h1>
+<div class="text-reader-prose font-reader-prose text-on-surface space-y-6 opacity-90">
+<p>
+            When the dancing recommenced, however, and Darcy approached to claim her hand, Charlotte could not help cautioning her in a whisper, not to be a simpleton, and allow her fancy for Wickham to make her appear unpleasant in the eyes of a man of ten times his consequence.
+          </p>
+<p>
+            Elizabeth made no answer, and took her place in the set, amazed at the dignity to which she was arrived in being allowed to stand opposite to Mr. Darcy, and reading in her neighbours’ looks their equal amazement in beholding it. They stood for some time without speaking a word; and she began to imagine that their silence was to belong to any thing rather than their conversation.
+          </p>
+<p>
+            “It is your turn to say something now, Mr. Darcy,” she remarked with deliberate playfulness. “I talked about the dance, and you ought to make some sort of remark on the size of the room, or the number of couples.”
+          </p>
+</div>
+</div>
+<!-- Footer Progress Indicator for Reader (dimmed) -->
+<div class="h-10 px-6 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Page 142 of 480</span>
+<span>28%</span>
+</div>
+</div>
+<!-- Scrim (Material Standard Darkening) -->
+<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-[0.5px] z-10"></div>
+<!-- ========================================== -->
+<!-- FOREGROUND: MATERIAL 3 BOTTOM SHEET MODAL  -->
+<!-- ========================================== -->
+<div class="relative z-20 mt-auto w-full bg-surface-container rounded-t-[28px] border-t border-outline-variant/30 flex flex-col max-h-[751px] shadow-[0_-8px_32px_rgba(32,26,22,0.12)]">
+<!-- M3 Drag Handle Bar -->
+<div class="w-full flex justify-center pt-3 pb-1">
+<div class="w-8 h-1 rounded-full bg-outline-variant"></div>
+</div>
+<!-- Modal Header -->
+<div class="px-5 py-2 flex items-center justify-between">
+<h2 class="text-headline-sm font-headline-sm text-on-surface">Appearance</h2>
+<button aria-label="Close settings" class="w-12 h-12 -mr-2 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high active:scale-95 transition-all">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Sheet Scrollable Content -->
+<div class="px-5 pb-4 pt-1 space-y-5 overflow-y-auto no-scrollbar">
+<!-- Live Prose Preview Card -->
+<div class="bg-surface-paper rounded-xl p-4 border border-outline-variant/40 shadow-sm transition-all">
+<div class="flex items-center justify-between mb-1.5 pb-1.5 border-b border-outline-variant/20">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Pride and Prejudice — Chapter 18</span>
+<span class="text-label-md font-label-md text-primary">Preview</span>
+</div>
+<p class="text-reader-prose font-reader-prose text-on-surface leading-snug">
+            “The moment of her release from him was ecstasy.”
+          </p>
+</div>
+<!-- 1. Paper Tone Palette Choices -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-2">Paper Tone</label>
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Light / Paper (Active) -->
+<button class="flex flex-col items-center justify-center p-2.5 rounded-xl bg-surface-paper border-2 border-primary shadow-sm active:scale-95 transition-transform text-left group">
+<div class="w-full h-7 rounded-lg bg-surface-paper border border-outline-variant/40 flex items-center justify-center mb-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="text-label-md font-label-md text-primary font-medium">Light</span>
+</button>
+<!-- Sepia -->
+<button class="flex flex-col items-center justify-center p-2.5 rounded-xl bg-[#F4ECD8] border border-outline-variant/40 hover:border-outline active:scale-95 transition-all text-left">
+<div class="w-full h-7 rounded-lg bg-[#F4ECD8] flex items-center justify-center mb-1.5">
+<span class="text-body-sm font-reader-prose text-[#4A3B2C] italic text-xs">Aa</span>
+</div>
+<span class="text-label-md font-label-md text-[#4A3B2C]">Sepia</span>
+</button>
+<!-- Dark / Obsidian -->
+<button class="flex flex-col items-center justify-center p-2.5 rounded-xl bg-[#19120D] border border-outline-variant/40 hover:border-outline active:scale-95 transition-all text-left">
+<div class="w-full h-7 rounded-lg bg-[#19120D] flex items-center justify-center mb-1.5">
+<span class="text-body-sm font-reader-prose text-[#EEE1D5] italic text-xs">Aa</span>
+</div>
+<span class="text-label-md font-label-md text-[#EEE1D5]">Dark</span>
+</button>
+</div>
+</div>
+<!-- 2. Font Selection (Segmented Pill) -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-2">Typeface</label>
+<div class="flex p-1 bg-surface-container-high rounded-full border border-outline-variant/30">
+<!-- Literata (Selected) -->
+<button class="flex-1 py-2 px-3 rounded-full bg-secondary-container text-on-secondary-container font-reader-prose text-title-md flex items-center justify-center space-x-1.5 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check</span>
+<span>Literata</span>
+</button>
+<!-- Roboto Flex -->
+<button class="flex-1 py-2 px-3 rounded-full text-on-surface-variant font-headline-sm text-body-lg flex items-center justify-center hover:text-on-surface active:scale-95 transition-transform">
+<span>Roboto Flex</span>
+</button>
+</div>
+</div>
+<!-- 3. Font Size Slider -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-label-md font-label-md text-on-surface-variant">Size</span>
+<span class="text-label-md font-label-md text-primary font-medium bg-primary-container px-2.5 py-0.5 rounded-full">19 pt</span>
+</div>
+<div class="flex items-center space-x-3 h-12 px-1">
+<span class="font-reader-prose text-body-sm text-on-surface-variant">A</span>
+<div class="relative flex-1 flex items-center cursor-pointer">
+<!-- Slider Track Background -->
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[55%]"></div>
+</div>
+<!-- Slider Active Thumb -->
+<div class="absolute left-[55%] -translate-x-1/2 w-6 h-6 rounded-full bg-primary shadow-md border-2 border-surface-paper flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-on-primary"></div>
+</div>
+</div>
+<span class="font-reader-prose text-headline-sm text-on-surface">A</span>
+</div>
+</div>
+<!-- 4. Line Spacing (Segmented Control) -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-2">Line Spacing</label>
+<div class="grid grid-cols-3 p-1 bg-surface-container-high rounded-full border border-outline-variant/30">
+<button class="py-1.5 text-label-md font-label-md rounded-full text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center">
+              Compact
+            </button>
+<button class="py-1.5 text-label-md font-label-md rounded-full bg-secondary-container text-on-secondary-container shadow-sm flex items-center justify-center font-medium">
+              Comfortable
+            </button>
+<button class="py-1.5 text-label-md font-label-md rounded-full text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center">
+              Spacious
+            </button>
+</div>
+</div>
+<!-- 5. Margins & Reading Mode (Two columns) -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Margins -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-2">Margins</label>
+<div class="flex p-1 bg-surface-container-high rounded-full border border-outline-variant/30">
+<button class="flex-1 py-1.5 text-label-md font-label-md rounded-full text-on-surface-variant hover:text-on-surface">
+                Narrow
+              </button>
+<button class="flex-1 py-1.5 text-label-md font-label-md rounded-full bg-secondary-container text-on-secondary-container shadow-sm font-medium">
+                Standard
+              </button>
+<button class="flex-1 py-1.5 text-label-md font-label-md rounded-full text-on-surface-variant hover:text-on-surface">
+                Wide
+              </button>
+</div>
+</div>
+<!-- Reading Mode -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-2">Reading Mode</label>
+<div class="flex p-1 bg-surface-container-high rounded-full border border-outline-variant/30">
+<button class="flex-1 py-1.5 text-label-md font-label-md rounded-full bg-secondary-container text-on-secondary-container shadow-sm font-medium flex items-center justify-center space-x-1">
+<span class="material-symbols-outlined text-[16px]">swap_vert</span>
+<span>Scroll</span>
+</button>
+<button class="flex-1 py-1.5 text-label-md font-label-md rounded-full text-on-surface-variant hover:text-on-surface flex items-center justify-center space-x-1">
+<span class="material-symbols-outlined text-[16px]">auto_stories</span>
+<span>Pages</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Sheet Action Area -->
+<div class="px-5 pt-3 pb-3 bg-surface-container border-t border-outline-variant/20">
+<button class="w-full h-12 bg-primary text-on-primary rounded-full font-label-md text-label-md font-medium tracking-wide flex items-center justify-center shadow hover:bg-primary/95 active:scale-[0.98] transition-all">
+          Done
+        </button>
+</div>
+<!-- Android Gesture Navigation Inset Bar -->
+<div class="h-6 w-full flex items-center justify-center pb-1">
+<div class="w-28 h-1 rounded-full bg-on-surface/30"></div>
+</div>
+</div>
+</div>
+</body></html>

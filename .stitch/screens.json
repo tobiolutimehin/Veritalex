@@ -1,0 +1,6334 @@
+{
+  "schema_version": 1,
+  "project": "Veritalex",
+  "stitch_project_id": "6233788376335662642",
+  "baseline": {
+    "width": 412,
+    "height": 915,
+    "compact_width": 360
+  },
+  "prototype_notice": "Design prototype · Simulated states only. No real Google sign-in, network, storage, sync or deletion.",
+  "catalogue": {
+    "1342": {
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "language": "English",
+      "subjects": [
+        "Fiction",
+        "Romance"
+      ],
+      "summary": "Elizabeth Bennet reassesses first impressions as she comes to understand character and love."
+    },
+    "84": {
+      "title": "Frankenstein",
+      "author": "Mary Shelley",
+      "language": "English",
+      "subjects": [
+        "Fiction",
+        "Gothic fiction"
+      ],
+      "summary": "Victor Frankenstein creates a living being and confronts the consequences of ambition and abandonment."
+    },
+    "11": {
+      "title": "Alice’s Adventures in Wonderland",
+      "author": "Lewis Carroll",
+      "language": "English",
+      "subjects": [
+        "Fiction",
+        "Adventure"
+      ],
+      "summary": "Alice follows a white rabbit into a world of curious encounters and shifting expectations."
+    },
+    "1260": {
+      "title": "Jane Eyre",
+      "author": "Charlotte Brontë",
+      "language": "English",
+      "subjects": [
+        "Fiction",
+        "Gothic fiction",
+        "Romance"
+      ],
+      "summary": "Jane Eyre seeks independence and belonging while confronting the secrets of Thornfield Hall."
+    }
+  },
+  "navigation": {
+    "primary": [
+      "Home",
+      "Explore",
+      "Library"
+    ],
+    "library_tabs": [
+      "Books",
+      "Shelves",
+      "Journal"
+    ],
+    "settings_entry": "Toolbar action",
+    "account_entry": "Settings → Account & sync"
+  },
+  "boards": [
+    {
+      "id": "01-auth-import",
+      "title": "Optional sign-in and guest import",
+      "screen_ids": [
+        "auth-welcome",
+        "auth-loading",
+        "auth-cancelled",
+        "auth-error",
+        "auth-import-preview",
+        "auth-importing",
+        "auth-import-complete"
+      ]
+    },
+    {
+      "id": "02-discovery",
+      "title": "Home, discovery and selecting books",
+      "screen_ids": [
+        "home-first",
+        "home-returning",
+        "explore-browse",
+        "explore-search",
+        "explore-results",
+        "explore-filters",
+        "explore-empty",
+        "shelf-add-books"
+      ]
+    },
+    {
+      "id": "03-book-access",
+      "title": "Recoverable catalogue and book access",
+      "screen_ids": [
+        "explore-loading",
+        "explore-offline",
+        "book-new",
+        "book-saved",
+        "book-reading",
+        "book-downloading",
+        "book-download-failed"
+      ]
+    },
+    {
+      "id": "04-library",
+      "title": "Offline reading and Library",
+      "screen_ids": [
+        "book-downloaded",
+        "book-unreadable",
+        "library-books",
+        "library-want",
+        "library-reading",
+        "library-finished",
+        "library-downloaded"
+      ]
+    },
+    {
+      "id": "05-organize",
+      "title": "Library actions and personal shelves",
+      "screen_ids": [
+        "library-empty",
+        "library-actions",
+        "library-remove",
+        "library-rating",
+        "shelves-list",
+        "shelves-empty",
+        "shelf-create",
+        "library-after-removal"
+      ]
+    },
+    {
+      "id": "06-shelves",
+      "title": "Shelf lifecycle and first journal",
+      "screen_ids": [
+        "shelf-name-error",
+        "shelf-rename",
+        "shelf-delete",
+        "shelf-membership",
+        "shelf-detail",
+        "shelf-detail-empty",
+        "journal-all",
+        "shelves-after-delete"
+      ]
+    },
+    {
+      "id": "07-journal",
+      "title": "Personal journal and passage references",
+      "screen_ids": [
+        "journal-book",
+        "journal-empty",
+        "journal-book-empty",
+        "journal-view",
+        "journal-create",
+        "journal-edit",
+        "journal-delete",
+        "journal-discard"
+      ]
+    },
+    {
+      "id": "08-reader",
+      "title": "Reading, selection and appearance",
+      "screen_ids": [
+        "reader-scroll",
+        "reader-immersive",
+        "reader-paged",
+        "reader-bookmark",
+        "reader-selection",
+        "reader-highlight",
+        "reader-appearance"
+      ]
+    },
+    {
+      "id": "09-reading-settings",
+      "title": "Reading tools, journal context and preferences",
+      "screen_ids": [
+        "reader-contents",
+        "reader-search",
+        "reader-search-results",
+        "reader-search-empty",
+        "reader-finished",
+        "settings-main",
+        "settings-appearance",
+        "journal-book-picker"
+      ]
+    },
+    {
+      "id": "10-settings-account",
+      "title": "Device settings and account decisions",
+      "screen_ids": [
+        "settings-reader-defaults",
+        "settings-storage",
+        "settings-storage-confirm",
+        "settings-about",
+        "account-details",
+        "account-signout-pending",
+        "account-delete-confirm",
+        "settings-storage-empty"
+      ]
+    },
+    {
+      "id": "11-account-recovery",
+      "title": "Account lifecycle and saved local data",
+      "screen_ids": [
+        "account-reauth",
+        "account-deleting",
+        "account-delete-error",
+        "account-deleted",
+        "sync-local",
+        "sync-waiting"
+      ]
+    },
+    {
+      "id": "12-sync",
+      "title": "Factual sync and reading position conflicts",
+      "screen_ids": [
+        "sync-syncing",
+        "sync-current",
+        "sync-failed",
+        "sync-expired",
+        "sync-restoring",
+        "sync-conflict"
+      ]
+    }
+  ],
+  "screens": [
+    {
+      "id": "auth-welcome",
+      "title": "A little space to read",
+      "area": "Auth",
+      "variant": "base",
+      "nav": null,
+      "annotations": [
+        "Google is optional; guest mode has the complete local reading experience.",
+        "No real provider sign-in occurs in the prototype."
+      ],
+      "blocks": [
+        {
+          "type": "brand"
+        },
+        {
+          "type": "text",
+          "title": "Your next chapter starts here",
+          "text": "Discover classic books. Keep a personal library and a journal as you read."
+        },
+        {
+          "type": "button",
+          "action": "google",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "guest",
+          "style": "tonal"
+        },
+        {
+          "type": "text",
+          "title": "Your reading, your choice",
+          "text": "Continue without an account. Guest books, notes and reading position stay on this device."
+        }
+      ],
+      "transitions": [
+        {
+          "id": "google",
+          "label": "Continue with Google",
+          "to": "auth-loading",
+          "role": "action"
+        },
+        {
+          "id": "guest",
+          "label": "Continue as guest",
+          "to": "home-first",
+          "role": "action"
+        }
+      ]
+    },
+    {
+      "id": "auth-loading",
+      "title": "Connecting to Google",
+      "area": "Auth",
+      "variant": "loading",
+      "nav": null,
+      "annotations": [
+        "External provider returns success, cancellation or recoverable error."
+      ],
+      "blocks": [
+        {
+          "type": "brand"
+        },
+        {
+          "type": "progress",
+          "label": "Opening secure sign-in…",
+          "value": null
+        },
+        {
+          "type": "text",
+          "title": "A moment, please",
+          "text": "Complete sign-in in the Google account sheet."
+        },
+        {
+          "type": "button",
+          "action": "cancel",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "cancel",
+          "label": "Cancel",
+          "to": "auth-cancelled",
+          "role": "action"
+        },
+        {
+          "id": "success",
+          "label": "Simulate sign-in success",
+          "to": "auth-import-preview",
+          "role": "event"
+        },
+        {
+          "id": "failure",
+          "label": "Simulate sign-in failure",
+          "to": "auth-error",
+          "role": "event"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "auth-welcome",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "auth-cancelled",
+      "title": "You’re still welcome here",
+      "area": "Auth",
+      "variant": "cancelled",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "notice",
+          "title": "Sign-in cancelled",
+          "text": "Nothing has changed on this device.",
+          "kind": "info"
+        },
+        {
+          "type": "text",
+          "title": "Read your way",
+          "text": "Try Google again to sync, or continue with a local guest library."
+        },
+        {
+          "type": "button",
+          "action": "retry",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "guest",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "retry",
+          "label": "Try Google again",
+          "to": "auth-loading",
+          "role": "action"
+        },
+        {
+          "id": "guest",
+          "label": "Continue as guest",
+          "to": "home-first",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "auth-welcome",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "auth-error",
+      "title": "Couldn’t sign in",
+      "area": "Auth",
+      "variant": "error",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "Connection interrupted",
+          "text": "Check your connection and try again. Your local library is safe.",
+          "icon": "cloud-off"
+        },
+        {
+          "type": "button",
+          "action": "retry",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "guest",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "retry",
+          "label": "Try again",
+          "to": "auth-loading",
+          "role": "action"
+        },
+        {
+          "id": "guest",
+          "label": "Continue as guest",
+          "to": "home-first",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "auth-welcome",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "auth-import-preview",
+      "title": "Bring your reading with you",
+      "area": "Auth",
+      "variant": "base",
+      "nav": null,
+      "annotations": [
+        "Deduplicate books by Gutenberg catalogue ID, never title.",
+        "Keep journal entries and highlights by their persistent IDs. Retry must not duplicate imported records.",
+        "Skip leaves the guest workspace available on this device."
+      ],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "Add guest data to your account?",
+          "text": "You have a separate guest library on this device. Review what will be added before continuing."
+        },
+        {
+          "type": "row",
+          "label": "2 guest books",
+          "detail": "1 new book · 1 already saved",
+          "action": null,
+          "icon": "chevron"
+        },
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "detail": "Already in account · Keep one book"
+        },
+        {
+          "type": "book",
+          "title": "Frankenstein",
+          "author": "Mary Shelley",
+          "book_id": "84",
+          "detail": "New to account"
+        },
+        {
+          "type": "notice",
+          "title": "Your notes are preserved",
+          "text": "3 guest journal entries and 2 highlights will be added with their book and passage references. Existing account notes remain.",
+          "kind": "info"
+        },
+        {
+          "type": "notice",
+          "title": "Choose reading position",
+          "text": "Pride and Prejudice has a newer account position. You can choose the position after importing.",
+          "kind": "info"
+        },
+        {
+          "type": "button",
+          "action": "import",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "skip",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "import",
+          "label": "Add guest reading",
+          "to": "auth-importing",
+          "role": "action"
+        },
+        {
+          "id": "skip",
+          "label": "Keep libraries separate",
+          "to": "home-returning",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "account-details",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "auth-importing",
+      "title": "Adding your reading",
+      "area": "Auth",
+      "variant": "progress",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "progress",
+          "label": "Adding books and notes…",
+          "value": 60
+        },
+        {
+          "type": "row",
+          "label": "Books matched",
+          "detail": "2 of 2 reviewed",
+          "action": null,
+          "icon": "check"
+        },
+        {
+          "type": "row",
+          "label": "Journal and highlights",
+          "detail": "Adding passage references",
+          "action": null,
+          "icon": "sync"
+        },
+        {
+          "type": "notice",
+          "title": "Safe to leave",
+          "text": "Your guest data remains on this device until the addition succeeds.",
+          "kind": "info"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "success",
+          "label": "Simulate import complete",
+          "to": "auth-import-complete",
+          "role": "event"
+        },
+        {
+          "id": "failure",
+          "label": "Simulate import interrupted",
+          "to": "sync-failed",
+          "role": "event"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "account-details",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "auth-import-complete",
+      "title": "Your library is together",
+      "area": "Auth",
+      "variant": "success",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "Reading added",
+          "text": "1 new book added. 1 existing book matched. All 3 journal entries and 2 highlights were preserved.",
+          "icon": "check"
+        },
+        {
+          "type": "notice",
+          "title": "One position to choose",
+          "text": "Choose where to resume Pride and Prejudice.",
+          "kind": "info"
+        },
+        {
+          "type": "button",
+          "action": "position",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "position",
+          "label": "Choose reading position",
+          "to": "sync-conflict",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "home-returning",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "home-first",
+      "title": "Home",
+      "area": "Home",
+      "variant": "first-use",
+      "nav": "Home",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "Make room for a good book",
+          "text": "Explore classic literature and save your first book."
+        },
+        {
+          "type": "notice",
+          "title": "Saved on device",
+          "text": "You’re reading as a guest. You can sign in later from Settings.",
+          "kind": "info"
+        },
+        {
+          "type": "text",
+          "title": "Start with a classic",
+          "text": "A few titles from the public catalogue."
+        },
+        {
+          "type": "grid",
+          "books": [
+            "1342",
+            "84"
+          ]
+        },
+        {
+          "type": "button",
+          "action": "explore",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "explore",
+          "label": "Explore books",
+          "to": "explore-browse",
+          "role": "action"
+        },
+        {
+          "id": "book-1342",
+          "label": "Pride and Prejudice",
+          "to": "book-new",
+          "role": "action"
+        },
+        {
+          "id": "book-84",
+          "label": "Frankenstein",
+          "to": "book-new",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        }
+      ]
+    },
+    {
+      "id": "home-returning",
+      "title": "Home",
+      "area": "Home",
+      "variant": "base",
+      "nav": "Home",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "Welcome back",
+          "text": "A quiet moment for your next chapter."
+        },
+        {
+          "type": "continue",
+          "action": "continue"
+        },
+        {
+          "type": "row",
+          "label": "Saved on device",
+          "detail": "Your reading is stored locally",
+          "action": "sync",
+          "icon": "device"
+        },
+        {
+          "type": "text",
+          "title": "Your library",
+          "text": "Ready when you are"
+        },
+        {
+          "type": "grid",
+          "books": [
+            "84",
+            "11"
+          ]
+        }
+      ],
+      "transitions": [
+        {
+          "id": "continue",
+          "label": "Continue reading",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "sync",
+          "label": "Saved on device",
+          "to": "sync-local",
+          "role": "action"
+        },
+        {
+          "id": "book-84",
+          "label": "Frankenstein",
+          "to": "book-saved",
+          "role": "action"
+        },
+        {
+          "id": "book-11",
+          "label": "Alice’s Adventures in Wonderland",
+          "to": "book-saved",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        }
+      ]
+    },
+    {
+      "id": "explore-browse",
+      "title": "Explore",
+      "area": "Explore",
+      "variant": "base",
+      "nav": "Explore",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "search",
+          "placeholder": "Search title or author",
+          "action": "search"
+        },
+        {
+          "type": "text",
+          "title": "Explore by subject",
+          "text": "Choose a shelf of the public catalogue."
+        },
+        {
+          "type": "subjects",
+          "items": [
+            "Fiction",
+            "Romance",
+            "Gothic fiction",
+            "Adventure"
+          ],
+          "action": "subject"
+        },
+        {
+          "type": "text",
+          "title": "Classic literature",
+          "text": "From Project Gutenberg"
+        },
+        {
+          "type": "grid",
+          "books": [
+            "1342",
+            "84",
+            "11",
+            "1260"
+          ]
+        }
+      ],
+      "transitions": [
+        {
+          "id": "search",
+          "label": "Search books",
+          "to": "explore-search",
+          "role": "action"
+        },
+        {
+          "id": "subject",
+          "label": "Browse Fiction",
+          "to": "explore-results",
+          "role": "action"
+        },
+        {
+          "id": "book-1342",
+          "label": "Pride and Prejudice",
+          "to": "book-new",
+          "role": "action"
+        },
+        {
+          "id": "book-84",
+          "label": "Frankenstein",
+          "to": "book-new",
+          "role": "action"
+        },
+        {
+          "id": "book-11",
+          "label": "Alice’s Adventures in Wonderland",
+          "to": "book-new",
+          "role": "action"
+        },
+        {
+          "id": "book-1260",
+          "label": "Jane Eyre",
+          "to": "book-new",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        }
+      ]
+    },
+    {
+      "id": "explore-search",
+      "title": "Search books",
+      "area": "Explore",
+      "variant": "base",
+      "nav": "Explore",
+      "annotations": [
+        "Keyboard and IME search submit use the same action. Empty input keeps focus and shows no network error."
+      ],
+      "blocks": [
+        {
+          "type": "field",
+          "label": "Title or author",
+          "value": "Austen",
+          "placeholder": "Search title or author"
+        },
+        {
+          "type": "row",
+          "label": "Search for Austen",
+          "detail": "",
+          "action": "submit",
+          "icon": "search"
+        },
+        {
+          "type": "text",
+          "title": "Recent search",
+          "text": "Jane Austen"
+        },
+        {
+          "type": "row",
+          "label": "Clear recent searches",
+          "detail": "",
+          "action": "clear",
+          "icon": "close"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "submit",
+          "label": "Search for Austen",
+          "to": "explore-loading",
+          "role": "action"
+        },
+        {
+          "id": "clear",
+          "label": "Clear recent searches",
+          "to": "explore-search",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "explore-browse",
+          "role": "back"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        }
+      ]
+    },
+    {
+      "id": "explore-results",
+      "title": "Search results",
+      "area": "Explore",
+      "variant": "base",
+      "nav": "Explore",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "search",
+          "value": "Austen",
+          "action": "search"
+        },
+        {
+          "type": "row",
+          "label": "1 title",
+          "detail": "Title or author · All languages",
+          "action": "filters",
+          "icon": "filter"
+        },
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "action": "book-1342",
+          "detail": "Jane Austen · English"
+        },
+        {
+          "type": "text",
+          "title": "Catalogue results",
+          "text": "Availability is based on the public catalogue. No community ratings are shown."
+        }
+      ],
+      "transitions": [
+        {
+          "id": "search",
+          "label": "Edit search",
+          "to": "explore-search",
+          "role": "action"
+        },
+        {
+          "id": "filters",
+          "label": "Filters",
+          "to": "explore-filters",
+          "role": "action"
+        },
+        {
+          "id": "book-1342",
+          "label": "Pride and Prejudice",
+          "to": "book-new",
+          "role": "action"
+        },
+        {
+          "id": "none",
+          "label": "Simulate no matches",
+          "to": "explore-empty",
+          "role": "event"
+        },
+        {
+          "id": "offline",
+          "label": "Simulate connection loss",
+          "to": "explore-offline",
+          "role": "event"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "explore-browse",
+          "role": "back"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        }
+      ]
+    },
+    {
+      "id": "explore-filters",
+      "title": "Filter books",
+      "area": "Explore",
+      "variant": "sheet",
+      "nav": null,
+      "annotations": [
+        "Temporary filter choices are discarded by Back. Language/subject are catalogue metadata, not app preferences."
+      ],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "Refine this search",
+          "text": "Filters apply when you choose Show results."
+        },
+        {
+          "type": "text",
+          "title": "Language",
+          "text": ""
+        },
+        {
+          "type": "chips",
+          "items": [
+            "Any language",
+            "English"
+          ],
+          "selected": "English",
+          "action": null,
+          "setting": "language"
+        },
+        {
+          "type": "text",
+          "title": "Subject",
+          "text": ""
+        },
+        {
+          "type": "chips",
+          "items": [
+            "Any subject",
+            "Fiction",
+            "Romance",
+            "Gothic fiction"
+          ],
+          "selected": "Romance",
+          "action": null,
+          "setting": "subject"
+        },
+        {
+          "type": "button",
+          "action": "apply",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "reset",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "apply",
+          "label": "Show results",
+          "to": "explore-results",
+          "role": "action"
+        },
+        {
+          "id": "reset",
+          "label": "Reset filters",
+          "to": "explore-results",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "explore-results",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "explore-empty",
+      "title": "No matching books",
+      "area": "Explore",
+      "variant": "empty",
+      "nav": "Explore",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "search",
+          "value": "Austen + Gothic fiction",
+          "action": "search"
+        },
+        {
+          "type": "empty",
+          "title": "No books found",
+          "text": "Try a different title, author or subject.",
+          "icon": "book"
+        },
+        {
+          "type": "button",
+          "action": "filters",
+          "style": "tonal"
+        },
+        {
+          "type": "button",
+          "action": "search",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "filters",
+          "label": "Clear filters",
+          "to": "explore-results",
+          "role": "action"
+        },
+        {
+          "id": "search",
+          "label": "Change search",
+          "to": "explore-search",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "explore-browse",
+          "role": "back"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        }
+      ]
+    },
+    {
+      "id": "explore-loading",
+      "title": "Searching the catalogue",
+      "area": "Explore",
+      "variant": "loading",
+      "nav": "Explore",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "search",
+          "value": "Austen",
+          "action": "search"
+        },
+        {
+          "type": "progress",
+          "label": "Looking for books…",
+          "value": null
+        },
+        {
+          "type": "skeleton",
+          "count": 3
+        }
+      ],
+      "transitions": [
+        {
+          "id": "search",
+          "label": "Edit search",
+          "to": "explore-search",
+          "role": "action"
+        },
+        {
+          "id": "success",
+          "label": "Simulate results",
+          "to": "explore-results",
+          "role": "event"
+        },
+        {
+          "id": "failure",
+          "label": "Simulate request failure",
+          "to": "explore-offline",
+          "role": "event"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "explore-search",
+          "role": "back"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        }
+      ]
+    },
+    {
+      "id": "explore-offline",
+      "title": "Explore is offline",
+      "area": "Explore",
+      "variant": "offline",
+      "nav": "Explore",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "Couldn’t load the catalogue",
+          "text": "Check your connection, then try again. Downloaded books are still available in Library.",
+          "icon": "cloud-off"
+        },
+        {
+          "type": "button",
+          "action": "retry",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "library",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "retry",
+          "label": "Try again",
+          "to": "explore-loading",
+          "role": "action"
+        },
+        {
+          "id": "library",
+          "label": "Open Library",
+          "to": "library-downloaded",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "explore-browse",
+          "role": "back"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        }
+      ]
+    },
+    {
+      "id": "book-new",
+      "title": "Book details",
+      "area": "Book",
+      "variant": "base",
+      "nav": null,
+      "annotations": [
+        "No page count, publication date or aggregate rating is invented.",
+        "Saving a book and downloading its text are distinct operations.",
+        "Design reference: Project Gutenberg catalogue ID 1342. Catalogue IDs are data identity and stay outside book-detail app copy."
+      ],
+      "blocks": [
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "large": true
+        },
+        {
+          "type": "chips",
+          "items": [
+            "English",
+            "Fiction",
+            "Romance"
+          ],
+          "selected": null,
+          "action": null
+        },
+        {
+          "type": "text",
+          "title": "About this book",
+          "text": "Austen’s novel follows Elizabeth Bennet as first impressions give way to a more complicated understanding of character and love."
+        },
+        {
+          "type": "row",
+          "label": "Source",
+          "detail": "Project Gutenberg",
+          "action": null,
+          "icon": "book"
+        },
+        {
+          "type": "button",
+          "action": "save",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "download",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "save",
+          "label": "Want to read",
+          "to": "book-saved",
+          "role": "action"
+        },
+        {
+          "id": "download",
+          "label": "Download to read",
+          "to": "book-downloading",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "explore-results",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "book-saved",
+      "title": "Book details",
+      "area": "Book",
+      "variant": "saved",
+      "nav": null,
+      "annotations": [
+        "Design reference: Project Gutenberg catalogue ID 1342. Catalogue IDs are data identity and stay outside book-detail app copy."
+      ],
+      "blocks": [
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "large": true
+        },
+        {
+          "type": "chips",
+          "items": [
+            "English",
+            "Fiction",
+            "Romance"
+          ],
+          "selected": null,
+          "action": null
+        },
+        {
+          "type": "text",
+          "title": "About this book",
+          "text": "Austen’s novel follows Elizabeth Bennet as first impressions give way to a more complicated understanding of character and love."
+        },
+        {
+          "type": "row",
+          "label": "Source",
+          "detail": "Project Gutenberg",
+          "action": null,
+          "icon": "book"
+        },
+        {
+          "type": "notice",
+          "title": "In your library",
+          "text": "Want to read",
+          "kind": "info"
+        },
+        {
+          "type": "button",
+          "action": "download",
+          "style": "primary"
+        },
+        {
+          "type": "row",
+          "label": "Organize book",
+          "detail": "Change status, shelves or private rating",
+          "action": "actions",
+          "icon": "chevron"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "download",
+          "label": "Download to read",
+          "to": "book-downloading",
+          "role": "action"
+        },
+        {
+          "id": "actions",
+          "label": "Book actions",
+          "to": "library-actions",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "library-want",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "book-reading",
+      "title": "Book details",
+      "area": "Book",
+      "variant": "in-progress",
+      "nav": null,
+      "annotations": [
+        "Design reference: Project Gutenberg catalogue ID 1342. Catalogue IDs are data identity and stay outside book-detail app copy."
+      ],
+      "blocks": [
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "large": true
+        },
+        {
+          "type": "chips",
+          "items": [
+            "English",
+            "Fiction",
+            "Romance"
+          ],
+          "selected": null,
+          "action": null
+        },
+        {
+          "type": "text",
+          "title": "About this book",
+          "text": "Austen’s novel follows Elizabeth Bennet as first impressions give way to a more complicated understanding of character and love."
+        },
+        {
+          "type": "row",
+          "label": "Source",
+          "detail": "Project Gutenberg",
+          "action": null,
+          "icon": "book"
+        },
+        {
+          "type": "progress",
+          "label": "Reading · Chapter 18",
+          "value": 28
+        },
+        {
+          "type": "button",
+          "action": "continue",
+          "style": "primary"
+        },
+        {
+          "type": "row",
+          "label": "Journal",
+          "detail": "1 entry for this book",
+          "action": "journal",
+          "icon": "journal"
+        },
+        {
+          "type": "row",
+          "label": "Organize book",
+          "detail": "Reading · In Classics",
+          "action": "actions",
+          "icon": "chevron"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "continue",
+          "label": "Continue reading",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "journal",
+          "label": "Open book journal",
+          "to": "journal-book",
+          "role": "action"
+        },
+        {
+          "id": "actions",
+          "label": "Book actions",
+          "to": "library-actions",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "library-reading",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "book-downloading",
+      "title": "Downloading book",
+      "area": "Book",
+      "variant": "progress",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "large": true
+        },
+        {
+          "type": "chips",
+          "items": [
+            "English",
+            "Fiction",
+            "Romance"
+          ],
+          "selected": null,
+          "action": null
+        },
+        {
+          "type": "progress",
+          "label": "Downloading book text…",
+          "value": 42
+        },
+        {
+          "type": "text",
+          "title": "Keep reading offline",
+          "text": "The book will be available when the download finishes."
+        },
+        {
+          "type": "button",
+          "action": "cancel",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "cancel",
+          "label": "Cancel download",
+          "to": "book-saved",
+          "role": "action"
+        },
+        {
+          "id": "success",
+          "label": "Simulate download complete",
+          "to": "book-downloaded",
+          "role": "event"
+        },
+        {
+          "id": "failure",
+          "label": "Simulate download failure",
+          "to": "book-download-failed",
+          "role": "event"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "library-books",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "book-download-failed",
+      "title": "Download interrupted",
+      "area": "Book",
+      "variant": "error",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "large": true
+        },
+        {
+          "type": "chips",
+          "items": [
+            "English",
+            "Fiction",
+            "Romance"
+          ],
+          "selected": null,
+          "action": null
+        },
+        {
+          "type": "notice",
+          "title": "Couldn’t download",
+          "text": "Check your connection and available storage. The book stays in your library.",
+          "kind": "error"
+        },
+        {
+          "type": "button",
+          "action": "retry",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "storage",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "retry",
+          "label": "Try download again",
+          "to": "book-downloading",
+          "role": "action"
+        },
+        {
+          "id": "storage",
+          "label": "Manage storage",
+          "to": "settings-storage",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "book-saved",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "book-downloaded",
+      "title": "Ready to read",
+      "area": "Book",
+      "variant": "downloaded",
+      "nav": null,
+      "annotations": [
+        "Design reference: Project Gutenberg catalogue ID 1342. Catalogue IDs are data identity and stay outside book-detail app copy."
+      ],
+      "blocks": [
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "large": true
+        },
+        {
+          "type": "chips",
+          "items": [
+            "English",
+            "Fiction",
+            "Romance"
+          ],
+          "selected": null,
+          "action": null
+        },
+        {
+          "type": "text",
+          "title": "About this book",
+          "text": "Austen’s novel follows Elizabeth Bennet as first impressions give way to a more complicated understanding of character and love."
+        },
+        {
+          "type": "row",
+          "label": "Source",
+          "detail": "Project Gutenberg",
+          "action": null,
+          "icon": "book"
+        },
+        {
+          "type": "notice",
+          "title": "Downloaded",
+          "text": "Available offline on this device.",
+          "kind": "info"
+        },
+        {
+          "type": "button",
+          "action": "read",
+          "style": "primary"
+        },
+        {
+          "type": "row",
+          "label": "Want to read",
+          "detail": "Status changes to Reading when you begin.",
+          "action": "actions",
+          "icon": "chevron"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "read",
+          "label": "Start reading",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "actions",
+          "label": "Book actions",
+          "to": "library-actions",
+          "role": "action"
+        },
+        {
+          "id": "unreadable",
+          "label": "Simulate unreadable text",
+          "to": "book-unreadable",
+          "role": "event"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "library-downloaded",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "book-unreadable",
+      "title": "Book can’t be opened",
+      "area": "Book",
+      "variant": "error",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "large": true
+        },
+        {
+          "type": "empty",
+          "title": "Unsupported book text",
+          "text": "This catalogue file couldn’t be read. Retry a fresh download or return to your library.",
+          "icon": "warning"
+        },
+        {
+          "type": "notice",
+          "title": "Your reading is safe",
+          "text": "Removing the downloaded text keeps the saved book, notes and last reading position.",
+          "kind": "info"
+        },
+        {
+          "type": "button",
+          "action": "retry",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "library",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "retry",
+          "label": "Download again",
+          "to": "book-downloading",
+          "role": "action"
+        },
+        {
+          "id": "library",
+          "label": "Return to Library",
+          "to": "library-books",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "book-downloaded",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "library-books",
+      "title": "Library",
+      "area": "Library",
+      "variant": "base",
+      "nav": "Library",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "tabs",
+          "items": [
+            "Books",
+            "Shelves",
+            "Journal"
+          ],
+          "selected": "Books"
+        },
+        {
+          "type": "chips",
+          "items": [
+            "All",
+            "Want to read",
+            "Reading",
+            "Finished",
+            "Downloaded"
+          ],
+          "selected": "All",
+          "action": "filters"
+        },
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "detail": "Reading · 28%",
+          "action": "book-1342"
+        },
+        {
+          "type": "book",
+          "title": "Frankenstein",
+          "author": "Mary Shelley",
+          "book_id": "84",
+          "detail": "Want to read",
+          "action": "book-84"
+        },
+        {
+          "type": "book",
+          "title": "Alice’s Adventures in Wonderland",
+          "author": "Lewis Carroll",
+          "book_id": "11",
+          "detail": "Finished",
+          "action": "book-11"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "filters",
+          "label": "Choose a library filter",
+          "to": "library-books",
+          "role": "action"
+        },
+        {
+          "id": "want",
+          "label": "Want to read filter",
+          "to": "library-want",
+          "role": "action"
+        },
+        {
+          "id": "reading",
+          "label": "Reading filter",
+          "to": "library-reading",
+          "role": "action"
+        },
+        {
+          "id": "finished",
+          "label": "Finished filter",
+          "to": "library-finished",
+          "role": "action"
+        },
+        {
+          "id": "book-1342",
+          "label": "Pride and Prejudice",
+          "to": "book-reading",
+          "role": "action"
+        },
+        {
+          "id": "book-84",
+          "label": "Frankenstein",
+          "to": "book-saved",
+          "role": "action"
+        },
+        {
+          "id": "book-11",
+          "label": "Alice’s Adventures in Wonderland",
+          "to": "book-downloaded",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        },
+        {
+          "id": "tab-books",
+          "label": "Books",
+          "to": "library-books",
+          "role": "tab"
+        },
+        {
+          "id": "tab-shelves",
+          "label": "Shelves",
+          "to": "shelves-list",
+          "role": "tab"
+        },
+        {
+          "id": "tab-journal",
+          "label": "Journal",
+          "to": "journal-all",
+          "role": "tab"
+        },
+        {
+          "id": "downloaded",
+          "label": "Downloaded filter",
+          "to": "library-downloaded",
+          "role": "action"
+        }
+      ]
+    },
+    {
+      "id": "library-want",
+      "title": "Library",
+      "area": "Library",
+      "variant": "filtered",
+      "nav": "Library",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "tabs",
+          "items": [
+            "Books",
+            "Shelves",
+            "Journal"
+          ],
+          "selected": "Books"
+        },
+        {
+          "type": "chips",
+          "items": [
+            "All",
+            "Want to read",
+            "Reading",
+            "Finished",
+            "Downloaded"
+          ],
+          "selected": "Want to read",
+          "action": "filters"
+        },
+        {
+          "type": "book",
+          "title": "Frankenstein",
+          "author": "Mary Shelley",
+          "book_id": "84",
+          "detail": "Want to read · Not downloaded",
+          "action": "book-84"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "filters",
+          "label": "Choose a library filter",
+          "to": "library-books",
+          "role": "action"
+        },
+        {
+          "id": "want",
+          "label": "Want to read filter",
+          "to": "library-want",
+          "role": "action"
+        },
+        {
+          "id": "reading",
+          "label": "Reading filter",
+          "to": "library-reading",
+          "role": "action"
+        },
+        {
+          "id": "finished",
+          "label": "Finished filter",
+          "to": "library-finished",
+          "role": "action"
+        },
+        {
+          "id": "downloaded",
+          "label": "Downloaded filter",
+          "to": "library-downloaded",
+          "role": "action"
+        },
+        {
+          "id": "book-84",
+          "label": "Frankenstein",
+          "to": "book-saved",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        },
+        {
+          "id": "tab-books",
+          "label": "Books",
+          "to": "library-books",
+          "role": "tab"
+        },
+        {
+          "id": "tab-shelves",
+          "label": "Shelves",
+          "to": "shelves-list",
+          "role": "tab"
+        },
+        {
+          "id": "tab-journal",
+          "label": "Journal",
+          "to": "journal-all",
+          "role": "tab"
+        }
+      ]
+    },
+    {
+      "id": "library-reading",
+      "title": "Library",
+      "area": "Library",
+      "variant": "filtered",
+      "nav": "Library",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "tabs",
+          "items": [
+            "Books",
+            "Shelves",
+            "Journal"
+          ],
+          "selected": "Books"
+        },
+        {
+          "type": "chips",
+          "items": [
+            "All",
+            "Want to read",
+            "Reading",
+            "Finished",
+            "Downloaded"
+          ],
+          "selected": "Reading",
+          "action": "filters"
+        },
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "detail": "28% · Chapter 18 · Downloaded",
+          "action": "book-1342"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "filters",
+          "label": "Choose a library filter",
+          "to": "library-books",
+          "role": "action"
+        },
+        {
+          "id": "want",
+          "label": "Want to read filter",
+          "to": "library-want",
+          "role": "action"
+        },
+        {
+          "id": "reading",
+          "label": "Reading filter",
+          "to": "library-reading",
+          "role": "action"
+        },
+        {
+          "id": "finished",
+          "label": "Finished filter",
+          "to": "library-finished",
+          "role": "action"
+        },
+        {
+          "id": "downloaded",
+          "label": "Downloaded filter",
+          "to": "library-downloaded",
+          "role": "action"
+        },
+        {
+          "id": "book-1342",
+          "label": "Pride and Prejudice",
+          "to": "book-reading",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        },
+        {
+          "id": "tab-books",
+          "label": "Books",
+          "to": "library-books",
+          "role": "tab"
+        },
+        {
+          "id": "tab-shelves",
+          "label": "Shelves",
+          "to": "shelves-list",
+          "role": "tab"
+        },
+        {
+          "id": "tab-journal",
+          "label": "Journal",
+          "to": "journal-all",
+          "role": "tab"
+        }
+      ]
+    },
+    {
+      "id": "library-finished",
+      "title": "Library",
+      "area": "Library",
+      "variant": "filtered",
+      "nav": "Library",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "tabs",
+          "items": [
+            "Books",
+            "Shelves",
+            "Journal"
+          ],
+          "selected": "Books"
+        },
+        {
+          "type": "chips",
+          "items": [
+            "All",
+            "Want to read",
+            "Reading",
+            "Finished",
+            "Downloaded"
+          ],
+          "selected": "Finished",
+          "action": "filters"
+        },
+        {
+          "type": "book",
+          "title": "Alice’s Adventures in Wonderland",
+          "author": "Lewis Carroll",
+          "book_id": "11",
+          "detail": "Finished · Downloaded",
+          "action": "book-11"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "filters",
+          "label": "Choose a library filter",
+          "to": "library-books",
+          "role": "action"
+        },
+        {
+          "id": "want",
+          "label": "Want to read filter",
+          "to": "library-want",
+          "role": "action"
+        },
+        {
+          "id": "reading",
+          "label": "Reading filter",
+          "to": "library-reading",
+          "role": "action"
+        },
+        {
+          "id": "finished",
+          "label": "Finished filter",
+          "to": "library-finished",
+          "role": "action"
+        },
+        {
+          "id": "downloaded",
+          "label": "Downloaded filter",
+          "to": "library-downloaded",
+          "role": "action"
+        },
+        {
+          "id": "book-11",
+          "label": "Alice’s Adventures in Wonderland",
+          "to": "book-downloaded",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        },
+        {
+          "id": "tab-books",
+          "label": "Books",
+          "to": "library-books",
+          "role": "tab"
+        },
+        {
+          "id": "tab-shelves",
+          "label": "Shelves",
+          "to": "shelves-list",
+          "role": "tab"
+        },
+        {
+          "id": "tab-journal",
+          "label": "Journal",
+          "to": "journal-all",
+          "role": "tab"
+        }
+      ]
+    },
+    {
+      "id": "library-downloaded",
+      "title": "Library",
+      "area": "Library",
+      "variant": "filtered",
+      "nav": "Library",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "tabs",
+          "items": [
+            "Books",
+            "Shelves",
+            "Journal"
+          ],
+          "selected": "Books"
+        },
+        {
+          "type": "chips",
+          "items": [
+            "All",
+            "Want to read",
+            "Reading",
+            "Finished",
+            "Downloaded"
+          ],
+          "selected": "Downloaded",
+          "action": "filters"
+        },
+        {
+          "type": "notice",
+          "title": "Ready offline",
+          "text": "Downloaded text is stored on this device.",
+          "kind": "info"
+        },
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "detail": "Reading · 28%",
+          "action": "book-1342"
+        },
+        {
+          "type": "book",
+          "title": "Alice’s Adventures in Wonderland",
+          "author": "Lewis Carroll",
+          "book_id": "11",
+          "detail": "Finished",
+          "action": "book-11"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "filters",
+          "label": "Choose a library filter",
+          "to": "library-books",
+          "role": "action"
+        },
+        {
+          "id": "want",
+          "label": "Want to read filter",
+          "to": "library-want",
+          "role": "action"
+        },
+        {
+          "id": "reading",
+          "label": "Reading filter",
+          "to": "library-reading",
+          "role": "action"
+        },
+        {
+          "id": "finished",
+          "label": "Finished filter",
+          "to": "library-finished",
+          "role": "action"
+        },
+        {
+          "id": "downloaded",
+          "label": "Downloaded filter",
+          "to": "library-downloaded",
+          "role": "action"
+        },
+        {
+          "id": "book-1342",
+          "label": "Pride and Prejudice",
+          "to": "book-reading",
+          "role": "action"
+        },
+        {
+          "id": "book-11",
+          "label": "Alice’s Adventures in Wonderland",
+          "to": "book-downloaded",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        },
+        {
+          "id": "tab-books",
+          "label": "Books",
+          "to": "library-books",
+          "role": "tab"
+        },
+        {
+          "id": "tab-shelves",
+          "label": "Shelves",
+          "to": "shelves-list",
+          "role": "tab"
+        },
+        {
+          "id": "tab-journal",
+          "label": "Journal",
+          "to": "journal-all",
+          "role": "tab"
+        }
+      ]
+    },
+    {
+      "id": "library-empty",
+      "title": "Library",
+      "area": "Library",
+      "variant": "empty",
+      "nav": "Library",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "tabs",
+          "items": [
+            "Books",
+            "Shelves",
+            "Journal"
+          ],
+          "selected": "Books"
+        },
+        {
+          "type": "empty",
+          "title": "Your books belong here",
+          "text": "Save a book from Explore to start your library.",
+          "icon": "book"
+        },
+        {
+          "type": "button",
+          "action": "explore",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "explore",
+          "label": "Explore books",
+          "to": "explore-browse",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        },
+        {
+          "id": "tab-books",
+          "label": "Books",
+          "to": "library-books",
+          "role": "tab"
+        },
+        {
+          "id": "tab-shelves",
+          "label": "Shelves",
+          "to": "shelves-list",
+          "role": "tab"
+        },
+        {
+          "id": "tab-journal",
+          "label": "Journal",
+          "to": "journal-all",
+          "role": "tab"
+        }
+      ]
+    },
+    {
+      "id": "library-actions",
+      "title": "Book actions",
+      "area": "Library",
+      "variant": "sheet",
+      "nav": null,
+      "annotations": [
+        "Status changes are local-first. Marking Finished does not delete downloaded text or notes."
+      ],
+      "blocks": [
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342"
+        },
+        {
+          "type": "text",
+          "title": "Reading status",
+          "text": ""
+        },
+        {
+          "type": "chips",
+          "items": [
+            "Want to read",
+            "Reading",
+            "Finished"
+          ],
+          "selected": "Reading",
+          "action": "status"
+        },
+        {
+          "type": "row",
+          "label": "Add to shelves",
+          "detail": "Classics",
+          "action": "shelves",
+          "icon": "shelf"
+        },
+        {
+          "type": "row",
+          "label": "Your rating",
+          "detail": "Only you can see it",
+          "action": "rating",
+          "icon": "star"
+        },
+        {
+          "type": "row",
+          "label": "Journal",
+          "detail": "Write or review your notes",
+          "action": "journal",
+          "icon": "journal"
+        },
+        {
+          "type": "row",
+          "label": "Remove from library",
+          "detail": "Review what will be removed",
+          "action": "remove",
+          "icon": "delete"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "shelves",
+          "label": "Choose shelves",
+          "to": "shelf-membership",
+          "role": "action"
+        },
+        {
+          "id": "rating",
+          "label": "Set private rating",
+          "to": "library-rating",
+          "role": "action"
+        },
+        {
+          "id": "journal",
+          "label": "Open book journal",
+          "to": "journal-book",
+          "role": "action"
+        },
+        {
+          "id": "remove",
+          "label": "Remove from library",
+          "to": "library-remove",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "book-reading",
+          "role": "back"
+        },
+        {
+          "id": "want",
+          "label": "Mark Want to read",
+          "to": "library-want",
+          "role": "action"
+        },
+        {
+          "id": "reading",
+          "label": "Mark Reading",
+          "to": "library-reading",
+          "role": "action"
+        },
+        {
+          "id": "finished",
+          "label": "Mark Finished",
+          "to": "library-finished",
+          "role": "action"
+        }
+      ]
+    },
+    {
+      "id": "library-remove",
+      "title": "Remove this book?",
+      "area": "Library",
+      "variant": "dialog",
+      "nav": null,
+      "annotations": [
+        "Destructive label states its exact scope. Do not delete notes as a side effect of removing a library book."
+      ],
+      "blocks": [
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342"
+        },
+        {
+          "type": "notice",
+          "title": "What changes",
+          "text": "The book leaves Library and its shelves. Downloaded text is removed from this device.",
+          "kind": "info"
+        },
+        {
+          "type": "notice",
+          "title": "Your writing stays",
+          "text": "Journal entries and highlights remain in Journal with their book and passage references. Your last position is kept.",
+          "kind": "info"
+        },
+        {
+          "type": "button",
+          "action": "remove",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "cancel",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "remove",
+          "label": "Remove from library",
+          "to": "library-after-removal",
+          "role": "action"
+        },
+        {
+          "id": "cancel",
+          "label": "Keep book",
+          "to": "library-books",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "library-actions",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "library-rating",
+      "title": "Your rating",
+      "area": "Library",
+      "variant": "sheet",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342"
+        },
+        {
+          "type": "text",
+          "title": "A rating just for you",
+          "text": "Your rating is private. It is never shown as a community score."
+        },
+        {
+          "type": "rating",
+          "value": 4
+        },
+        {
+          "type": "button",
+          "action": "save",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "clear",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "save",
+          "label": "Save rating",
+          "to": "library-actions",
+          "role": "action"
+        },
+        {
+          "id": "clear",
+          "label": "Clear rating",
+          "to": "library-actions",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "library-actions",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "shelves-list",
+      "title": "Library",
+      "area": "Shelves",
+      "variant": "base",
+      "nav": "Library",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "tabs",
+          "items": [
+            "Books",
+            "Shelves",
+            "Journal"
+          ],
+          "selected": "Shelves"
+        },
+        {
+          "type": "row",
+          "label": "Create shelf",
+          "detail": "",
+          "action": "create",
+          "icon": "plus"
+        },
+        {
+          "type": "row",
+          "label": "Classics",
+          "detail": "2 books",
+          "action": "shelf-classics",
+          "icon": "shelf"
+        },
+        {
+          "type": "row",
+          "label": "Reading next",
+          "detail": "1 book",
+          "action": "shelf-reading-next",
+          "icon": "shelf"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "create",
+          "label": "Create shelf",
+          "to": "shelf-create",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        },
+        {
+          "id": "tab-books",
+          "label": "Books",
+          "to": "library-books",
+          "role": "tab"
+        },
+        {
+          "id": "tab-shelves",
+          "label": "Shelves",
+          "to": "shelves-list",
+          "role": "tab"
+        },
+        {
+          "id": "tab-journal",
+          "label": "Journal",
+          "to": "journal-all",
+          "role": "tab"
+        },
+        {
+          "id": "shelf-classics",
+          "label": "Open Classics",
+          "to": "shelf-detail",
+          "role": "action"
+        },
+        {
+          "id": "shelf-reading-next",
+          "label": "Open Reading next",
+          "to": "shelf-detail",
+          "role": "action"
+        }
+      ]
+    },
+    {
+      "id": "shelves-empty",
+      "title": "Library",
+      "area": "Shelves",
+      "variant": "empty",
+      "nav": "Library",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "tabs",
+          "items": [
+            "Books",
+            "Shelves",
+            "Journal"
+          ],
+          "selected": "Shelves"
+        },
+        {
+          "type": "empty",
+          "title": "Make a shelf of your own",
+          "text": "Group your saved books in any way that feels right.",
+          "icon": "shelf"
+        },
+        {
+          "type": "button",
+          "action": "create",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "create",
+          "label": "Create shelf",
+          "to": "shelf-create",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        },
+        {
+          "id": "tab-books",
+          "label": "Books",
+          "to": "library-books",
+          "role": "tab"
+        },
+        {
+          "id": "tab-shelves",
+          "label": "Shelves",
+          "to": "shelves-list",
+          "role": "tab"
+        },
+        {
+          "id": "tab-journal",
+          "label": "Journal",
+          "to": "journal-all",
+          "role": "tab"
+        }
+      ]
+    },
+    {
+      "id": "shelf-create",
+      "title": "Create shelf",
+      "area": "Shelves",
+      "variant": "base",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "A place for a few good books",
+          "text": "Choose a name. You can add books after creating the shelf."
+        },
+        {
+          "type": "field",
+          "label": "Shelf name",
+          "value": "Classics",
+          "placeholder": ""
+        },
+        {
+          "type": "button",
+          "action": "create",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "create",
+          "label": "Create shelf",
+          "to": "shelf-detail-empty",
+          "role": "action"
+        },
+        {
+          "id": "duplicate",
+          "label": "Simulate duplicate name",
+          "to": "shelf-name-error",
+          "role": "event"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "shelves-list",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "library-after-removal",
+      "title": "Library",
+      "area": "Library",
+      "variant": "after-removal",
+      "nav": "Library",
+      "annotations": [
+        "Removal changes only its confirmed scope; other saved data remains visible."
+      ],
+      "blocks": [
+        {
+          "type": "tabs",
+          "items": [
+            "Books",
+            "Shelves",
+            "Journal"
+          ],
+          "selected": "Books"
+        },
+        {
+          "type": "notice",
+          "title": "Book removed",
+          "text": "Pride and Prejudice left Library. Your notes and highlights are kept in Journal.",
+          "kind": "info"
+        },
+        {
+          "type": "book",
+          "title": "Frankenstein",
+          "author": "Mary Shelley",
+          "book_id": "84",
+          "detail": "Want to read",
+          "action": "book-84"
+        },
+        {
+          "type": "book",
+          "title": "Alice’s Adventures in Wonderland",
+          "author": "Lewis Carroll",
+          "book_id": "11",
+          "detail": "Finished · Downloaded",
+          "action": "book-11"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "book-84",
+          "label": "Frankenstein",
+          "to": "book-saved",
+          "role": "action"
+        },
+        {
+          "id": "book-11",
+          "label": "Alice’s Adventures in Wonderland",
+          "to": "book-downloaded",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        },
+        {
+          "id": "tab-books",
+          "label": "Books",
+          "to": "library-books",
+          "role": "tab"
+        },
+        {
+          "id": "tab-shelves",
+          "label": "Shelves",
+          "to": "shelves-list",
+          "role": "tab"
+        },
+        {
+          "id": "tab-journal",
+          "label": "Journal",
+          "to": "journal-all",
+          "role": "tab"
+        }
+      ]
+    },
+    {
+      "id": "shelf-name-error",
+      "title": "Create shelf",
+      "area": "Shelves",
+      "variant": "validation",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "field",
+          "label": "Shelf name",
+          "value": "Classics",
+          "placeholder": "",
+          "error": "A shelf called Classics already exists."
+        },
+        {
+          "type": "text",
+          "title": "Try another name",
+          "text": "Shelf names must contain at least one non-space character and be unique in this library."
+        },
+        {
+          "type": "button",
+          "action": "rename",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "existing",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "rename",
+          "label": "Save name",
+          "to": "shelf-detail-empty",
+          "role": "action"
+        },
+        {
+          "id": "existing",
+          "label": "Open existing shelf",
+          "to": "shelf-detail",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "shelf-create",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "shelf-rename",
+      "title": "Rename shelf",
+      "area": "Shelves",
+      "variant": "base",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "field",
+          "label": "Shelf name",
+          "value": "Classics to revisit",
+          "placeholder": ""
+        },
+        {
+          "type": "notice",
+          "title": "Books stay together",
+          "text": "Renaming this shelf keeps all its books and their reading status.",
+          "kind": "info"
+        },
+        {
+          "type": "button",
+          "action": "save",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "save",
+          "label": "Save name",
+          "to": "shelf-detail",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "shelf-detail",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "shelf-delete",
+      "title": "Delete this shelf?",
+      "area": "Shelves",
+      "variant": "dialog",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "Classics",
+          "text": "2 books"
+        },
+        {
+          "type": "notice",
+          "title": "Your books stay in Library",
+          "text": "Only this shelf and its memberships will be removed. Books, downloads and journal entries are kept.",
+          "kind": "info"
+        },
+        {
+          "type": "button",
+          "action": "delete",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "cancel",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "delete",
+          "label": "Delete shelf",
+          "to": "shelves-after-delete",
+          "role": "action"
+        },
+        {
+          "id": "cancel",
+          "label": "Keep shelf",
+          "to": "shelf-detail",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "shelf-detail",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "shelf-membership",
+      "title": "Add to shelves",
+      "area": "Shelves",
+      "variant": "sheet",
+      "nav": null,
+      "annotations": [
+        "A book may belong to multiple shelves. This changes membership only."
+      ],
+      "blocks": [
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342"
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "label": "Classics",
+              "checked": true
+            },
+            {
+              "label": "Reading next",
+              "checked": false
+            }
+          ]
+        },
+        {
+          "type": "row",
+          "label": "Create another shelf",
+          "detail": "",
+          "action": "create",
+          "icon": "plus"
+        },
+        {
+          "type": "button",
+          "action": "save",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "create",
+          "label": "Create shelf",
+          "to": "shelf-create",
+          "role": "action"
+        },
+        {
+          "id": "save",
+          "label": "Save shelves",
+          "to": "book-reading",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "library-actions",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "shelf-detail",
+      "title": "Classics",
+      "area": "Shelves",
+      "variant": "base",
+      "nav": "Library",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "row",
+          "label": "Shelf options",
+          "detail": "Rename or delete this shelf",
+          "action": "rename",
+          "icon": "more"
+        },
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "detail": "Reading · 28%",
+          "action": "book-1342"
+        },
+        {
+          "type": "book",
+          "title": "Frankenstein",
+          "author": "Mary Shelley",
+          "book_id": "84",
+          "detail": "Want to read",
+          "action": "book-84"
+        },
+        {
+          "type": "button",
+          "action": "add",
+          "style": "tonal"
+        },
+        {
+          "type": "button",
+          "action": "delete",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "rename",
+          "label": "Rename shelf",
+          "to": "shelf-rename",
+          "role": "action"
+        },
+        {
+          "id": "delete",
+          "label": "Delete shelf",
+          "to": "shelf-delete",
+          "role": "action"
+        },
+        {
+          "id": "add",
+          "label": "Add books",
+          "to": "shelf-add-books",
+          "role": "action"
+        },
+        {
+          "id": "book-1342",
+          "label": "Pride and Prejudice",
+          "to": "book-reading",
+          "role": "action"
+        },
+        {
+          "id": "book-84",
+          "label": "Frankenstein",
+          "to": "book-saved",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "shelves-list",
+          "role": "back"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        }
+      ]
+    },
+    {
+      "id": "shelf-detail-empty",
+      "title": "Classics to revisit",
+      "area": "Shelves",
+      "variant": "empty",
+      "nav": "Library",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "This shelf has room",
+          "text": "Add books from your library. Their reading status stays the same.",
+          "icon": "shelf"
+        },
+        {
+          "type": "button",
+          "action": "add",
+          "style": "primary"
+        },
+        {
+          "type": "row",
+          "label": "Rename shelf",
+          "detail": "",
+          "action": "rename",
+          "icon": "edit"
+        },
+        {
+          "type": "row",
+          "label": "Delete shelf",
+          "detail": "Your books stay in Library",
+          "action": "delete",
+          "icon": "delete"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "add",
+          "label": "Add books",
+          "to": "shelf-add-books",
+          "role": "action"
+        },
+        {
+          "id": "rename",
+          "label": "Rename shelf",
+          "to": "shelf-rename",
+          "role": "action"
+        },
+        {
+          "id": "delete",
+          "label": "Delete shelf",
+          "to": "shelf-delete",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "shelves-list",
+          "role": "back"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        }
+      ]
+    },
+    {
+      "id": "journal-all",
+      "title": "Library",
+      "area": "Journal",
+      "variant": "base",
+      "nav": "Library",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "tabs",
+          "items": [
+            "Books",
+            "Shelves",
+            "Journal"
+          ],
+          "selected": "Journal"
+        },
+        {
+          "type": "row",
+          "label": "New journal entry",
+          "detail": "",
+          "action": "new",
+          "icon": "plus"
+        },
+        {
+          "type": "entry",
+          "title": "First impressions",
+          "book": "Pride and Prejudice",
+          "reference": "Chapter 18 · 28%",
+          "quote": "“The moment of her release from him was ecstasy.”",
+          "text": "How quickly a first impression becomes a certainty. I want to notice when Elizabeth changes her mind.",
+          "action": "entry"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "new",
+          "label": "New entry",
+          "to": "journal-book-picker",
+          "role": "action"
+        },
+        {
+          "id": "entry",
+          "label": "Read First impressions",
+          "to": "journal-view",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        },
+        {
+          "id": "tab-books",
+          "label": "Books",
+          "to": "library-books",
+          "role": "tab"
+        },
+        {
+          "id": "tab-shelves",
+          "label": "Shelves",
+          "to": "shelves-list",
+          "role": "tab"
+        },
+        {
+          "id": "tab-journal",
+          "label": "Journal",
+          "to": "journal-all",
+          "role": "tab"
+        }
+      ]
+    },
+    {
+      "id": "shelves-after-delete",
+      "title": "Library",
+      "area": "Shelves",
+      "variant": "after-removal",
+      "nav": "Library",
+      "annotations": [
+        "Removal changes only its confirmed scope; other saved data remains visible."
+      ],
+      "blocks": [
+        {
+          "type": "tabs",
+          "items": [
+            "Books",
+            "Shelves",
+            "Journal"
+          ],
+          "selected": "Shelves"
+        },
+        {
+          "type": "notice",
+          "title": "Shelf deleted",
+          "text": "Classics was removed. All its books remain in Library.",
+          "kind": "info"
+        },
+        {
+          "type": "row",
+          "label": "Reading next",
+          "detail": "1 book",
+          "action": "books",
+          "icon": "shelf"
+        },
+        {
+          "type": "button",
+          "action": "create",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "books",
+          "label": "View saved books",
+          "to": "library-books",
+          "role": "action"
+        },
+        {
+          "id": "create",
+          "label": "Create shelf",
+          "to": "shelf-create",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        },
+        {
+          "id": "tab-books",
+          "label": "Books",
+          "to": "library-books",
+          "role": "tab"
+        },
+        {
+          "id": "tab-shelves",
+          "label": "Shelves",
+          "to": "shelves-list",
+          "role": "tab"
+        },
+        {
+          "id": "tab-journal",
+          "label": "Journal",
+          "to": "journal-all",
+          "role": "tab"
+        }
+      ]
+    },
+    {
+      "id": "journal-book",
+      "title": "Book journal",
+      "area": "Journal",
+      "variant": "base",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342"
+        },
+        {
+          "type": "row",
+          "label": "New journal entry",
+          "detail": "",
+          "action": "new",
+          "icon": "plus"
+        },
+        {
+          "type": "entry",
+          "title": "First impressions",
+          "book": "Pride and Prejudice",
+          "reference": "Chapter 18 · 28%",
+          "quote": "“The moment of her release from him was ecstasy.”",
+          "text": "How quickly a first impression becomes a certainty. I want to notice when Elizabeth changes her mind.",
+          "action": "entry"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "new",
+          "label": "New entry",
+          "to": "journal-create",
+          "role": "action"
+        },
+        {
+          "id": "entry",
+          "label": "Read First impressions",
+          "to": "journal-view",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "book-reading",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "journal-empty",
+      "title": "Library",
+      "area": "Journal",
+      "variant": "empty",
+      "nav": "Library",
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "tabs",
+          "items": [
+            "Books",
+            "Shelves",
+            "Journal"
+          ],
+          "selected": "Journal"
+        },
+        {
+          "type": "empty",
+          "title": "A place for what stays with you",
+          "text": "Write a thought about a book or save a passage while reading.",
+          "icon": "journal"
+        },
+        {
+          "type": "button",
+          "action": "new",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "new",
+          "label": "Write an entry",
+          "to": "journal-book-picker",
+          "role": "action"
+        },
+        {
+          "id": "nav-home",
+          "label": "Home",
+          "to": "home-returning",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-explore",
+          "label": "Explore",
+          "to": "explore-browse",
+          "role": "navigation"
+        },
+        {
+          "id": "nav-library",
+          "label": "Library",
+          "to": "library-books",
+          "role": "navigation"
+        },
+        {
+          "id": "settings",
+          "label": "Settings",
+          "to": "settings-main",
+          "role": "toolbar"
+        },
+        {
+          "id": "tab-books",
+          "label": "Books",
+          "to": "library-books",
+          "role": "tab"
+        },
+        {
+          "id": "tab-shelves",
+          "label": "Shelves",
+          "to": "shelves-list",
+          "role": "tab"
+        },
+        {
+          "id": "tab-journal",
+          "label": "Journal",
+          "to": "journal-all",
+          "role": "tab"
+        }
+      ]
+    },
+    {
+      "id": "journal-book-empty",
+      "title": "Book journal",
+      "area": "Journal",
+      "variant": "empty",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342"
+        },
+        {
+          "type": "empty",
+          "title": "Your first thought goes here",
+          "text": "Keep a note about this book. Add a passage reference while you read.",
+          "icon": "journal"
+        },
+        {
+          "type": "button",
+          "action": "new",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "new",
+          "label": "Write an entry",
+          "to": "journal-create",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "book-reading",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "journal-view",
+      "title": "Journal entry",
+      "area": "Journal",
+      "variant": "base",
+      "nav": null,
+      "annotations": [
+        "Chapter 18 excerpt verified against Gutenberg 1342. The 28% value is a prototype anchor; production uses a stable passage locator."
+      ],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "First impressions",
+          "text": "Pride and Prejudice · Jane Austen"
+        },
+        {
+          "type": "quote",
+          "text": "“The moment of her release from him was ecstasy.”",
+          "reference": "Chapter 18 · 28%",
+          "action": "passage"
+        },
+        {
+          "type": "text",
+          "title": "My thought",
+          "text": "How quickly a first impression becomes a certainty. I want to notice when Elizabeth changes her mind."
+        },
+        {
+          "type": "button",
+          "action": "edit",
+          "style": "tonal"
+        },
+        {
+          "type": "row",
+          "label": "Delete entry",
+          "detail": "",
+          "action": "delete",
+          "icon": "delete"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "passage",
+          "label": "Return to passage",
+          "to": "reader-highlight",
+          "role": "action"
+        },
+        {
+          "id": "edit",
+          "label": "Edit entry",
+          "to": "journal-edit",
+          "role": "action"
+        },
+        {
+          "id": "delete",
+          "label": "Delete entry",
+          "to": "journal-delete",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "journal-all",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "journal-create",
+      "title": "New journal entry",
+      "area": "Journal",
+      "variant": "base",
+      "nav": null,
+      "annotations": [
+        "When started from Reader, selected text and its stable passage reference are attached. From Journal, choose a library book first."
+      ],
+      "blocks": [
+        {
+          "type": "row",
+          "label": "Book",
+          "detail": "Pride and Prejudice",
+          "action": "choose-book",
+          "icon": "book"
+        },
+        {
+          "type": "quote",
+          "text": "“The moment of her release from him was ecstasy.”",
+          "reference": "Saved passage reference"
+        },
+        {
+          "type": "field",
+          "label": "Title",
+          "value": "First impressions",
+          "placeholder": ""
+        },
+        {
+          "type": "field",
+          "label": "Your thought",
+          "value": "How quickly a first impression becomes a certainty.",
+          "placeholder": "",
+          "multiline": true
+        },
+        {
+          "type": "button",
+          "action": "save",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "save",
+          "label": "Save entry",
+          "to": "journal-view",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "journal-discard",
+          "role": "back"
+        },
+        {
+          "id": "choose-book",
+          "label": "Choose book",
+          "to": "journal-book-picker",
+          "role": "action"
+        }
+      ]
+    },
+    {
+      "id": "journal-edit",
+      "title": "Edit journal entry",
+      "area": "Journal",
+      "variant": "base",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "row",
+          "label": "Book",
+          "detail": "Pride and Prejudice",
+          "action": null,
+          "icon": "book"
+        },
+        {
+          "type": "quote",
+          "text": "“The moment of her release from him was ecstasy.”",
+          "reference": "Saved passage reference"
+        },
+        {
+          "type": "field",
+          "label": "Title",
+          "value": "First impressions",
+          "placeholder": ""
+        },
+        {
+          "type": "field",
+          "label": "Your thought",
+          "value": "How quickly a first impression becomes a certainty. I want to notice when Elizabeth changes her mind.",
+          "placeholder": "",
+          "multiline": true
+        },
+        {
+          "type": "button",
+          "action": "save",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "save",
+          "label": "Save changes",
+          "to": "journal-view",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "journal-discard",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "journal-delete",
+      "title": "Delete this entry?",
+      "area": "Journal",
+      "variant": "dialog",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "First impressions",
+          "text": "Pride and Prejudice"
+        },
+        {
+          "type": "notice",
+          "title": "This removes your journal entry",
+          "text": "The book, reading position and any separately saved highlight are kept.",
+          "kind": "info"
+        },
+        {
+          "type": "button",
+          "action": "delete",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "cancel",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "delete",
+          "label": "Delete entry",
+          "to": "journal-empty",
+          "role": "action"
+        },
+        {
+          "id": "cancel",
+          "label": "Keep entry",
+          "to": "journal-view",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "journal-view",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "journal-discard",
+      "title": "Discard your changes?",
+      "area": "Journal",
+      "variant": "dialog",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "Your entry has unsaved changes",
+          "text": "Keep editing to save your thought, or discard changes to return to Journal."
+        },
+        {
+          "type": "button",
+          "action": "keep",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "discard",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "keep",
+          "label": "Keep editing",
+          "to": "journal-edit",
+          "role": "action"
+        },
+        {
+          "id": "discard",
+          "label": "Discard changes",
+          "to": "journal-all",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "journal-edit",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "reader-scroll",
+      "title": "Pride and Prejudice",
+      "area": "Reader",
+      "variant": "scroll",
+      "nav": null,
+      "annotations": [
+        "Reader demo anchor: 28%, Chapter 18. Continuous scroll is the default.",
+        "Tap prose to reveal/hide controls; no primary destination navigation appears in Reader."
+      ],
+      "blocks": [
+        {
+          "type": "reader",
+          "mode": "scroll"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "immersive",
+          "label": "Hide controls",
+          "to": "reader-immersive",
+          "role": "action"
+        },
+        {
+          "id": "appearance",
+          "label": "Reading appearance",
+          "to": "reader-appearance",
+          "role": "action"
+        },
+        {
+          "id": "contents",
+          "label": "Contents",
+          "to": "reader-contents",
+          "role": "action"
+        },
+        {
+          "id": "search",
+          "label": "Search in book",
+          "to": "reader-search",
+          "role": "action"
+        },
+        {
+          "id": "bookmark",
+          "label": "Add bookmark",
+          "to": "reader-bookmark",
+          "role": "action"
+        },
+        {
+          "id": "select",
+          "label": "Select passage",
+          "to": "reader-selection",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "book-reading",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "reader-immersive",
+      "title": "Pride and Prejudice",
+      "area": "Reader",
+      "variant": "immersive",
+      "nav": null,
+      "annotations": [
+        "Reader demo anchor: 28%, Chapter 18. Continuous scroll is the default.",
+        "Tap prose to reveal/hide controls; no primary destination navigation appears in Reader."
+      ],
+      "blocks": [
+        {
+          "type": "reader",
+          "mode": "immersive"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "controls",
+          "label": "Show controls",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "select",
+          "label": "Select passage",
+          "to": "reader-selection",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "book-reading",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "reader-paged",
+      "title": "Pride and Prejudice",
+      "area": "Reader",
+      "variant": "paged",
+      "nav": null,
+      "annotations": [
+        "Reader demo anchor: 28%, Chapter 18. Continuous scroll is the default.",
+        "Tap prose to reveal/hide controls; no primary destination navigation appears in Reader."
+      ],
+      "blocks": [
+        {
+          "type": "reader",
+          "mode": "paged"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "previous",
+          "label": "Previous passage",
+          "to": "reader-paged",
+          "role": "action"
+        },
+        {
+          "id": "next",
+          "label": "Next passage",
+          "to": "reader-paged",
+          "role": "action"
+        },
+        {
+          "id": "appearance",
+          "label": "Reading appearance",
+          "to": "reader-appearance",
+          "role": "action"
+        },
+        {
+          "id": "contents",
+          "label": "Contents",
+          "to": "reader-contents",
+          "role": "action"
+        },
+        {
+          "id": "bookmark",
+          "label": "Add bookmark",
+          "to": "reader-bookmark",
+          "role": "action"
+        },
+        {
+          "id": "search",
+          "label": "Search in book",
+          "to": "reader-search",
+          "role": "action"
+        },
+        {
+          "id": "select",
+          "label": "Select passage",
+          "to": "reader-selection",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "book-reading",
+          "role": "back"
+        },
+        {
+          "id": "finish-demo",
+          "label": "Simulate reaching the end",
+          "to": "reader-finished",
+          "role": "event"
+        }
+      ]
+    },
+    {
+      "id": "reader-bookmark",
+      "title": "Pride and Prejudice",
+      "area": "Reader",
+      "variant": "bookmark",
+      "nav": null,
+      "annotations": [
+        "Reader demo anchor: 28%, Chapter 18. Continuous scroll is the default.",
+        "Tap prose to reveal/hide controls; no primary destination navigation appears in Reader."
+      ],
+      "blocks": [
+        {
+          "type": "reader",
+          "mode": "bookmark"
+        },
+        {
+          "type": "notice",
+          "title": "Bookmark saved",
+          "text": "Chapter 18 · 28% · Saved on device",
+          "kind": "info"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "remove",
+          "label": "Remove bookmark",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "appearance",
+          "label": "Reading appearance",
+          "to": "reader-appearance",
+          "role": "action"
+        },
+        {
+          "id": "contents",
+          "label": "Contents",
+          "to": "reader-contents",
+          "role": "action"
+        },
+        {
+          "id": "search",
+          "label": "Search in book",
+          "to": "reader-search",
+          "role": "action"
+        },
+        {
+          "id": "select",
+          "label": "Select passage",
+          "to": "reader-selection",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "book-reading",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "reader-selection",
+      "title": "Pride and Prejudice",
+      "area": "Reader",
+      "variant": "selection",
+      "nav": null,
+      "annotations": [
+        "Reader demo anchor: 28%, Chapter 18. Continuous scroll is the default.",
+        "Tap prose to reveal/hide controls; no primary destination navigation appears in Reader."
+      ],
+      "blocks": [
+        {
+          "type": "reader",
+          "mode": "selection"
+        },
+        {
+          "type": "selection",
+          "actions": [
+            "highlight",
+            "note",
+            "dismiss"
+          ]
+        }
+      ],
+      "transitions": [
+        {
+          "id": "highlight",
+          "label": "Highlight",
+          "to": "reader-highlight",
+          "role": "action"
+        },
+        {
+          "id": "note",
+          "label": "Add note",
+          "to": "journal-create",
+          "role": "action"
+        },
+        {
+          "id": "dismiss",
+          "label": "Dismiss selection",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "reader-scroll",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "reader-highlight",
+      "title": "Pride and Prejudice",
+      "area": "Reader",
+      "variant": "highlight",
+      "nav": null,
+      "annotations": [
+        "Reader demo anchor: 28%, Chapter 18. Continuous scroll is the default.",
+        "Tap prose to reveal/hide controls; no primary destination navigation appears in Reader."
+      ],
+      "blocks": [
+        {
+          "type": "reader",
+          "mode": "highlight"
+        },
+        {
+          "type": "notice",
+          "title": "Passage highlighted",
+          "text": "Saved on device",
+          "kind": "info"
+        },
+        {
+          "type": "row",
+          "label": "Add a journal note",
+          "detail": "Keep a thought with this passage",
+          "action": "note",
+          "icon": "journal"
+        },
+        {
+          "type": "row",
+          "label": "Remove highlight",
+          "detail": "",
+          "action": "remove",
+          "icon": "close"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "note",
+          "label": "Add note",
+          "to": "journal-create",
+          "role": "action"
+        },
+        {
+          "id": "remove",
+          "label": "Remove highlight",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "appearance",
+          "label": "Reading appearance",
+          "to": "reader-appearance",
+          "role": "action"
+        },
+        {
+          "id": "contents",
+          "label": "Contents",
+          "to": "reader-contents",
+          "role": "action"
+        },
+        {
+          "id": "search",
+          "label": "Search in book",
+          "to": "reader-search",
+          "role": "action"
+        },
+        {
+          "id": "bookmark",
+          "label": "Add bookmark",
+          "to": "reader-bookmark",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "book-reading",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "reader-appearance",
+      "title": "Reading appearance",
+      "area": "Reader",
+      "variant": "sheet",
+      "nav": null,
+      "annotations": [
+        "Changing paper, text size or mode preserves the current passage, not a pixel offset.",
+        "App theme remains independent from reader Light/Sepia/Dark paper.",
+        "Font, size, line spacing, margins, paper and reading mode are editable. The simulated prototype carries these values and preserves its passage anchor."
+      ],
+      "blocks": [
+        {
+          "type": "mini-prose"
+        },
+        {
+          "type": "text",
+          "title": "Book typeface",
+          "text": ""
+        },
+        {
+          "type": "chips",
+          "items": [
+            "Literata",
+            "Roboto Flex"
+          ],
+          "selected": "Literata",
+          "setting": "font"
+        },
+        {
+          "type": "text",
+          "title": "Margins",
+          "text": ""
+        },
+        {
+          "type": "chips",
+          "items": [
+            "Narrow",
+            "Comfortable",
+            "Wide"
+          ],
+          "selected": "Comfortable",
+          "setting": "margins"
+        },
+        {
+          "type": "text",
+          "title": "Paper",
+          "text": "Independent of app appearance"
+        },
+        {
+          "type": "chips",
+          "items": [
+            "Light",
+            "Sepia",
+            "Dark"
+          ],
+          "selected": "Sepia",
+          "setting": "paper"
+        },
+        {
+          "type": "text",
+          "title": "Text size",
+          "text": "19 sp"
+        },
+        {
+          "type": "slider",
+          "label": "Text size",
+          "value": 45
+        },
+        {
+          "type": "text",
+          "title": "Line spacing",
+          "text": "Comfortable"
+        },
+        {
+          "type": "slider",
+          "label": "Line spacing",
+          "value": 60
+        },
+        {
+          "type": "text",
+          "title": "Reading mode",
+          "text": ""
+        },
+        {
+          "type": "chips",
+          "items": [
+            "Scroll",
+            "Paged"
+          ],
+          "selected": "Scroll",
+          "setting": "mode"
+        },
+        {
+          "type": "button",
+          "action": "done",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "done",
+          "label": "Done",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "reader-scroll",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "reader-contents",
+      "title": "Contents",
+      "area": "Reader",
+      "variant": "base",
+      "nav": null,
+      "annotations": [
+        "This prototype opens the representative Chapter 18 passage; neighboring chapter rows are visible only. Production contents navigate every stored chapter locator."
+      ],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "Pride and Prejudice",
+          "text": "Jane Austen"
+        },
+        {
+          "type": "chips",
+          "items": [
+            "Chapters",
+            "Bookmarks"
+          ],
+          "selected": "Chapters",
+          "action": null
+        },
+        {
+          "type": "row",
+          "label": "Chapter 16",
+          "detail": "",
+          "action": null,
+          "icon": "book"
+        },
+        {
+          "type": "row",
+          "label": "Chapter 17",
+          "detail": "",
+          "action": null,
+          "icon": "book"
+        },
+        {
+          "type": "row",
+          "label": "Chapter 18",
+          "detail": "Current chapter · 28%",
+          "action": "chapter",
+          "icon": "check"
+        },
+        {
+          "type": "row",
+          "label": "Chapter 19",
+          "detail": "",
+          "action": null,
+          "icon": "book"
+        },
+        {
+          "type": "text",
+          "title": "Saved bookmark",
+          "text": ""
+        },
+        {
+          "type": "row",
+          "label": "Chapter 18 · 28%",
+          "detail": "Current passage",
+          "action": "bookmark",
+          "icon": "bookmark"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "chapter",
+          "label": "Go to Chapter 18",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "bookmark",
+          "label": "Open bookmarked passage",
+          "to": "reader-bookmark",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "reader-scroll",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "reader-search",
+      "title": "Search in book",
+      "area": "Reader",
+      "variant": "base",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "field",
+          "label": "Word or phrase",
+          "value": "Elizabeth",
+          "placeholder": ""
+        },
+        {
+          "type": "text",
+          "title": "Find a passage",
+          "text": "Search the downloaded text of Pride and Prejudice."
+        },
+        {
+          "type": "button",
+          "action": "search",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "search",
+          "label": "Search this book",
+          "to": "reader-search-results",
+          "role": "action"
+        },
+        {
+          "id": "empty",
+          "label": "Simulate no matches",
+          "to": "reader-search-empty",
+          "role": "event"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "reader-scroll",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "reader-search-results",
+      "title": "Search in book",
+      "area": "Reader",
+      "variant": "base",
+      "nav": null,
+      "annotations": [
+        "No fabricated global result count; production displays results from the actual downloaded text."
+      ],
+      "blocks": [
+        {
+          "type": "search",
+          "value": "Elizabeth",
+          "action": "search"
+        },
+        {
+          "type": "text",
+          "title": "Matches in this chapter",
+          "text": "Select a result to return to its passage."
+        },
+        {
+          "type": "row",
+          "label": "“…Elizabeth was in spirits…”",
+          "detail": "Chapter 18",
+          "action": "result",
+          "icon": "search"
+        },
+        {
+          "type": "row",
+          "label": "“…Elizabeth could not help…”",
+          "detail": "Chapter 18",
+          "action": "result",
+          "icon": "search"
+        },
+        {
+          "type": "notice",
+          "title": "Your place is kept",
+          "text": "Back returns to the passage you were reading.",
+          "kind": "info"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "search",
+          "label": "Edit in-book search",
+          "to": "reader-search",
+          "role": "action"
+        },
+        {
+          "id": "result",
+          "label": "Jump to matching passage",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "reader-scroll",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "reader-search-empty",
+      "title": "Search in book",
+      "area": "Reader",
+      "variant": "empty",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "search",
+          "value": "no matching phrase",
+          "action": "search"
+        },
+        {
+          "type": "empty",
+          "title": "No matching passage",
+          "text": "Try another word or a shorter phrase.",
+          "icon": "search"
+        },
+        {
+          "type": "button",
+          "action": "search",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "search",
+          "label": "Change search",
+          "to": "reader-search",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "reader-scroll",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "reader-finished",
+      "title": "The end",
+      "area": "Reader",
+      "variant": "completion",
+      "nav": null,
+      "annotations": [
+        "Reaching the end offers an explicit status change; it does not silently publish or rate anything."
+      ],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "A chapter of your own, finished",
+          "text": "You’ve reached the end of Pride and Prejudice.",
+          "icon": "check"
+        },
+        {
+          "type": "button",
+          "action": "finish",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "journal",
+          "style": "tonal"
+        },
+        {
+          "type": "button",
+          "action": "read",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "finish",
+          "label": "Mark as finished",
+          "to": "library-finished",
+          "role": "action"
+        },
+        {
+          "id": "journal",
+          "label": "Write a final thought",
+          "to": "journal-create",
+          "role": "action"
+        },
+        {
+          "id": "read",
+          "label": "Keep reading",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "reader-scroll",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "settings-main",
+      "title": "Settings",
+      "area": "Settings",
+      "variant": "base",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "row",
+          "label": "Account & sync",
+          "detail": "Guest · Saved on device",
+          "action": "account",
+          "icon": "person"
+        },
+        {
+          "type": "row",
+          "label": "Appearance",
+          "detail": "Follow system · Brand color",
+          "action": "appearance",
+          "icon": "appearance"
+        },
+        {
+          "type": "row",
+          "label": "Reader defaults",
+          "detail": "Scroll · Literata · 19 sp",
+          "action": "reader",
+          "icon": "text"
+        },
+        {
+          "type": "row",
+          "label": "Downloaded books",
+          "detail": "Manage this device’s book text",
+          "action": "storage",
+          "icon": "download"
+        },
+        {
+          "type": "row",
+          "label": "About Veritalex",
+          "detail": "Catalogue, credits and app information",
+          "action": "about",
+          "icon": "info"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "account",
+          "label": "Account & sync",
+          "to": "sync-local",
+          "role": "action"
+        },
+        {
+          "id": "appearance",
+          "label": "Appearance",
+          "to": "settings-appearance",
+          "role": "action"
+        },
+        {
+          "id": "reader",
+          "label": "Reader defaults",
+          "to": "settings-reader-defaults",
+          "role": "action"
+        },
+        {
+          "id": "storage",
+          "label": "Downloaded books",
+          "to": "settings-storage",
+          "role": "action"
+        },
+        {
+          "id": "about",
+          "label": "About Veritalex",
+          "to": "settings-about",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "home-returning",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "settings-appearance",
+      "title": "Appearance",
+      "area": "Settings",
+      "variant": "base",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "App theme",
+          "text": ""
+        },
+        {
+          "type": "radios",
+          "items": [
+            "Follow system",
+            "Light",
+            "Dark"
+          ],
+          "selected": "Follow system"
+        },
+        {
+          "type": "text",
+          "title": "App colors",
+          "text": ""
+        },
+        {
+          "type": "radios",
+          "items": [
+            "Veritalex brand",
+            "Device colors"
+          ],
+          "selected": "Veritalex brand"
+        },
+        {
+          "type": "notice",
+          "title": "Reading paper is separate",
+          "text": "Change Light, Sepia or Dark paper from the reader’s appearance controls.",
+          "kind": "info"
+        },
+        {
+          "type": "button",
+          "action": "save",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "save",
+          "label": "Save appearance",
+          "to": "settings-main",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "settings-main",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "settings-reader-defaults",
+      "title": "Reader defaults",
+      "area": "Settings",
+      "variant": "base",
+      "nav": null,
+      "annotations": [
+        "Font, size, line spacing, margins, paper and reading mode are editable. The simulated prototype carries these values and preserves its passage anchor."
+      ],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "For your next reading session",
+          "text": "Changes preserve your current passage."
+        },
+        {
+          "type": "text",
+          "title": "Book typeface",
+          "text": ""
+        },
+        {
+          "type": "chips",
+          "items": [
+            "Literata",
+            "Roboto Flex"
+          ],
+          "selected": "Literata",
+          "setting": "font"
+        },
+        {
+          "type": "text",
+          "title": "Margins",
+          "text": ""
+        },
+        {
+          "type": "chips",
+          "items": [
+            "Narrow",
+            "Comfortable",
+            "Wide"
+          ],
+          "selected": "Comfortable",
+          "setting": "margins"
+        },
+        {
+          "type": "chips",
+          "items": [
+            "Scroll",
+            "Paged"
+          ],
+          "selected": "Scroll",
+          "setting": "mode"
+        },
+        {
+          "type": "slider",
+          "label": "Default text size · 19 sp",
+          "value": 45
+        },
+        {
+          "type": "slider",
+          "label": "Line spacing · Comfortable",
+          "value": 60
+        },
+        {
+          "type": "chips",
+          "items": [
+            "Light",
+            "Sepia",
+            "Dark"
+          ],
+          "selected": "Light",
+          "setting": "paper"
+        },
+        {
+          "type": "button",
+          "action": "save",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "save",
+          "label": "Save reader defaults",
+          "to": "settings-main",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "settings-main",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "settings-storage",
+      "title": "Downloaded books",
+      "area": "Settings",
+      "variant": "base",
+      "nav": null,
+      "annotations": [
+        "Show storage bytes only after measuring files on the device."
+      ],
+      "blocks": [
+        {
+          "type": "notice",
+          "title": "On this device",
+          "text": "2 books available offline on this device.",
+          "kind": "info"
+        },
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "detail": "Downloaded · Reading · 28%"
+        },
+        {
+          "type": "book",
+          "title": "Alice’s Adventures in Wonderland",
+          "author": "Lewis Carroll",
+          "book_id": "11",
+          "detail": "Downloaded · Finished"
+        },
+        {
+          "type": "button",
+          "action": "remove",
+          "style": "tonal"
+        },
+        {
+          "type": "text",
+          "title": "Only downloaded text is removed",
+          "text": "Books stay in Library. Notes, highlights, shelf memberships and reading positions are kept."
+        }
+      ],
+      "transitions": [
+        {
+          "id": "remove",
+          "label": "Remove downloaded text",
+          "to": "settings-storage-confirm",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "settings-main",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "settings-storage-confirm",
+      "title": "Remove downloaded text?",
+      "area": "Settings",
+      "variant": "dialog",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "2 downloaded books",
+          "text": "You’ll need a connection to download them again."
+        },
+        {
+          "type": "notice",
+          "title": "Your library stays",
+          "text": "Saved books, reading positions, highlights and journal entries are kept.",
+          "kind": "info"
+        },
+        {
+          "type": "button",
+          "action": "remove",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "cancel",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "remove",
+          "label": "Remove downloads",
+          "to": "settings-storage-empty",
+          "role": "action"
+        },
+        {
+          "id": "cancel",
+          "label": "Keep downloads",
+          "to": "settings-storage",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "settings-storage",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "settings-about",
+      "title": "About Veritalex",
+      "area": "Settings",
+      "variant": "base",
+      "nav": null,
+      "annotations": [
+        "The installed app supplies its build version. No version is fabricated in this design."
+      ],
+      "blocks": [
+        {
+          "type": "brand"
+        },
+        {
+          "type": "text",
+          "title": "A personal place to read",
+          "text": "Veritalex"
+        },
+        {
+          "type": "row",
+          "label": "Book catalogue",
+          "detail": "Project Gutenberg · Public-domain text",
+          "action": null,
+          "icon": "book"
+        },
+        {
+          "type": "text",
+          "title": "Catalogue identifiers",
+          "text": "1342 · Pride and Prejudice\n84 · Frankenstein\n11 · Alice’s Adventures in Wonderland\n1260 · Jane Eyre"
+        },
+        {
+          "type": "text",
+          "title": "Reading and privacy",
+          "text": "Your journal and ratings are private. Guest data stays on this device. Google sign-in enables optional account sync."
+        }
+      ],
+      "transitions": [
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "settings-main",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "account-details",
+      "title": "Account & sync",
+      "area": "Account",
+      "variant": "base",
+      "nav": null,
+      "annotations": [
+        "Example email is a design placeholder. The account workspace and local guest workspace remain distinct."
+      ],
+      "blocks": [
+        {
+          "type": "row",
+          "label": "Signed in with Google",
+          "detail": "reader@example.com",
+          "action": null,
+          "icon": "person"
+        },
+        {
+          "type": "row",
+          "label": "Up to date",
+          "detail": "Books, notes and reading position are synced",
+          "action": "sync",
+          "icon": "check"
+        },
+        {
+          "type": "row",
+          "label": "Guest reading on this device",
+          "detail": "Review before adding it to this account",
+          "action": "import",
+          "icon": "device"
+        },
+        {
+          "type": "row",
+          "label": "Sign out",
+          "detail": "Review pending changes first",
+          "action": "signout",
+          "icon": "logout"
+        },
+        {
+          "type": "row",
+          "label": "Delete account",
+          "detail": "Permanently remove account data",
+          "action": "delete",
+          "icon": "delete"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "sync",
+          "label": "View sync status",
+          "to": "sync-current",
+          "role": "action"
+        },
+        {
+          "id": "import",
+          "label": "Review guest reading",
+          "to": "auth-import-preview",
+          "role": "action"
+        },
+        {
+          "id": "signout",
+          "label": "Sign out",
+          "to": "account-signout-pending",
+          "role": "action"
+        },
+        {
+          "id": "delete",
+          "label": "Delete account",
+          "to": "account-delete-confirm",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "settings-main",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "account-signout-pending",
+      "title": "Before you sign out",
+      "area": "Account",
+      "variant": "dialog",
+      "nav": null,
+      "annotations": [
+        "Signing out never merges unsynced account records into the guest workspace.",
+        "Device retention must be scoped to the signed-out account; the next matching sign-in can retry sync."
+      ],
+      "blocks": [
+        {
+          "type": "notice",
+          "title": "2 changes are waiting to sync",
+          "text": "Your latest journal edit and reading position are saved on this device.",
+          "kind": "info"
+        },
+        {
+          "type": "text",
+          "title": "Keep this account’s work safe",
+          "text": "Sync now before signing out. You can also sign out and keep unsynced account data on this device for the next sign-in."
+        },
+        {
+          "type": "button",
+          "action": "sync",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "signout",
+          "style": "tonal"
+        },
+        {
+          "type": "button",
+          "action": "cancel",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "sync",
+          "label": "Sync before signing out",
+          "to": "sync-syncing",
+          "role": "action"
+        },
+        {
+          "id": "signout",
+          "label": "Sign out and keep on device",
+          "to": "sync-local",
+          "role": "action"
+        },
+        {
+          "id": "cancel",
+          "label": "Stay signed in",
+          "to": "account-details",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "account-details",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "account-delete-confirm",
+      "title": "Delete your account?",
+      "area": "Account",
+      "variant": "dialog",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "notice",
+          "title": "This cannot be undone",
+          "text": "Your account library, reading positions, journal entries, highlights and shelves will be permanently deleted.",
+          "kind": "error"
+        },
+        {
+          "type": "text",
+          "title": "Guest data stays separate",
+          "text": "Your local guest library is not part of this account deletion. Downloaded account text on this device will be removed."
+        },
+        {
+          "type": "text",
+          "title": "Confirm with Google",
+          "text": "You’ll verify your identity before deletion begins."
+        },
+        {
+          "type": "button",
+          "action": "continue",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "cancel",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "continue",
+          "label": "Continue to verification",
+          "to": "account-reauth",
+          "role": "action"
+        },
+        {
+          "id": "cancel",
+          "label": "Keep my account",
+          "to": "account-details",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "account-details",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "settings-storage-empty",
+      "title": "Downloaded books",
+      "area": "Settings",
+      "variant": "empty",
+      "nav": null,
+      "annotations": [
+        "Removal changes only its confirmed scope; other saved data remains visible."
+      ],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "No downloaded text",
+          "text": "Your saved books, notes and reading positions are kept. Download a book again when you want to read offline.",
+          "icon": "download"
+        },
+        {
+          "type": "button",
+          "action": "library",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "library",
+          "label": "Open Library",
+          "to": "library-books",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "settings-main",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "account-reauth",
+      "title": "Verify it’s you",
+      "area": "Account",
+      "variant": "base",
+      "nav": null,
+      "annotations": [
+        "Production reauthentication must confirm the same account and require fresh verification. Prototype buttons simulate this only."
+      ],
+      "blocks": [
+        {
+          "type": "row",
+          "label": "Google account",
+          "detail": "reader@example.com",
+          "action": null,
+          "icon": "person"
+        },
+        {
+          "type": "text",
+          "title": "Confirm account deletion",
+          "text": "Verify this same Google account to continue. Cancelling keeps your account and all its data."
+        },
+        {
+          "type": "button",
+          "action": "verify",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "cancel",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "verify",
+          "label": "Verify with Google",
+          "to": "account-deleting",
+          "role": "action"
+        },
+        {
+          "id": "cancel",
+          "label": "Cancel deletion",
+          "to": "account-details",
+          "role": "action"
+        },
+        {
+          "id": "failure",
+          "label": "Simulate verification failure",
+          "to": "account-delete-error",
+          "role": "event"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "account-details",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "account-deleting",
+      "title": "Deleting your account",
+      "area": "Account",
+      "variant": "progress",
+      "nav": null,
+      "annotations": [
+        "Do not present a success state until the service confirms deletion. Back may leave this screen but must not imply cancellation of an accepted deletion."
+      ],
+      "blocks": [
+        {
+          "type": "progress",
+          "label": "Removing account data…",
+          "value": null
+        },
+        {
+          "type": "text",
+          "title": "Deletion in progress",
+          "text": "Please keep the app open while we confirm the result. Your guest library remains on this device."
+        }
+      ],
+      "transitions": [
+        {
+          "id": "success",
+          "label": "Simulate deletion complete",
+          "to": "account-deleted",
+          "role": "event"
+        },
+        {
+          "id": "failure",
+          "label": "Simulate deletion failure",
+          "to": "account-delete-error",
+          "role": "event"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "account-details",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "account-delete-error",
+      "title": "Deletion wasn’t confirmed",
+      "area": "Account",
+      "variant": "error",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "Couldn’t complete deletion",
+          "text": "We couldn’t confirm that all account data was removed. Check your connection and try again.",
+          "icon": "warning"
+        },
+        {
+          "type": "notice",
+          "title": "No success assumed",
+          "text": "Stay signed in until the result is confirmed. Your guest library is unchanged.",
+          "kind": "info"
+        },
+        {
+          "type": "button",
+          "action": "retry",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "account",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "retry",
+          "label": "Verify and try again",
+          "to": "account-reauth",
+          "role": "action"
+        },
+        {
+          "id": "account",
+          "label": "Return to account",
+          "to": "account-details",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "account-details",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "account-deleted",
+      "title": "Account deleted",
+      "area": "Account",
+      "variant": "success",
+      "nav": null,
+      "annotations": [],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "Your account data was removed",
+          "text": "You’re now using the separate guest library on this device.",
+          "icon": "check"
+        },
+        {
+          "type": "button",
+          "action": "guest",
+          "style": "primary"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "guest",
+          "label": "Open guest library",
+          "to": "home-first",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "home-first",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "sync-local",
+      "title": "Account & sync",
+      "area": "Sync",
+      "variant": "local",
+      "nav": null,
+      "annotations": [
+        "Sync copy describes confirmed local or account state; reading remains available offline."
+      ],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "Saved on device",
+          "text": "You’re reading as a guest. Your books, journal and reading position stay on this device.",
+          "icon": "device"
+        },
+        {
+          "type": "button",
+          "action": "signin",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "library",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "signin",
+          "label": "Sign in to sync",
+          "to": "auth-loading",
+          "role": "action"
+        },
+        {
+          "id": "library",
+          "label": "Open Library",
+          "to": "library-books",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "settings-main",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "sync-waiting",
+      "title": "Account & sync",
+      "area": "Sync",
+      "variant": "waiting",
+      "nav": null,
+      "annotations": [
+        "Sync copy describes confirmed local or account state; reading remains available offline."
+      ],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "Waiting to sync",
+          "text": "2 changes are saved on this device. They’ll sync when a connection is available.",
+          "icon": "cloud-off"
+        },
+        {
+          "type": "row",
+          "label": "Pending changes",
+          "detail": "Journal entry · Reading position",
+          "action": null,
+          "icon": "journal"
+        },
+        {
+          "type": "button",
+          "action": "retry",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "library",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "retry",
+          "label": "Try sync now",
+          "to": "sync-syncing",
+          "role": "action"
+        },
+        {
+          "id": "library",
+          "label": "Keep reading",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "settings-main",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "sync-syncing",
+      "title": "Account & sync",
+      "area": "Sync",
+      "variant": "syncing",
+      "nav": null,
+      "annotations": [
+        "Sync copy describes confirmed local or account state; reading remains available offline."
+      ],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "Syncing",
+          "text": "Your local reading remains available while we save your latest changes.",
+          "icon": "sync"
+        },
+        {
+          "type": "progress",
+          "label": "Saving 2 changes…",
+          "value": null
+        },
+        {
+          "type": "button",
+          "action": "library",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "library",
+          "label": "Keep reading",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "success",
+          "label": "Simulate sync complete",
+          "to": "sync-current",
+          "role": "event"
+        },
+        {
+          "id": "failure",
+          "label": "Simulate sync failure",
+          "to": "sync-failed",
+          "role": "event"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "settings-main",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "sync-current",
+      "title": "Account & sync",
+      "area": "Sync",
+      "variant": "current",
+      "nav": null,
+      "annotations": [
+        "Sync copy describes confirmed local or account state; reading remains available offline."
+      ],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "Up to date",
+          "text": "Your books, notes, highlights and reading position are synced.",
+          "icon": "check"
+        },
+        {
+          "type": "row",
+          "label": "Google account",
+          "detail": "reader@example.com",
+          "action": "account",
+          "icon": "person"
+        },
+        {
+          "type": "button",
+          "action": "library",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "account",
+          "label": "Account details",
+          "to": "account-details",
+          "role": "action"
+        },
+        {
+          "id": "library",
+          "label": "Open Library",
+          "to": "library-books",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "settings-main",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "sync-failed",
+      "title": "Account & sync",
+      "area": "Sync",
+      "variant": "failed",
+      "nav": null,
+      "annotations": [
+        "Sync copy describes confirmed local or account state; reading remains available offline."
+      ],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "Couldn’t sync",
+          "text": "Your changes are saved on this device. Check your connection and try again.",
+          "icon": "warning"
+        },
+        {
+          "type": "row",
+          "label": "Still on this device",
+          "detail": "Journal entry · Reading position",
+          "action": null,
+          "icon": "device"
+        },
+        {
+          "type": "button",
+          "action": "retry",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "library",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "retry",
+          "label": "Try again",
+          "to": "sync-syncing",
+          "role": "action"
+        },
+        {
+          "id": "library",
+          "label": "Keep reading",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "settings-main",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "sync-expired",
+      "title": "Account & sync",
+      "area": "Sync",
+      "variant": "expired",
+      "nav": null,
+      "annotations": [
+        "Sync copy describes confirmed local or account state; reading remains available offline."
+      ],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "Sign in to sync",
+          "text": "Your Google session expired. Your current reading is saved on this device.",
+          "icon": "person"
+        },
+        {
+          "type": "button",
+          "action": "signin",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "library",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "signin",
+          "label": "Sign in again",
+          "to": "auth-loading",
+          "role": "action"
+        },
+        {
+          "id": "library",
+          "label": "Keep reading offline",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "settings-main",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "sync-restoring",
+      "title": "Account & sync",
+      "area": "Sync",
+      "variant": "restoring",
+      "nav": null,
+      "annotations": [
+        "Sync copy describes confirmed local or account state; reading remains available offline."
+      ],
+      "blocks": [
+        {
+          "type": "empty",
+          "title": "Restoring your library",
+          "text": "Your account books and notes are being restored. Download book text separately for offline reading.",
+          "icon": "sync"
+        },
+        {
+          "type": "progress",
+          "label": "Restoring books and journal…",
+          "value": null
+        },
+        {
+          "type": "button",
+          "action": "library",
+          "style": "tonal"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "library",
+          "label": "Use local library",
+          "to": "library-books",
+          "role": "action"
+        },
+        {
+          "id": "success",
+          "label": "Simulate restore complete",
+          "to": "sync-current",
+          "role": "event"
+        },
+        {
+          "id": "failure",
+          "label": "Simulate restore interrupted",
+          "to": "sync-failed",
+          "role": "event"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "settings-main",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "sync-conflict",
+      "title": "Choose where to continue",
+      "area": "Sync",
+      "variant": "conflict",
+      "nav": null,
+      "annotations": [
+        "Compare stable passage locators and modified time. Do not resolve a meaningful conflict by choosing the larger percentage silently."
+      ],
+      "blocks": [
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342"
+        },
+        {
+          "type": "text",
+          "title": "Two reading positions",
+          "text": "Choose one position for this account. Your journal and highlights are kept either way."
+        },
+        {
+          "type": "radios",
+          "items": [
+            "This device · Chapter 18 · 28%",
+            "Account · Chapter 19 · 31%"
+          ],
+          "selected": "This device · Chapter 18 · 28%"
+        },
+        {
+          "type": "button",
+          "action": "use",
+          "style": "primary"
+        },
+        {
+          "type": "button",
+          "action": "later",
+          "style": "text"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "use",
+          "label": "Use selected position",
+          "to": "reader-scroll",
+          "role": "action"
+        },
+        {
+          "id": "later",
+          "label": "Decide later",
+          "to": "home-returning",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "account-details",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "shelf-add-books",
+      "title": "Add books to shelf",
+      "area": "Shelves",
+      "variant": "picker",
+      "nav": null,
+      "annotations": [
+        "This direction selects multiple Library books for one shelf. The per-book Add to shelves sheet is a separate operation."
+      ],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "Choose books from Library",
+          "text": "Select every book you want to add. Existing members stay on the shelf."
+        },
+        {
+          "type": "checks",
+          "items": [
+            {
+              "label": "Pride and Prejudice",
+              "value": "1342",
+              "checked": false
+            },
+            {
+              "label": "Frankenstein",
+              "value": "84",
+              "checked": false
+            },
+            {
+              "label": "Alice’s Adventures in Wonderland",
+              "value": "11",
+              "checked": false
+            }
+          ]
+        },
+        {
+          "type": "button",
+          "action": "add",
+          "style": "primary",
+          "requires_selection": true
+        }
+      ],
+      "transitions": [
+        {
+          "id": "add",
+          "label": "Add selected books",
+          "to": "shelf-detail",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "shelf-detail-empty",
+          "role": "back"
+        }
+      ]
+    },
+    {
+      "id": "journal-book-picker",
+      "title": "Choose a book",
+      "area": "Journal",
+      "variant": "picker",
+      "nav": null,
+      "annotations": [
+        "A journal entry always has an explicit book context. Starting from a book or selected Reader passage already supplies it."
+      ],
+      "blocks": [
+        {
+          "type": "text",
+          "title": "Which book is on your mind?",
+          "text": "Choose a saved book for this journal entry."
+        },
+        {
+          "type": "book",
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "book_id": "1342",
+          "action": "book-1342"
+        },
+        {
+          "type": "book",
+          "title": "Frankenstein",
+          "author": "Mary Shelley",
+          "book_id": "84",
+          "action": "book-84"
+        },
+        {
+          "type": "book",
+          "title": "Alice’s Adventures in Wonderland",
+          "author": "Lewis Carroll",
+          "book_id": "11",
+          "action": "book-11"
+        }
+      ],
+      "transitions": [
+        {
+          "id": "book-1342",
+          "label": "Pride and Prejudice",
+          "to": "journal-create",
+          "role": "action"
+        },
+        {
+          "id": "book-84",
+          "label": "Frankenstein",
+          "to": "journal-create",
+          "role": "action"
+        },
+        {
+          "id": "book-11",
+          "label": "Alice’s Adventures in Wonderland",
+          "to": "journal-create",
+          "role": "action"
+        },
+        {
+          "id": "back",
+          "label": "Back",
+          "to": "journal-all",
+          "role": "back"
+        }
+      ]
+    }
+  ],
+  "content_source": "https://www.gutenberg.org/cache/epub/1342/pg1342.txt",
+  "prototype_behavior": {
+    "storage": "In-memory per review session; no persistent browser storage or backend.",
+    "routes": "Manifest transitions are base scenario routes. Contextual resolution preserves invoking destination, reader mode, workspace, operation intent, selected book/shelf, and empty collection state.",
+    "state": "Guest and account collections are separate. Forms, ratings, statuses, shelf membership, journal drafts and chosen reading position are carried between states.",
+    "reader": "Chapter 18 and Chapter 19 excerpts are representative public-domain passages, not a full downloaded book."
+  }
+}

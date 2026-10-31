@@ -1,0 +1,18 @@
+{
+  "slug": "tablet-reader",
+  "id": "4f336bc6715c4ae2b760b51aba01816a",
+  "name": "projects/6233788376335662642/screens/4f336bc6715c4ae2b760b51aba01816a",
+  "title": "TAB-04 Reader with Contents - Veritalex",
+  "width": "2560",
+  "height": "2048",
+  "deviceType": "TABLET",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/daf7b596ac71495e88fa241067f8dd7f:download",
+    "name": "projects/6233788376335662642/files/daf7b596ac71495e88fa241067f8dd7f"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/f3daa52a53334a39975a42e6cb97d3ca:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/f3daa52a53334a39975a42e6cb97d3ca"
+  }
+}

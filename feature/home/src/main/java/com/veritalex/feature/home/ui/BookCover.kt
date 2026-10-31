@@ -1,6 +1,13 @@
 package com.veritalex.feature.home.ui
 
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
@@ -20,8 +27,9 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import coil.compose.AsyncImage
-import coil.request.ImageRequest
+import coil3.compose.AsyncImage
+import coil3.request.ImageRequest
+import coil3.request.crossfade
 import com.veritalex.core.data.models.Book
 import com.veritalex.core.data.models.Person
 import com.veritalex.feature.home.R
@@ -30,7 +38,7 @@ import com.veritalex.feature.home.R
 fun BookRowItem(
     book: Book,
     modifier: Modifier = Modifier,
-    onClick: () -> Unit = {},
+    onClick: (() -> Unit)? = null,
 ) {
     val authorName = book.authors.firstOrNull()?.name
     val unknownAuthorString = stringResource(R.string.unknown_author)
@@ -43,7 +51,7 @@ fun BookRowItem(
     Column(
         modifier = modifier
             .width(110.dp)
-            .clickable(onClick = onClick)
+            .then(if (onClick == null) Modifier else Modifier.clickable(onClick = onClick))
             .semantics(mergeDescendants = true) {
                 contentDescription = fullContentDescription
             },
@@ -71,17 +79,37 @@ fun BookCover(
     book: Book,
     modifier: Modifier = Modifier,
 ) {
-    AsyncImage(
-        model = ImageRequest.Builder(LocalContext.current)
-            .data(book.formats["image/jpeg"])
-            .crossfade(true)
-            .build(),
-        alignment = Alignment.Center,
-        modifier = modifier
-            .aspectRatio(0.7f)
-            .clip(MaterialTheme.shapes.small),
-        contentDescription = null,
-    )
+    Box(
+        modifier = modifier.aspectRatio(2f / 3f)
+            .clip(MaterialTheme.shapes.extraSmall)
+            .background(MaterialTheme.colorScheme.secondaryContainer)
+            .clearAndSetSemantics { },
+    ) {
+        Column(
+            modifier = Modifier.fillMaxSize().padding(8.dp),
+            verticalArrangement = Arrangement.SpaceBetween,
+        ) {
+            Text(
+                book.title, style = MaterialTheme.typography.titleSmall,
+                color = MaterialTheme.colorScheme.onSecondaryContainer,
+                maxLines = 4, overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f),
+            )
+            Text(
+                book.authors.firstOrNull()?.name ?: stringResource(R.string.unknown_author),
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSecondaryContainer,
+                maxLines = 2, overflow = TextOverflow.Ellipsis,
+            )
+        }
+        AsyncImage(
+            model = ImageRequest.Builder(LocalContext.current)
+                .data(book.formats["image/jpeg"]).crossfade(true).build(),
+            modifier = Modifier.fillMaxSize(),
+            contentScale = ContentScale.Crop,
+            contentDescription = null,
+        )
+    }
 }
 
 @Preview
@@ -123,7 +151,7 @@ fun BookRowItemPreview() {
         ),
         downloadCount = 1000,
     )
-    MaterialTheme {
+    com.veritalex.core.designsystem.theme.VeritalexTheme {
         BookRowItem(book = book)
     }
 }

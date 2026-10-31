@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Veritalex - Study Alcove</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface": "#241A14",
+            "on-primary-fixed": "#301400",
+            "surface-dim": "#e4d8d1",
+            "on-primary-container": "#ffcead",
+            "inverse-on-surface": "#fbeee7",
+            "tertiary-container": "#006878",
+            "secondary-container": "#f9ddc9",
+            "background": "#fff8f5",
+            "surface-container-highest": "#ede0d9",
+            "secondary": "#6e5b4b",
+            "on-tertiary-fixed-variant": "#004e5b",
+            "error-container": "#ffdad6",
+            "primary-container": "#895021",
+            "on-surface-variant": "#55483D",
+            "on-error": "#ffffff",
+            "surface-bright": "#fff8f5",
+            "on-background": "#201a16",
+            "on-secondary-container": "#756050",
+            "on-secondary-fixed": "#27190c",
+            "inverse-primary": "#ffb782",
+            "on-primary-fixed-variant": "#6d390b",
+            "surface-container-low": "#FCF1E8",
+            "outline-variant": "#d7c3b6",
+            "surface-container-high": "#f3e6df",
+            "on-primary": "#ffffff",
+            "tertiary": "#5D633D",
+            "surface-tint": "#895021",
+            "surface": "#fff8f5",
+            "tertiary-fixed-dim": "#86d2e4",
+            "error": "#ba1a1a",
+            "on-secondary": "#ffffff",
+            "on-tertiary-container": "#98e4f7",
+            "surface-container": "#f9ebe4",
+            "inverse-surface": "#362f2b",
+            "on-secondary-fixed-variant": "#554334",
+            "surface-variant": "#ede0d9",
+            "on-error-container": "#93000a",
+            "outline": "#857469",
+            "secondary-fixed-dim": "#dcc2ae",
+            "primary": "#6c390b",
+            "highlight": "#F6E5A8",
+            "on-tertiary-fixed": "#001f25",
+            "surface-container-lowest": "#ffffff",
+            "surface-paper": "#FFF8F3",
+            "secondary-fixed": "#f9ddc9",
+            "primary-fixed": "#ffdcc5",
+            "tertiary-fixed": "#a6eeff",
+            "primary-fixed-dim": "#ffb782",
+            "on-tertiary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "4px",
+            "space-sm": "8px",
+            "space-md": "12px",
+            "space-lg": "16px",
+            "space-xl": "24px",
+            "space-xxl": "32px",
+            "gutter": "20px",
+            "margin": "20px"
+          },
+          "fontFamily": {
+            "headline-lg": ["Roboto Flex"],
+            "headline-md": ["Roboto Flex"],
+            "headline-sm": ["Roboto Flex"],
+            "title-md": ["Roboto Flex"],
+            "body-lg": ["Roboto Flex"],
+            "body-sm": ["Roboto Flex"],
+            "label-md": ["Roboto Flex"],
+            "reader-prose": ["Literata"],
+            "reader-chapter": ["Literata"]
+          },
+          "fontSize": {
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "reader-prose": ["19px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "reader-chapter": ["26px", { "lineHeight": "34px", "fontWeight": "500" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+      user-select: none;
+    }
+    .material-symbols-outlined.fill-1 {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface h-full flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container overflow-hidden">
+<!-- Android Tablet System Bar (Subtle Landscape Inset) -->
+<header class="w-full h-6 px-6 bg-surface-container-low flex justify-between items-center text-[11px] font-label-md text-on-surface-variant select-none shrink-0 z-50">
+<span>10:42 AM</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">wifi</span>
+<span class="material-symbols-outlined text-[14px]">battery_full</span>
+</div>
+</header>
+<!-- Tablet Layout Root -->
+<div class="flex flex-1 w-full h-[calc(100%-24px)] overflow-hidden relative">
+<!-- Shared Component: SideNavBar (Material 3 Tablet Navigation Rail) -->
+<aside class="fixed top-6 left-0 bottom-0 w-24 z-40 flex flex-col justify-between items-center py-space-xl bg-surface-container-low text-primary select-none border-r border-outline-variant/15">
+<!-- Monogram Header -->
+<div class="flex flex-col items-center gap-1 group cursor-pointer">
+<div class="w-12 h-12 rounded-2xl bg-secondary-container flex items-center justify-center text-primary shadow-sm group-hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined fill-1 text-2xl">auto_stories</span>
+</div>
+<span class="text-[11px] font-label-md text-on-surface tracking-wide mt-1">Veritalex</span>
+</div>
+<!-- Navigation Destinations (Strict exact JSON match: Home, Explore, Library) -->
+<nav class="flex flex-col items-center gap-5 w-full">
+<!-- Home (Active Item based on TAB-01 Home screen intent) -->
+<a class="flex flex-col items-center justify-center text-decoration-none group active:scale-95 transition-transform duration-200" href="#home">
+<div class="flex items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-5 py-1.5 transition-colors">
+<span class="material-symbols-outlined fill-1 text-[22px]">home</span>
+</div>
+<span class="text-label-md font-label-md text-on-surface mt-1">Home</span>
+</a>
+<!-- Explore -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface text-decoration-none rounded-full py-1 px-4 transition-colors group active:scale-95 duration-200" href="#explore">
+<div class="flex items-center justify-center py-1">
+<span class="material-symbols-outlined text-[22px]">explore</span>
+</div>
+<span class="text-label-md font-label-md mt-0.5">Explore</span>
+</a>
+<!-- Library -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface text-decoration-none rounded-full py-1 px-4 transition-colors group active:scale-95 duration-200" href="#library">
+<div class="flex items-center justify-center py-1">
+<span class="material-symbols-outlined text-[22px]">local_library</span>
+</div>
+<span class="text-label-md font-label-md mt-0.5">Library</span>
+</a>
+</nav>
+<!-- Footer Action: Settings -->
+<div class="flex flex-col items-center w-full">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface text-decoration-none rounded-full py-1 px-4 transition-colors group active:scale-95 duration-200" href="#settings">
+<div class="flex items-center justify-center py-1">
+<span class="material-symbols-outlined text-[22px]">settings</span>
+</div>
+<span class="text-label-md font-label-md mt-0.5">Settings</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas (Offset by w-24 for docked SideNav) -->
+<div class="flex-1 flex flex-col ml-24 h-full bg-background overflow-hidden">
+<!-- Shared Component: TopNavBar -->
+<header class="h-16 shrink-0 bg-surface flex items-center justify-between px-8 select-none z-30">
+<!-- Brand Title & Alcove indicator -->
+<div class="flex items-center gap-3"><h1 class="text-headline-sm font-headline-sm font-medium text-on-surface tracking-tight">Veritalex</h1></div>
+<!-- Trailing Sync Status & Actions -->
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px]">cloud_done</span>
+<span class="text-label-md font-label-md">Up to date</span>
+</div>
+<button aria-label="More options" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors active:scale-95">
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Scrollable Editorial Viewport -->
+<main class="flex-1 overflow-y-auto px-8 md:px-12 py-space-xl">
+<div class="max-w-6xl mx-auto space-y-8 pb-12">
+<!-- 1. Dual-pane Hero Grid -->
+<section class="grid grid-cols-12 gap-6">
+<!-- Left Pane: Continue Reading Card -->
+<article class="col-span-7 bg-surface-container-low rounded-2xl p-6 border border-outline-variant/20 flex gap-6 items-center">
+<!-- Book Cover Physical Thumbnail -->
+<div class="w-28 h-40 shrink-0 rounded-lg overflow-hidden relative shadow-sm border border-outline-variant/30 bg-[#4a1c24] flex flex-col justify-between p-2.5 text-[#fff8f5] select-none">
+<div class="border border-[#e7c7a5]/40 h-full p-2 flex flex-col justify-between">
+<div class="text-center space-y-0.5">
+<p class="font-reader-prose text-[9px] uppercase tracking-widest text-[#f9ddc9]/80">Project Gutenberg</p>
+<p class="font-reader-chapter text-[11px] leading-tight font-medium text-[#ffdcc5]">Pride and Prejudice</p>
+</div>
+<div class="text-center pt-2">
+<span class="material-symbols-outlined text-sm opacity-60">menu_book</span>
+<p class="font-reader-prose text-[8px] tracking-wide text-[#f9ddc9]/80 mt-0.5">Jane Austen</p>
+</div>
+</div>
+</div>
+<!-- Meta & Immediate Action -->
+<div class="flex-1 flex flex-col justify-between h-40 py-1">
+<div>
+<div class="flex items-center gap-2 mb-1.5">
+<span class="text-xs uppercase font-label-md tracking-wider text-primary font-medium">Continue Reading</span>
+<span class="text-outline-variant text-xs">•</span>
+<span class="text-label-md font-label-md text-on-surface-variant">Chapter 18</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight">Pride and Prejudice</h2>
+<p class="font-reader-prose text-body-sm text-on-surface-variant italic mt-0.5">Jane Austen</p>
+</div>
+<div class="space-y-3">
+<!-- Progress metric -->
+<div class="space-y-1.5">
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface-variant"><span>28% read</span></div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 28%"></div>
+</div>
+</div>
+<!-- Primary Filled Action Pill -->
+<button class="inline-flex items-center gap-2 bg-primary text-on-primary font-label-md text-label-md px-5 py-2.5 rounded-full hover:opacity-90 active:scale-95 transition-all shadow-sm">
+<span class="material-symbols-outlined text-lg">auto_stories</span>
+<span>Continue reading</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Right Pane: Your Shelves -->
+<article class="col-span-5 bg-surface-container-low rounded-2xl p-6 border border-outline-variant/20 flex flex-col justify-between">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">folder_special</span>
+<h3 class="font-title-md text-title-md text-on-surface">Your shelves</h3>
+</div>
+<a class="text-label-md font-label-md text-primary hover:underline" href="#shelves">View all</a>
+</div>
+<!-- Shelf List Rows -->
+<div class="divide-y divide-outline-variant/15 flex-1 flex flex-col justify-center">
+<!-- Shelf Row 1 -->
+<div class="py-3 flex items-center justify-between group cursor-pointer hover:bg-surface-container/60 -mx-2 px-2 rounded-lg transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-2.5 h-7 rounded-sm bg-[#35493e]"></div>
+<div>
+<p class="text-title-md font-title-md text-on-surface group-hover:text-primary transition-colors">Weekend reads</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">3 books in collection</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-base">chevron_right</span>
+</div>
+<!-- Shelf Row 2 -->
+<div class="py-3 flex items-center justify-between group cursor-pointer hover:bg-surface-container/60 -mx-2 px-2 rounded-lg transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-2.5 h-7 rounded-sm bg-[#5c4033]"></div>
+<div>
+<p class="text-title-md font-title-md text-on-surface group-hover:text-primary transition-colors">Classics to revisit</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">2 books in collection</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-base">chevron_right</span>
+</div>
+<!-- Shelf Row 3 -->
+<div class="py-3 flex items-center justify-between group cursor-pointer hover:bg-surface-container/60 -mx-2 px-2 rounded-lg transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-2.5 h-7 rounded-sm bg-[#22334e]"></div>
+<div>
+<p class="text-title-md font-title-md text-on-surface group-hover:text-primary transition-colors">Curious minds</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">1 book in collection</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-base">chevron_right</span>
+</div>
+</div>
+</article>
+</section>
+<!-- 2. Section: Your Books -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-title-md font-title-md text-on-surface font-medium">Your books</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Offline ready on this device</p>
+</div>
+<a class="text-label-md font-label-md text-primary hover:underline" href="#all-books">See all</a>
+</div>
+<!-- Horizontal Grid of 4 Gutenberg Cloth Cover Books -->
+<div class="grid grid-cols-4 gap-5">
+<!-- Book 1: Frankenstein -->
+<div class="group cursor-pointer bg-surface-container-low rounded-xl p-3 border border-outline-variant/20 hover:border-outline-variant/50 transition-all">
+<div class="aspect-[2/3] w-full rounded-lg bg-[#273d2f] p-3 text-[#f9ebe4] flex flex-col justify-between shadow-sm relative overflow-hidden border border-[#9fa8a3]/20">
+<div class="border border-[#7e9987]/30 h-full p-2.5 flex flex-col justify-between">
+<div>
+<span class="text-[8px] uppercase tracking-wider font-label-md opacity-70">Gutenberg 84</span>
+<h4 class="font-reader-chapter text-sm leading-tight text-white mt-1">Frankenstein</h4>
+</div>
+<div>
+<p class="font-reader-prose text-[10px] italic opacity-80">Mary Shelley</p>
+<div class="mt-2 flex items-center justify-between text-[9px] opacity-75">
+<span class="material-symbols-outlined text-xs">bookmark</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-3 space-y-1">
+<h5 class="text-title-md font-title-md text-on-surface truncate group-hover:text-primary transition-colors">Frankenstein</h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Mary Shelley</p>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-md px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[12px]">download_done</span>
+                      Downloaded
+                    </span>
+<span class="text-[11px] font-label-md text-on-surface-variant">Want to read</span>
+</div>
+</div>
+</div>
+<!-- Book 2: Alice's Adventures in Wonderland -->
+<div class="group cursor-pointer bg-surface-container-low rounded-xl p-3 border border-outline-variant/20 hover:border-outline-variant/50 transition-all">
+<div class="aspect-[2/3] w-full rounded-lg bg-[#1f2c42] p-3 text-[#f9ebe4] flex flex-col justify-between shadow-sm relative overflow-hidden border border-[#8fa0b5]/20">
+<div class="border border-[#7890b0]/30 h-full p-2.5 flex flex-col justify-between">
+<div>
+<span class="text-[8px] uppercase tracking-wider font-label-md opacity-70">Gutenberg 11</span>
+<h4 class="font-reader-chapter text-sm leading-tight text-white mt-1">Alice's Adventures</h4>
+</div>
+<div>
+<p class="font-reader-prose text-[10px] italic opacity-80">Lewis Carroll</p>
+<div class="mt-2 flex items-center justify-between text-[9px] opacity-75">
+<span class="material-symbols-outlined text-xs">palette</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-3 space-y-1">
+<h5 class="text-title-md font-title-md text-on-surface truncate group-hover:text-primary transition-colors">Alice's Adventures in Wonderland</h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Lewis Carroll</p>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-md px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[12px]">download_done</span>
+                      Downloaded
+                    </span>
+<span class="text-[11px] font-label-md text-on-surface-variant">12% read</span>
+</div>
+</div>
+</div>
+<!-- Book 3: Jane Eyre -->
+<div class="group cursor-pointer bg-surface-container-low rounded-xl p-3 border border-outline-variant/20 hover:border-outline-variant/50 transition-all">
+<div class="aspect-[2/3] w-full rounded-lg bg-[#4a3627] p-3 text-[#f9ebe4] flex flex-col justify-between shadow-sm relative overflow-hidden border border-[#c4a993]/20">
+<div class="border border-[#b89578]/30 h-full p-2.5 flex flex-col justify-between">
+<div>
+<span class="text-[8px] uppercase tracking-wider font-label-md opacity-70">Gutenberg 1260</span>
+<h4 class="font-reader-chapter text-sm leading-tight text-white mt-1">Jane Eyre</h4>
+</div>
+<div>
+<p class="font-reader-prose text-[10px] italic opacity-80">Charlotte Brontë</p>
+<div class="mt-2 flex items-center justify-between text-[9px] opacity-75">
+<span class="material-symbols-outlined text-xs">auto_stories</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-3 space-y-1">
+<h5 class="text-title-md font-title-md text-on-surface truncate group-hover:text-primary transition-colors">Jane Eyre</h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Charlotte Brontë</p>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-md px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant">
+                      In library
+                    </span>
+<span class="text-[11px] font-label-md text-on-surface-variant">Finished · 4/5</span>
+</div>
+</div>
+</div>
+<!-- Book 4: Pride and Prejudice -->
+<div class="group cursor-pointer bg-surface-container-low rounded-xl p-3 border border-outline-variant/20 hover:border-outline-variant/50 transition-all">
+<div class="aspect-[2/3] w-full rounded-lg bg-[#4a1c24] p-3 text-[#f9ebe4] flex flex-col justify-between shadow-sm relative overflow-hidden border border-[#d9a4ab]/20">
+<div class="border border-[#c68992]/30 h-full p-2.5 flex flex-col justify-between">
+<div>
+<span class="text-[8px] uppercase tracking-wider font-label-md opacity-70">Gutenberg 1342</span>
+<h4 class="font-reader-chapter text-sm leading-tight text-white mt-1">Pride and Prejudice</h4>
+</div>
+<div>
+<p class="font-reader-prose text-[10px] italic opacity-80">Jane Austen</p>
+<div class="mt-2 flex items-center justify-between text-[9px] opacity-75">
+<span class="material-symbols-outlined text-xs">history_edu</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-3 space-y-1">
+<h5 class="text-title-md font-title-md text-on-surface truncate group-hover:text-primary transition-colors">Pride and Prejudice</h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Jane Austen</p>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-md px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[12px]">download_done</span>
+                      Downloaded
+                    </span>
+<span class="text-[11px] font-label-md text-on-surface-variant">28% read</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Section: Popular Classics -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-title-md font-title-md text-on-surface font-medium">Popular classics</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">From Project Gutenberg catalogue</p>
+</div>
+<a class="text-label-md font-label-md text-primary hover:underline" href="#catalogue">Explore catalogue</a>
+</div>
+<!-- Horizontal Grid of 4 Gutenberg Catalogue Editions -->
+<div class="grid grid-cols-4 gap-5">
+<!-- Great Expectations -->
+<div class="p-4 bg-surface-container-low rounded-xl border border-outline-variant/20 hover:border-outline-variant/50 transition-all flex flex-col justify-between">
+<div class="space-y-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="font-label-md text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface">No. 1400</span>
+</div>
+<h4 class="font-reader-chapter text-headline-sm leading-tight text-on-surface pt-1">Great Expectations</h4>
+<p class="font-reader-prose text-body-sm italic text-on-surface-variant">Charles Dickens</p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-outline-variant/15 mt-3">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Victorian, Serialized</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-primary hover:bg-secondary-container transition-colors" title="Add to Library">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+<!-- The Picture of Dorian Gray -->
+<div class="p-4 bg-surface-container-low rounded-xl border border-outline-variant/20 hover:border-outline-variant/50 transition-all flex flex-col justify-between">
+<div class="space-y-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="font-label-md text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface">No. 174</span>
+</div>
+<h4 class="font-reader-chapter text-headline-sm leading-tight text-on-surface pt-1">The Picture of Dorian Gray</h4>
+<p class="font-reader-prose text-body-sm italic text-on-surface-variant">Oscar Wilde</p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-outline-variant/15 mt-3">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Philosophical, Gothic</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-primary hover:bg-secondary-container transition-colors" title="Add to Library">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+<!-- Moby-Dick -->
+<div class="p-4 bg-surface-container-low rounded-xl border border-outline-variant/20 hover:border-outline-variant/50 transition-all flex flex-col justify-between">
+<div class="space-y-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="font-label-md text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface">No. 2701</span>
+</div>
+<h4 class="font-reader-chapter text-headline-sm leading-tight text-on-surface pt-1">Moby-Dick</h4>
+<p class="font-reader-prose text-body-sm italic text-on-surface-variant">Herman Melville</p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-outline-variant/15 mt-3">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Sea Adventure, Epics</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-primary hover:bg-secondary-container transition-colors" title="Add to Library">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+<!-- Dracula -->
+<div class="p-4 bg-surface-container-low rounded-xl border border-outline-variant/20 hover:border-outline-variant/50 transition-all flex flex-col justify-between">
+<div class="space-y-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span class="font-label-md text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface">No. 345</span>
+</div>
+<h4 class="font-reader-chapter text-headline-sm leading-tight text-on-surface pt-1">Dracula</h4>
+<p class="font-reader-prose text-body-sm italic text-on-surface-variant">Bram Stoker</p>
+</div>
+<div class="pt-4 flex items-center justify-between border-t border-outline-variant/15 mt-3">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Epistolary, Horror</span>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-primary hover:bg-secondary-container transition-colors" title="Add to Library">
+<span class="material-symbols-outlined text-lg">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Quiet Footer -->
+<footer class="pt-8 border-t border-outline-variant/15 text-center text-body-sm font-body-sm text-on-surface-variant select-none">
+<p>Books from Project Gutenberg</p>
+</footer>
+</div>
+</main>
+</div>
+</div>
+</body></html>

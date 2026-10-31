@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Veritalex - Explore</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..600;1,7..72,400&amp;family=Roboto+Flex:wght,GRAD@300..700,-50..100&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#a8edff",
+            "on-surface-variant": "#d7c3b6",
+            "on-primary": "#4e2600",
+            "on-primary-container": "#FFDCBF",
+            "inverse-on-surface": "#362f2b",
+            "primary-container": "#6D3A0D",
+            "on-tertiary-fixed": "#001f26",
+            "surface-variant": "#3a332f",
+            "on-error": "#690005",
+            "surface-container-lowest": "#120d0a",
+            "inverse-primary": "#875123",
+            "secondary-fixed": "#fedcc3",
+            "secondary": "#e1c0a8",
+            "on-secondary-fixed": "#291809",
+            "on-primary-fixed": "#2f1500",
+            "on-surface": "#F0DFD6",
+            "surface": "#19120D",
+            "secondary-fixed-dim": "#e1c0a8",
+            "surface-container-high": "#382D25",
+            "primary-fixed-dim": "#ffb77f",
+            "secondary-container": "#534234",
+            "primary-fixed": "#ffdcc4",
+            "surface-bright": "#3f3833",
+            "background": "#18120f",
+            "on-tertiary": "#00363f",
+            "on-error-container": "#ffdad6",
+            "error": "#FFB4AB",
+            "on-secondary-container": "#FFDCBF",
+            "surface-container": "#2D231C",
+            "on-tertiary-fixed-variant": "#004e5b",
+            "tertiary-fixed-dim": "#88d1e3",
+            "on-primary-fixed-variant": "#6b3a0c",
+            "inverse-surface": "#ece0d9",
+            "outline-variant": "#52443a",
+            "tertiary": "#C6CE9F",
+            "on-secondary": "#402c1b",
+            "on-tertiary-container": "#005b69",
+            "on-secondary-fixed-variant": "#584230",
+            "surface-container-low": "#231A14",
+            "surface-container-highest": "#3a332f",
+            "tertiary-container": "#88d1e3",
+            "error-container": "#93000a",
+            "primary": "#ffdcc4",
+            "outline": "#9F8D83",
+            "on-background": "#ece0d9",
+            "surface-tint": "#ffb77f",
+            "surface-dim": "#18120f"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "margin": "1rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Roboto Flex", "sans-serif"],
+            "body-md": ["Roboto Flex", "sans-serif"],
+            "reader-prose": ["Literata", "serif"],
+            "body-sm": ["Roboto Flex", "sans-serif"],
+            "headline-lg": ["Roboto Flex", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "reader-prose": ["19px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      background-color: #120d0a;
+      color: #F0DFD6;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="flex justify-center items-center min-h-screen p-0 sm:p-4 bg-surface-container-lowest">
+<!-- Android Viewport Frame -->
+<div class="relative w-full max-w-[412px] h-[915px] max-h-screen sm:max-h-[915px] bg-surface flex flex-col overflow-hidden sm:rounded-3xl shadow-2xl border border-outline-variant/30">
+<!-- 1. Native Android Status Bar (412 baseline) -->
+<header class="w-full h-10 pt-2 px-6 flex justify-between items-center text-on-surface z-40 bg-surface shrink-0">
+<span class="text-body-sm font-headline-md text-on-surface tracking-normal select-none">9:41</span>
+<div class="flex items-center space-x-2 text-on-surface">
+<span class="material-symbols-outlined text-[17px]">network_cell</span>
+<span class="material-symbols-outlined text-[17px]">wifi</span>
+<span class="material-symbols-outlined text-[18px]">battery_full</span>
+</div>
+</header>
+<!-- 2. Shared TopAppBar -->
+<nav class="bg-surface text-primary flex justify-between items-center w-full px-5 h-16 shrink-0 z-30">
+<div class="flex items-center space-x-2.5">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="cloud_done">cloud_done</span>
+<span class="text-headline-md font-headline-md text-primary tracking-tight font-bold">Veritalex</span>
+</div>
+<button aria-label="Settings" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors duration-200 active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined text-2xl" data-icon="settings">settings</span>
+</button>
+</nav>
+<!-- Main Scrollable Canvas -->
+<main class="flex-1 overflow-y-auto px-5 pb-28 pt-1 space-y-6 scrollbar-none">
+<!-- Page Title Header -->
+<section class="space-y-1">
+<h1 class="text-headline-lg font-headline-lg text-on-surface tracking-tight font-semibold">Explore</h1>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Timeless literature preserved for unhurried study</p>
+</section>
+<!-- 3. Search Bar -->
+<section>
+<div class="w-full h-14 bg-surface-container-low hover:bg-surface-container border border-outline-variant/50 rounded-full px-4 flex items-center space-x-3 transition-colors group cursor-text">
+<span class="material-symbols-outlined text-on-surface-variant text-2xl group-focus-within:text-primary transition-colors" data-icon="search">search</span>
+<input class="flex-1 bg-transparent border-0 p-0 text-body-md font-body-md text-on-surface placeholder:text-outline focus:ring-0 focus:outline-none" placeholder="Search books or authors" type="text"/>
+<button aria-label="Filter catalogue" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors active:scale-95">
+<span class="material-symbols-outlined text-xl" data-icon="tune">tune</span>
+</button>
+</div>
+</section>
+<!-- 4. Browse by Subject -->
+<section class="space-y-3">
+<div class="flex items-center justify-between">
+<h2 class="text-headline-md font-headline-md text-on-surface font-medium">Browse by subject</h2>
+<span class="text-body-sm font-body-sm text-outline">6 subjects</span>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Subject 1: Fiction -->
+<div class="bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 rounded-2xl p-3.5 flex flex-col justify-between h-[104px] transition-colors cursor-pointer group active:scale-[0.98]" role="button" tabindex="0">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-xl" data-icon="auto_stories">auto_stories</span>
+</div>
+<div>
+<div class="text-body-md font-headline-md text-on-surface font-medium group-hover:text-primary-fixed transition-colors">Fiction</div>
+<div class="text-body-sm font-body-sm text-outline text-[12px] leading-tight">Classic prose</div>
+</div>
+</div>
+<!-- Subject 2: Mystery -->
+<div class="bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 rounded-2xl p-3.5 flex flex-col justify-between h-[104px] transition-colors cursor-pointer group active:scale-[0.98]" role="button" tabindex="0">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-xl" data-icon="visibility">visibility</span>
+</div>
+<div>
+<div class="text-body-md font-headline-md text-on-surface font-medium group-hover:text-primary-fixed transition-colors">Mystery</div>
+<div class="text-body-sm font-body-sm text-outline text-[12px] leading-tight">Deduction &amp; dark</div>
+</div>
+</div>
+<!-- Subject 3: Romance -->
+<div class="bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 rounded-2xl p-3.5 flex flex-col justify-between h-[104px] transition-colors cursor-pointer group active:scale-[0.98]" role="button" tabindex="0">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-xl" data-icon="favorite">favorite</span>
+</div>
+<div>
+<div class="text-body-md font-headline-md text-on-surface font-medium group-hover:text-primary-fixed transition-colors">Romance</div>
+<div class="text-body-sm font-body-sm text-outline text-[12px] leading-tight">Courts &amp; passion</div>
+</div>
+</div>
+<!-- Subject 4: Adventure -->
+<div class="bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 rounded-2xl p-3.5 flex flex-col justify-between h-[104px] transition-colors cursor-pointer group active:scale-[0.98]" role="button" tabindex="0">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-xl" data-icon="explore">explore</span>
+</div>
+<div>
+<div class="text-body-md font-headline-md text-on-surface font-medium group-hover:text-primary-fixed transition-colors">Adventure</div>
+<div class="text-body-sm font-body-sm text-outline text-[12px] leading-tight">Journeys &amp; trials</div>
+</div>
+</div>
+<!-- Subject 5: Philosophy -->
+<div class="bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 rounded-2xl p-3.5 flex flex-col justify-between h-[104px] transition-colors cursor-pointer group active:scale-[0.98]" role="button" tabindex="0">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-xl" data-icon="psychology">psychology</span>
+</div>
+<div>
+<div class="text-body-md font-headline-md text-on-surface font-medium group-hover:text-primary-fixed transition-colors">Philosophy</div>
+<div class="text-body-sm font-body-sm text-outline text-[12px] leading-tight">Ethics &amp; mind</div>
+</div>
+</div>
+<!-- Subject 6: Poetry -->
+<div class="bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 rounded-2xl p-3.5 flex flex-col justify-between h-[104px] transition-colors cursor-pointer group active:scale-[0.98]" role="button" tabindex="0">
+<div class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-primary-fixed-dim">
+<span class="material-symbols-outlined text-xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div>
+<div class="text-body-md font-headline-md text-on-surface font-medium group-hover:text-primary-fixed transition-colors">Poetry</div>
+<div class="text-body-sm font-body-sm text-outline text-[12px] leading-tight">Verse &amp; ballad</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Popular Classics Section -->
+<section class="space-y-3 pt-2">
+<div class="space-y-0.5">
+<h2 class="text-headline-md font-headline-md text-on-surface font-medium">Popular classics</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">From Project Gutenberg catalogue</p>
+</div>
+<div class="space-y-2.5">
+<!-- Card 1: Pride and Prejudice -->
+<div class="bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 rounded-2xl p-3 flex items-center space-x-3.5 transition-colors group cursor-pointer">
+<!-- Gutenberg Mini-Cover (Burgundy Plum) -->
+<div class="w-16 h-22 py-2 px-1.5 rounded bg-stone-900 border-l-[3.5px] border-amber-800/80 flex flex-col justify-between items-center text-center shadow-md shrink-0 bg-gradient-to-r from-[#241316] to-[#1c1214]">
+<span class="text-[8px] font-mono tracking-widest text-outline uppercase">Gutenberg 1342</span>
+<span class="font-reader-prose text-[10.5px] leading-tight font-medium text-on-surface px-0.5">Pride and Prejudice</span>
+<span class="text-[8px] tracking-wide text-on-surface-variant font-body-sm">J. Austen</span>
+</div>
+<!-- Metadata Info -->
+<div class="flex-1 min-w-0">
+<h3 class="text-body-md font-headline-md text-on-surface font-medium truncate group-hover:text-primary transition-colors">Pride and Prejudice</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Jane Austen</p>
+<div class="flex items-center space-x-2 mt-1.5 text-[12px] text-outline">
+<span class="inline-flex items-center text-primary-fixed-dim bg-primary-container/40 px-2 py-0.5 rounded-full text-[11px] font-medium">Complete text</span>
+<span>•</span>
+<span>61 chapters</span>
+</div>
+</div>
+<!-- Trailing Action -->
+<button aria-label="Save Pride and Prejudice" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors shrink-0">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<!-- Card 2: Frankenstein -->
+<div class="bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 rounded-2xl p-3 flex items-center space-x-3.5 transition-colors group cursor-pointer">
+<!-- Gutenberg Mini-Cover (Deep Forest Green) -->
+<div class="w-16 h-22 py-2 px-1.5 rounded bg-stone-900 border-l-[3.5px] border-emerald-900/80 flex flex-col justify-between items-center text-center shadow-md shrink-0 bg-gradient-to-r from-[#111e17] to-[#161d18]">
+<span class="text-[8px] font-mono tracking-widest text-outline uppercase">Gutenberg 84</span>
+<span class="font-reader-prose text-[11px] leading-tight font-medium text-on-surface px-0.5">Frankenstein</span>
+<span class="text-[8px] tracking-wide text-on-surface-variant font-body-sm">M. Shelley</span>
+</div>
+<!-- Metadata Info -->
+<div class="flex-1 min-w-0">
+<h3 class="text-body-md font-headline-md text-on-surface font-medium truncate group-hover:text-primary transition-colors">Frankenstein</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Mary Shelley</p>
+<div class="flex items-center space-x-2 mt-1.5 text-[12px] text-outline">
+<span class="inline-flex items-center text-primary-fixed-dim bg-primary-container/40 px-2 py-0.5 rounded-full text-[11px] font-medium">Complete text</span>
+<span>•</span>
+<span>24 chapters</span>
+</div>
+</div>
+<!-- Trailing Action -->
+<button aria-label="Save Frankenstein" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors shrink-0">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<!-- Card 3: Jane Eyre -->
+<div class="bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 rounded-2xl p-3 flex items-center space-x-3.5 transition-colors group cursor-pointer">
+<!-- Gutenberg Mini-Cover (Warm Dark Umber) -->
+<div class="w-16 h-22 py-2 px-1.5 rounded bg-stone-900 border-l-[3.5px] border-amber-900/80 flex flex-col justify-between items-center text-center shadow-md shrink-0 bg-gradient-to-r from-[#211812] to-[#1a1410]">
+<span class="text-[8px] font-mono tracking-widest text-outline uppercase">Gutenberg 1260</span>
+<span class="font-reader-prose text-[11px] leading-tight font-medium text-on-surface px-0.5">Jane Eyre</span>
+<span class="text-[8px] tracking-wide text-on-surface-variant font-body-sm">C. Brontë</span>
+</div>
+<!-- Metadata Info -->
+<div class="flex-1 min-w-0">
+<h3 class="text-body-md font-headline-md text-on-surface font-medium truncate group-hover:text-primary transition-colors">Jane Eyre</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant truncate">Charlotte Brontë</p>
+<div class="flex items-center space-x-2 mt-1.5 text-[12px] text-outline">
+<span class="inline-flex items-center text-primary-fixed-dim bg-primary-container/40 px-2 py-0.5 rounded-full text-[11px] font-medium">Complete text</span>
+<span>•</span>
+<span>38 chapters</span>
+</div>
+</div>
+<!-- Trailing Action -->
+<button aria-label="Save Jane Eyre" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors shrink-0">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Archival Subtitle / Footnote -->
+<p class="pt-3 text-[11.5px] leading-relaxed text-outline/80 text-center font-body-sm">
+          Public domain editions via Project Gutenberg &amp; Project Gutenberg • Designed for quiet offline reading
+        </p>
+</section>
+</main>
+<!-- 6. Shared BottomNavBar (Fixed Shell Docked Bottom) -->
+<nav class="fixed sm:absolute bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 pb-safe bg-surface-container dark:bg-surface-container-high select-none">
+<!-- Destination 1: Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-5 py-1 hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-colors duration-200 active:scale-95 transition-transform duration-150" href="#home">
+<span class="material-symbols-outlined text-2xl mb-0.5" data-icon="auto_stories">auto_stories</span>
+<span class="text-label-md font-label-md text-xs">Home</span>
+</a>
+<!-- Destination 2: Explore (ACTIVE) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-5 py-1 hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-colors duration-200 active:scale-95 transition-transform duration-150" href="#explore">
+<span class="material-symbols-outlined text-2xl mb-0.5 fill-icon" data-icon="explore" data-weight="fill" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="text-label-md font-label-md text-xs font-semibold">Explore</span>
+</a>
+<!-- Destination 3: Library (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant px-5 py-1 hover:bg-surface-container-highest dark:hover:bg-surface-container-highest transition-colors duration-200 active:scale-95 transition-transform duration-150" href="#library">
+<span class="material-symbols-outlined text-2xl mb-0.5" data-icon="local_library">local_library</span>
+<span class="text-label-md font-label-md text-xs">Library</span>
+</a>
+</nav>
+<!-- 7. Android Gesture Navigation Pill Bar Indicator -->
+<div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-28 h-1 bg-on-surface/30 rounded-full pointer-events-none z-50"></div>
+</div>
+</body></html>

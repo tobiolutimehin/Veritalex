@@ -1,0 +1,125 @@
+{
+  "results": [
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/7028754476728808775",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1XLL7m0Unb1N6PZTMe9mhH3gl9-r2wnyh4Hat46OXGzSsUSOKvVzWRqJ_qRr0KrvvlOXatjoayyYsEA_UYwk7zn5nTSt9OEQJcSkrSN5H6nEDtU5LIV1eYF4f0Ydb7e2FN-noX-I1l712mL63YQGn8CTyw3-kTKCSUHGL7gAVWdwia_YYfi7qcHHU7CQmz8TvWgieDnQaLqTfguvSTkuqQVVmL9fMq96WX4k3SfolA91YgIidqkWTC7x9PmGF55Idn4ooBLfeo6GQ"
+        },
+        "id": "7028754476728810132",
+        "width": "780",
+        "height": "2116",
+        "title": "Final / library",
+        "name": "projects/6233788376335662642/screens/7028754476728810132",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/7028754476728810182",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1WwWrYFpULLee9CL0Y_rb25yT8pISEipjFlQYFG47xTfTrkd1lu6u2t4G2FMfq2F4l77XuyzSYD1U1Vkpc1XmO3ynZuxu0x8rWi0djMh2GW9hFUm8JHPQYqOT1xMoDRHULXm3u-r1ls9CymaoJiSp0mTFuV-4q8tBHwSL294zVbYUByZ7ZL5k9aOIYS--ySYLxsy6-i4WZ_U4RWOY_4vhPp3_zKjQDVb9wpjipDjCMVnUxn94HHVu-ofQy1Snycrv11ueooY39VFA"
+        },
+        "id": "7028754476728807443",
+        "width": "780",
+        "height": "1894",
+        "title": "Final / settings",
+        "name": "projects/6233788376335662642/screens/7028754476728807443",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/7028754476728807493",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1USKOT8RZEFXju6-gZdKBBW2odoZnIhFAnKU2tIIDvejG3nAE10Pl_M2--wP4JsMYceflJl4M-AJBDb4KKWS9VU1SvFYCNqmyJpBAx9GLJ-aYFcEkLpI-uMhJ-MQFKpDLzEvyzORrBsinjUDBq95DoStgdGfW-MXJ3HTn09YEB6NzHBeHPgtWoHk_DWKsIkSifnPo8GvTqLte1Z95MisjJvH2eVXnh8Zwe2Os1y8NNjF6pXFoq2S7uv5q6WOChHlkIkSbDmMUc-Dw"
+        },
+        "id": "7028754476728808850",
+        "width": "780",
+        "height": "1830",
+        "title": "Final / dark-explore",
+        "name": "projects/6233788376335662642/screens/7028754476728808850",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/7028754476728808900",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1VLt4wt6QfWBpjU7m6nmBIuZC9QTfb4AlImSFuSHvY_K4HlYiWzfZXd-QDwU8eRCFfwLsNt6x2kKx9GqEp7zqy1CDzn23DHeNtE4zqXr-l0k-m_Hbbcif3I5ejH27o8EL5tnRkFS_qKgn4Xnzbe9bPZRrWPVKoqvh7apirSgsb94vTcexSsU0ykyTpG0Jm0oh1tuVRto6C_YY9SaI8RP3Cy6BF09cxNHL0UEERMUnUz8vX3Alc8bQm5EVvLS2wiZK5gTS66rKWo7A"
+        },
+        "id": "7028754476728810257",
+        "width": "780",
+        "height": "2468",
+        "title": "Final / explore",
+        "name": "projects/6233788376335662642/screens/7028754476728810257",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    }
+  ],
+  "screenInstances": [
+    {
+      "id": "7028754476728810132",
+      "sourceScreen": "projects/6233788376335662642/screens/7028754476728810132",
+      "x": 144170,
+      "width": 390,
+      "height": 1058
+    },
+    {
+      "id": "7028754476728807443",
+      "sourceScreen": "projects/6233788376335662642/screens/7028754476728807443",
+      "x": 144660,
+      "width": 390,
+      "height": 947
+    },
+    {
+      "id": "7028754476728808850",
+      "sourceScreen": "projects/6233788376335662642/screens/7028754476728808850",
+      "x": 145150,
+      "width": 390,
+      "height": 915
+    },
+    {
+      "id": "7028754476728810257",
+      "sourceScreen": "projects/6233788376335662642/screens/7028754476728810257",
+      "x": 145640,
+      "width": 390,
+      "height": 1234
+    }
+  ],
+  "transfer": {
+    "files": [
+      "designs/library.png",
+      "designs/settings.png",
+      "designs/dark-explore.png",
+      "designs/explore.png"
+    ],
+    "prefix": "Final / ",
+    "sha256": {
+      "designs/library.png": "964b56671211cfcc6efbda6fd05dfeda11e1bfc6c8b771b7dc41772774cd28fb",
+      "designs/settings.png": "2f3749035ceb30660e64ba13fa1626a2ff3651f9811fff2eefc3b72dd3043b11",
+      "designs/dark-explore.png": "86bccbec7bbf11f51d18a2ff19c280e659052e55f5c25348d2bc6e6eefc2154f",
+      "designs/explore.png": "a5b821828ebd8ccafb498cf80a98e0acda6ca39cb30dbff71c71bc5eccd1eea3"
+    }
+  }
+}

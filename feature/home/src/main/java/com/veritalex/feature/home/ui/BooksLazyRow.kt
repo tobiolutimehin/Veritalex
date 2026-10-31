@@ -1,6 +1,14 @@
 package com.veritalex.feature.home.ui
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.TextButton
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.dimensionResource
+import com.veritalex.core.designsystem.R as DesignR
+import androidx.paging.LoadState
+import com.veritalex.feature.home.R
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
@@ -45,20 +53,23 @@ fun BooksLazyRowPaging(
     modifier: Modifier = Modifier,
 ) {
     val items = books.collectAsLazyPagingItems()
-    items.let { item ->
-        LazyRow(
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
-            modifier = modifier,
-        ) {
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        when (items.loadState.refresh) {
+            is LoadState.Loading -> CircularProgressIndicator()
+            is LoadState.Error -> {
+                Text(stringResource(R.string.books_load_error))
+                TextButton(onClick = items::retry) { Text(stringResource(R.string.retry)) }
+            }
+            is LoadState.NotLoading -> if (items.itemCount == 0) Text(stringResource(R.string.catalogue_empty))
+        }
+        LazyRow(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             items(
-                item.itemCount,
-                key = item.itemKey { key -> key.id },
-                contentType = item.itemContentType { "contentType" },
-            ) { index ->
-                val book = items[index]
-                book?.let {
-                    BookRowItem(book = book)
-                }
+                count = items.itemCount,
+                key = items.itemKey { it.id },
+                contentType = items.itemContentType { "book" },
+            ) { index -> items[index]?.let { BookRowItem(book = it) } }
+            if (items.loadState.append is LoadState.Error) item {
+                TextButton(onClick = items::retry) { Text(stringResource(R.string.retry)) }
             }
         }
     }
@@ -142,10 +153,10 @@ fun BooksLazyColumn(
     modifier: Modifier = Modifier,
 ) {
     LazyColumn(
-        contentPadding = PaddingValues(16.dp),
+        contentPadding = PaddingValues(dimensionResource(DesignR.dimen.content_gutter)),
         modifier = modifier,
     ) {
-        itemsIndexed(savedBooks) { index, book ->
+        itemsIndexed(savedBooks, key = { _, book -> book.id }) { index, book ->
             BooksLazyColumnItem(book = book)
 
             if (index < savedBooks.lastIndex) {
@@ -203,7 +214,7 @@ fun BooksLazyColumnItem(
             BookCover(book = book, modifier = Modifier.width(62.dp))
         },
         supportingContent = {
-            Text(text = book.authors.first().name, style = MaterialTheme.typography.bodyMedium)
+            Text(text = book.authors.firstOrNull()?.name ?: androidx.compose.ui.res.stringResource(com.veritalex.feature.home.R.string.unknown_author), style = MaterialTheme.typography.bodyMedium)
         },
         modifier = modifier,
     )

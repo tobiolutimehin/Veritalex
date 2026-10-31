@@ -1,11 +1,11 @@
 plugins {
     alias(libs.plugins.com.android.library)
-    alias(libs.plugins.org.jetbrains.kotlin.android)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
     namespace = "com.veritalex.core.designsystem"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         minSdk = 30
@@ -24,14 +24,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.7"
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     buildFeatures {
         compose = true
@@ -48,9 +42,7 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(platform(libs.compose.bom))
-    implementation(libs.material3.adaptive)
-    implementation(libs.androidx.compose.material.iconsExtended)
-    implementation(libs.androidx.ui.text.google.fonts)
+    implementation(libs.material.iconsExtended)
 
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -62,9 +54,6 @@ dependencies {
 
     implementation(libs.compose.foundation)
     implementation(libs.compose.foundation.layout)
-    implementation(libs.androidx.compose.material.iconsExtended)
-    implementation(libs.material3)
     implementation(libs.compose.runtime)
-    implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.ui.util)
 }

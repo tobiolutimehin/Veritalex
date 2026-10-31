@@ -1,0 +1,315 @@
+{
+  "designSystem": {
+    "designSystem": {
+      "displayName": "Veritalex",
+      "styleGuidelines": "## Brand & Style\n\nThis design system establishes a calm, personal reading sanctuary rooted in the principles of Material 3 and Material You. The brand personality is scholarly, deliberate, warm, and focused entirely on the intimacy of text. It evokes the quiet focus of a personal study or a well-lit library alcove. \n\nThe aesthetic style is a refined, content-first **Corporate / Modern** execution tailored for literature:\n- **Atmospheric Warmth:** Built on warm paper tones and rich amber-brown seed colors rather than cold corporate neutrals.\n- **Utilitarian Clarity:** Strict adherence to native Android component behavior with generous whitespace and zero decorative fluff.\n- **Distraction-Free Focus:** Complete absence of marketing heroes, dashboard metrics, social feeds, or gradients.\n\n## Layout & Spacing\n\nThe layout model follows a fluid Android phone baseline (optimized for 412dp, validating down to 360dp) utilizing edge-to-edge display with safe status and navigation insets. \n\n- **Grid & Gutters:** Content uses 20dp gutters (16dp on compact viewports). \n- **Spacing Rhythm:** Based on a strict 4dp/8dp scale (`4`, `8`, `12`, `16`, `24`, `32dp`), ensuring consistent vertical rhythm between section headers, book rows, and shelves.\n- **Form Factors:** On tablets, the layout expands gracefully using a navigation rail and intentional list/detail panes, restricting the central reading measure to an optimal 60-70 characters per line. Top bars are structured at 64dp and bottom navigation at 80dp plus system insets.\n\n## Elevation & Depth\n\nDepth is conveyed primarily through **Tonal Layers** rather than heavy drop shadows. \n- **Surface Tiers:** UI elements stack cleanly using the warm paper surface container hierarchy (`surface-container-low`, `surface-container`, `surface-container-high`).\n- **Shadows:** Applied strictly as transient overlays for floating action buttons, active bottom sheets, or dialog modals. \n- **Borders & Outlines:** Low-contrast outlines (`#857468`, `#D7C3B4`) bound interactive elements cleanly without card-in-card visual noise.\n\n## Components\n\nComponents follow native Material 3 guidelines, emphasizing functional clarity and touch ergonomics:\n\n- **Buttons:** Filled, tonal, and text variants with a pill main action shape. All interactive touch targets maintain a strict minimum of 48dp. Icon buttons have explicit 48dp bounds.\n- **Navigation:** Bottom navigation uses labeled destinations with a selected tonal pill indicator. The app features three primary destinations (Home, Explore, Library), with Settings housed as a toolbar action.\n- **Cards & Lists:** `BookCoverCard` components preserve accurate 2:3 portrait dimensions with dignified typeset fallbacks. `BookListRow` and `ShelfRow` components use flat tonal grouping with generous section spacing.\n- **Reader Interface:** Distraction-free text view with access to the `ReaderToolbar` and `ReaderAppearanceSheet` on tap. Supports continuous scroll and page modes seamlessly.\n- **State & Feedback:** Clear, factual status components (`DownloadState`, `SyncStatusRow`, `EmptyState`, `RetryState`) that keep users informed of offline capability and device sync status without exposing backend jargon.",
+      "theme": {
+        "bodyFont": "ROBOTO_FLEX",
+        "bodyFontFamily": "Roboto Flex",
+        "colorMode": "LIGHT",
+        "colorVariant": "FIDELITY",
+        "customColor": "#895021",
+        "designMd": "---\nname: Veritalex\ncolors:\n  surface: '#fff8f5'\n  surface-dim: '#e4d8d1'\n  surface-bright: '#fff8f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#FCF1E8'\n  surface-container: '#F5E9DF'\n  surface-container-high: '#EEE1D5'\n  surface-container-highest: '#ede0d9'\n  on-surface: '#241A14'\n  on-surface-variant: '#55483D'\n  inverse-surface: '#362f2b'\n  inverse-on-surface: '#fbeee7'\n  outline: '#857469'\n  outline-variant: '#d7c3b6'\n  surface-tint: '#895021'\n  primary: '#6c390b'\n  on-primary: '#ffffff'\n  primary-container: '#FFDCBF'\n  on-primary-container: '#2D1606'\n  inverse-primary: '#ffb782'\n  secondary: '#6e5b4b'\n  on-secondary: '#ffffff'\n  secondary-container: '#f9ddc9'\n  on-secondary-container: '#756050'\n  tertiary: '#5D633D'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#E1E8B8'\n  on-tertiary-container: '#98e4f7'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdcc5'\n  primary-fixed-dim: '#ffb782'\n  on-primary-fixed: '#301400'\n  on-primary-fixed-variant: '#6d390b'\n  secondary-fixed: '#f9ddc9'\n  secondary-fixed-dim: '#dcc2ae'\n  on-secondary-fixed: '#27190c'\n  on-secondary-fixed-variant: '#554334'\n  tertiary-fixed: '#a6eeff'\n  tertiary-fixed-dim: '#86d2e4'\n  on-tertiary-fixed: '#001f25'\n  on-tertiary-fixed-variant: '#004e5b'\n  background: '#fff8f5'\n  on-background: '#201a16'\n  surface-variant: '#ede0d9'\n  surface-paper: '#FFF8F3'\n  highlight: '#F6E5A8'\ntypography:\n  headline-lg:\n    fontFamily: Roboto Flex\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: 40px\n  headline-md:\n    fontFamily: Roboto Flex\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: 32px\n  headline-sm:\n    fontFamily: Roboto Flex\n    fontSize: 20px\n    fontWeight: '500'\n    lineHeight: 28px\n  title-md:\n    fontFamily: Roboto Flex\n    fontSize: 16px\n    fontWeight: '500'\n    lineHeight: 24px\n  body-lg:\n    fontFamily: Roboto Flex\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  body-sm:\n    fontFamily: Roboto Flex\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\n  label-md:\n    fontFamily: Roboto Flex\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\n  reader-prose:\n    fontFamily: Literata\n    fontSize: 19px\n    fontWeight: '400'\n    lineHeight: 32px\n  reader-chapter:\n    fontFamily: Literata\n    fontSize: 26px\n    fontWeight: '500'\n    lineHeight: 34px\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  gutter: 20px\n  margin: 20px\n  space-xs: 4px\n  space-sm: 8px\n  space-md: 12px\n  space-lg: 16px\n  space-xl: 24px\n  space-xxl: 32px\n---\n\n## Brand & Style\n\nThis design system establishes a calm, personal reading sanctuary rooted in the principles of Material 3 and Material You. The brand personality is scholarly, deliberate, warm, and focused entirely on the intimacy of text. It evokes the quiet focus of a personal study or a well-lit library alcove. \n\nThe aesthetic style is a refined, content-first **Corporate / Modern** execution tailored for literature:\n- **Atmospheric Warmth:** Built on warm paper tones and rich amber-brown seed colors rather than cold corporate neutrals.\n- **Utilitarian Clarity:** Strict adherence to native Android component behavior with generous whitespace and zero decorative fluff.\n- **Distraction-Free Focus:** Complete absence of marketing heroes, dashboard metrics, social feeds, or gradients.\n\n## Colors\n\nThe color palette is derived from an amber-brown brand seed (`#895021`), translating physical book-binding and warm paper into digital screens. The interface operates on warm paper surfaces that reduce eye strain during extended reading sessions.\n\n- **Primary:** Deep amber brown (`#895021`), used for primary actions, selected navigation states, and key interactive elements.\n- **Surfaces:** A progression of warm paper tones (`#FFF8F3` down to `#EEE1D5`) providing subtle tonal layering without relying on heavy borders or artificial elevation.\n- **Ink & Legibility:** Dark ink (`#241A14`) on-surface colors guarantee high contrast and crisp readability.\n- **System Adaptability:** Fully supports dynamic color systems and system light/dark modes, with independent Light, Sepia, and Dark themes available within the dedicated reading environment.\n\n## Typography\n\nTypography strictly bifurcates the application interface from the reading experience:\n- **Interface:** **Roboto Flex** is used exclusively for all app chrome, navigation, lists, headings, and metadata. Headings use medium weights (24/32 and 20/28), while body and supporting labels maintain high legibility at 16/24 and 14/20. Sentence-case labels are preferred.\n- **Book Prose:** **Literata** is reserved solely for actual book prose, chapter headings, and meaningful excerpts. The default reading size is set to a comfortable 19/32 regular grid with generous line height.\n\n## Layout & Spacing\n\nThe layout model follows a fluid Android phone baseline (optimized for 412dp, validating down to 360dp) utilizing edge-to-edge display with safe status and navigation insets. \n\n- **Grid & Gutters:** Content uses 20dp gutters (16dp on compact viewports). \n- **Spacing Rhythm:** Based on a strict 4dp/8dp scale (`4`, `8`, `12`, `16`, `24`, `32dp`), ensuring consistent vertical rhythm between section headers, book rows, and shelves.\n- **Form Factors:** On tablets, the layout expands gracefully using a navigation rail and intentional list/detail panes, restricting the central reading measure to an optimal 60-70 characters per line. Top bars are structured at 64dp and bottom navigation at 80dp plus system insets.\n\n## Elevation & Depth\n\nDepth is conveyed primarily through **Tonal Layers** rather than heavy drop shadows. \n- **Surface Tiers:** UI elements stack cleanly using the warm paper surface container hierarchy (`surface-container-low`, `surface-container`, `surface-container-high`).\n- **Shadows:** Applied strictly as transient overlays for floating action buttons, active bottom sheets, or dialog modals. \n- **Borders & Outlines:** Low-contrast outlines (`#857468`, `#D7C3B4`) bound interactive elements cleanly without card-in-card visual noise.\n\n## Shapes\n\nThe shape language utilizes friendly, approachable rounded geometry that mimics soft paper goods:\n- **Cards & Containers:** Softly rounded with a standard `16dp` radius for book cards and content blocks.\n- **Sheets & Dialogs:** Employs a larger `28dp` corner radius for bottom sheets and modal dialogs.\n- **Book Covers & Imagery:** Strictly maintains a `4dp` subtle rounding on book covers to preserve their authentic portrait ratio (approx. 2:3).\n- **Interactive Controls:** Buttons, chips, and input fields utilize pill shapes or fully rounded pill containers to encourage clear touch targets (minimum 48dp).\n\n## Components\n\nComponents follow native Material 3 guidelines, emphasizing functional clarity and touch ergonomics:\n\n- **Buttons:** Filled, tonal, and text variants with a pill main action shape. All interactive touch targets maintain a strict minimum of 48dp. Icon buttons have explicit 48dp bounds.\n- **Navigation:** Bottom navigation uses labeled destinations with a selected tonal pill indicator. The app features three primary destinations (Home, Explore, Library), with Settings housed as a toolbar action.\n- **Cards & Lists:** `BookCoverCard` components preserve accurate 2:3 portrait dimensions with dignified typeset fallbacks. `BookListRow` and `ShelfRow` components use flat tonal grouping with generous section spacing.\n- **Reader Interface:** Distraction-free text view with access to the `ReaderToolbar` and `ReaderAppearanceSheet` on tap. Supports continuous scroll and page modes seamlessly.\n- **State & Feedback:** Clear, factual status components (`DownloadState`, `SyncStatusRow`, `EmptyState`, `RetryState`) that keep users informed of offline capability and device sync status without exposing backend jargon.",
+        "font": "ROBOTO_FLEX",
+        "headlineFont": "ROBOTO_FLEX",
+        "headlineFontFamily": "Roboto Flex",
+        "labelFont": "ROBOTO_FLEX",
+        "labelFontFamily": "Roboto Flex",
+        "namedColors": {
+          "background": "#fff8f5",
+          "error": "#ba1a1a",
+          "error_container": "#ffdad6",
+          "highlight": "#F6E5A8",
+          "inverse_on_surface": "#fbeee7",
+          "inverse_primary": "#ffb782",
+          "inverse_surface": "#362f2b",
+          "on-primary-container": "#2D1606",
+          "on-surface": "#241A14",
+          "on-surface-variant": "#55483D",
+          "on_background": "#201a16",
+          "on_error": "#ffffff",
+          "on_error_container": "#93000a",
+          "on_primary": "#ffffff",
+          "on_primary_container": "#ffcead",
+          "on_primary_fixed": "#301400",
+          "on_primary_fixed_variant": "#6d390b",
+          "on_secondary": "#ffffff",
+          "on_secondary_container": "#756050",
+          "on_secondary_fixed": "#27190c",
+          "on_secondary_fixed_variant": "#554334",
+          "on_surface": "#201a16",
+          "on_surface_variant": "#52443a",
+          "on_tertiary": "#ffffff",
+          "on_tertiary_container": "#98e4f7",
+          "on_tertiary_fixed": "#001f25",
+          "on_tertiary_fixed_variant": "#004e5b",
+          "outline": "#857469",
+          "outline_variant": "#d7c3b6",
+          "primary": "#6c390b",
+          "primary-container": "#FFDCBF",
+          "primary_container": "#895021",
+          "primary_fixed": "#ffdcc5",
+          "primary_fixed_dim": "#ffb782",
+          "secondary": "#6e5b4b",
+          "secondary_container": "#f9ddc9",
+          "secondary_fixed": "#f9ddc9",
+          "secondary_fixed_dim": "#dcc2ae",
+          "surface": "#fff8f5",
+          "surface-container": "#F5E9DF",
+          "surface-container-high": "#EEE1D5",
+          "surface-container-low": "#FCF1E8",
+          "surface-paper": "#FFF8F3",
+          "surface_bright": "#fff8f5",
+          "surface_container": "#f9ebe4",
+          "surface_container_high": "#f3e6df",
+          "surface_container_highest": "#ede0d9",
+          "surface_container_low": "#fef1ea",
+          "surface_container_lowest": "#ffffff",
+          "surface_dim": "#e4d8d1",
+          "surface_tint": "#895021",
+          "surface_variant": "#ede0d9",
+          "tertiary": "#5D633D",
+          "tertiary-container": "#E1E8B8",
+          "tertiary_container": "#006878",
+          "tertiary_fixed": "#a6eeff",
+          "tertiary_fixed_dim": "#86d2e4"
+        },
+        "overridePrimaryColor": "#895021",
+        "overrideSecondaryColor": "#6f5b4b",
+        "roundness": "ROUND_EIGHT",
+        "spacing": {
+          "gutter": "20px",
+          "margin": "20px",
+          "space-lg": "16px",
+          "space-md": "12px",
+          "space-sm": "8px",
+          "space-xl": "24px",
+          "space-xs": "4px",
+          "space-xxl": "32px"
+        },
+        "spacingScale": 2,
+        "typography": {
+          "body-lg": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px"
+          },
+          "body-sm": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "20px"
+          },
+          "headline-lg": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "32px",
+            "fontWeight": "500",
+            "lineHeight": "40px"
+          },
+          "headline-md": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "24px",
+            "fontWeight": "500",
+            "lineHeight": "32px"
+          },
+          "headline-sm": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "20px",
+            "fontWeight": "500",
+            "lineHeight": "28px"
+          },
+          "label-md": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "14px",
+            "fontWeight": "500",
+            "lineHeight": "20px"
+          },
+          "reader-chapter": {
+            "fontFamily": "Literata",
+            "fontSize": "26px",
+            "fontWeight": "500",
+            "lineHeight": "34px"
+          },
+          "reader-prose": {
+            "fontFamily": "Literata",
+            "fontSize": "19px",
+            "fontWeight": "400",
+            "lineHeight": "32px"
+          },
+          "title-md": {
+            "fontFamily": "Roboto Flex",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "lineHeight": "24px"
+          }
+        }
+      }
+    },
+    "name": "assets/8968a942b6fd463cb1575ef49ec130ed",
+    "version": "1"
+  },
+  "deviceType": "MOBILE",
+  "generatedBy": "figaro_agent",
+  "height": "2148",
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/a34d3fee99494c49acee102653b50149:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/a34d3fee99494c49acee102653b50149"
+  },
+  "id": "77e4f1a5cf1c419d94bb049d7271690e",
+  "name": "projects/6233788376335662642/screens/77e4f1a5cf1c419d94bb049d7271690e",
+  "prompt": "Design the UI-01 Home screen for a returning reader on Veritalex, a native Android reading app.\nDimensions: Android phone portrait 412x915dp. Warm paper aesthetic (#FFF8F3), amber-brown brand accents (#895021), strict Material 3 / Material You styling. Clean typography using Roboto Flex, dignified Literata book covers.\n\nStructure:\n1. Native Android Status Bar (time 9:41, wifi, battery, 44dp height) and Top App Bar:\n   - Veritalex title (24/32 medium in Roboto Flex, on-surface #241A14).\n   - Beneath the title, discreet factual sync status: subtle row with 'cloud_done' icon (16dp) and 'Up to date' text (12dp label, text-on-surface-variant #55483D).\n   - End action: IconButton with 'settings' icon (48dp touch target, ripple effect).\n\n2. Scrollable Body Content (with 20dp horizontal gutters, padding bottom to clear the 80dp fixed bottom nav):\n   - 'Continue reading' section:\n     * Section label / eyebrow or clean heading.\n     * Single calm horizontal reading panel (rounded-2xl 16dp, surface-container-low #FCF1E8 with subtle border outline-variant #D7C3B4):\n       - Book portrait cover: Pride and Prejudice by Jane Austen (Gutenberg #1342), 2:3 aspect ratio, rounded-sm (4dp), dignified typeset classical book cover treatment in deep burgundy/warm tones with serif title.\n       - Metadata column:\n         * Title: 'Pride and Prejudice' (16/24 medium)\n         * Author: 'Jane Austen' (14/20 regular, on-surface-variant)\n         * Current position: 'Chapter 18' (14/20 medium)\n         * Linear progress indicator (determinate bar, 4dp height, rounded-full, primary colored fill #895021, surface-container-high background) with label '28% read' (12/16 regular).\n         * Primary action button: Pill filled button ('Continue reading' with leading or trailing reading icon, 48dp height, #895021 background, white text).\n       - Never promotional, just calm reader utility.\n\n3. 'Your books' section:\n   - Header row with section title 'Your books' (20/28 medium) and text action 'See all' (14/20 medium, text-primary #895021).\n   - Natural horizontal shelf with 3 books:\n     * 'Frankenstein' / Mary Shelley (Gutenberg #84), status chip 'Downloaded' or 'Last read 3d ago'.\n     * 'Alice\\'s Adventures in Wonderland' / Lewis Carroll (Gutenberg #11), status chip 'Downloaded'.\n     * 'Jane Eyre' / Charlotte Brontë (Gutenberg #1260), status chip 'In library'.\n     * Each item has: Portrait cover (around 100x150dp, 2:3 ratio, rounded-sm 4dp with subtle elevation or gentle paper rim), title (Roboto Flex 14/20 medium, 2-line max), author (12/16 on-surface-variant), subtle status tag.\n\n4. 'Popular classics' section:\n   - Header row with section title 'Popular classics' (20/28 medium) and subtitle or 'From Project Gutenberg'.\n   - Horizontal shelf with real catalogue classics and factual download indicators (no stars, no community reviews):\n     * 'Great Expectations' / Charles Dickens (Gutenberg #1400) — '54k downloads' with download/check icon.\n     * 'The Picture of Dorian Gray' / Oscar Wilde (Gutenberg #174) — '48k downloads'.\n     * 'Moby-Dick' / Herman Melville (Gutenberg #2701) — '42k downloads'.\n     * Clean portrait book covers with classical typographic elegance, author, and downloads pill/label.\n\n5. Fixed Bottom Navigation Bar (Material 3):\n   - Three labeled destinations:\n     1. 'Home' (selected: filled tonal pill container #F9DDC5 / #FFDCBF, icon 'auto_stories' filled, label 'Home' in medium primary text).\n     2. 'Explore' (unselected: icon 'explore', label 'Explore', on-surface-variant).\n     3. 'Library' (unselected: icon 'local_library', label 'Library', on-surface-variant).\n   - Native Android gesture navigation handle inset bar at bottom (gesture bar pill centered).\n\nKeep all colors, typography, spacing, and shapes strictly compliant with DESIGN.md (warm paper surface #FFF8F3, primary #895021, containers #FCF1E8 and #F5E9DF). No generic dashboard cards, paywalls, or streaks.",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "status": "COMPLETE"
+  },
+  "screenType": "DESIGN",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/0c14d787bffa4073bd185ec60ee574ce:download",
+    "name": "projects/6233788376335662642/files/0c14d787bffa4073bd185ec60ee574ce"
+  },
+  "theme": {
+    "bodyFont": "ROBOTO_FLEX",
+    "bodyFontFamily": "Roboto Flex",
+    "colorMode": "LIGHT",
+    "colorVariant": "FIDELITY",
+    "customColor": "#895021",
+    "font": "ROBOTO_FLEX",
+    "headlineFont": "ROBOTO_FLEX",
+    "headlineFontFamily": "Roboto Flex",
+    "labelFont": "ROBOTO_FLEX",
+    "labelFontFamily": "Roboto Flex",
+    "namedColors": {
+      "background": "#fff8f5",
+      "error": "#ba1a1a",
+      "error_container": "#ffdad6",
+      "highlight": "#F6E5A8",
+      "inverse_on_surface": "#fbeee7",
+      "inverse_primary": "#ffb782",
+      "inverse_surface": "#362f2b",
+      "on-primary-container": "#2D1606",
+      "on-surface": "#241A14",
+      "on-surface-variant": "#55483D",
+      "on_background": "#201a16",
+      "on_error": "#ffffff",
+      "on_error_container": "#93000a",
+      "on_primary": "#ffffff",
+      "on_primary_container": "#ffcead",
+      "on_primary_fixed": "#301400",
+      "on_primary_fixed_variant": "#6d390b",
+      "on_secondary": "#ffffff",
+      "on_secondary_container": "#756050",
+      "on_secondary_fixed": "#27190c",
+      "on_secondary_fixed_variant": "#554334",
+      "on_surface": "#201a16",
+      "on_surface_variant": "#52443a",
+      "on_tertiary": "#ffffff",
+      "on_tertiary_container": "#98e4f7",
+      "on_tertiary_fixed": "#001f25",
+      "on_tertiary_fixed_variant": "#004e5b",
+      "outline": "#857469",
+      "outline_variant": "#d7c3b6",
+      "primary": "#6c390b",
+      "primary-container": "#FFDCBF",
+      "primary_container": "#895021",
+      "primary_fixed": "#ffdcc5",
+      "primary_fixed_dim": "#ffb782",
+      "secondary": "#6e5b4b",
+      "secondary_container": "#f9ddc9",
+      "secondary_fixed": "#f9ddc9",
+      "secondary_fixed_dim": "#dcc2ae",
+      "surface": "#fff8f5",
+      "surface-container": "#F5E9DF",
+      "surface-container-high": "#EEE1D5",
+      "surface-container-low": "#FCF1E8",
+      "surface-paper": "#FFF8F3",
+      "surface_bright": "#fff8f5",
+      "surface_container": "#f9ebe4",
+      "surface_container_high": "#f3e6df",
+      "surface_container_highest": "#ede0d9",
+      "surface_container_low": "#fef1ea",
+      "surface_container_lowest": "#ffffff",
+      "surface_dim": "#e4d8d1",
+      "surface_tint": "#895021",
+      "surface_variant": "#ede0d9",
+      "tertiary": "#5D633D",
+      "tertiary-container": "#E1E8B8",
+      "tertiary_container": "#006878",
+      "tertiary_fixed": "#a6eeff",
+      "tertiary_fixed_dim": "#86d2e4"
+    },
+    "overridePrimaryColor": "#895021",
+    "overrideSecondaryColor": "#6f5b4b",
+    "roundness": "ROUND_EIGHT",
+    "spacing": {
+      "gutter": "20px",
+      "margin": "20px",
+      "space-lg": "16px",
+      "space-md": "12px",
+      "space-sm": "8px",
+      "space-xl": "24px",
+      "space-xs": "4px",
+      "space-xxl": "32px"
+    },
+    "spacingScale": 2,
+    "typography": {
+      "body-lg": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "24px"
+      },
+      "body-sm": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "lineHeight": "20px"
+      },
+      "headline-lg": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "32px",
+        "fontWeight": "500",
+        "lineHeight": "40px"
+      },
+      "headline-md": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "24px",
+        "fontWeight": "500",
+        "lineHeight": "32px"
+      },
+      "headline-sm": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "20px",
+        "fontWeight": "500",
+        "lineHeight": "28px"
+      },
+      "label-md": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "14px",
+        "fontWeight": "500",
+        "lineHeight": "20px"
+      },
+      "reader-chapter": {
+        "fontFamily": "Literata",
+        "fontSize": "26px",
+        "fontWeight": "500",
+        "lineHeight": "34px"
+      },
+      "reader-prose": {
+        "fontFamily": "Literata",
+        "fontSize": "19px",
+        "fontWeight": "400",
+        "lineHeight": "32px"
+      },
+      "title-md": {
+        "fontFamily": "Roboto Flex",
+        "fontSize": "16px",
+        "fontWeight": "500",
+        "lineHeight": "24px"
+      }
+    }
+  },
+  "title": "UI-01 Home - Veritalex",
+  "width": "780"
+}

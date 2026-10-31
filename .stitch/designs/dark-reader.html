@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Veritalex - Dark Reader</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Roboto Flex & Literata -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300;0,7..72,400;0,7..72,500;1,7..72,400&amp;family=Roboto+Flex:wght,GRAD@400..600,-50..50&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "secondary-fixed-dim": "#e1c0a8",
+            "on-surface": "#F0DFD6",
+            "inverse-primary": "#875123",
+            "secondary-container": "#534234",
+            "surface-dim": "#18120f",
+            "outline-variant": "#52443a",
+            "surface-container": "#2D231C",
+            "surface-container-high": "#2f2924",
+            "error": "#FFB4AB",
+            "primary": "#ffdcc4",
+            "inverse-surface": "#ece0d9",
+            "primary-container": "#ffb77f",
+            "on-tertiary": "#00363f",
+            "on-tertiary-fixed": "#001f26",
+            "surface-bright": "#3f3833",
+            "surface-container-lowest": "#120d0a",
+            "surface": "#19120D",
+            "surface-container-low": "#231A14",
+            "inverse-on-surface": "#362f2b",
+            "on-background": "#ece0d9",
+            "background": "#18120f",
+            "surface-container-highest": "#3a332f",
+            "on-error": "#690005",
+            "tertiary-fixed-dim": "#88d1e3",
+            "secondary": "#e1c0a8",
+            "on-surface-variant": "#D6C3B7",
+            "on-primary-container": "#FFDCBF",
+            "on-tertiary-container": "#005b69",
+            "tertiary": "#C6CE9F",
+            "on-primary-fixed": "#2f1500",
+            "primary-fixed": "#ffdcc4",
+            "on-secondary-fixed-variant": "#584230",
+            "on-tertiary-fixed-variant": "#004e5b",
+            "on-secondary": "#402c1b",
+            "secondary-fixed": "#fedcc3",
+            "error-container": "#93000a",
+            "on-error-container": "#ffdad6",
+            "primary-fixed-dim": "#ffb77f",
+            "surface-variant": "#3a332f",
+            "on-primary-fixed-variant": "#6b3a0c",
+            "on-primary": "#4e2600",
+            "surface-tint": "#ffb77f",
+            "on-secondary-fixed": "#291809",
+            "tertiary-container": "#88d1e3",
+            "tertiary-fixed": "#a8edff",
+            "outline": "#9F8D83"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "2rem",
+            "gutter": "1rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "margin": "1rem"
+          },
+          "fontFamily": {
+            "headline-md": [
+              "Roboto Flex"
+            ],
+            "headline-lg": [
+              "Roboto Flex"
+            ],
+            "body-sm": [
+              "Roboto Flex"
+            ],
+            "body-md": [
+              "Roboto Flex"
+            ],
+            "reader-prose": [
+              "Literata"
+            ]
+          },
+          "fontSize": {
+            "headline-md": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "500"
+              }
+            ],
+            "headline-lg": [
+              "24px",
+              {
+                "lineHeight": "32px",
+                "fontWeight": "500"
+              }
+            ],
+            "body-sm": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "400"
+              }
+            ],
+            "body-md": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "reader-prose": [
+              "19px",
+              {
+                "lineHeight": "32px",
+                "fontWeight": "400"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary">
+<!-- Phone Baseline Canvas (412x915 Portrait viewport emulation wrapper) -->
+<main class="mx-auto w-full max-w-[412px] min-h-[915px] h-screen bg-surface flex flex-col relative overflow-hidden shadow-2xl">
+<!-- 1. Native Android Status Bar (412 baseline) -->
+<header class="w-full h-10 px-6 flex justify-between items-center z-30 select-none bg-surface shrink-0">
+<span class="font-headline-md text-body-sm font-semibold tracking-tight text-on-surface">9:41</span>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[17px] leading-none" data-icon="signal_cellular_alt">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[17px] leading-none" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-[19px] leading-none" data-icon="battery_full">battery_full</span>
+</div>
+</header>
+<!-- 2. Reader Top App Bar (Task-Focused Reader Chrome) -->
+<nav class="w-full h-14 px-3 flex items-center justify-between z-20 shrink-0 bg-surface border-b border-outline-variant/20 transition-colors">
+<!-- Leading: Back arrow button (48dp touch target) -->
+<button aria-label="Navigate back" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container-high/50 active:opacity-75 transition-opacity text-on-surface focus:outline-none">
+<span class="material-symbols-outlined text-headline-md" data-icon="arrow_back">arrow_back</span>
+</button>
+<!-- Center Title and Subtitle -->
+<div class="flex flex-col items-center justify-center text-center px-2 flex-1 min-w-0">
+<h1 class="font-headline-md text-headline-md text-on-surface truncate w-full tracking-tight">Pride and Prejudice</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Chapter 18</p>
+</div>
+<!-- Trailing Action Buttons (48dp touch targets) -->
+<div class="flex items-center">
+<button aria-label="Toggle Bookmark" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container-high/50 active:opacity-75 transition-colors text-primary-container focus:outline-none" id="bookmark-toggle">
+<span class="material-symbols-outlined text-headline-md" data-icon="bookmark" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+</button>
+<button aria-label="More options" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container-high/50 active:opacity-75 transition-colors text-on-surface focus:outline-none">
+<span class="material-symbols-outlined text-headline-md" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</nav>
+<!-- 3. Reading Prose Body (Scrollable, Immersive Reading View) -->
+<div class="flex-1 overflow-y-auto px-7 pt-9 pb-44 scroll-smooth" id="reader-scroll-canvas">
+<div class="max-w-[356px] mx-auto flex flex-col items-center">
+<!-- Chapter Header Section -->
+<header class="" style="padding:8px 0 20px;text-align:left">
+<h2 class="font-reader-prose text-headline-lg font-medium text-primary-container mt-2 tracking-tight" style="font-family:Literata,Georgia,serif;font-size:26px;line-height:34px;font-weight:500">Chapter 18</h2>
+</header>
+<!-- Authentic Austen Netherfield Ball Prose -->
+<article class="font-reader-prose text-reader-prose text-on-surface tracking-normal leading-[1.72] space-y-7 text-left" style="text-align:left;word-spacing:normal">
+<p>
+            When the dancing recommenced, however, and Darcy approached to claim her hand, Charlotte could not help cautioning her in a whisper, not to be a simpleton, and allow her fancy for Wickham to make her appear unpleasant in the eyes of a man of ten times his consequence. Elizabeth made no answer, and took her place in the set, amazed at the dignity to which she was arrived in being allowed to stand opposite to Mr. Darcy, and reading in her neighbours' looks their equal amazement in beholding it.
+          </p>
+<p>
+            They stood for some time without speaking a word; and she began to imagine that their silence was to last through the two dances, and at first was resolved not to break it; till, on the chest of Darcy, she caught a glimpse of an expression that showed him determined to persist in the same reserved demeanor. She felt herself unequal to the task of speaking first, but at length resolved that silence was more awkward than speech.
+          </p>
+</article>
+</div>
+</div>
+<!-- 4. Lower Persistent Reader Bar / Floating Sheet -->
+<footer class="absolute bottom-0 left-0 right-0 z-30 bg-surface-container-low border-t border-outline-variant/30 rounded-t-3xl pt-4 pb-2 px-6 flex flex-col gap-3 shadow-[0_-8px_24px_rgba(0,0,0,0.45)]">
+<!-- Progress Bar & Indicator Row -->
+<section class="flex flex-col gap-2">
+<div class="flex justify-between items-center font-body-sm text-body-sm text-on-surface-variant font-medium px-1">
+<span>Chapter 18</span>
+<span class="text-primary-container font-semibold">28%</span>
+</div>
+<!-- Slider Bar with Amber Accent Fill & Pill Thumb -->
+<div class="relative w-full h-8 flex items-center cursor-pointer group select-none">
+<!-- Inactive Track -->
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden relative">
+<!-- Active Progress Track (28%) -->
+<div class="h-full bg-primary-container rounded-full" style="width: 28%;"></div>
+</div>
+<!-- Slider Thumb (Positioned at 28%) -->
+<div class="absolute left-[28%] -translate-x-1/2 w-4 h-4 rounded-full bg-primary-container border-2 border-surface shadow-md group-hover:scale-125 transition-transform flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+</div>
+</div>
+</section>
+<!-- Reader Actions Row (4 Labelled Controls with 48dp min targets) -->
+<nav class="grid grid-cols-4 items-center gap-1 text-on-surface-variant pt-1 border-t border-outline-variant/20">
+<!-- Contents Action -->
+<button aria-label="Table of Contents" class="flex flex-col items-center justify-center min-h-[48px] py-1 px-2 rounded-xl hover:bg-surface-container hover:text-on-surface active:scale-95 transition-all focus:outline-none">
+<span class="material-symbols-outlined text-[22px] leading-none mb-1 text-on-surface" data-icon="menu_book">menu_book</span>
+<span class="font-body-sm text-body-sm font-medium">Contents</span>
+</button>
+<!-- Appearance Action -->
+<button aria-label="Reader Appearance Settings" class="flex flex-col items-center justify-center min-h-[48px] py-1 px-2 rounded-xl hover:bg-surface-container hover:text-on-surface active:scale-95 transition-all focus:outline-none">
+<span class="material-symbols-outlined text-[22px] leading-none mb-1 text-on-surface" data-icon="text_format">text_format</span>
+<span class="font-body-sm text-body-sm font-medium">Appearance</span>
+</button>
+<!-- Search Action -->
+<button aria-label="Search Book" class="flex flex-col items-center justify-center min-h-[48px] py-1 px-2 rounded-xl hover:bg-surface-container hover:text-on-surface active:scale-95 transition-all focus:outline-none">
+<span class="material-symbols-outlined text-[22px] leading-none mb-1 text-on-surface" data-icon="search">search</span>
+<span class="font-body-sm text-body-sm font-medium">Search</span>
+</button>
+<!-- Notes Action -->
+<button aria-label="Book Notes and Highlights" class="flex flex-col items-center justify-center min-h-[48px] py-1 px-2 rounded-xl hover:bg-surface-container hover:text-on-surface active:scale-95 transition-all focus:outline-none">
+<span class="material-symbols-outlined text-[22px] leading-none mb-1 text-on-surface" data-icon="edit_note">edit_note</span>
+<span class="font-body-sm text-body-sm font-medium">Notes</span>
+</button>
+</nav>
+<!-- Android Gesture Navigation Pill Bar -->
+<div class="w-full flex justify-center items-center pt-2 pb-1.5 select-none">
+<div class="w-32 h-1 bg-outline-variant/70 rounded-full"></div>
+</div>
+</footer>
+</main>
+<!-- Interactive State Logic -->
+<script>
+    // Micro-interaction: Bookmark active toggle
+    const bookmarkBtn = document.getElementById('bookmark-toggle');
+    let isBookmarked = true;
+
+    bookmarkBtn.addEventListener('click', () => {
+      isBookmarked = !isBookmarked;
+      const icon = bookmarkBtn.querySelector('.material-symbols-outlined');
+      if (isBookmarked) {
+        icon.style.fontVariationSettings = "'FILL' 1";
+        bookmarkBtn.classList.add('text-primary-container');
+        bookmarkBtn.classList.remove('text-on-surface-variant');
+      } else {
+        icon.style.fontVariationSettings = "'FILL' 0";
+        bookmarkBtn.classList.remove('text-primary-container');
+        bookmarkBtn.classList.add('text-on-surface-variant');
+      }
+    });
+  </script>
+</body></html>

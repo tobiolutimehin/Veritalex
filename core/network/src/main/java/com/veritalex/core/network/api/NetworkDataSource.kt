@@ -22,7 +22,7 @@ class RetrofitNetworkDataSource
         override suspend fun getBooks(
             page: Int?,
             ids: Set<Int>?,
-        ): Response<BookListResponse> = apiService.getBooks(page = page, ids = ids.toString())
+        ): Response<BookListResponse> = apiService.getBooks(page = page, ids = ids?.joinToString(","))
 
         override suspend fun getBookById(id: Int): Response<BookDto> = apiService.getBookById(id)
     }

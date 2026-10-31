@@ -1,0 +1,49 @@
+{
+  "mode": "large-text",
+  "baseUrl": "http://127.0.0.1:4175",
+  "executable": "/Users/tobiolutimehin/Library/Caches/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-mac-arm64/chrome-headless-shell",
+  "errors": [],
+  "results": [
+    {
+      "id": "home-returning",
+      "bodyOverflow": false,
+      "overflow": []
+    },
+    {
+      "id": "library-books",
+      "bodyOverflow": false,
+      "overflow": []
+    },
+    {
+      "id": "reader-scroll",
+      "bodyOverflow": false,
+      "overflow": []
+    },
+    {
+      "id": "reader-appearance",
+      "bodyOverflow": false,
+      "overflow": []
+    },
+    {
+      "id": "journal-create",
+      "bodyOverflow": false,
+      "overflow": []
+    },
+    {
+      "id": "shelf-create",
+      "bodyOverflow": false,
+      "overflow": []
+    },
+    {
+      "id": "account-signout-pending",
+      "bodyOverflow": false,
+      "overflow": []
+    },
+    {
+      "id": "settings-main",
+      "bodyOverflow": false,
+      "overflow": []
+    }
+  ],
+  "passed": true
+}

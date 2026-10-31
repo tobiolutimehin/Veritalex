@@ -1,0 +1,18 @@
+{
+  "slug": "book-details",
+  "id": "e38c1a94c65c4cb2a2a5df3e3a31c3a1",
+  "name": "projects/6233788376335662642/screens/e38c1a94c65c4cb2a2a5df3e3a31c3a1",
+  "title": "UI-02 Book details - Veritalex",
+  "width": "780",
+  "height": "1894",
+  "deviceType": "MOBILE",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/00c1cdc2e9cc4d67aac7f94f90267346:download",
+    "name": "projects/6233788376335662642/files/00c1cdc2e9cc4d67aac7f94f90267346"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/391244559d4b4b06bd45fb61e347e47a:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/391244559d4b4b06bd45fb61e347e47a"
+  }
+}

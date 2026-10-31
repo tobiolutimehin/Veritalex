@@ -1,0 +1,1593 @@
+{
+  "mode": "audit",
+  "baseUrl": "http://127.0.0.1:4175",
+  "executable": "/Users/tobiolutimehin/Library/Caches/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-mac-arm64/chrome-headless-shell",
+  "errors": [],
+  "results": [
+    {
+      "id": "auth-welcome",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "auth-loading",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "auth-cancelled",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "auth-error",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "auth-import-preview",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "auth-importing",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "auth-import-complete",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "home-first",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "home-returning",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "explore-browse",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "explore-search",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "explore-results",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "explore-filters",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "explore-empty",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "explore-loading",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "explore-offline",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "book-new",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "book-saved",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "book-reading",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "book-downloading",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "book-download-failed",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "book-downloaded",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "book-unreadable",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-books",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-want",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-reading",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-finished",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-downloaded",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-empty",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-actions",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-remove",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-rating",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelves-list",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelves-empty",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-create",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-after-removal",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-name-error",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-rename",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-delete",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-membership",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-detail",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-detail-empty",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-all",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelves-after-delete",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-book",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-empty",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-book-empty",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-view",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-create",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-edit",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-delete",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-discard",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-scroll",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-immersive",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-paged",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-bookmark",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-selection",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-highlight",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-appearance",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-contents",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-search",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-search-results",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-search-empty",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-finished",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "settings-main",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "settings-appearance",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "settings-reader-defaults",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "settings-storage",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "settings-storage-confirm",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "settings-about",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "account-details",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "account-signout-pending",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "account-delete-confirm",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "settings-storage-empty",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "account-reauth",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "account-deleting",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "account-delete-error",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "account-deleted",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-local",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-waiting",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-syncing",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-current",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-failed",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-expired",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-restoring",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-conflict",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-add-books",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-book-picker",
+      "width": 360,
+      "phoneWidth": 360,
+      "viewport": 360,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "auth-welcome",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "auth-loading",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "auth-cancelled",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "auth-error",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "auth-import-preview",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "auth-importing",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "auth-import-complete",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "home-first",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "home-returning",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "explore-browse",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "explore-search",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "explore-results",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "explore-filters",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "explore-empty",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "explore-loading",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "explore-offline",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "book-new",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "book-saved",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "book-reading",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "book-downloading",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "book-download-failed",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "book-downloaded",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "book-unreadable",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-books",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-want",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-reading",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-finished",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-downloaded",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-empty",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-actions",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-remove",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-rating",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelves-list",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelves-empty",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-create",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "library-after-removal",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-name-error",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-rename",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-delete",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-membership",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-detail",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-detail-empty",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-all",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelves-after-delete",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-book",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-empty",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-book-empty",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-view",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-create",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-edit",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-delete",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-discard",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-scroll",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-immersive",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-paged",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-bookmark",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-selection",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-highlight",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-appearance",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-contents",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-search",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-search-results",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-search-empty",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "reader-finished",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "settings-main",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "settings-appearance",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "settings-reader-defaults",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "settings-storage",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "settings-storage-confirm",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "settings-about",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "account-details",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "account-signout-pending",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "account-delete-confirm",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "settings-storage-empty",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "account-reauth",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "account-deleting",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "account-delete-error",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "account-deleted",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-local",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-waiting",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-syncing",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-current",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-failed",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-expired",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-restoring",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "sync-conflict",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "shelf-add-books",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    },
+    {
+      "id": "journal-book-picker",
+      "width": 412,
+      "phoneWidth": 412,
+      "viewport": 412,
+      "bodyOverflow": false,
+      "overflow": [],
+      "smallTargets": []
+    }
+  ],
+  "passed": true
+}

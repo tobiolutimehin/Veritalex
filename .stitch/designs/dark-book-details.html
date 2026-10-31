@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIGHT-04 Book details - Veritalex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FFB77F',
+            'on-primary': '#4E2600',
+            'primary-container': '#6D3A0D',
+            'on-primary-container': '#FFDCBF',
+            surface: '#19120D',
+            'surface-dim': '#18120f',
+            'surface-bright': '#3f3833',
+            'surface-container-lowest': '#120d0a',
+            'surface-container-low': '#231A14',
+            'surface-container': '#2D231C',
+            'surface-container-high': '#382D25',
+            'surface-container-highest': '#433830',
+            'on-surface': '#F0DFD6',
+            'on-surface-variant': '#D6C3B7',
+            outline: '#9F8D83',
+            'outline-variant': '#52443B',
+            secondary: '#E0C0A8',
+            'secondary-container': '#534234',
+            'on-secondary-container': '#FFDCBF',
+            tertiary: '#C6CE9F',
+          },
+          fontFamily: {
+            sans: ['"Roboto Flex"', 'sans-serif'],
+            serif: ['Literata', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-sans antialiased min-h-screen flex justify-center selection:bg-primary selection:text-on-primary">
+  <!-- Device Frame (412 x 915 standard Android baseline) -->
+  <div class="w-full max-w-[412px] min-h-[915px] bg-surface flex flex-col relative shadow-2xl overflow-x-hidden border-x border-outline-variant/20">
+
+    <!-- Android Status Bar -->
+    <header class="sticky top-0 z-30 bg-surface/95 backdrop-blur-md">
+      <div class="h-10 px-6 flex items-center justify-between text-xs text-on-surface-variant font-medium select-none">
+        <span>9:41</span>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[15px]">signal_cellular_4_bar</span>
+          <span class="material-symbols-outlined text-[15px]">wifi</span>
+          <span class="material-symbols-outlined text-[16px]">battery_full</span>
+        </div>
+      </div>
+
+      <!-- Top App Bar: Back / Book details / Overflow -->
+      <div class="h-14 px-4 flex items-center justify-between">
+        <button type="button" aria-label="Navigate back" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-high/60 active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-2xl">arrow_back</span>
+        </button>
+        <h1 class="text-xl font-medium tracking-tight text-on-surface">Book details</h1>
+        <button type="button" aria-label="More options" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container-high/60 active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-2xl">more_vert</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Scrollable Content -->
+    <main class="flex-1 px-5 pt-3 pb-8 space-y-6">
+
+      <!-- Hero Book Cover & Title Info -->
+      <section class="flex flex-col items-center text-center">
+        <!-- Dignified Typeset Book Cover (Preserving authentic portrait Gutenberg styling) -->
+        <div class="w-[148px] h-[222px] rounded-lg bg-[#3A1E1E] shadow-xl border border-[#5A2F2F]/60 p-4 flex flex-col justify-between items-center text-center relative overflow-hidden select-none mb-5">
+          <!-- Subtle inner border frame -->
+          <div class="absolute inset-2 border border-[#9A5050]/40 rounded pointer-events-none"></div>
+          
+          <div class="pt-2 z-10">
+            <span class="text-[9px] tracking-[0.2em] uppercase font-semibold text-[#D69E9E]/90 block">GUTENBERG 1342</span>
+            <div class="w-5 h-[1px] bg-[#9A5050]/60 mx-auto mt-1 mb-2"></div>
+          </div>
+
+          <div class="my-auto z-10 px-1">
+            <h2 class="font-serif text-lg font-medium leading-tight text-[#FFDFDF]">Pride and Prejudice</h2>
+          </div>
+
+          <div class="pb-2 z-10">
+            <p class="font-serif text-[11px] italic text-[#E5B5B5]">Jane Austen</p>
+            <span class="text-[8px] tracking-[0.15em] uppercase text-[#B27B7B] mt-1 block">CLASSIC</span>
+          </div>
+        </div>
+
+        <!-- Book Title & Author -->
+        <h2 class="text-2xl font-semibold tracking-tight text-on-surface px-4">Pride and Prejudice</h2>
+        <p class="text-base text-on-surface-variant font-normal mt-1">Jane Austen</p>
+
+        <!-- Category Tags -->
+        <div class="flex items-center gap-2 mt-3.5 flex-wrap justify-center">
+          <span class="px-3 py-1 rounded-full text-xs font-medium bg-surface-container text-on-surface-variant border border-outline-variant/30">English</span>
+          <span class="px-3 py-1 rounded-full text-xs font-medium bg-surface-container text-on-surface-variant border border-outline-variant/30">Fiction</span>
+          <span class="px-3 py-1 rounded-full text-xs font-medium bg-surface-container text-on-surface-variant border border-outline-variant/30">Romance</span>
+        </div>
+      </section>
+
+      <!-- Primary Action: Read book -->
+      <section class="pt-1">
+        <button type="button" class="w-full h-13 py-3.5 px-6 rounded-full bg-primary text-on-primary font-medium text-base flex items-center justify-center gap-2.5 shadow hover:opacity-95 active:scale-[0.99] transition-all">
+          <span class="material-symbols-outlined text-xl">menu_book</span>
+          <span>Read book</span>
+        </button>
+
+        <!-- Secondary Actions: Save to library / Download / Share -->
+        <div class="grid grid-cols-3 gap-2 mt-4 text-center">
+          <button type="button" class="flex flex-col items-center justify-center py-2.5 px-1 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors">
+            <span class="material-symbols-outlined text-2xl text-on-surface mb-1">bookmark_border</span>
+            <span class="text-xs font-medium">Save to library</span>
+          </button>
+
+          <button type="button" class="flex flex-col items-center justify-center py-2.5 px-1 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors">
+            <span class="material-symbols-outlined text-2xl text-on-surface mb-1">download</span>
+            <span class="text-xs font-medium">Download</span>
+          </button>
+
+          <button type="button" class="flex flex-col items-center justify-center py-2.5 px-1 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors">
+            <span class="material-symbols-outlined text-2xl text-on-surface mb-1">share</span>
+            <span class="text-xs font-medium">Share</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Divider -->
+      <div class="h-[1px] bg-outline-variant/20 -mx-1"></div>
+
+      <!-- About Section & Catalogue Source -->
+      <section class="space-y-3">
+        <h3 class="text-base font-medium text-on-surface">About</h3>
+        <p class="text-sm leading-relaxed text-on-surface-variant">
+          A novel of manners, family, and marriage in nineteenth-century England, following the turbulent relationship between Elizabeth Bennet and Fitzwilliam Darcy.
+        </p>
+
+        <!-- Metadata Container Card -->
+        <div class="bg-surface-container-low rounded-2xl p-4 border border-outline-variant/20 space-y-3">
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-on-surface-variant">Language</span>
+            <span class="text-on-surface font-medium">English</span>
+          </div>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-on-surface-variant">Author</span>
+            <span class="text-on-surface font-medium">Jane Austen</span>
+          </div>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-on-surface-variant">Source</span>
+            <span class="text-on-surface font-medium">Project Gutenberg</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Your reading status selector & Private Rating -->
+      <section class="space-y-4 pt-1">
+        <h3 class="text-base font-medium text-on-surface">Your reading status</h3>
+
+        <!-- Status Segmented Toggle: Want to read / Reading / Finished -->
+        <div class="bg-surface-container-lowest p-1 rounded-full border border-outline-variant/30 flex items-center justify-between gap-1">
+          <button type="button" class="flex-1 py-2 text-xs font-medium rounded-full text-on-surface-variant hover:text-on-surface transition-all text-center">
+            Want to read
+          </button>
+          <button type="button" class="flex-1 py-2 text-xs font-semibold rounded-full bg-secondary-container text-on-secondary-container transition-all text-center shadow-sm">
+            Reading
+          </button>
+          <button type="button" class="flex-1 py-2 text-xs font-medium rounded-full text-on-surface-variant hover:text-on-surface transition-all text-center">
+            Finished
+          </button>
+        </div>
+
+        <!-- Rating & Shelf Card (Private User Data) -->
+        <div class="bg-surface-container-low rounded-2xl p-4 border border-outline-variant/20 space-y-4">
+          <!-- Private Rating -->
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium text-on-surface">Your rating</span>
+              <span class="text-xs text-on-surface-variant/80">Only visible to you</span>
+            </div>
+            
+            <div class="flex items-center gap-1.5 pt-1" aria-label="Rating: 4 out of 5 stars">
+              <button type="button" aria-label="1 star" class="p-1 text-primary focus:outline-none">
+                <span class="material-symbols-outlined fill text-2xl">star</span>
+              </button>
+              <button type="button" aria-label="2 stars" class="p-1 text-primary focus:outline-none">
+                <span class="material-symbols-outlined fill text-2xl">star</span>
+              </button>
+              <button type="button" aria-label="3 stars" class="p-1 text-primary focus:outline-none">
+                <span class="material-symbols-outlined fill text-2xl">star</span>
+              </button>
+              <button type="button" aria-label="4 stars" class="p-1 text-primary focus:outline-none">
+                <span class="material-symbols-outlined fill text-2xl">star</span>
+              </button>
+              <button type="button" aria-label="5 stars" class="p-1 text-outline focus:outline-none">
+                <span class="material-symbols-outlined text-2xl">star</span>
+              </button>
+              <span class="text-xs font-medium text-on-surface-variant ml-2">4 of 5</span>
+            </div>
+          </div>
+
+          <!-- Subtle Divider inside card -->
+          <div class="h-[1px] bg-outline-variant/15"></div>
+
+          <!-- Add to shelf row -->
+          <button type="button" class="w-full flex items-center justify-between py-1 text-left text-on-surface hover:text-primary transition-colors group">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">shelves</span>
+              <div>
+                <span class="text-sm font-medium block">Add to shelf</span>
+                <span class="text-xs text-on-surface-variant">Classics to revisit, Weekend reads</span>
+              </div>
+            </div>
+            <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary text-xl">chevron_right</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Bottom Spacer for Native Gestures -->
+      <div class="h-6"></div>
+    </main>
+
+    <!-- Android Gesture Bar -->
+    <footer class="h-4 pb-2 flex justify-center items-center w-full sticky bottom-0 bg-surface/90 backdrop-blur-sm pointer-events-none">
+      <div class="w-32 h-1 bg-on-surface/20 rounded-full"></div>
+    </footer>
+
+  </div>
+</body>
+</html>

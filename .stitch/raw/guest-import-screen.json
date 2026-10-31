@@ -1,0 +1,18 @@
+{
+  "slug": "guest-import",
+  "id": "6e27f95c073644c9a7c28b3030c72742",
+  "name": "projects/6233788376335662642/screens/6e27f95c073644c9a7c28b3030c72742",
+  "title": "UI-09 Bring your library with you - Veritalex",
+  "width": "780",
+  "height": "1984",
+  "deviceType": "MOBILE",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/8b4da09d15d84ca387d139d15b52bd07:download",
+    "name": "projects/6233788376335662642/files/8b4da09d15d84ca387d139d15b52bd07"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/fae9af581c584891981197f8749b42c8:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/fae9af581c584891981197f8749b42c8"
+  }
+}

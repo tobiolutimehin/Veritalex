@@ -10,6 +10,7 @@ import com.veritalex.core.database.dao.BookDao
 import com.veritalex.core.database.entities.BookWithPeople
 import com.veritalex.core.network.api.RetrofitNetworkDataSource
 import retrofit2.HttpException
+import kotlinx.serialization.SerializationException
 import java.io.IOException
 import javax.inject.Inject
 
@@ -31,29 +32,24 @@ class BooksRemoteMediator
                     when (loadType) {
                         LoadType.REFRESH -> null
                         LoadType.PREPEND -> return MediatorResult.Success(endOfPaginationReached = true)
-                        LoadType.APPEND -> {
-                            state.lastItemOrNull()
-                                ?: return MediatorResult.Success(
-                                    endOfPaginationReached = true,
-                                )
-
-                            loadKey
-                        }
+                        LoadType.APPEND -> loadKey
+                            ?: return MediatorResult.Success(endOfPaginationReached = true)
                     }
                 val response = network.getBooks(page = key)
 
-                if (response.isSuccessful) {
-                    response.body()?.let { body ->
-                        val networkBooks = body.results
-                        networkBooks.insertBooks(bookDao)
-                        loadKey = body.next?.extractPageNumberFromUrl()
-                    }
+                if (!response.isSuccessful) throw HttpException(response)
+                val body = response.body() ?: throw IOException("Empty catalogue response")
+                val nextKey = body.next?.let {
+                    it.extractPageNumberFromUrl() ?: throw IOException("Invalid catalogue page")
                 }
-
-                MediatorResult.Success(endOfPaginationReached = (loadKey ?: 0) > 25)
+                body.results.insertBooks(bookDao)
+                loadKey = nextKey
+                MediatorResult.Success(endOfPaginationReached = body.next == null)
             } catch (e: IOException) {
                 MediatorResult.Error(e)
             } catch (e: HttpException) {
+                MediatorResult.Error(e)
+            } catch (e: SerializationException) {
                 MediatorResult.Error(e)
             }
         }

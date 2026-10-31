@@ -1,0 +1,59 @@
+{
+  "mode": "references",
+  "baseUrl": "http://127.0.0.1:4175",
+  "executable": "/Users/tobiolutimehin/Library/Caches/ms-playwright/chromium_headless_shell-1228/chrome-headless-shell-mac-arm64/chrome-headless-shell",
+  "errors": [],
+  "results": [
+    {
+      "slug": "home",
+      "stylesLength": 25313,
+      "title": "Veritalex - Home"
+    },
+    {
+      "slug": "sync-conflict",
+      "stylesLength": 19161,
+      "title": "Veritalex - Sync Conflict"
+    },
+    {
+      "slug": "reader",
+      "stylesLength": 19792,
+      "title": "Veritalex - Reader"
+    },
+    {
+      "slug": "dark-reader",
+      "stylesLength": 18416,
+      "title": "Veritalex - Dark Reader"
+    },
+    {
+      "slug": "dark-library",
+      "stylesLength": 25360,
+      "title": "Veritalex - Library"
+    },
+    {
+      "slug": "tablet-library",
+      "stylesLength": 19108,
+      "title": "TAB-02 Library & Book Detail - Veritalex"
+    },
+    {
+      "slug": "library",
+      "stylesLength": 22359,
+      "title": "Veritalex — Library"
+    },
+    {
+      "slug": "settings",
+      "stylesLength": 18377,
+      "title": "Veritalex - Settings"
+    },
+    {
+      "slug": "dark-explore",
+      "stylesLength": 23995,
+      "title": "Veritalex - Explore"
+    },
+    {
+      "slug": "explore",
+      "stylesLength": 23015,
+      "title": "Veritalex - Explore"
+    }
+  ],
+  "passed": true
+}

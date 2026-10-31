@@ -1,0 +1,125 @@
+{
+  "results": [
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/16719224565033259743",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1Up5LNF69PqeOikYyIaE5FhygAwtEhAdI_fsLDMNrQTZwVunwuaJbHhIbeq6xG-EWSMcD48Mq1Nob44D5DqFNvi4oShoKay863VHVR8SpZG0q5yx9HqtRgZY6AzSp9bhqU-7GZcrJbZI_0PQmE7qoYX7kGFzP6IYncmEMHZLy2R6Nzw_vzcfApUOyDXVMyTDviXegM0nlm1waE2BXddYRXO7kdvfHiMIAXZ1geFws4m-LWM2gxCgT_ZFRZi5Rt_mWHsS8HMZ2CMoQ"
+        },
+        "id": "16719224565033260632",
+        "width": "2560",
+        "height": "2048",
+        "title": "Reference / tablet-home",
+        "name": "projects/6233788376335662642/screens/16719224565033260632",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/16719224565033259394",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1XmFY1gxQi0ij0OhK3GLWWsAA4d5eMgkyRoElfG4vutcgmxTfkk3qLcenTWOu5y-RuByyQvxX-Xa7qtJ5bYGJQTL3pnj-CGS1lpWTzGE_L0HrU6oX2ETNpziI-DEBHMwc53WXnQKen0uRndd3j3EOiM8obF3X1tNxSi6N-dX1HBSD9x-pPrxRYJvpnI_5laGuiXNYn2ybzfGyXj7_6cOK-l-rdy80LmGrByNZGyotydpVkjaC9ZYgw61Q1mOQ_LSorRz1GbB72Ngg"
+        },
+        "id": "16719224565033260283",
+        "width": "2560",
+        "height": "2048",
+        "title": "Reference / tablet-journal",
+        "name": "projects/6233788376335662642/screens/16719224565033260283",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/16719224565033259045",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1UEH6yOSuRw3J1hHLywxbJHkUFEK7Lm4BB6cGVM2mmP2o3PLonN7dGGRuWM7YMha13tIDGpNOFg8xQz46giyPbc56Kdc2luQN_ExVlFK1Gwe2_JiAQfV2jGwPxyWrpoZ8w6on60ke64RWX4Xd9ml7xTuM_8xVMh-yoS1o8-0tjrPA3I_UcYvubjKbfw6e-B9ML80IPCk-IVhb8pRM0fu2P_xcD70-u0WIctovL7mEkO-eHQCMwoKFtPNSrvT3zTJLhHG4wn4vhUGA"
+        },
+        "id": "16719224565033259934",
+        "width": "2560",
+        "height": "2048",
+        "title": "Reference / tablet-reader",
+        "name": "projects/6233788376335662642/screens/16719224565033259934",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/16719224565033262792",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1WB82YLvOGzquIk5Wln6QzC3VCnYzrlBbSAcnrQbKH0I7VF3QhBkbmcyefKa95GV82t1VTNy4JdGDOTMR1rCv6BrKx4IDrH9gVy5zrFDridams121-PGcGTFV2g4niSWIVv3CiThWAslxdV5b95gtCPCr-eIz0HlK8n5bp8FUOXkHda3Zrm2TTHFvVGsfDUc-cLDKf90zoIeYGhQcwq2-dcdZzghugTEMmzPAdlrjHFjdW2lFlAVbJD7tTmF0A18gy4HKFpDsK2"
+        },
+        "id": "16719224565033259585",
+        "width": "780",
+        "height": "2484",
+        "title": "Reference / dark-home",
+        "name": "projects/6233788376335662642/screens/16719224565033259585",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    }
+  ],
+  "screenInstances": [
+    {
+      "id": "16719224565033260632",
+      "sourceScreen": "projects/6233788376335662642/screens/16719224565033260632",
+      "x": 154410,
+      "width": 1280,
+      "height": 1024
+    },
+    {
+      "id": "16719224565033260283",
+      "sourceScreen": "projects/6233788376335662642/screens/16719224565033260283",
+      "x": 155790,
+      "width": 1280,
+      "height": 1024
+    },
+    {
+      "id": "16719224565033259934",
+      "sourceScreen": "projects/6233788376335662642/screens/16719224565033259934",
+      "x": 157170,
+      "width": 1280,
+      "height": 1024
+    },
+    {
+      "id": "16719224565033259585",
+      "sourceScreen": "projects/6233788376335662642/screens/16719224565033259585",
+      "x": 158550,
+      "width": 390,
+      "height": 1242
+    }
+  ],
+  "transfer": {
+    "files": [
+      "designs/tablet-home.png",
+      "designs/tablet-journal.png",
+      "designs/tablet-reader.png",
+      "designs/dark-home.png"
+    ],
+    "prefix": "Reference / ",
+    "sha256": {
+      "designs/tablet-home.png": "25aa335a9a11510d9a62c0942f253f4998546ee339a8868d43972c05b3837af1",
+      "designs/tablet-journal.png": "329d3459a80ca5a0d8b1fda320fc5cdb88d838f20841734e3e4ce2ab1232f52e",
+      "designs/tablet-reader.png": "6af6578682c4baff6681954f6c9268663a1626c5ad016d2f5c875a360422e33e",
+      "designs/dark-home.png": "3d9e99af872de29405c911382d0d16b5acb9c05d83af61e30d65a2a46cbc65a0"
+    }
+  }
+}

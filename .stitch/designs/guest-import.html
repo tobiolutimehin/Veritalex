@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Veritalex - Bring your library with you</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400..600;1,7..72,400&amp;family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-surface": "#362f2b",
+            "on-primary-container": "#2D1606",
+            "tertiary-fixed": "#a6eeff",
+            "tertiary-container": "#006878",
+            "highlight": "#F6E5A8",
+            "surface-container-high": "#f3e6df",
+            "primary-fixed": "#ffdcc5",
+            "on-error-container": "#93000a",
+            "primary-container": "#895021",
+            "on-surface-variant": "#52443a",
+            "outline-variant": "#d7c3b6",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#27190c",
+            "on-primary-fixed": "#301400",
+            "on-tertiary-container": "#98e4f7",
+            "on-secondary-container": "#756050",
+            "inverse-on-surface": "#fbeee7",
+            "on-tertiary-fixed": "#001f25",
+            "on-primary-fixed-variant": "#6d390b",
+            "tertiary": "#5D633D",
+            "on-primary": "#ffffff",
+            "secondary-container": "#f9ddc9",
+            "on-surface": "#241A14",
+            "surface-container": "#F5E9DF",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fff8f5",
+            "on-tertiary": "#ffffff",
+            "surface-dim": "#e4d8d1",
+            "surface-container-lowest": "#ffffff",
+            "on-background": "#201a16",
+            "surface-variant": "#ede0d9",
+            "primary": "#6c390b",
+            "on-error": "#ffffff",
+            "secondary": "#6e5b4b",
+            "on-tertiary-fixed-variant": "#004e5b",
+            "surface": "#fff8f5",
+            "error": "#ba1a1a",
+            "on-secondary-fixed-variant": "#554334",
+            "inverse-primary": "#ffb782",
+            "surface-container-low": "#fef1ea",
+            "background": "#fff8f5",
+            "outline": "#857469",
+            "tertiary-fixed-dim": "#86d2e4",
+            "primary-fixed-dim": "#ffb782",
+            "secondary-fixed": "#f9ddc9",
+            "surface-tint": "#895021",
+            "surface-container-highest": "#ede0d9",
+            "secondary-fixed-dim": "#dcc2ae",
+            "surface-paper": "#FFF8F3"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "16px",
+            "space-md": "12px",
+            "space-xxl": "32px",
+            "gutter": "20px",
+            "space-xs": "4px",
+            "space-sm": "8px",
+            "space-xl": "24px",
+            "margin": "20px"
+          },
+          "fontFamily": {
+            "headline-lg": ["Roboto Flex"],
+            "headline-sm": ["Roboto Flex"],
+            "label-md": ["Roboto Flex"],
+            "reader-prose": ["Literata"],
+            "headline-md": ["Roboto Flex"],
+            "reader-chapter": ["Literata"],
+            "body-sm": ["Roboto Flex"],
+            "title-md": ["Roboto Flex"],
+            "body-lg": ["Roboto Flex"]
+          },
+          "fontSize": {
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "reader-prose": ["19px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "reader-chapter": ["26px", { "lineHeight": "34px", "fontWeight": "500" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      font-size: 22px;
+      line-height: 1;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .material-symbols-outlined.filled {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-dim min-h-screen flex justify-center items-center font-body-lg text-on-surface antialiased p-0 sm:py-6 selection:bg-secondary-container">
+<!-- Mobile Screen Container (412dp baseline) -->
+<main class="w-full max-w-[412px] min-h-screen sm:min-h-[892px] sm:h-[892px] bg-surface flex flex-col justify-between overflow-y-auto sm:rounded-[28px] sm:shadow-lg relative select-none">
+<!-- Top System & App Navigation Flow -->
+<div>
+<!-- Android Status Bar -->
+<div class="h-10 px-6 flex items-center justify-between text-on-surface text-label-md font-label-md tracking-tight select-none">
+<span>9:41</span>
+<div class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-[18px]">wifi</span>
+<span class="material-symbols-outlined text-[18px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[18px]">battery_full</span>
+</div>
+</div>
+<!-- Linear / Task-focused Top App Bar -->
+<header class="flex items-center px-4 h-14">
+<button aria-label="Go back" class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<span class="ml-2 text-label-md font-label-md text-on-surface-variant">Veritalex Account</span>
+</header>
+<!-- Main Body Content Canvas -->
+<div class="px-5 pt-2 pb-6 space-y-6">
+<!-- Title & Subtitle Hierarchy -->
+<div class="space-y-2">
+<h1 class="text-headline-md font-headline-md text-on-surface tracking-tight">
+            Bring your library with you
+          </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed">
+            Add the reading you saved on this device to your personal account.
+          </p>
+</div>
+<!-- Signed-in Account Identifier Pill / Card -->
+<div class="bg-surface-container-low rounded-2xl p-3.5 flex items-center justify-between border border-outline-variant/40">
+<div class="flex items-center space-x-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-fixed font-title-md flex items-center justify-center text-title-md font-medium shadow-sm">
+              A
+            </div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md text-on-surface leading-tight">Alex Morgan</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">alex@example.com</span>
+</div>
+</div>
+<div class="flex items-center space-x-1.5 px-2.5 py-1 bg-surface-container rounded-full text-on-surface-variant text-[12px] font-label-md">
+<span class="material-symbols-outlined text-[16px] text-tertiary">check_circle</span>
+<span>Connected</span>
+</div>
+</div>
+<!-- Local Content Scope / Summary Chips -->
+<section aria-labelledby="device-summary-label">
+<p class="text-label-md font-label-md text-on-surface-variant uppercase tracking-wider text-[11px] mb-2.5" id="device-summary-label">
+            Saved on this device
+          </p>
+<div class="grid grid-cols-3 gap-2">
+<div class="bg-surface-container rounded-xl p-3 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-1 text-[22px]">auto_stories</span>
+<span class="text-title-md font-title-md text-on-surface">4</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant text-[12px]">Books</span>
+</div>
+<div class="bg-surface-container rounded-xl p-3 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-1 text-[22px]">shelves</span>
+<span class="text-title-md font-title-md text-on-surface">3</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant text-[12px]">Shelves</span>
+</div>
+<div class="bg-surface-container rounded-xl p-3 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-1 text-[22px]">history_edu</span>
+<span class="text-title-md font-title-md text-on-surface">3</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant text-[12px]">Journal entries</span>
+</div>
+</div>
+</section>
+<!-- Book Cover Preview Bento Grid (Classic Typeset Style) -->
+<section class="bg-surface-container-low rounded-2xl p-4 border border-outline-variant/30 space-y-3">
+<div class="flex items-center justify-between text-label-md font-label-md text-on-surface-variant">
+<span>Local books preview</span>
+<span class="text-[12px] text-secondary">2 unread · 2 active</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<!-- Book 1: Pride and Prejudice -->
+<div class="bg-surface-container rounded-xl p-2.5 flex items-start space-x-2.5">
+<div class="w-12 h-18 h-[72px] bg-[#4a1c1d] rounded shadow-xs flex flex-col justify-between p-1.5 shrink-0 text-[#fbeee7]">
+<span class="text-[7px] font-reader-chapter tracking-wider uppercase opacity-80">Austen</span>
+<span class="text-[9px] font-reader-prose font-semibold leading-tight line-clamp-2">Pride &amp; Prejudice</span>
+<span class="text-[6px] opacity-60">Classic</span>
+</div>
+<div class="flex flex-col justify-center min-w-0 py-0.5">
+<span class="text-title-md font-title-md text-on-surface text-[13px] truncate">Pride and Prejudice</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant text-[11px] truncate">Jane Austen</span>
+<span class="inline-flex items-center text-[10px] text-tertiary mt-1">
+<span class="material-symbols-outlined text-[12px] mr-0.5">bookmark</span> Chapter 12
+                </span>
+</div>
+</div>
+<!-- Book 2: Frankenstein -->
+<div class="bg-surface-container rounded-xl p-2.5 flex items-start space-x-2.5">
+<div class="w-12 h-18 h-[72px] bg-[#1b3b2b] rounded shadow-xs flex flex-col justify-between p-1.5 shrink-0 text-[#fbeee7]">
+<span class="text-[7px] font-reader-chapter tracking-wider uppercase opacity-80">Shelley</span>
+<span class="text-[9px] font-reader-prose font-semibold leading-tight line-clamp-2">Frankenstein</span>
+<span class="text-[6px] opacity-60">1818</span>
+</div>
+<div class="flex flex-col justify-center min-w-0 py-0.5">
+<span class="text-title-md font-title-md text-on-surface text-[13px] truncate">Frankenstein</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant text-[11px] truncate">Mary Shelley</span>
+<span class="inline-flex items-center text-[10px] text-on-surface-variant mt-1">
+<span class="material-symbols-outlined text-[12px] mr-0.5">schedule</span> 14% read
+                </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Informational Guarantees & Notes -->
+<div class="space-y-2.5 pt-1">
+<div class="flex items-start space-x-3 text-body-sm font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary shrink-0 text-[20px] mt-0.5">check_circle</span>
+<p class="leading-snug">
+              2 books are already in your account. They won’t be added twice.
+            </p>
+</div>
+<div class="flex items-start space-x-3 text-body-sm font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary shrink-0 text-[20px] mt-0.5">notes</span>
+<p class="leading-snug">
+              Your notes, highlights, and saved passages will be kept safely.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Pinned Decision & Bottom Actions Section -->
+<div class="px-5 pt-3 pb-8 bg-surface border-t border-outline-variant/30 flex flex-col space-y-3">
+<!-- Summary Line -->
+<p class="text-body-sm font-body-sm text-center text-on-surface-variant">
+        Your device library will be combined with your account.
+      </p>
+<!-- Primary Action: Pill Filled Button -->
+<button class="w-full h-12 bg-primary hover:bg-primary-container text-on-primary rounded-full font-label-md text-label-md flex items-center justify-center space-x-2 transition-all active:scale-[0.98] shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">sync_alt</span>
+<span>Add and sync</span>
+</button>
+<!-- Secondary Action: Tonal/Text Button -->
+<button class="w-full h-11 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-full font-label-md text-label-md flex items-center justify-center transition-colors active:scale-[0.98]" type="button">
+        Keep separate
+      </button>
+<!-- Reassuring Microcopy -->
+<p class="text-center text-[12px] text-on-surface-variant/80 font-body-sm pt-0.5">
+        Your device library stays available in guest mode.
+      </p>
+</div>
+</main>
+</body></html>

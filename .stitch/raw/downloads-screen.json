@@ -1,0 +1,18 @@
+{
+  "slug": "downloads",
+  "id": "11f336008b294986b1dfd1bc13c2193d",
+  "name": "projects/6233788376335662642/screens/11f336008b294986b1dfd1bc13c2193d",
+  "title": "UI-13 Downloads & storage - Veritalex",
+  "width": "780",
+  "height": "1768",
+  "deviceType": "MOBILE",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/1862b4d9724c4424bcee847f51092075:download",
+    "name": "projects/6233788376335662642/files/1862b4d9724c4424bcee847f51092075"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/28d4cfb3f7f04040bb3ca6c6cac4dce0:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/28d4cfb3f7f04040bb3ca6c6cac4dce0"
+  }
+}

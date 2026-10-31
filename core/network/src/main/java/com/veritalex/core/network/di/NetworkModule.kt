@@ -1,6 +1,6 @@
 package com.veritalex.core.network.di
 
-import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
+import retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.veritalex.core.network.api.GutendexApiService
 import dagger.Module
 import dagger.Provides

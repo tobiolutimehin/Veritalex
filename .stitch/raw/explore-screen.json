@@ -1,0 +1,18 @@
+{
+  "slug": "explore",
+  "id": "44706dac603e400fa1bafb15f6872b94",
+  "name": "projects/6233788376335662642/screens/44706dac603e400fa1bafb15f6872b94",
+  "title": "UI-05 Explore - Veritalex",
+  "width": "780",
+  "height": "2436",
+  "deviceType": "MOBILE",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/05344bffa0424e42971bfbe6b46eda2f:download",
+    "name": "projects/6233788376335662642/files/05344bffa0424e42971bfbe6b46eda2f"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/bba04e5ff6944cb382b24e09c7b60a85:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/bba04e5ff6944cb382b24e09c7b60a85"
+  }
+}

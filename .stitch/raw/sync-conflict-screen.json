@@ -1,0 +1,19 @@
+{
+  "id": "cfe0f6ff044e4d858bcf99d4960168a9",
+  "name": "projects/6233788376335662642/screens/cfe0f6ff044e4d858bcf99d4960168a9",
+  "title": "UI-14 Choose where to continue - Veritalex",
+  "width": "780",
+  "height": "2052",
+  "deviceType": "MOBILE",
+  "htmlCode": {
+    "name": "projects/6233788376335662642/files/c1ccc3037ee040d782ba4e0bbb9ab01d",
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/c1ccc3037ee040d782ba4e0bbb9ab01d:download",
+    "mimeType": "text/html"
+  },
+  "screenshot": {
+    "name": "projects/6233788376335662642/files/60d43fdfb9934eb4a437fe611dca0753",
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/60d43fdfb9934eb4a437fe611dca0753:download",
+    "mimeType": "png"
+  },
+  "slug": "sync-conflict"
+}

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Veritalex - Sync Conflict</title>
+<!-- Material Symbols & Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&amp;family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-container": "#006878",
+            "surface-dim": "#e4d8d1",
+            "on-tertiary-fixed-variant": "#004e5b",
+            "on-surface-variant": "#55483D",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed-variant": "#554334",
+            "surface-container": "#f9ebe4",
+            "on-secondary-container": "#756050",
+            "surface-bright": "#fff8f5",
+            "on-error": "#ffffff",
+            "inverse-on-surface": "#fbeee7",
+            "on-primary": "#ffffff",
+            "error": "#ba1a1a",
+            "on-secondary": "#ffffff",
+            "primary-fixed": "#ffdcc5",
+            "surface-variant": "#ede0d9",
+            "surface-tint": "#895021",
+            "primary-container": "#FFDCBF",
+            "on-primary-container": "#2D1606",
+            "on-surface": "#241A14",
+            "inverse-surface": "#362f2b",
+            "primary-fixed-dim": "#ffb782",
+            "background": "#fff8f5",
+            "secondary": "#6e5b4b",
+            "on-background": "#201a16",
+            "tertiary-fixed-dim": "#86d2e4",
+            "on-tertiary-container": "#98e4f7",
+            "tertiary-fixed": "#a6eeff",
+            "tertiary": "#5D633D",
+            "surface": "#fff8f5",
+            "secondary-fixed": "#f9ddc9",
+            "secondary-container": "#f9ddc9",
+            "on-secondary-fixed": "#27190c",
+            "surface-container-high": "#f3e6df",
+            "secondary-fixed-dim": "#dcc2ae",
+            "inverse-primary": "#ffb782",
+            "surface-paper": "#FFF8F3",
+            "surface-container-low": "#fef1ea",
+            "outline": "#857469",
+            "surface-container-highest": "#ede0d9",
+            "on-tertiary-fixed": "#001f25",
+            "highlight": "#F6E5A8",
+            "on-error-container": "#93000a",
+            "on-primary-fixed": "#301400",
+            "on-primary-fixed-variant": "#6d390b",
+            "primary": "#6c390b",
+            "outline-variant": "#d7c3b6",
+            "error-container": "#ffdad6",
+            "on-tertiary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "4px",
+            "space-md": "12px",
+            "margin": "20px",
+            "space-xl": "24px",
+            "gutter": "20px",
+            "space-xxl": "32px",
+            "space-lg": "16px",
+            "space-sm": "8px"
+          },
+          "fontFamily": {
+            "headline-sm": ["Roboto Flex"],
+            "headline-md": ["Roboto Flex"],
+            "body-sm": ["Roboto Flex"],
+            "title-md": ["Roboto Flex"],
+            "reader-prose": ["Literata"],
+            "label-md": ["Roboto Flex"],
+            "headline-lg": ["Roboto Flex"],
+            "body-lg": ["Roboto Flex"],
+            "reader-chapter": ["Literata"]
+          },
+          "fontSize": {
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "reader-prose": ["19px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "reader-chapter": ["26px", { "lineHeight": "34px", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased flex justify-center min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- Mobile Viewport Frame (Edge-to-Edge Android Canvas 412dp baseline) -->
+<div class="w-full max-w-[412px] min-h-screen bg-surface flex flex-col justify-between shadow-2xl relative select-none">
+<!-- Top System Container -->
+<div class="w-full flex flex-col shrink-0">
+<!-- Android Native Status Bar -->
+<div class="h-10 px-6 flex items-center justify-between text-on-surface font-title-md text-body-sm tracking-tight pt-1">
+<span class="font-medium tracking-normal text-[14px]">9:41</span>
+<div class="flex items-center gap-1.5 opacity-90">
+<span class="material-symbols-outlined text-[17px] leading-none" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-[17px] leading-none" data-icon="signal_cellular_4_bar">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[19px] leading-none" data-icon="battery_full">battery_full</span>
+</div>
+</div>
+<!-- Material 3 TopAppBar (Strict JSON mapping & hierarchy) -->
+<header class="h-16 flex items-center justify-between px-4 w-full bg-surface">
+<div class="flex items-center gap-2">
+<button aria-label="Go back" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container-high active:scale-95 transition-all text-on-surface" type="button">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight">
+            Reading position
+          </h1>
+</div>
+<button aria-label="Help and information" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container-high active:scale-95 transition-all text-on-surface-variant" type="button">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</header>
+</div>
+<!-- Main Scrollable Content Canvas -->
+<main class="flex-1 px-5 pt-1 pb-4 flex flex-col gap-5 overflow-y-auto">
+<!-- Book Context Card -->
+<section class="bg-surface-container-low p-3.5 rounded-xl flex items-center gap-3.5">
+<!-- Typeset Gutenberg 2:3 Cover Fallback -->
+<div class="w-12 h-16 shrink-0 rounded bg-[#4a1c24] flex flex-col justify-between p-1 text-center shadow-xs select-none">
+<div class="flex justify-between items-center text-[5px] text-[#f4dcd6] font-mono opacity-80 px-0.5">
+<span>GUTENBERG</span>
+<span>1342</span>
+</div>
+<div class="my-auto px-0.5">
+<span class="block font-reader-chapter text-[7.5px] leading-[8.5px] text-[#fff8f5] font-medium tracking-tight">
+              Pride and Prejudice
+            </span>
+</div>
+<div class="flex justify-between items-center text-[5px] text-[#e8c2ba] uppercase font-sans tracking-widest px-0.5">
+<span>Austen</span>
+<span>Classic</span>
+</div>
+</div>
+<div class="flex flex-col justify-center min-w-0">
+<span class="font-title-md text-title-md text-on-surface truncate">
+            Pride and Prejudice
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            Jane Austen
+          </span>
+</div>
+</section>
+<!-- Main Headline & Narrative Context -->
+<section class="flex flex-col gap-1.5 pt-1">
+<h2 class="font-headline-md text-headline-md text-on-surface leading-snug">
+          Where would you like to continue?
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          This book was read in two places before syncing. Choose where you'd like to resume reading.
+        </p>
+</section>
+<!-- Interactive Position Comparison Radio Cards -->
+<section aria-label="Choose reading position" class="flex flex-col gap-3" role="radiogroup">
+<!-- Option A (Currently Active / Selected) -->
+<div aria-checked="true" class="cursor-pointer bg-surface-container-low border-2 border-primary rounded-xl p-4 transition-all duration-150 relative" id="option-device-local" onclick="selectOption('local')" role="radio" tabindex="0">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-start gap-3">
+<!-- Material 3 Radio Button: Checked -->
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-primary">
+<span class="material-symbols-outlined text-[22px]" data-icon="radio_button_checked" data-weight="fill" id="radio-icon-local" style="font-variation-settings: 'FILL' 1;">
+                  radio_button_checked
+                </span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-medium">This device</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container text-[11px] font-label-md font-medium tracking-wide">
+                    Current reading
+                  </span>
+</div>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-medium text-on-surface">Chapter 18</span>
+<span class="text-outline-variant">•</span>
+<span>28% read</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Progress Bar Tonal Track -->
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 mt-3 overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-300" style="width: 28%"></div>
+</div>
+<!-- Book Snippet Preview -->
+</div>
+<!-- Option B (Alternative Cloud/Remote Device) -->
+<div aria-checked="false" class="cursor-pointer bg-surface-container border-2 border-transparent rounded-xl p-4 transition-all duration-150 relative" id="option-device-remote" onclick="selectOption('remote')" role="radio" tabindex="0">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-start gap-3">
+<!-- Material 3 Radio Button: Unchecked -->
+<div class="w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-outline">
+<span class="material-symbols-outlined text-[22px]" data-icon="radio_button_unchecked" id="radio-icon-remote">
+                  radio_button_unchecked
+                </span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface font-medium">Your other device</span>
+</div>
+<div class="flex items-center gap-2 mt-1 text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-medium text-on-surface">Chapter 19</span>
+<span class="text-outline-variant">•</span>
+<span>31% read</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Progress Bar Tonal Track -->
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 mt-3 overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all duration-300" style="width: 31%"></div>
+</div>
+<!-- Book Snippet Preview -->
+</div>
+</section>
+<!-- Reassurance Banner -->
+<section class="bg-surface-container/60 rounded-xl p-3.5 flex items-start gap-3 border border-outline-variant/40 mt-1">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5" data-icon="bookmark_added">bookmark_added</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Your bookmarks, quotes, and journal entries from both sessions will be preserved.
+        </p>
+</section>
+</main>
+<!-- Anchored Actions & System Gesture Navigation -->
+<footer class="w-full px-5 pt-2 pb-2 shrink-0 flex flex-col gap-2.5 bg-surface">
+<!-- Primary Pill Action (48dp height minimum touch target) -->
+<button class="w-full h-12 rounded-full bg-primary text-on-primary font-title-md text-title-md flex items-center justify-center shadow-xs active:scale-[0.98] transition-transform" id="btn-confirm" type="button">
+<span id="btn-label">Continue from this device</span>
+</button>
+<!-- Secondary Flat / Outlined Action -->
+<button class="w-full h-12 rounded-full bg-transparent hover:bg-surface-container text-on-surface font-title-md text-title-md flex items-center justify-center transition-colors" type="button">
+        Decide later
+      </button>
+<!-- Subtle Reader Guidance Text -->
+<p class="text-center font-body-sm text-[12px] text-on-surface-variant opacity-80 pb-1">
+        You can change your position at any time in the reader.
+      </p>
+<!-- Android Gesture Navigation Handle Pill (24-48dp safe zone) -->
+<div class="w-full h-6 flex items-center justify-center">
+<div class="w-32 h-1 bg-on-surface/30 rounded-full"></div>
+</div>
+</footer>
+</div>
+<script>
+    let currentSelection = 'local';
+
+    function selectOption(target) {
+      currentSelection = target;
+      
+      const localCard = document.getElementById('option-device-local');
+      const remoteCard = document.getElementById('option-device-remote');
+      const localRadio = document.getElementById('radio-icon-local');
+      const remoteRadio = document.getElementById('radio-icon-remote');
+      const btnLabel = document.getElementById('btn-label');
+
+      if (target === 'local') {
+        localCard.setAttribute('aria-checked', 'true');
+        remoteCard.setAttribute('aria-checked', 'false');
+
+        localCard.className = 'cursor-pointer bg-surface-container-low border-2 border-primary rounded-xl p-4 transition-all duration-150 relative';
+        remoteCard.className = 'cursor-pointer bg-surface-container border-2 border-transparent rounded-xl p-4 transition-all duration-150 relative';
+
+        localRadio.innerText = 'radio_button_checked';
+        localRadio.setAttribute('data-icon', 'radio_button_checked');
+        localRadio.setAttribute('style', "font-variation-settings: 'FILL' 1;");
+        localRadio.parentElement.className = 'w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-primary';
+
+        remoteRadio.innerText = 'radio_button_unchecked';
+        remoteRadio.setAttribute('data-icon', 'radio_button_unchecked');
+        remoteRadio.removeAttribute('style');
+        remoteRadio.parentElement.className = 'w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-outline';
+
+        btnLabel.textContent = 'Continue from this device';
+      } else {
+        localCard.setAttribute('aria-checked', 'false');
+        remoteCard.setAttribute('aria-checked', 'true');
+
+        localCard.className = 'cursor-pointer bg-surface-container border-2 border-transparent rounded-xl p-4 transition-all duration-150 relative';
+        remoteCard.className = 'cursor-pointer bg-surface-container-low border-2 border-primary rounded-xl p-4 transition-all duration-150 relative';
+
+        localRadio.innerText = 'radio_button_unchecked';
+        localRadio.setAttribute('data-icon', 'radio_button_unchecked');
+        localRadio.removeAttribute('style');
+        localRadio.parentElement.className = 'w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-outline';
+
+        remoteRadio.innerText = 'radio_button_checked';
+        remoteRadio.setAttribute('data-icon', 'radio_button_checked');
+        remoteRadio.setAttribute('style', "font-variation-settings: 'FILL' 1;");
+        remoteRadio.parentElement.className = 'w-6 h-6 rounded-full flex items-center justify-center shrink-0 mt-0.5 text-primary';
+
+        btnLabel.textContent = 'Continue from other device';
+      }
+    }
+  </script>
+</body></html>

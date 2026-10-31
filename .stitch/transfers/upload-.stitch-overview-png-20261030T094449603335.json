@@ -1,0 +1,72 @@
+{
+  "results": [
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/6209007980920152600",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1W2TsX17JVImKy53Qck6htXrEvBFWdYJKiWk8t9_jLxKO44hxqrudHZthld-a7vit4oonQzDylQkv2dsJWVqslUiHZFBpT5qUnOBTmiYeVfwzmiy4kcV6satx5eKNqKsEiNI3yTllt4El8zykjsrADb0NodI1z4hLKF78HYloaQRORHggdv47GF7WgX4L91qWgLzGcHQ_BPoTZ5bfNMRO7wXu0ynBDwgbA_t43ygzK5MTkl_gEhMhOIGysx6uUW--1QpRvsnpoeyQ"
+        },
+        "id": "6209007980920153295",
+        "width": "1280",
+        "height": "980",
+        "title": "Start here / overview",
+        "name": "projects/6233788376335662642/screens/6209007980920153295",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "htmlCode": {
+          "name": "projects/6233788376335662642/files/6209007980920153221",
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBKNARIhYXBwX2NvbXBhbmlvbl91c2VyX3VwbG9hZGVkX2ZpbGVzGmgKM3VzZXJfdXBsb2FkZWRfaHRtbF8wMDA2NWYwYmE1YTY0MmU5MDAzMDM2YTFmNjFhMjdjZRILEgcQh5SsssAKGAGSASMKCnByb2plY3RfaWQSFUITNjIzMzc4ODM3NjMzNTY2MjY0Mg&filename=&opi=96797242",
+          "mimeType": "text/markdown"
+        },
+        "id": "6209007980920153916",
+        "generatedBy": "UserUploadedDesignMd: stitch::code-to-design",
+        "width": "780",
+        "height": "1768",
+        "title": "Start here / QA",
+        "name": "projects/6233788376335662642/screens/6209007980920153916",
+        "theme": {},
+        "screenType": "DOCUMENT",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE",
+          "displayMode": "MARKDOWN"
+        }
+      }
+    }
+  ],
+  "screenInstances": [
+    {
+      "id": "6209007980920153295",
+      "sourceScreen": "projects/6233788376335662642/screens/6209007980920153295",
+      "x": 161890,
+      "width": 640,
+      "height": 490
+    },
+    {
+      "id": "6209007980920153916",
+      "sourceScreen": "projects/6233788376335662642/screens/6209007980920153916",
+      "x": 162630,
+      "width": 390,
+      "height": 884
+    }
+  ],
+  "transfer": {
+    "files": [
+      "overview.png",
+      "QA.md"
+    ],
+    "prefix": "Start here / ",
+    "sha256": {
+      "overview.png": "7e0defd2d8cdada6f89353f6eaacca858d8fbd0141f3380ec0b3f0ba4a83204b",
+      "QA.md": "14546989dbc1c8fc34a820ef48db4afb20f0ac6914acd52b3b7f7a78153c32b3"
+    }
+  }
+}

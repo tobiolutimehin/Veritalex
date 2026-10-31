@@ -1,0 +1,18 @@
+{
+  "slug": "tablet-journal",
+  "id": "784b0f6da227430ba90d3f2ca4532148",
+  "name": "projects/6233788376335662642/screens/784b0f6da227430ba90d3f2ca4532148",
+  "title": "TAB-03 Journal list and entry detail - Veritalex",
+  "width": "2560",
+  "height": "2048",
+  "deviceType": "DESKTOP",
+  "screenshot": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/7e3a8744e78845788e6c46115da4e833:download",
+    "name": "projects/6233788376335662642/files/7e3a8744e78845788e6c46115da4e833"
+  },
+  "htmlCode": {
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/6404b6cd5a8c4dd7a9efca0df0ef4922:download",
+    "mimeType": "text/html",
+    "name": "projects/6233788376335662642/files/6404b6cd5a8c4dd7a9efca0df0ef4922"
+  }
+}

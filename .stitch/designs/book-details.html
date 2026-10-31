@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Veritalex - Book details</title>
+<!-- Material Symbols Outlined font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Roboto Flex and Literata -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration matching design system -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#52443a",
+            "on-primary": "#ffffff",
+            "on-surface": "#201a16",
+            "highlight": "#F6E5A8",
+            "surface-container-low": "#FCF1E8",
+            "surface-tint": "#895021",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#a6eeff",
+            "secondary-container": "#f9ddc9",
+            "tertiary-container": "#E1E8B8",
+            "secondary-fixed-dim": "#dcc2ae",
+            "error": "#ba1a1a",
+            "on-background": "#201a16",
+            "surface-container-highest": "#ede0d9",
+            "primary-fixed-dim": "#ffb782",
+            "primary-container": "#FFDCBF",
+            "on-secondary-fixed": "#27190c",
+            "on-primary-fixed-variant": "#6d390b",
+            "on-tertiary": "#ffffff",
+            "inverse-primary": "#ffb782",
+            "surface-container": "#f9ebe4",
+            "on-secondary-container": "#756050",
+            "surface-paper": "#FFF8F3",
+            "on-error-container": "#93000a",
+            "surface-dim": "#e4d8d1",
+            "inverse-surface": "#362f2b",
+            "outline": "#857469",
+            "surface-variant": "#ede0d9",
+            "on-tertiary-fixed-variant": "#004e5b",
+            "surface-container-lowest": "#ffffff",
+            "background": "#fff8f5",
+            "on-primary-container": "#2D1606",
+            "primary": "#6c390b",
+            "on-tertiary-container": "#98e4f7",
+            "secondary": "#6e5b4b",
+            "secondary-fixed": "#f9ddc9",
+            "on-tertiary-fixed": "#001f25",
+            "error-container": "#ffdad6",
+            "on-secondary-fixed-variant": "#554334",
+            "on-primary-fixed": "#301400",
+            "surface-container-high": "#f3e6df",
+            "surface": "#fff8f5",
+            "primary-fixed": "#ffdcc5",
+            "tertiary-fixed-dim": "#86d2e4",
+            "tertiary": "#5D633D",
+            "surface-bright": "#fff8f5",
+            "outline-variant": "#d7c3b6",
+            "inverse-on-surface": "#fbeee7"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "3xl": "1.5rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "12px",
+            "space-xs": "4px",
+            "space-sm": "8px",
+            "space-lg": "16px",
+            "gutter": "20px",
+            "space-xxl": "32px",
+            "space-xl": "24px",
+            "margin": "20px"
+          },
+          "fontFamily": {
+            "title-md": ["Roboto Flex"],
+            "body-lg": ["Roboto Flex"],
+            "reader-prose": ["Literata"],
+            "headline-md": ["Roboto Flex"],
+            "headline-lg": ["Roboto Flex"],
+            "headline-sm": ["Roboto Flex"],
+            "label-md": ["Roboto Flex"],
+            "reader-chapter": ["Literata"],
+            "body-sm": ["Roboto Flex"]
+          },
+          "fontSize": {
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "reader-prose": ["19px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "reader-chapter": ["26px", { "lineHeight": "34px", "fontWeight": "500" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+    body {
+      background-color: #f1e7e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 16px 0;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-lg text-on-surface antialiased select-none">
+<!-- Mobile Device Simulation Frame (412x915 baseline for Android) -->
+<main class="w-[412px] h-[915px] bg-surface relative overflow-hidden flex flex-col shadow-2xl rounded-[32px] border border-outline-variant/30">
+<!-- Edge-to-Edge Android Status Bar -->
+<header class="w-full h-11 px-6 pt-2 flex items-center justify-between z-20 shrink-0 text-on-surface select-none">
+<span class="text-label-md font-label-md font-semibold text-on-surface">9:41</span>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined !text-[18px]">wifi</span>
+<span class="material-symbols-outlined !text-[18px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined !text-[18px]">battery_full</span>
+</div>
+</header>
+<!-- Top App Bar (Task Detail context: Back navigation, Title, Trailing overflow, No bottom nav) -->
+<nav aria-label="Top bar" class="w-full h-16 px-3 flex items-center justify-between shrink-0 bg-surface text-on-surface z-10">
+<div class="flex items-center gap-1">
+<button aria-label="Navigate back" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container active:scale-95 transition-all text-on-surface" type="button">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-headline-sm font-headline-sm font-semibold tracking-tight text-on-surface ml-1">
+          Book details
+        </h1>
+</div>
+<div class="flex items-center">
+<button aria-label="More options" class="w-12 h-12 flex items-center justify-center rounded-full hover:bg-surface-container active:scale-95 transition-all text-on-surface" type="button">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</nav>
+<!-- Scrollable Content Canvas -->
+<div class="flex-1 overflow-y-auto overflow-x-hidden px-5 pb-8 space-y-6">
+<!-- Hero / Book Overview Section -->
+<section class="pt-2 flex flex-col items-center text-center">
+<!-- Compact Dignified Book Cover Card (2:3 Aspect Ratio) -->
+<div class="w-[140px] h-[210px] rounded-lg bg-[#441a12] text-[#fff8f5] shadow-md flex flex-col justify-between p-3.5 border border-[#612c20]/40 relative overflow-hidden shrink-0 mb-5">
+<!-- Subtle foil border inlay -->
+<div class="absolute inset-1.5 border border-[#d7c3b6]/25 rounded pointer-events-none"></div>
+<div class="flex flex-col items-center pt-1 z-10">
+<span class="text-[9px] tracking-[0.2em] font-semibold text-[#ffdcc5]/70 uppercase">Gutenberg 1342</span>
+<div class="w-6 h-[1px] bg-[#ffdcc5]/40 my-2"></div>
+<h2 class="font-reader-chapter text-[15px] leading-[19px] font-medium tracking-tight text-[#fff8f5] px-1 text-center mt-1">
+              Pride and Prejudice
+            </h2>
+</div>
+<div class="flex flex-col items-center pb-1 z-10">
+<span class="text-[11px] font-reader-chapter italic text-[#ffdcc5]/90 mb-1">Jane Austen</span>
+<span class="text-[8px] font-semibold tracking-widest text-[#ffdcc5]/60 uppercase">Classic</span>
+</div>
+</div>
+<!-- Book Header Metadata -->
+<div class="w-full flex flex-col items-center px-2">
+<h2 class="text-headline-md font-headline-md text-on-surface tracking-tight text-center font-semibold">
+            Pride and Prejudice
+          </h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mt-0.5 text-center">
+            Jane Austen
+          </p>
+<!-- Tonal Topic & Language Badges -->
+<div class="flex items-center justify-center gap-2 mt-3 flex-wrap">
+<span class="inline-flex items-center px-3 py-1 rounded-lg bg-surface-container text-on-surface-variant text-label-md font-label-md border border-outline-variant/40">
+              English
+            </span>
+<span class="inline-flex items-center px-3 py-1 rounded-lg bg-surface-container-high text-on-surface text-label-md font-label-md">
+              Fiction
+            </span>
+<span class="inline-flex items-center px-3 py-1 rounded-lg bg-surface-container-high text-on-surface text-label-md font-label-md">
+              Romance
+            </span>
+</div>
+</div>
+</section>
+<!-- Primary & Secondary Actions Section -->
+<section class="space-y-4">
+<!-- Prominent Primary Filled Action Button (Pill shape, >= 48dp) -->
+<button class="w-full h-12 bg-surface-tint hover:bg-primary active:scale-[0.98] text-on-primary rounded-full flex items-center justify-center gap-2.5 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined !text-[22px]">auto_stories</span>
+<span class="text-label-md font-label-md font-semibold tracking-wide">Read book</span>
+</button>
+<!-- Secondary Action Row with Labelled Icon Buttons (Each min 48dp target) -->
+<div class="grid grid-cols-3 gap-2 pt-1">
+<!-- Save to library -->
+<button class="min-h-[48px] py-2 px-1 flex flex-col items-center justify-center rounded-xl text-on-surface hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-secondary">bookmark_border</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant mt-1">Save to library</span>
+</button>
+<!-- Download -->
+<button class="min-h-[48px] py-2 px-1 flex flex-col items-center justify-center rounded-xl text-on-surface hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-secondary">file_download</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant mt-1">Download</span>
+</button>
+<!-- Share -->
+<button class="min-h-[48px] py-2 px-1 flex flex-col items-center justify-center rounded-xl text-on-surface hover:bg-surface-container active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-secondary">share</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant mt-1">Share</span>
+</button>
+</div>
+</section>
+<!-- Section Separator Line -->
+<div class="w-full h-[1px] bg-outline-variant/40"></div>
+<!-- About Section (Catalogue Details) -->
+<section class="space-y-3">
+<h3 class="text-title-md font-title-md text-on-surface font-semibold">
+          About
+        </h3>
+<!-- Subject-based factual copy -->
+<p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed">
+          A novel of manners, family, and marriage in nineteenth-century England.
+        </p>
+<!-- Factual Sub-metadata Grid -->
+<div class="pt-2 rounded-xl bg-surface-container-low/70 p-3.5 border border-outline-variant/40 space-y-2.5">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Language</span>
+<span class="text-on-surface font-medium">English</span>
+</div>
+<div class="w-full h-[1px] bg-outline-variant/30"></div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Author</span>
+<span class="text-on-surface font-medium">Jane Austen</span>
+</div>
+<div class="w-full h-[1px] bg-outline-variant/30"></div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Source</span>
+<span class="text-on-surface font-medium">Project Gutenberg</span>
+</div>
+</div>
+</section>
+<!-- "Your reading" Section (Personal Data Container) -->
+<section class="rounded-2xl bg-surface-container-low p-4 border border-outline-variant/40 space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="text-title-md font-title-md text-on-surface font-semibold">
+            Your reading
+          </h3>
+<span class="material-symbols-outlined !text-[18px] text-outline">lock</span>
+</div>
+<!-- Status Segmented Control / Chips -->
+<div class="space-y-1.5">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Reading status</span>
+<div class="grid grid-cols-3 gap-1.5 p-1 bg-surface-container rounded-xl">
+<!-- Want to read (Active selected) -->
+<button class="py-2 px-1 text-center rounded-lg bg-surface text-primary font-medium text-body-sm font-body-sm shadow-xs transition-all" type="button">
+              Want to read
+            </button>
+<!-- Reading -->
+<button class="py-2 px-1 text-center rounded-lg text-on-surface-variant hover:text-on-surface text-body-sm font-body-sm transition-all" type="button">
+              Reading
+            </button>
+<!-- Finished -->
+<button class="py-2 px-1 text-center rounded-lg text-on-surface-variant hover:text-on-surface text-body-sm font-body-sm transition-all" type="button">
+              Finished
+            </button>
+</div>
+</div>
+<!-- Private Rating Control -->
+<div class="pt-1 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="text-body-sm font-body-sm text-on-surface-variant">Your rating</span>
+<span class="text-[12px] text-outline">Only visible to you</span>
+</div>
+<div class="flex items-center gap-2 pt-0.5">
+<button aria-label="Rate 1 star" class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-surface-container text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined !text-[22px]">star_rate</span>
+</button>
+<button aria-label="Rate 2 stars" class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-surface-container text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined !text-[22px]">star_rate</span>
+</button>
+<button aria-label="Rate 3 stars" class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-surface-container text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined !text-[22px]">star_rate</span>
+</button>
+<button aria-label="Rate 4 stars" class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-surface-container text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined !text-[22px]">star_rate</span>
+</button>
+<button aria-label="Rate 5 stars" class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-surface-container text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined !text-[22px]">star_rate</span>
+</button>
+</div>
+</div>
+<!-- Add to Shelf Action Button -->
+<button class="w-full min-h-[48px] px-3.5 py-2.5 rounded-xl border border-outline-variant/60 bg-surface hover:bg-surface-container flex items-center justify-between active:scale-[0.99] transition-all" type="button">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary">shelves</span>
+<span class="text-body-sm font-body-sm font-medium text-on-surface">Add to shelf</span>
+</div>
+<span class="material-symbols-outlined !text-[20px] text-on-surface-variant">add</span>
+</button>
+<!-- Microcopy Privacy Assurance Badge -->
+<div class="flex items-center justify-center gap-1.5 pt-1 text-center text-outline">
+<span class="material-symbols-outlined !text-[15px]">security</span>
+<p class="text-[12px] leading-tight">Personal reading data is stored on device</p>
+</div>
+</section>
+</div>
+<!-- Android 3-Button / Gesture Inset Pill at bottom -->
+<div class="w-full h-4 pb-2 flex items-center justify-center shrink-0">
+<div class="w-28 h-1 rounded-full bg-on-surface/20"></div>
+</div>
+</main>
+</body></html>

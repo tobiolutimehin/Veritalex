@@ -1,0 +1,19 @@
+{
+  "id": "77e4f1a5cf1c419d94bb049d7271690e",
+  "name": "projects/6233788376335662642/screens/77e4f1a5cf1c419d94bb049d7271690e",
+  "title": "UI-01 Home - Veritalex",
+  "width": "780",
+  "height": "2148",
+  "deviceType": "MOBILE",
+  "htmlCode": {
+    "name": "projects/6233788376335662642/files/a34d3fee99494c49acee102653b50149",
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/a34d3fee99494c49acee102653b50149:download",
+    "mimeType": "text/html"
+  },
+  "screenshot": {
+    "name": "projects/6233788376335662642/files/0c14d787bffa4073bd185ec60ee574ce",
+    "downloadUrl": "https://stitch.googleapis.com/v1/projects/6233788376335662642/files/0c14d787bffa4073bd185ec60ee574ce:download",
+    "mimeType": "png"
+  },
+  "slug": "home"
+}

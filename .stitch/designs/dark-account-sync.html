@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NIGHT-07 Account &amp; sync - Veritalex</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&amp;family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface": "#19120D",
+          "surface-container": "#2D231C",
+          "inverse-primary": "#875123",
+          "tertiary-fixed-dim": "#88d1e3",
+          "surface-container-high": "#2f2924",
+          "inverse-on-surface": "#362f2b",
+          "error": "#FFB4AB",
+          "tertiary": "#C6CE9F",
+          "on-primary-container": "#794618",
+          "on-secondary-container": "#d2b39b",
+          "secondary-container": "#534234",
+          "on-error": "#690005",
+          "secondary-fixed": "#fedcc3",
+          "on-secondary-fixed-variant": "#584230",
+          "secondary": "#e1c0a8",
+          "on-secondary": "#402c1b",
+          "on-tertiary-fixed": "#001f26",
+          "surface-bright": "#3f3833",
+          "on-error-container": "#ffdad6",
+          "on-primary-fixed": "#2f1500",
+          "surface-container-highest": "#3a332f",
+          "on-tertiary-container": "#005b69",
+          "on-secondary-fixed": "#291809",
+          "on-tertiary": "#00363f",
+          "primary-container": "#6D3A0D",
+          "surface-dim": "#18120f",
+          "surface-container-low": "#231A14",
+          "on-primary-fixed-variant": "#6b3a0c",
+          "on-surface": "#F0DFD6",
+          "surface-variant": "#3a332f",
+          "outline-variant": "#52443B",
+          "background": "#18120f",
+          "primary-fixed-dim": "#ffb77f",
+          "on-primary": "#4e2600",
+          "tertiary-container": "#88d1e3",
+          "on-background": "#ece0d9",
+          "surface-tint": "#ffb77f",
+          "inverse-surface": "#ece0d9",
+          "error-container": "#93000a",
+          "on-surface-variant": "#D6C3B7",
+          "primary": "#ffb77f",
+          "tertiary-fixed": "#a8edff",
+          "surface-container-lowest": "#120d0a",
+          "secondary-fixed-dim": "#e1c0a8",
+          "primary-fixed": "#ffdcc4",
+          "outline": "#9F8D83",
+          "on-tertiary-fixed-variant": "#004e5b"
+        },
+        "borderRadius": {
+          "DEFAULT": "1rem",
+          "lg": "1.25rem",
+          "xl": "1.5rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-lg": "1.5rem",
+          "gutter": "1rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem",
+          "space-md": "1rem",
+          "margin": "1rem",
+          "space-xl": "2rem"
+        },
+        "fontFamily": {
+          "headline-lg": ["Roboto Flex"],
+          "body-md": ["Roboto Flex"],
+          "headline-md": ["Roboto Flex"],
+          "reader-prose": ["Literata"],
+          "body-sm": ["Roboto Flex"]
+        },
+        "fontSize": {
+          "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+          "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+          "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "500" }],
+          "reader-prose": ["19px", { "lineHeight": "32px", "fontWeight": "400" }],
+          "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+        }
+      },
+    },
+  }
+</script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+      user-select: none;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    body {
+      -webkit-tap-highlight-color: transparent;
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex justify-center selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Mobile Device Simulation Frame (412x915 baseline) -->
+<main class="w-full max-w-[412px] min-h-screen flex flex-col bg-surface relative shadow-2xl overflow-x-hidden border-x border-outline-variant/20">
+<!-- Native Android Status Bar (24dp / h-10) -->
+<header class="w-full h-10 px-5 pt-2 flex items-center justify-between text-on-surface select-none z-20">
+<span class="font-body-sm text-[14px] font-semibold tracking-tight text-on-surface">9:41</span>
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[17px]" data-icon="signal_cellular_4_bar">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[17px]" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-[19px] fill-icon" data-icon="battery_full" style="font-variation-settings: 'FILL' 1;">battery_full</span>
+</div>
+</header>
+<!-- Top App Bar (Task-focused sub-page with Back Navigation) -->
+<section class="w-full h-16 px-3 flex items-center gap-2 bg-surface text-on-surface select-none">
+<button aria-label="Navigate back" class="w-12 h-12 flex items-center justify-center rounded-full text-on-surface active:scale-95 active:bg-surface-container transition duration-150" type="button">
+<span class="material-symbols-outlined text-[24px]" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-medium tracking-tight text-on-surface">Account &amp; sync</h1>
+</section>
+<!-- Scrollable Content Canvas -->
+<div class="flex-1 px-5 pt-2 pb-6 flex flex-col space-y-5 overflow-y-auto">
+<!-- Compact Account Identity Card -->
+<section class="bg-surface-container-low rounded-2xl p-4 border border-outline-variant flex items-center justify-between shadow-none">
+<div class="flex items-center gap-3.5 min-w-0">
+<!-- User Monogram Avatar -->
+<div class="w-12 h-12 rounded-full bg-secondary-container text-[#FFDCBF] flex items-center justify-center font-headline-md text-headline-md font-medium flex-shrink-0 select-none">
+  A
+</div>
+<!-- User Metadata -->
+<div class="min-w-0 flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate leading-tight">Alex Morgan</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate mt-0.5">alex@example.com</span>
+</div>
+</div>
+<!-- Google Connected Pill Badge -->
+<div class="flex-shrink-0 ml-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container border border-outline-variant text-on-surface-variant font-body-sm text-[12px] select-none">
+<span class="material-symbols-outlined text-[15px] text-[#81C784] fill-icon" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface">Google</span>
+</div>
+</div>
+</section>
+<!-- Factual Sync Status Section -->
+<section class="bg-surface-container-low rounded-2xl p-5 border border-outline-variant flex flex-col gap-4">
+<div class="flex items-start gap-3.5">
+<div class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]" data-icon="cloud_done">cloud_done</span>
+</div>
+<div class="flex-1 min-w-0 pt-0.5">
+<div class="flex items-center gap-2">
+<h2 class="font-body-md text-body-md font-semibold text-on-surface">Up to date</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="syncStatusTime">Last synced just now</p>
+</div>
+</div>
+<div class="pt-1 flex items-center">
+<button class="h-12 w-full inline-flex items-center justify-center gap-2 px-6 rounded-full bg-surface-container-low border border-outline-variant text-primary font-body-sm text-body-sm font-medium hover:bg-surface-container active:scale-[0.98] transition-all duration-150" id="syncButton" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary" data-icon="sync" id="syncIcon">sync</span>
+<span class="text-on-surface" id="syncButtonText">Sync now</span>
+</button>
+</div>
+</section>
+<!-- "Your synced reading" Section -->
+<section class="flex flex-col">
+<h2 class="font-body-md text-body-md font-medium text-on-surface px-1 mb-2">Your synced reading</h2>
+<div class="bg-surface-container-low rounded-2xl border border-outline-variant divide-y divide-outline-variant overflow-hidden">
+<!-- Row 1: Library -->
+<div class="flex items-center justify-between px-4 py-3.5">
+<div class="flex items-center gap-3.5 text-on-surface">
+<span class="material-symbols-outlined text-[22px] text-secondary" data-icon="auto_stories">auto_stories</span>
+<span class="font-body-md text-body-md text-on-surface">Library</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">4 books</span>
+</div>
+<!-- Row 2: Shelves -->
+<div class="flex items-center justify-between px-4 py-3.5">
+<div class="flex items-center gap-3.5 text-on-surface">
+<span class="material-symbols-outlined text-[22px] text-secondary" data-icon="shelves">shelves</span>
+<span class="font-body-md text-body-md text-on-surface">Shelves</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">3 shelves</span>
+</div>
+<!-- Row 3: Journal -->
+<div class="flex items-center justify-between px-4 py-3.5">
+<div class="flex items-center gap-3.5 text-on-surface">
+<span class="material-symbols-outlined text-[22px] text-secondary" data-icon="rate_review">rate_review</span>
+<span class="font-body-md text-body-md text-on-surface">Journal</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">3 entries</span>
+</div>
+<!-- Row 4: Reading positions -->
+<div class="flex items-center justify-between px-4 py-3.5">
+<div class="flex items-center gap-3.5 text-on-surface">
+<span class="material-symbols-outlined text-[22px] text-secondary" data-icon="bookmark">bookmark</span>
+<span class="font-body-md text-body-md text-on-surface">Reading positions</span>
+</div>
+<div class="inline-flex items-center gap-1.5 text-tertiary font-body-sm text-body-sm font-medium">
+<span class="material-symbols-outlined text-[18px] fill-icon" data-icon="check" style="font-variation-settings: 'FILL' 1;">check</span>
+<span>Synced</span>
+</div>
+</div>
+</div>
+<!-- Explanatory note -->
+<p class="font-body-sm text-body-sm text-outline px-1.5 mt-2.5 leading-relaxed">
+  Your books, notes, and reading positions are available on your other devices. Downloads stay on each device.
+</p>
+</section>
+<!-- Spacing push for actions -->
+<div class="flex-grow pt-4"></div>
+<!-- Account Actions Section -->
+<section class="flex flex-col items-center gap-3 pt-2">
+<!-- Sign Out Button -->
+<button class="w-full h-12 rounded-full border border-outline-variant text-on-surface font-body-sm text-body-sm font-medium inline-flex items-center justify-center gap-2 hover:bg-surface-container active:scale-[0.98] transition-all duration-150" type="button">
+<span class="material-symbols-outlined text-[20px] text-on-surface" data-icon="logout">logout</span>
+<span>Sign out</span>
+</button>
+<!-- Delete Account Destructive Action -->
+<div class="w-full flex flex-col items-center pt-1">
+<button class="py-2 px-4 font-body-sm text-body-sm font-medium text-error hover:text-error/80 active:opacity-75 transition-opacity" type="button">
+  Delete account
+</button>
+<span class="font-body-sm text-[12px] text-outline text-center mt-0.5">
+  Requires confirmation and reauthentication.
+</span>
+</div>
+</section>
+</div>
+<!-- Native Gesture Inset Area -->
+<footer class="w-full h-8 flex items-center justify-center bg-surface select-none pb-1">
+<div class="w-32 h-1 bg-outline-variant/60 rounded-full"></div>
+</footer>
+</main>
+<!-- Micro-interaction Script -->
+<script>
+  const syncButton = document.getElementById('syncButton');
+  const syncIcon = document.getElementById('syncIcon');
+  const syncStatusTime = document.getElementById('syncStatusTime');
+  const syncButtonText = document.getElementById('syncButtonText');
+
+  if (syncButton) {
+    syncButton.addEventListener('click', () => {
+      syncIcon.classList.add('animate-spin');
+      syncButtonText.textContent = 'Syncing…';
+      syncButton.disabled = true;
+
+      setTimeout(() => {
+        syncIcon.classList.remove('animate-spin');
+        syncButtonText.textContent = 'Sync now';
+        syncStatusTime.textContent = 'Last synced just now';
+        syncButton.disabled = false;
+      }, 1200);
+    });
+  }
+</script>
+</body></html>

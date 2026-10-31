@@ -1,0 +1,83 @@
+{
+  "results": [
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/11215589261446279097",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1W-dthk-B0bnNxNERL-QLmdkwSxfSycZD8RFKfJwgJr5CnW1j1vWi6WtlgVZQQOTim5Usfudbj1VSGXk6caArp6F_upVnutribZ-9WBEJtBHFZQ1vX9g-rZo2nPvOyh6kCgPXMhvv_84qmLjjmZOvUaKONwTScFQ41cEXaHv6pxa0cKx_OjWlN-nfCBSTVVsC31LQMyE3dxjT9bct8oG08gT0jzbdjKNLEHGE9CYz5mSi_nZ2eooiqm96Z9mo1woXFa-Y2oK5g-"
+        },
+        "htmlCode": {
+          "name": "projects/6233788376335662642/files/11215589261446276706",
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBKNARIhYXBwX2NvbXBhbmlvbl91c2VyX3VwbG9hZGVkX2ZpbGVzGmgKM3VzZXJfdXBsb2FkZWRfaHRtbF8wMDA2NWYwYjk1MDU5YTY5MDdmZWMxODZkZTBjMmI4NhILEgcQh5SsssAKGAGSASMKCnByb2plY3RfaWQSFUITNjIzMzc4ODM3NjMzNTY2MjY0Mg&filename=&opi=96797242",
+          "mimeType": "text/html"
+        },
+        "id": "11215589261446277392",
+        "generatedBy": "UserUploadedHtml: stitch::code-to-design",
+        "width": "2560",
+        "height": "1894",
+        "title": "Source / Final / dark-explore",
+        "name": "projects/6233788376335662642/screens/11215589261446277392",
+        "theme": {},
+        "screenType": "DESIGN",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE",
+          "displayMode": "HTML"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/11215589261446277372",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1XEu0zrV-KuLsRpf1U0udblfRDe-sBVNLIwS03OTExDjNggKigwPR-FamfVrXJ8FdgLHFCqVl-HdhayxJHutyqXjLVgg71xg6oJ6vfEYV5sJpc8Vu-1Jx3zJRvkssxJY9IsVJP2Ql6z0jUDFVdIzPgo4WdzDMmixDnscn8rp4pqt9XxBDeH9Bm1-Q1flu8ND7irwgLQhGNYEQpMKbP5IHtrzuCwe8sStslEgNjiFUwkHBDKfNSFkl_PE8UgE4ESikNuyIBPazQQ-Q"
+        },
+        "htmlCode": {
+          "name": "projects/6233788376335662642/files/11215589261446279077",
+          "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBKNARIhYXBwX2NvbXBhbmlvbl91c2VyX3VwbG9hZGVkX2ZpbGVzGmgKM3VzZXJfdXBsb2FkZWRfaHRtbF8wMDA2NWYwYjk1MDU5YTZjMDdmZWMxODZkZTBjMmI4NhILEgcQh5SsssAKGAGSASMKCnByb2plY3RfaWQSFUITNjIzMzc4ODM3NjMzNTY2MjY0Mg&filename=&opi=96797242",
+          "mimeType": "text/html"
+        },
+        "id": "11215589261446275667",
+        "generatedBy": "UserUploadedHtml: stitch::code-to-design",
+        "width": "2560",
+        "height": "2372",
+        "title": "Source / Final / explore",
+        "name": "projects/6233788376335662642/screens/11215589261446275667",
+        "theme": {},
+        "screenType": "DESIGN",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE",
+          "displayMode": "HTML"
+        }
+      }
+    }
+  ],
+  "screenInstances": [
+    {
+      "id": "11215589261446277392",
+      "sourceScreen": "projects/6233788376335662642/screens/11215589261446277392",
+      "x": 151650,
+      "width": 1280,
+      "height": 947
+    },
+    {
+      "id": "11215589261446275667",
+      "sourceScreen": "projects/6233788376335662642/screens/11215589261446275667",
+      "x": 153030,
+      "width": 1280,
+      "height": 1186
+    }
+  ],
+  "transfer": {
+    "files": [
+      "designs/dark-explore.html",
+      "designs/explore.html"
+    ],
+    "prefix": "Source / Final / ",
+    "sha256": {
+      "designs/dark-explore.html": "ca862aea323d184dfecdcbbb6191031567edcf305e069c7fd4e0f490dffec229",
+      "designs/explore.html": "83d73b9e8de756aca8f467d70bc2cc29f4dc46277f49a459a45efb967a6d47a6"
+    }
+  }
+}

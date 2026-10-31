@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Veritalex — Journal List and Entry Detail</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400;1,7..72,500&amp;family=Roboto+Flex:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-container": "#E1E8B8",
+            "inverse-surface": "#362f2b",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed-variant": "#004e5b",
+            "on-secondary-container": "#756050",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#ffcead",
+            "tertiary-fixed-dim": "#86d2e4",
+            "surface-container": "#F5E9DF",
+            "on-background": "#201a16",
+            "surface-container-highest": "#ede0d9",
+            "surface": "#fff8f5",
+            "on-secondary": "#ffffff",
+            "primary-fixed-dim": "#ffb782",
+            "surface-container-high": "#f3e6df",
+            "surface-dim": "#e4d8d1",
+            "on-surface-variant": "#55483D",
+            "on-tertiary-fixed": "#001f25",
+            "background": "#fff8f5",
+            "secondary-fixed-dim": "#dcc2ae",
+            "outline": "#857469",
+            "on-primary": "#ffffff",
+            "on-surface": "#241A14",
+            "secondary-container": "#f9ddc9",
+            "error": "#ba1a1a",
+            "tertiary": "#5D633D",
+            "tertiary-fixed": "#a6eeff",
+            "on-primary-fixed": "#301400",
+            "error-container": "#ffdad6",
+            "primary-container": "#FFDCBF",
+            "on-primary-fixed-variant": "#6d390b",
+            "surface-tint": "#895021",
+            "on-tertiary-container": "#98e4f7",
+            "surface-paper": "#FFF8F3",
+            "primary-fixed": "#ffdcc5",
+            "secondary-fixed": "#f9ddc9",
+            "surface-bright": "#fff8f5",
+            "inverse-on-surface": "#fbeee7",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "primary": "#6c390b",
+            "surface-container-low": "#FCF1E8",
+            "secondary": "#6e5b4b",
+            "outline-variant": "#d7c3b6",
+            "highlight": "#F6E5A8",
+            "on-secondary-fixed-variant": "#554334",
+            "inverse-primary": "#ffb782",
+            "surface-variant": "#ede0d9",
+            "on-secondary-fixed": "#27190c"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "24px",
+            "gutter": "20px",
+            "space-lg": "16px",
+            "space-md": "12px",
+            "space-xxl": "32px",
+            "space-xs": "4px",
+            "space-sm": "8px",
+            "margin": "20px"
+          },
+          "fontFamily": {
+            "reader-chapter": [
+              "Literata", "serif"
+            ],
+            "reader-prose": [
+              "Literata", "serif"
+            ],
+            "headline-md": [
+              "Roboto Flex", "sans-serif"
+            ],
+            "body-lg": [
+              "Roboto Flex", "sans-serif"
+            ],
+            "title-md": [
+              "Roboto Flex", "sans-serif"
+            ],
+            "headline-lg": [
+              "Roboto Flex", "sans-serif"
+            ],
+            "body-sm": [
+              "Roboto Flex", "sans-serif"
+            ],
+            "headline-sm": [
+              "Roboto Flex", "sans-serif"
+            ],
+            "label-md": [
+              "Roboto Flex", "sans-serif"
+            ]
+          },
+          "fontSize": {
+            "reader-chapter": [
+              "26px",
+              {
+                "lineHeight": "34px",
+                "fontWeight": "500"
+              }
+            ],
+            "reader-prose": [
+              "19px",
+              {
+                "lineHeight": "32px",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-md": [
+              "24px",
+              {
+                "lineHeight": "32px",
+                "fontWeight": "500"
+              }
+            ],
+            "body-lg": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "title-md": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "500"
+              }
+            ],
+            "headline-lg": [
+              "32px",
+              {
+                "lineHeight": "40px",
+                "fontWeight": "500"
+              }
+            ],
+            "body-sm": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-sm": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "500"
+              }
+            ],
+            "label-md": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "500"
+              }
+            ]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-surface-paper text-on-surface antialiased overflow-hidden select-none font-body-lg text-body-lg">
+<!-- Tablet Viewport Frame 1280x900 Simulation Container -->
+<div class="relative w-full h-screen flex flex-col bg-surface-paper">
+<!-- 1. Android Tablet System Bar (24dp height) -->
+<header class="w-full h-6 px-6 bg-surface-paper flex items-center justify-between z-50 shrink-0 text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center space-x-2">
+<span class="font-medium text-xs tracking-tight text-on-surface">10:42 AM</span>
+</div>
+<div class="flex items-center space-x-3">
+<span class="material-symbols-outlined text-[15px] leading-none" data-icon="wifi">wifi</span>
+<span class="material-symbols-outlined text-[15px] leading-none" data-icon="signal_cellular_alt">signal_cellular_alt</span>
+<div class="flex items-center space-x-1">
+<span class="text-[11px] font-medium text-on-surface">94%</span>
+<span class="material-symbols-outlined text-[16px] leading-none" data-icon="battery_full" data-weight="fill" style="font-variation-settings: 'FILL' 1;">battery_full</span>
+</div>
+</div>
+</header>
+<!-- Main Workspace Container: Navigation Rail + Content Area -->
+<div class="flex-1 flex overflow-hidden relative">
+<!-- 2. Navigation Rail (Shared Component SideNavBar: docked left 88-96px) -->
+<aside class="w-20 md:w-24 shrink-0 bg-surface-container-low border-r border-outline-variant flex flex-col items-center justify-between py-6 px-2 z-40">
+<!-- Top: Veritalex Monogram & Wordmark -->
+<div class="flex flex-col items-center gap-1.5 cursor-pointer">
+<div class="w-11 h-11 rounded-full bg-primary-container flex items-center justify-center text-primary shadow-sm hover:scale-105 active:scale-95 transition-transform duration-100">
+<span class="material-symbols-outlined text-2xl" data-icon="menu_book" data-weight="fill" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-medium tracking-tight text-xs md:text-sm">Veritalex</span>
+</div>
+<!-- Rail Destinations -->
+<nav class="flex flex-col items-center space-y-5 w-full">
+<!-- Home -->
+<button class="w-full flex flex-col items-center justify-center text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface py-2 rounded-xl transition-colors duration-150 active:scale-95">
+<div class="w-12 h-8 rounded-full flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-2xl" data-icon="home">home</span>
+</div>
+<span class="text-xs font-medium">Home</span>
+</button>
+<!-- Explore -->
+<button class="w-full flex flex-col items-center justify-center text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface py-2 rounded-xl transition-colors duration-150 active:scale-95">
+<div class="w-12 h-8 rounded-full flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-2xl" data-icon="explore">explore</span>
+</div>
+<span class="text-xs font-medium">Explore</span>
+</button>
+<!-- Library (Active Tab in Shared Component) -->
+<button class="w-full flex flex-col items-center justify-center text-on-primary-fixed-variant font-label-md text-label-md py-1.5 active:scale-95 transition-transform duration-100">
+<div class="w-14 h-8 rounded-full bg-primary-container flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-2xl text-on-primary-fixed-variant" data-icon="local_library" data-weight="fill" style="font-variation-settings: 'FILL' 1;">local_library</span>
+</div>
+<span class="text-xs font-bold text-primary">Library</span>
+</button>
+</nav>
+<!-- Bottom: Settings -->
+<div class="flex flex-col items-center w-full">
+<button class="w-full flex flex-col items-center justify-center text-on-surface-variant font-label-md text-label-md hover:bg-surface-container hover:text-on-surface py-2 rounded-xl transition-colors duration-150 active:scale-95" title="Settings">
+<div class="w-12 h-8 rounded-full flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-2xl" data-icon="settings">settings</span>
+</div>
+<span class="text-xs font-medium">Settings</span>
+</button>
+</div>
+</aside>
+<!-- 3. Main Content Canvas -->
+<main class="flex-1 flex flex-col min-w-0 bg-surface-paper overflow-hidden">
+<!-- TopNavBar (Shared Component aligned to master-detail body) -->
+<header class="w-full bg-surface-paper border-b border-outline-variant px-8 pt-4 pb-0 flex flex-col justify-between shrink-0">
+<div class="flex items-center justify-between w-full mb-3">
+<div class="flex items-center gap-3">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Library</h1>
+<!-- Cloud Status Component -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-xs">
+<span class="material-symbols-outlined text-base text-tertiary" data-icon="sync_saved_locally">sync_saved_locally</span>
+<span class="text-on-surface-variant">Up to date</span>
+</div>
+</div>
+<!-- Header Right Actions: Search Box -->
+<div class="flex items-center gap-3">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-xl" data-icon="search">search</span>
+<input class="h-10 pl-10 pr-4 py-2 w-64 rounded-full bg-surface-container border-none text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant focus:ring-2 focus:ring-primary focus:outline-none transition-all" placeholder="Search notes, quotes..." type="text"/>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container active:scale-95 transition-all" title="Filter collection">
+<span class="material-symbols-outlined text-xl" data-icon="tune">tune</span>
+</button>
+</div>
+</div>
+<!-- Library Navigation Tabs (Books, Shelves, Journal active) -->
+<nav class="flex items-center space-x-2 -mb-[1px]">
+<a class="text-on-surface-variant font-label-md text-label-md pb-3 px-4 hover:text-on-surface transition-colors" href="#books">Books</a>
+<a class="text-on-surface-variant font-label-md text-label-md pb-3 px-4 hover:text-on-surface transition-colors" href="#shelves">Shelves</a>
+<a class="border-b-2 border-primary text-primary font-bold font-label-md text-label-md pb-3 px-4 flex items-center gap-1.5" href="#journal">
+<span>Journal</span>
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+</a>
+</nav>
+</header>
+<!-- Master-Detail Split Layout Container -->
+<div class="flex-1 flex min-h-0 overflow-hidden">
+<!-- LEFT PANE: Master List (~40% width, min-w-[390px]) -->
+<section class="w-5/12 min-w-[390px] max-w-[460px] border-r border-outline-variant flex flex-col bg-surface-paper overflow-hidden">
+<!-- Pane Header & Controls -->
+<div class="p-5 pb-3 border-b border-outline-variant bg-surface-paper shrink-0">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Reading journal</h2>
+<span class="px-2 py-0.5 rounded-full text-xs font-medium bg-surface-container text-on-surface-variant">14</span>
+</div>
+<!-- Primary Action: + New entry -->
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary-fixed-variant font-label-md text-label-md font-medium hover:bg-secondary-container active:scale-95 transition-transform duration-100 shadow-none">
+<span class="material-symbols-outlined text-lg" data-icon="add">add</span>
+<span>New entry</span>
+</button>
+</div>
+<!-- Filter Chips (All entries, Notes, Quotes) -->
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-high text-on-surface font-label-md text-xs font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="check">check</span>
+<span>All entries</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-xs font-medium transition-colors">
+<span>Notes</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-xs font-medium transition-colors">
+<span>Quotes</span>
+</button>
+</div>
+</div>
+<!-- Journal Entries List (Scrollable) -->
+<div class="flex-1 overflow-y-auto divide-y divide-outline-variant/60">
+<!-- Entry 1: Selected Item (Pride and Prejudice) -->
+<article class="p-5 bg-surface-container-low border-l-4 border-primary cursor-pointer transition-colors duration-150">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-medium text-primary tracking-wide">Pride and Prejudice</span>
+<span class="text-xs text-on-surface-variant">Today, 9:15 AM</span>
+</div>
+<div class="flex items-center gap-2 mb-2.5">
+<span class="text-xs font-medium text-on-surface">Jane Austen</span>
+<span class="text-on-surface-variant text-xs">•</span>
+<span class="text-xs text-on-surface-variant">Chapter 18</span>
+<span class="ml-auto inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-medium bg-primary-container text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-xs" data-icon="format_quote">format_quote</span>
+                    Quote &amp; note
+                  </span>
+</div>
+<!-- Quote Snippet in Literata -->
+<p class="font-reader-prose italic text-on-surface text-sm mb-2 line-clamp-2 pl-2.5 border-l-2 border-primary/40 leading-relaxed">
+                  “The moment of her release from him was ecstasy.”
+                </p>
+<!-- Note Preview -->
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">
+                  Elizabeth's relief says more than her politeness ever could.
+                </p>
+</article>
+<!-- Entry 2: Frankenstein -->
+<article class="p-5 hover:bg-surface-container-low/70 cursor-pointer transition-colors duration-150">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-medium text-on-surface tracking-wide">Frankenstein</span>
+<span class="text-xs text-on-surface-variant">Yesterday</span>
+</div>
+<div class="flex items-center gap-2 mb-2.5">
+<span class="text-xs font-medium text-on-surface">Mary Shelley</span>
+<span class="text-on-surface-variant text-xs">•</span>
+<span class="text-xs text-on-surface-variant">Vol. 2, Ch. 1</span>
+<span class="ml-auto inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-medium bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-xs" data-icon="edit_note">edit_note</span>
+                    Note
+                  </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-2 leading-relaxed">
+                  "Who is responsible for what we create? Victor abandons his creature the second it fails to resemble his ideal imagination."
+                </p>
+</article>
+<!-- Entry 3: Alice's Adventures in Wonderland -->
+<article class="p-5 hover:bg-surface-container-low/70 cursor-pointer transition-colors duration-150">
+<div class="flex items-center justify-between mb-2">
+<span class="text-xs font-medium text-on-surface tracking-wide">Alice's Adventures in Wonderland</span>
+<span class="text-xs text-on-surface-variant">Oct 14</span>
+</div>
+<div class="flex items-center gap-2 mb-2.5">
+<span class="text-xs font-medium text-on-surface">Lewis Carroll</span>
+<span class="text-on-surface-variant text-xs">•</span>
+<span class="text-xs text-on-surface-variant">Chapter 2</span>
+<span class="ml-auto inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-medium bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-xs" data-icon="format_quote">format_quote</span>
+                    Quote
+                  </span>
+</div>
+<p class="font-reader-prose italic text-on-surface text-sm line-clamp-2 pl-2.5 border-l-2 border-outline-variant leading-relaxed">
+                  “Curiouser and curiouser!” cried Alice (she was so much surprised, that for the moment she quite forgot how to speak good English).
+                </p>
+</article>
+</div>
+<!-- List Footer / Status -->
+<div class="p-3 px-5 bg-surface-paper border-t border-outline-variant flex items-center justify-between text-xs text-on-surface-variant">
+<span>Showing 3 of 14 entries</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-tertiary" data-icon="check_circle">check_circle</span>
+                All saved offline
+              </span>
+</div>
+</section>
+<!-- RIGHT PANE: Detail View (~60% width) -->
+<section class="flex-1 flex flex-col bg-surface-paper overflow-y-auto">
+<!-- Detail Pane Top Action Bar -->
+<div class="h-16 px-8 border-b border-outline-variant flex items-center justify-between shrink-0 bg-surface-paper/95 backdrop-blur sticky top-0 z-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="bookmarks">bookmarks</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Saved Oct 17, 2024 at 9:15 AM</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-9 px-3 rounded-full border border-outline-variant text-on-surface hover:bg-surface-container active:scale-95 transition-all text-xs font-medium flex items-center gap-1.5" title="Copy quote text">
+<span class="material-symbols-outlined text-base" data-icon="content_copy">content_copy</span>
+<span>Copy quote</span>
+</button>
+<button class="h-9 px-3 rounded-full border border-outline-variant text-on-surface hover:bg-surface-container active:scale-95 transition-all text-xs font-medium flex items-center gap-1.5" title="Share entry">
+<span class="material-symbols-outlined text-base" data-icon="share">share</span>
+<span>Share entry</span>
+</button>
+<button class="w-9 h-9 rounded-full hover:bg-surface-container text-on-surface-variant flex items-center justify-center active:scale-95 transition-colors" title="Edit entry">
+<span class="material-symbols-outlined text-lg" data-icon="edit">edit</span>
+</button>
+<button class="w-9 h-9 rounded-full hover:bg-surface-container text-on-surface-variant flex items-center justify-center active:scale-95 transition-colors" title="More options">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Detail Reading Canvas -->
+<div class="p-8 md:p-10 max-w-4xl w-full mx-auto flex-1 flex flex-col space-y-8">
+<!-- Book Context Header Card (Bento/Hero Tile) -->
+<div class="p-6 rounded-2xl bg-surface-container-low border border-outline-variant/70 flex items-start justify-between gap-6 shadow-sm">
+<div class="flex gap-5">
+<!-- Book Cover Thumbnail (2:3 aspect portrait) -->
+<div class="w-20 h-28 rounded-lg overflow-hidden shrink-0 shadow-sm border border-outline-variant/40 bg-[#3d191e] flex flex-col justify-between p-2.5 text-surface-container-lowest">
+<div>
+<span class="text-[9px] uppercase tracking-wider block opacity-75 font-semibold">Gutenberg 1342</span>
+<p class="font-reader-chapter text-[11px] font-bold leading-tight mt-1 text-[#fce8e8]">Pride and Prejudice</p>
+</div>
+<div class="border-t border-[#fce8e8]/20 pt-1">
+<span class="text-[8px] italic block opacity-90 text-[#fce8e8]">J. Austen</span>
+</div>
+</div>
+<!-- Book Metadata Cluster -->
+<div class="flex flex-col justify-center">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded text-xs font-semibold bg-tertiary-container text-on-surface">Reading Now</span>
+<span class="text-xs text-on-surface-variant">Classics Collection</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">Pride and Prejudice</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Jane Austen • Published 1813</p>
+<div class="flex items-center gap-4 mt-3 text-xs text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="menu_book">menu_book</span>
+                        Chapter 18
+                      </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="timelapse">timelapse</span>
+                        28% read position
+                      </span>
+</div>
+</div>
+</div>
+<!-- Jump to Context Action Button -->
+<button class="shrink-0 px-4 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-medium hover:bg-surface-tint active:scale-95 transition-all flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-lg" data-icon="auto_stories">auto_stories</span>
+<span>Return to passage</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Excerpt / Quote Section (Literata styling) -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Passage Excerpt</span>
+<span class="text-xs text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="bookmark" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bookmark</span>
+                    Highlighted in Gold
+                  </span>
+</div>
+<!-- Blockquote Display -->
+<div class="relative p-7 rounded-2xl bg-surface-container border-l-4 border-primary shadow-none">
+<span class="material-symbols-outlined absolute top-4 right-4 text-4xl text-primary/20 pointer-events-none" data-icon="format_quote">format_quote</span>
+<blockquote class="font-reader-chapter text-reader-chapter italic text-on-surface tracking-normal leading-relaxed">
+                    “The moment of her release from him was ecstasy.”
+                  </blockquote>
+<div class="mt-4 flex items-center justify-between text-xs text-on-surface-variant pt-3 border-t border-outline-variant/40">
+<span class="font-serif italic">— Elizabeth Bennet concerning Mr. Collins at the Netherfield Ball</span>
+<span>Loc 1,482</span>
+</div>
+</div>
+</div>
+<!-- Private Reflection / Note Section -->
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Private Reflection</span>
+<button class="text-xs font-medium text-primary hover:underline flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="edit">edit</span>
+                    Edit note
+                  </button>
+</div>
+<div class="p-6 rounded-2xl bg-surface-paper border border-outline-variant/80 shadow-none space-y-3">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                    Elizabeth's relief says more than her politeness ever could. Even in early nineteenth-century ballroom decorum, Austen captures physical dread transforming into sheer bodily freedom the instant an unwanted obligation concludes.
+                  </p>
+<div class="pt-3 border-t border-outline-variant/40 flex items-center gap-2">
+<span class="text-xs text-on-surface-variant font-medium">Tag:</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-xs">Social Satire</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-xs">Character Study</span>
+</div>
+</div>
+</div>
+<!-- Related Context / Reading Session Status Card -->
+<div class="p-4 rounded-xl bg-surface-container-high/60 border border-outline-variant/40 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-base" data-icon="history_edu">history_edu</span>
+</div>
+<div>
+<p class="text-xs font-medium text-on-surface">Part of Netherfield Ball Reading Session</p>
+<p class="text-[11px] text-on-surface-variant">Session duration: 42 mins • 18 pages read</p>
+</div>
+</div>
+<button class="text-xs font-semibold text-primary hover:underline flex items-center gap-1">
+                  View session highlights
+                  <span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Bottom Detail Footer Dock -->
+<footer class="p-4 px-8 border-t border-outline-variant bg-surface-paper flex items-center justify-between shrink-0 text-xs text-on-surface-variant">
+<div class="flex items-center gap-4">
+<span>Entry ID: JRN-2024-098</span>
+<span>•</span>
+<span>Format: EPUB Offline Cache</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-tertiary" data-icon="cloud_done">cloud_done</span>
+<span>Synced to personal study vault</span>
+</div>
+</footer>
+</section>
+</div>
+</main>
+</div>
+</div>
+</body></html>

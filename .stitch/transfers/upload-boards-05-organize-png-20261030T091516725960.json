@@ -1,0 +1,125 @@
+{
+  "results": [
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/2202519320052249169",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1UgHyWrd3YNfMW3fRQiqk2wB5ubfLpJqgZFT3B_qC9bFDEIK5Do9IS6Lsz9tFKOw8aHkP6IulP5Zo6ZIb_85GqbQmmrmrzNLX9YXOLmyQrqSqLZMFs20uSCAjsaDK6CgkkTSepwmP9hROQ4mcBKSuZLYX8vpMgTjPB4lkJkpJNtxlkMhdcb-EnnsUz9h7KT_bJFJ2QsfukvYWrQ7hArczo5nWlM2p9tzDcXL-w1f6zhF0olh9AOTuyJM3vVy5m0muG4sHTxF7Pikg"
+        },
+        "id": "2202519320052249562",
+        "width": "3600",
+        "height": "1464",
+        "title": "WF / 05-organize",
+        "name": "projects/6233788376335662642/screens/2202519320052249562",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/2202519320052251300",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1UL1fANpJtLYPeV9j-mVpp5NwCF9aYLG8vSB9UagE0HCE-F8FcvHYxr-xHyR32R4Cep7zfai5YY_z2X04RkKi4luzN4OPwwJD2kI1OptbVSJatdc2Y9VfJlDvn5zNgm9Zqyz70MXDRDJORjM0cA4Z-YiX--Putp0s8mwCFcQyDNa32mrYbtlTMY3VC-GSHsC-xKaFyxMJkK5c6Dd7lYcJz-mRzjqB3XzSeq6Vj8pha7RnwWouj6XptkoEjlSaqI_b-kKR3NndCWxA"
+        },
+        "id": "2202519320052251693",
+        "width": "3600",
+        "height": "1464",
+        "title": "WF / 06-shelves",
+        "name": "projects/6233788376335662642/screens/2202519320052251693",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/2202519320052249335",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1U1ph-Wqw2KYTfOZNpdWDtNf47HS0Lujc1BBE6uSHNVbOHn78yzb0y9a6E9ha7XMUAS0AxdjlOwV0wAqjBF2RBXy3GXrr3RrxOLqD5TDHe_Le-nZwLVGZXa3VlImAjjL6HnA7sy35cQA_FZTn4Isim9las7NJrnx_GC1WhlF2dGSdTc3Dde9_NA6C4ni7kOpcQcVuLs-jb2OQco2iUFQQJCnAVJZHjhd0Le8gIebV9MDtp9TlANYOtn-7BeW80pEFct_8UJR0O6eA"
+        },
+        "id": "2202519320052249728",
+        "width": "3600",
+        "height": "1464",
+        "title": "WF / 07-journal",
+        "name": "projects/6233788376335662642/screens/2202519320052249728",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    },
+    {
+      "screen": {
+        "screenshot": {
+          "name": "projects/6233788376335662642/files/2202519320052251466",
+          "downloadUrl": "https://lh3.googleusercontent.com/aida/AEtjO1UQJ0NkNLThTzma1tnFpTQeS4xxu-4zPUsb-CVtOEeicDkVy_T_eDYy3uNWBimVL23RenW8yeqy5qwCuf1xfhCX57ajRX3VRTu7w-PKe5VjO6WhQiLIocFtYllHDbMcFRZ_fo10fZBV8s9IajUa9gmCYLwcVvb0nEiUxbMmDHwHsYlcLseT1wWpp8CmvYb7aZwPro2suSavVG4xD7ljHYR9cLNUsNm40rU_rwQLIqY32XJMcxRkVpU3E69R2iySn0n5C3s8qksapg"
+        },
+        "id": "2202519320052251859",
+        "width": "3600",
+        "height": "1464",
+        "title": "WF / 08-reader",
+        "name": "projects/6233788376335662642/screens/2202519320052251859",
+        "theme": {},
+        "screenType": "IMAGE",
+        "isCreatedByClient": true,
+        "screenMetadata": {
+          "status": "COMPLETE"
+        }
+      }
+    }
+  ],
+  "screenInstances": [
+    {
+      "id": "2202519320052249562",
+      "sourceScreen": "projects/6233788376335662642/screens/2202519320052249562",
+      "x": 12184,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "2202519320052251693",
+      "sourceScreen": "projects/6233788376335662642/screens/2202519320052251693",
+      "x": 14084,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "2202519320052249728",
+      "sourceScreen": "projects/6233788376335662642/screens/2202519320052249728",
+      "x": 15984,
+      "width": 1800,
+      "height": 732
+    },
+    {
+      "id": "2202519320052251859",
+      "sourceScreen": "projects/6233788376335662642/screens/2202519320052251859",
+      "x": 17884,
+      "width": 1800,
+      "height": 732
+    }
+  ],
+  "transfer": {
+    "files": [
+      "boards/05-organize.png",
+      "boards/06-shelves.png",
+      "boards/07-journal.png",
+      "boards/08-reader.png"
+    ],
+    "prefix": "WF / ",
+    "sha256": {
+      "boards/05-organize.png": "1f1f90fa2871b67bee35776c7c4d158a9c465d59ed50de2c66bb40a446ece03c",
+      "boards/06-shelves.png": "2b713517ffb925828b3e4cfd8dbaa4c2e7849d7d4f08b1b12fe73ce78c6f01a5",
+      "boards/07-journal.png": "b4a919f324eca95ae1344c6653720b9e4172087fc7b206fde0d03d45c0a9e2a7",
+      "boards/08-reader.png": "74cc969b06da0d7f1ba0f780b3bb3d3636774db252eded01f36aad2630624c62"
+    }
+  }
+}
