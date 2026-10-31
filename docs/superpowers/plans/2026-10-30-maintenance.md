@@ -1,5 +1,7 @@
 # Veritalex foundation refresh
 
+> Historical record, superseded by the October 30, 2026 learning reset. The active starting point is [the learning path](../../LEARNING_PATH.md). This plan records the pre-reset implementation, preserved on local branch `codex/pre-reset-2026-10-30` at `9445e42`; its feature and validation claims do not describe the current three-module sample checkpoint. See [README](../../../README.md) for the retained toolchain.
+
 The earlier conservative toolchain pins below are superseded by [the current-toolchain migration](2026-10-30-current-toolchain.md), approved and completed later the same day.
 
 **Goal:** Make the existing learning project runnable with stable dependencies and apply the approved `.stitch/DESIGN.md` system without implementing the MVP.

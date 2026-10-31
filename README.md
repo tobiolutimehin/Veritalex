@@ -1,41 +1,44 @@
 # Veritalex
 
-A personal Android reading app and learning project. The native code currently provides the catalogue and saved-book foundation. The approved MVP design is in [.stitch/HANDOFF.md](.stitch/HANDOFF.md); open [.stitch/index.html](.stitch/index.html) to browse the design states.
+A personal Android reading app built one lesson at a time. Start with [the learning path](docs/LEARNING_PATH.md).
+
+## Current checkpoint
+
+The app displays a stateless Compose list of sample books. The titles and authors are real examples, but this screen does not fetch a catalogue, save books or open a reader. The activity passes sample data directly to `BooksScreen`.
+
+Exactly three modules are active:
+
+```text
+:app → :feature:books → :core:designsystem
+  └──────────────────→ :core:designsystem
+```
+
+`app` launches the screen, `feature:books` owns the sample model and UI, and `core:designsystem` supplies the existing theme, interface font and visual tokens. Networking, Room, Hilt, Paging, ViewModels, coroutine scaffolding and navigation are future lessons. There are no dormant copies of those modules in this checkout.
+
+The first real product milestone is **browse → save → Library → relaunch offline**. The learner will implement it incrementally; this checkpoint establishes a small, readable starting point.
 
 ## Build and check
 
-Install Temurin JDK 25 LTS and Android SDK 37. The wrapper selects JDK 25 through `gradle/gradle-daemon-jvm.properties`; CI also installs current Temurin 25 and SDK 37. Use Android Studio Rabbit 2 (2026.2.2) or newer for AGP 9.5; the installed Studio is on that compatible line. No Firebase configuration is required.
+Use Temurin JDK 25 and Android SDK 37. The retained toolchain is AGP 9.5.0, Gradle 9.8.2 and Kotlin 2.4.21, with AGP's built-in Kotlin support. The app supports API 30+, targets SDK 37 and emits JVM 17 bytecode. The JDK running Gradle and the Android bytecode target serve different purposes.
+
+Lifecycle runtime remains explicitly pinned to 2.11.0 so its bundled lint checks work with this toolchain. The Compose BOM does not manage Lifecycle versions.
+
+From the repository root:
 
 ```sh
-./gradlew testDebugUnitTest :app:assembleDebug :app:lintDebug
-./gradlew :app:assembleRelease
-ANDROID_SERIAL=emulator-5554 ./gradlew :core:database:connectedDebugAndroidTest
+rtk proxy ./gradlew testDebugUnitTest :app:assembleDebug :app:assembleRelease :app:lintDebug
+rtk proxy adb devices
+rtk proxy ./gradlew :app:connectedDebugAndroidTest
 ```
 
-Use the actual emulator serial from `adb devices` for the last command. Database instrumentation tests cover author/translator membership, repeated imports and preservation of version-1 records during migration. Network tests use a local HTTP server; they do not require Gutendex to be online.
+The last command requires a running emulator or connected device. With several devices, set `ANDROID_SERIAL` to the intended serial before running it. Successful assembly checks compilation and packaging; the connected test checks the displayed sample screen. These commands describe the current checks, not a claim that future features are tested.
 
-## Maintenance decisions
+There is one activity launch test. Unit-test tasks currently have no business tests; add those with the first ViewModel or repository behavior. Connected tests are configured to leave the app installed. Use a dedicated emulator for testing.
 
-The current stable baseline is AGP 9.5.0, Gradle 9.8.2, Kotlin 2.4.21, KSP 2.3.13, Hilt 2.60.1 and Temurin JDK 25 LTS (verified with 25.0.5). All modules compile against SDK 37; the app targets 37 and still supports API 30+. Kotlin uses AGP's built-in support and new DSL, with the documented root compiler override to 2.4.21. The legacy Kotlin Android plugin and DSL opt-outs are absent. See the [AGP 9.5 compatibility table](https://developer.android.com/build/releases/agp-9-5-0-release-notes?hl=en) and [built-in Kotlin migration guide](https://developer.android.com/build/migrate-to-built-in-kotlin).
+## Design reference and recovery
 
-Java/Kotlin bytecode stays at JVM 17 for Android compatibility; that is separate from the JDK used to run Gradle. Gradle's own embedded Kotlin version shown by `./gradlew --version` is also separate from the app compiler pinned in the version catalog.
+The approved product and visual reference remains [.stitch/HANDOFF.md](.stitch/HANDOFF.md). Open [.stitch/index.html](.stitch/index.html) to browse it. Its reader, shelves, journal and account flows describe future work.
 
-Compose BOM 2026.09.00, Core 1.19.1, Lifecycle 2.11.0, Navigation 3 1.2.0, AndroidX Hilt Compose 1.4.0, Serialization 1.12.0, OkHttp 5.5.1 and Coil 3.6.3 replace the older compatibility pins. Coil includes its explicit OkHttp networking module; HTTP regression tests use MockWebServer 3. Direct versions were checked against official Maven release metadata. Existing Room, Paging, Retrofit, DataStore, Gson and JUnit dependencies were already on their current stable releases.
+The complete source before this learning reset, including Room schemas, migrations and tests, is preserved on the local branch `codex/pre-reset-2026-10-30` at `9445e42`. Work continues on `codex/foundation-reset`. Earlier maintenance plans are historical records.
 
-Unused Firebase analytics, the Google Services plugin, downloadable fonts, duplicate dependencies and stale generated theme variants were removed. The version catalog owns library versions; app bytecode targets JVM 17. Both the Gradle distribution and wrapper JAR were checked against official SHA-256 values.
-
-## Design system and learning boundary
-
-`:core:designsystem` implements the approved warm-paper and Night Material 3 roles, Roboto Flex interface typography, Literata prose/chapter styles, 4/16/28 dp cover/card/sheet shapes and 16/20 dp compact/regular gutters. Fonts and their OFL licenses ship with the app and work offline. `VeritalexTheme` follows device appearance; optional dynamic color remains available through its existing parameter. Use semantic Material roles in feature code.
-
-The shell uses Home, Explore and Library, with Settings in the toolbar and a navigation rail on wider windows. Existing catalogue/saved-book UI is reused; there is no fabricated reading progress or sample saved collection. Missing covers have a typeset fallback. Loading failures offer retry.
-
-Book details and save actions, a reader with independent paper settings, Library shelves/journal, and optional account/sync are still learning work. Settings currently only describes the actual system appearance behavior. The design gallery contains these future flows; it does not mean they are implemented in Android.
-
-The version-2 Room migration preserves existing books and people. Version 1 never stored reliable author/translator memberships, so those are rebuilt from catalogue responses rather than guessed from unrelated IDs. It never clears the database or saved-book preferences.
-
-## Verified on October 30, 2026
-
-Debug and release APKs build on JDK 25.0.5; all 17 unit tests and 3 database instrumentation tests pass. Lint reports zero errors and zero warnings. Gradle configuration (`help`), the full task graph (`build --dry-run`) and resolved compiler checks passed: AGP’s bundled Kotlin dependency resolves to 2.4.21. The packaged APK confirms compile/target SDK 37.
-
-Android 17 / API 37 verification used a 16 KB page-size emulator: actual network book covers loaded through Coil 3, tab/Settings/Back navigation and launcher-based process restoration worked, light/Night appearance and 200% text were checked, and a fresh cold launch survived 30 seconds with the same process resumed and no fresh crash recorded. Android Studio GUI sync and remote GitHub Actions were not automated.
+The sample app opens no existing database or preferences and performs no data migration or deletion. The Git checkpoint preserves source code and schemas, not device data; keep separate backups of any records you need.

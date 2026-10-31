@@ -5,6 +5,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -14,11 +15,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Veritalex"
-include(":app")
-include(":core:network")
-include(":core:data")
-include(":core:database")
-include(":core:designsystem")
-include(":feature:home")
-include(":core:navigation")
-include(":core:datastore")
+include(":app", ":feature:books", ":core:designsystem")

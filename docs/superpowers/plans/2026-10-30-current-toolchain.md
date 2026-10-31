@@ -1,5 +1,7 @@
 # Current stable Android toolchain migration
 
+> Historical record, superseded by the October 30, 2026 learning reset. The active starting point is [the learning path](../../LEARNING_PATH.md). This plan records the pre-reset implementation, preserved on local branch `codex/pre-reset-2026-10-30` at `9445e42`; its feature and validation claims do not describe the current three-module sample checkpoint. See [README](../../../README.md) for the retained toolchain.
+
 The user approved completing the fresh-app baseline. Continue in the existing working tree and preserve the earlier cleanup/theme/navigation work. Keep feature scope unchanged and leave the mixed working tree uncommitted.
 
 - [x] Confirm the prior baseline builds/tests pass; snapshot existing files before migration.
