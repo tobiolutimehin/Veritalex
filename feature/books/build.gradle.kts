@@ -27,7 +27,7 @@ dependencies {
     implementation(libs.compose.foundation)
     implementation(libs.material3)
     implementation(libs.ui)
-    implementation(libs.ui.tooling.preview)
+    compileOnly(libs.ui.tooling.preview)
     debugImplementation(libs.ui.tooling)
     implementation(project(":core:designsystem"))
 }

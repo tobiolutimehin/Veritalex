@@ -27,4 +27,7 @@ dependencies {
     implementation(libs.compose.foundation)
     implementation(libs.material3)
     implementation(libs.ui)
+    compileOnly(libs.ui.tooling.preview)
+    debugImplementation(libs.ui.tooling)
+    testImplementation(libs.junit)
 }

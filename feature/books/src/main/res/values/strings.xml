@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="no_sample_books">No sample books</string>
+    <string name="empty_sample_explanation">Pass a list of books to see them here.</string>
     <string name="books">Books</string>
     <string name="sample_catalogue">Sample catalogue</string>
 </resources>

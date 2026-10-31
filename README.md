@@ -13,7 +13,9 @@ Exactly three modules are active:
   └──────────────────→ :core:designsystem
 ```
 
-`app` launches the screen, `feature:books` owns the sample model and UI, and `core:designsystem` supplies the existing theme, interface font and visual tokens. Networking, Room, Hilt, Paging, ViewModels, coroutine scaffolding and navigation are future lessons. There are no dormant copies of those modules in this checkout.
+`app` launches the screen, `feature:books` owns the sample model and UI, and `core:designsystem` supplies the theme, fonts, visual tokens and shared UI controls. Networking, Room, Hilt, Paging, ViewModels, coroutine scaffolding and navigation are future lessons. There are no dormant copies of those modules in this checkout.
+
+The native [design-system guide](docs/DESIGN_SYSTEM.md) explains colors, type, spacing, reader paper and reusable controls. Debug builds also include a **Veritalex UI gallery** launcher entry; its local demo state implements no product flows. See [verification evidence](docs/DESIGN_SYSTEM_QA.md).
 
 The first real product milestone is **browse → save → Library → relaunch offline**. The learner will implement it incrementally; this checkpoint establishes a small, readable starting point.
 
@@ -31,9 +33,9 @@ rtk proxy adb devices
 rtk proxy ./gradlew :app:connectedDebugAndroidTest
 ```
 
-The last command requires a running emulator or connected device. With several devices, set `ANDROID_SERIAL` to the intended serial before running it. Successful assembly checks compilation and packaging; the connected test checks the displayed sample screen. These commands describe the current checks, not a claim that future features are tested.
+The last command requires a running emulator or connected device. With several devices, set `ANDROID_SERIAL` to the intended serial before running it. Assembly checks compilation and packaging; connected tests check the sample screen and design-system behavior. These commands describe the current checks, not a claim that future features are tested.
 
-There is one activity launch test. Unit-test tasks currently have no business tests; add those with the first ViewModel or repository behavior. Connected tests are configured to leave the app installed. Use a dedicated emulator for testing.
+Tests cover the sample activity, design-system interaction/accessibility contracts and semantic color contrast. There are no business tests yet; add those with the first ViewModel or repository behavior. Connected tests leave the app installed. Use a dedicated emulator for testing.
 
 ## Design reference and recovery
 

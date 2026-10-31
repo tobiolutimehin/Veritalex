@@ -1,0 +1,5 @@
+<resources>
+    <string name="action_loading">In progress</string>
+    <string name="clear_search">Clear search</string>
+    <string name="book_cover_description">%1$s, by %2$s</string>
+</resources>

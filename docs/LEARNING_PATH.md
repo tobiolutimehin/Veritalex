@@ -10,7 +10,7 @@ A **module** is a separately configured build unit with its own dependencies. A 
 | --- | --- | --- |
 | `:app` | Activity and screen assembly | The runnable Android application. |
 | `:feature:books` | `Book`, `SampleCatalogue`, `BooksScreen` | A small feature boundary you can read end to end. |
-| `:core:designsystem` | Theme, interface font, colors, shapes and spacing | A reusable visual vocabulary shared by the activity and feature. |
+| `:core:designsystem` | Theme, UI/reader fonts, colors, shapes, spacing and shared controls | A reusable visual vocabulary shared by the activity and feature. |
 
 This is a learning choice, not a rule that every Android app needs three modules. Android's [modularization guide](https://developer.android.com/topic/modularization) explains the costs and benefits of boundaries. For now, organize new concepts in packages before adding modules.
 
@@ -23,6 +23,10 @@ This is a learning choice, not a rule that every Android app needs three modules
 5. Read [settings.gradle.kts](../settings.gradle.kts), the three module build files and [libs.versions.toml](../gradle/libs.versions.toml). Draw which module depends on which, and distinguish project dependencies from external libraries.
 
 You should be able to describe the current execution path without opening the old implementation or a future architecture plan.
+
+The [native design-system guide](DESIGN_SYSTEM.md) explains what the visual roles mean and how to select them. Open the debug **Veritalex UI gallery** to compare actions, fields, shapes, type and independent reader papers. Its remembered demo state is not application architecture or persisted settings. Use its examples without introducing a ViewModel or new module just to render a control.
+
+For a new screen preview, add `@VeritalexPreviews` to a parameterless composable and wrap its sample content in `VeritalexTheme` plus Surface/Scaffold. It supplies six standard configurations from one shared definition. Use the focused Theme/LargeText/Tablet annotations when fewer views are sufficient; see [the preview examples](DESIGN_SYSTEM.md#shared-preview-annotations).
 
 ## 1. Kotlin through the book model
 
