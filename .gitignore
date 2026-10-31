@@ -41,3 +41,8 @@ google-services.json
 *.hprof
 # Kotlin compiler state
 .kotlin/
+
+# Local design bundles and Python caches (sources and review exports stay tracked)
+/.stitch/*.zip
+__pycache__/
+*.py[cod]
