@@ -6,7 +6,7 @@ compose-bom = "2026.09.00"
 junit = "4.13.2"
 kotlin = "2.4.21"
 # Compose's transitive Lifecycle also needs lint APIs compatible with AGP 9.5.
-lifecycle = "2.11.0"
+lifecycle = "2.11.1"
 
 [libraries]
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
